@@ -10,39 +10,59 @@ export default function ContactPage() {
           Contact
         </p>
 
-        <h1 className="mt-4 text-6xl leading-none md:text-8xl">
-          Let’s make
-          <br />
-          something worth sharing.
-        </h1>
+        <h1 className="mt-4 max-w-3xl text-5xl leading-[1.05] md:text-7xl">
+  Let’s Build Something
+</h1>
+
+<p className="mt-6 max-w-2xl text-lg leading-relaxed text-[var(--muted)] md:text-xl">
+  Campaigns that capture attention. Systems that work.
+</p>
 
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-[var(--muted)] md:text-xl">
-          For campaign inquiries, partnerships, or creative conversations, book
-          a call or send us a note.
+          Whether you’re looking to launch a campaign or implement AI across your
+          business, we’ll help you take the next step.
         </p>
 
-        <div className="mt-12 rounded-[32px] border border-white/8 bg-white/[0.02] p-8 md:p-10">
-          <div className="flex flex-col gap-6">
-            <a
-              href="https://calendly.com/pixelnarratives"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex w-fit items-center rounded-full border border-white/10 bg-[var(--foreground)] px-6 py-3 text-sm font-medium text-black transition hover:opacity-90"
-            >
-              Book a Call
-            </a>
+        <div className="mt-12 grid gap-6">
+          <div className="rounded-[32px] border border-white/8 bg-white/[0.02] p-8 md:p-10">
+            <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
+              Start Here
+            </p>
 
-            <div>
-              <p className="text-sm text-[var(--muted)]">or email</p>
+            <h2 className="mt-4 text-2xl leading-none md:text-3xl">
+              Book a call
+            </h2>
+
+            <p className="mt-4 max-w-xl text-base leading-relaxed text-[var(--muted)]">
+              The fastest way to get started. We’ll talk through your goals,
+              where you are today, and what the right next step looks like.
+            </p>
+
+            <div className="mt-6">
               <a
-                href="mailto:hello@pixelnarratives.studio"
-                className="mt-2 inline-block text-lg text-[var(--foreground)] transition hover:text-white"
+                href="https://calendly.com/pixelnarratives"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center rounded-full border border-white/10 bg-[var(--foreground)] px-6 py-3 text-sm font-medium text-black transition hover:opacity-90"
               >
-                hello@pixelnarratives.studio
+                Book a Call
               </a>
             </div>
+          </div>
 
-            <p className="text-sm text-[var(--muted)]">
+          <div className="rounded-[32px] border border-white/8 bg-white/[0.02] p-8 md:p-10">
+            <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
+              Prefer email?
+            </p>
+
+            <a
+              href="mailto:hello@pixelnarratives.studio"
+              className="mt-4 inline-block text-xl text-[var(--foreground)] transition hover:text-white"
+            >
+              hello@pixelnarratives.studio
+            </a>
+
+            <p className="mt-4 text-sm text-[var(--muted)]">
               We reply within 1–2 business days.
             </p>
           </div>

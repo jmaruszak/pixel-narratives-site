@@ -6,44 +6,44 @@ export default function Home() {
       <Nav />
 
       <section className="relative min-h-[90vh] overflow-hidden">
-  <img
-    src="/images/hero-cinematic.jpg"
-    alt="Explorers overlooking a sea of clouds at sunrise"
-    className="absolute inset-0 h-full w-full object-cover"
-  />
+        <img
+          src="/images/hero-cinematic.jpg"
+          alt="Businessman discovering a new type of studio"
+          className="absolute inset-0 h-full w-full object-cover"
+        />
 
-  <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/35 to-transparent" />
-  <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/35 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
 
-  <div className="relative mx-auto flex min-h-[90vh] w-full max-w-7xl items-center px-6 py-32 md:px-10">
-    <div className="max-w-3xl">
-    <h1 className="leading-none text-white font-semibold">
-        <span className="block text-6xl md:text-8xl">
-          Narrative Intelligence
-        </span>
-        <span className="block text-3xl text-white/80 md:text-4xl">
-          for Brands
-        </span>
-      </h1>
+        <div className="relative mx-auto flex min-h-[90vh] w-full max-w-7xl items-center px-6 py-32 md:px-10">
+          <div className="max-w-3xl">
+            <h1 className="leading-none text-white font-semibold">
+              <span className="block text-6xl md:text-8xl">
+                Narrative Intelligence
+              </span>
+              <span className="block text-3xl text-white/80 md:text-4xl">
+                for Brands
+              </span>
+            </h1>
 
-      <div className="mt-8 space-y-2 text-lg text-white/70 md:text-xl">
-        <p>Strategy-first storytelling.</p>
-        <p>AI-native production.</p>
-      </div>
+            <div className="mt-8 space-y-2 text-lg text-white/70 md:text-xl">
+              <p>Strategy-first storytelling.</p>
+              <p>AI-native creative and systems.</p>
+            </div>
 
-      <div className="mt-10">
-        <a
-          href="https://calendly.com/pixelnarratives"
-          target="_blank"
-          rel="noreferrer"
-          className="inline-flex items-center rounded-full bg-white px-6 py-3 text-sm font-medium text-black transition hover:opacity-90"
-        >
-          Book a Call
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
+            <div className="mt-10">
+              <a
+                href="https://calendly.com/pixelnarratives"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center rounded-full bg-white px-6 py-3 text-sm font-medium text-black transition hover:opacity-90"
+              >
+                Start a Project
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section className="border-t border-white/8">
         <div className="mx-auto grid w-full max-w-7xl gap-12 px-6 py-24 md:grid-cols-2 md:px-10">
@@ -119,45 +119,107 @@ export default function Home() {
 
       <section className="border-t border-white/8">
         <div className="mx-auto w-full max-w-7xl px-6 py-24 md:px-10">
+          <div className="max-w-3xl">
+            <p className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
+              How We Work
+            </p>
+            <h2 className="mt-4 text-5xl leading-none md:text-7xl">
+              Creative that gets attention.
+              <br />
+              Systems that create leverage.
+            </h2>
+          </div>
+
+          <div className="mt-14 grid gap-6 md:grid-cols-2">
+            <div className="rounded-[28px] border border-white/8 bg-white/[0.02] p-8">
+              <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
+                Studio
+              </p>
+              <h3 className="mt-4 text-3xl leading-none md:text-4xl">
+                Pixel Narratives Studio
+              </h3>
+              <p className="mt-5 text-base leading-relaxed text-[var(--muted)] md:text-lg">
+                Cinematic, concept-driven campaigns built to make brands more
+                watchable, memorable, and distinct.
+              </p>
+              <div className="mt-8">
+                <a
+                  href="/projects"
+                  className="inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm text-[var(--foreground)] transition hover:bg-white/5"
+                >
+                  View Projects
+                </a>
+              </div>
+            </div>
+
+            <div className="rounded-[28px] border border-white/8 bg-white/[0.02] p-8">
+              <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
+                Intelligence Layer
+              </p>
+              <h3 className="mt-4 text-3xl leading-none md:text-4xl">
+                AI strategy and implementation
+              </h3>
+              <p className="mt-5 text-base leading-relaxed text-[var(--muted)] md:text-lg">
+                For businesses ready to move from scattered AI usage to practical
+                systems, workflows, and measurable value.
+              </p>
+              <div className="mt-8">
+                <a
+                  href="/intelligence-layer"
+                  className="inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm text-[var(--foreground)] transition hover:bg-white/5"
+                >
+                  Explore Intelligence Layer
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-white/8">
+        <div className="mx-auto w-full max-w-7xl px-6 py-24 md:px-10">
           <div className="max-w-2xl">
             <p className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
-              Selected Campaigns
+              Featured Campaign
             </p>
 
             <h2 className="mt-4 text-5xl leading-none md:text-7xl">
-              Studio Launch
+              The Homie
             </h2>
 
             <p className="mt-6 text-lg leading-relaxed text-[var(--muted)] md:text-xl">
-              A cinematic introduction to Pixel Narratives and the kind of work the
-              studio exists to create.
+              A spec campaign created for Fizz Soda as our entry into the Runway
+              Big Ad Contest — built to show how much energy, personality, and
+              cinematic style a brand spot can carry.
             </p>
           </div>
+
           <div className="mt-14 grid gap-8 md:grid-cols-[1.25fr_0.75fr] md:items-start">
-          <div className="overflow-hidden rounded-[24px] border border-white/8 bg-black">
-  <video
-    className="block w-full"
-    controls
-    playsInline
-    preload="metadata"
-    poster="/images/studio-launch-still.jpg"
-    src="/videos/pixel-narratives-launch.mp4"
-  >
-    <img
-      src="/images/studio-launch-still.jpg"
-      alt="Pixel Narratives Studio Launch still"
-      className="block w-full object-cover"
-    />
-  </video>
-</div>
-<div className="flex flex-col justify-between rounded-[24px] border border-white/8 bg-white/[0.02] p-8">
+            <div className="overflow-hidden rounded-[24px] border border-white/8 bg-black">
+              <video
+                className="block w-full"
+                controls
+                playsInline
+                preload="metadata"
+                poster="/images/runway-still.jpg"
+                src="/videos/the-last-fizz.mp4"
+              >
+                <img
+                  src="/images/runway-still.jpg"
+                  alt="The Homie campaign still for Fizz Soda"
+                  className="block w-full object-cover"
+                />
+              </video>
+            </div>
+
+            <div className="flex flex-col justify-between rounded-[24px] border border-white/8 bg-white/[0.02] p-8">
               <div>
                 <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
-                  Studio Launch
+                  Fizz Soda
                 </p>
 
                 <h3 className="mt-4 text-3xl leading-none md:text-4xl">
-                  Pixel Narratives Launch Commercial
+                  The Homie
                 </h3>
               </div>
 
@@ -167,18 +229,19 @@ export default function Home() {
                     Deliverables
                   </p>
                   <ul className="mt-3 space-y-2 text-sm text-[var(--foreground)] md:text-base">
-                    <li>Studio launch commercial</li>
+                    <li>Spec campaign</li>
                     <li>Creative direction</li>
                     <li>Concept development</li>
+                    <li>AI-native production</li>
                   </ul>
                 </div>
 
                 <div className="pt-2">
                   <a
-                    href="/projects"
+                    href="mailto:hello@pixelnarratives.studio"
                     className="inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm text-[var(--foreground)] transition hover:bg-white/5"
                   >
-                    View Campaign
+                    Ask About a Campaign
                   </a>
                 </div>
               </div>
@@ -188,25 +251,77 @@ export default function Home() {
       </section>
 
       <section className="border-t border-white/8">
-        <div className="mx-auto w-full max-w-7xl px-6 py-28 text-center md:px-10">
-          <h2 className="text-5xl leading-none md:text-7xl">
-            Ready to build something
-            <br />
-            people actually watch?
-          </h2>
+  <div className="mx-auto w-full max-w-7xl px-6 py-28 md:px-10">
+    <div className="mx-auto max-w-3xl text-center">
+      <p className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
+        Next Step
+      </p>
 
-          <div className="mt-12">
-            <a
-              href="https://calendly.com/pixelnarratives"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center rounded-full border border-white/10 bg-[var(--foreground)] px-8 py-4 text-sm font-medium text-black transition hover:opacity-90"
-            >
-              Book a Call
-            </a>
-          </div>
+      <h2 className="mt-4 text-4xl leading-none md:text-6xl">
+        Choose the path that fits
+        <br />
+        what you need next.
+      </h2>
+
+      <p className="mt-6 text-lg leading-relaxed text-[var(--muted)] md:text-xl">
+        Whether you need a campaign that earns attention or systems that create
+        leverage, Pixel Narratives is built to help you move.
+      </p>
+    </div>
+
+    <div className="mt-14 grid gap-6 md:grid-cols-2">
+      <div className="rounded-[28px] border border-white/8 bg-white/[0.02] p-8 text-left">
+        <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
+          Studio
+        </p>
+
+        <h3 className="mt-4 text-3xl leading-none md:text-4xl">
+          Build a campaign
+        </h3>
+
+        <p className="mt-5 text-base leading-relaxed text-[var(--muted)] md:text-lg">
+          For brands that want cinematic, concept-driven creative built to be
+          watched, remembered, and shared.
+        </p>
+
+        <div className="mt-8">
+          <a
+            href="https://calendly.com/pixelnarratives"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center rounded-full border border-white/10 bg-[var(--foreground)] px-6 py-3 text-sm font-medium text-black transition hover:opacity-90"
+          >
+            Book a Creative Call
+          </a>
         </div>
-      </section>
+      </div>
+
+      <div className="rounded-[28px] border border-white/8 bg-white/[0.02] p-8 text-left">
+        <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
+          Intelligence Layer
+        </p>
+
+        <h3 className="mt-4 text-3xl leading-none md:text-4xl">
+          Build your AI systems
+        </h3>
+
+        <p className="mt-5 text-base leading-relaxed text-[var(--muted)] md:text-lg">
+          For businesses ready to move from scattered AI usage to practical
+          workflows, stronger systems, and measurable value.
+        </p>
+
+        <div className="mt-8">
+          <a
+            href="/intelligence-layer"
+            className="inline-flex items-center rounded-full border border-white/10 px-6 py-3 text-sm text-[var(--foreground)] transition hover:bg-white/5"
+          >
+            Explore Intelligence Layer
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
       <footer className="border-t border-white/8">
         <div className="mx-auto flex w-full max-w-7xl flex-col gap-3 px-6 py-10 text-sm text-[var(--muted)] md:flex-row md:items-center md:justify-between md:px-10">
