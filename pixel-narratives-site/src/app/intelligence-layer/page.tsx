@@ -141,8 +141,8 @@ export default function IntelligenceLayerPage() {
               </p>
 
               <p className="mt-6 text-base leading-relaxed text-[var(--muted)] md:text-lg">
-  Build and stabilize your AI layer over a structured 12-month engagement.
-  This is where the real work happens: implementing core systems, refining
+  Build and stabilize your AI layer over a structured engagement.
+  This is where the real work happens: implementing core systems over time, refining
   them, and making sure your team actually uses them.
 </p>
             </div>
@@ -162,16 +162,19 @@ export default function IntelligenceLayerPage() {
               </ul>
 
               <div className="mt-8">
-                <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
-                  What to Expect
-                </p>
-                <ul className="mt-4 space-y-2 text-sm text-[var(--foreground)] md:text-base">
-                  <li>Months 1–2: Build core systems</li>
-                  <li>Months 3–4: Improve and stabilize</li>
-                  <li>Months 5–6: Drive adoption across your team</li>
-                  <li>Months 7–12: Maintain, optimize, and deepen adoption</li>
-                </ul>
-              </div>
+  <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
+    What to Expect
+  </p>
+  <p className="mt-2 text-sm text-[var(--muted)]">
+  Every engagement is different, but most follow a progression like this:
+</p>
+  <ul className="mt-4 space-y-2 text-sm text-[var(--foreground)] md:text-base">
+    <li>Phase 1: Build core systems</li>
+    <li>Phase 2: Improve and stabilize performance</li>
+    <li>Phase 3: Drive adoption across your team</li>
+    <li>Phase 4: Expand into new projects and opportunities</li>
+  </ul>
+</div>
 
               
             </div>
@@ -188,7 +191,7 @@ export default function IntelligenceLayerPage() {
               </h2>
 
               <p className="mt-4 text-sm uppercase tracking-[0.25em] text-[var(--muted)]">
-                Ongoing Support at 50% of Growth Tier
+                Ongoing Support available for existing clients, pricing adjusted based on scope.
               </p>
 
               <p className="mt-6 text-base leading-relaxed text-[var(--muted)] md:text-lg">
@@ -212,7 +215,7 @@ export default function IntelligenceLayerPage() {
               </ul>
 
               <p className="mt-8 text-base leading-relaxed text-[var(--muted)]">
-                Designed for long-term support without unnecessary cost.
+                Designed for long-term support.
               </p>
             </div>
           </div>
