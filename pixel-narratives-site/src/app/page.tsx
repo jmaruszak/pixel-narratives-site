@@ -1,4 +1,6 @@
+import AdsProcessFlow from "../components/AdsProcessFlow";
 import Nav from "../components/Nav";
+import ServicesGridReveal from "../components/ServicesGridReveal";
 
 export default function Home() {
   return (
@@ -12,12 +14,16 @@ export default function Home() {
           className="absolute inset-0 h-full w-full object-cover"
         />
 
-        <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/35 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
+        <div
+          className="hero-ambient-gradient pointer-events-none absolute inset-0 z-[1]"
+          aria-hidden
+        />
+        <div className="absolute inset-0 z-[2] bg-gradient-to-r from-black/75 via-black/35 to-transparent" />
+        <div className="absolute inset-0 z-[2] bg-gradient-to-t from-black/55 via-transparent to-transparent" />
 
-        <div className="relative mx-auto flex min-h-[90vh] w-full max-w-7xl items-center px-6 py-32 md:px-10">
+        <div className="relative z-10 mx-auto flex min-h-[90vh] w-full max-w-7xl items-center px-6 py-32 md:px-10">
           <div className="max-w-3xl">
-            <h1 className="leading-none text-white font-semibold">
+            <h1 className="hero-entrance leading-none text-white font-semibold">
               <span className="block text-6xl md:text-8xl">
                 Narrative Intelligence
               </span>
@@ -26,12 +32,12 @@ export default function Home() {
               </span>
             </h1>
 
-            <div className="mt-8 space-y-2 text-lg text-white/70 md:text-xl">
+            <div className="hero-entrance hero-entrance-delay-1 mt-8 space-y-2 text-lg text-white/70 md:text-xl">
               <p>Strategy-first storytelling.</p>
               <p>AI-native creative and systems.</p>
             </div>
 
-            <div className="mt-10">
+            <div className="hero-entrance hero-entrance-delay-2 mt-10">
               <a
                 href="https://calendly.com/pixelnarratives"
                 target="_blank"
@@ -40,6 +46,66 @@ export default function Home() {
               >
                 Start a Project
               </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-white/8">
+        <div className="mx-auto w-full max-w-7xl px-6 py-24 md:px-10">
+          <div className="max-w-3xl">
+            <p className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
+              How We Work
+            </p>
+            <h2 className="mt-4 text-3xl leading-[1.1] sm:text-4xl md:text-5xl">
+              <span className="block">Creative that gets attention.</span>
+              <span className="mt-2 block sm:mt-2.5 md:mt-3">
+                Systems that create leverage.
+              </span>
+            </h2>
+          </div>
+
+          <div className="mt-14 grid gap-6 md:grid-cols-2">
+            <div className="service-card rounded-[28px] border border-white/8 bg-white/[0.02] p-8">
+              <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
+                Studio
+              </p>
+              <h3 className="mt-4 text-3xl leading-none md:text-4xl">
+                Pixel Narratives Studio
+              </h3>
+              <p className="mt-5 text-base leading-relaxed text-[var(--muted)] md:text-lg">
+                Cinematic, concept-driven campaigns built to make brands more
+                watchable, memorable, and distinct.
+              </p>
+              <div className="mt-8">
+                <a
+                  href="/projects"
+                  className="inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm text-[var(--foreground)] transition hover:bg-white/5"
+                >
+                  View Projects
+                </a>
+              </div>
+            </div>
+
+            <div className="service-card rounded-[28px] border border-white/8 bg-white/[0.02] p-8">
+              <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
+                Intelligence Layer
+              </p>
+              <h3 className="mt-4 text-3xl leading-none md:text-4xl">
+                AI strategy and implementation
+              </h3>
+              <p className="mt-5 text-base leading-relaxed text-[var(--muted)] md:text-lg">
+                For businesses ready to move from scattered AI usage to practical
+                systems, workflows, and measurable value.
+              </p>
+              <div className="mt-8">
+                <a
+                  href="/intelligence-layer"
+                  className="inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm text-[var(--foreground)] transition hover:bg-white/5"
+                >
+                  Explore Intelligence Layer
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -71,6 +137,8 @@ export default function Home() {
         </div>
       </section>
 
+      <AdsProcessFlow />
+
       <section className="border-t border-white/8">
         <div className="mx-auto w-full max-w-7xl px-6 py-24 md:px-10">
           <div className="max-w-3xl">
@@ -84,95 +152,42 @@ export default function Home() {
             </h2>
           </div>
 
-          <div className="mt-14 grid gap-6 md:grid-cols-3">
-            <div className="rounded-[28px] border border-white/8 bg-white/[0.02] p-8 transition hover:border-white/20 hover:bg-white/[0.04]">
-              <h3 className="text-3xl leading-none md:text-4xl">
-                Narrative Intelligence
-              </h3>
-              <p className="mt-5 text-base leading-relaxed text-[var(--muted)] md:text-lg">
-                We build around the story, not the slogan. Every campaign needs a
-                setup, a turn, and a payoff.
-              </p>
-            </div>
-
-            <div className="rounded-[28px] border border-white/8 bg-white/[0.02] p-8 transition hover:border-white/20 hover:bg-white/[0.04]">
-              <h3 className="text-3xl leading-none md:text-4xl">
-                Entertainment-Driven Advertising
-              </h3>
-              <p className="mt-5 text-base leading-relaxed text-[var(--muted)] md:text-lg">
-                If it feels like an ad, it’s already losing. The work has to earn
-                attention before it asks for anything.
-              </p>
-            </div>
-
-            <div className="rounded-[28px] border border-white/8 bg-white/[0.02] p-8 transition hover:border-white/20 hover:bg-white/[0.04]">
-              <h3 className="text-3xl leading-none md:text-4xl">
-                AI-Native Production
-              </h3>
-              <p className="mt-5 text-base leading-relaxed text-[var(--muted)] md:text-lg">
-                Cinematic, bold, and built to feel bigger than the budget.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="border-t border-white/8">
-        <div className="mx-auto w-full max-w-7xl px-6 py-24 md:px-10">
-          <div className="max-w-3xl">
-            <p className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
-              How We Work
-            </p>
-            <h2 className="mt-4 text-5xl leading-none md:text-7xl">
-              Creative that gets attention.
-              <br />
-              Systems that create leverage.
-            </h2>
-          </div>
-
-          <div className="mt-14 grid gap-6 md:grid-cols-2">
-            <div className="rounded-[28px] border border-white/8 bg-white/[0.02] p-8">
-              <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
-                Studio
-              </p>
-              <h3 className="mt-4 text-3xl leading-none md:text-4xl">
-                Pixel Narratives Studio
-              </h3>
-              <p className="mt-5 text-base leading-relaxed text-[var(--muted)] md:text-lg">
-                Cinematic, concept-driven campaigns built to make brands more
-                watchable, memorable, and distinct.
-              </p>
-              <div className="mt-8">
-                <a
-                  href="/projects"
-                  className="inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm text-[var(--foreground)] transition hover:bg-white/5"
-                >
-                  View Projects
-                </a>
+          <ServicesGridReveal className="mt-14 grid gap-6 md:grid-cols-3">
+            <div className="service-reveal-item">
+              <div className="service-card rounded-[28px] border border-white/8 bg-white/[0.02] p-8">
+                <h3 className="text-3xl leading-none md:text-4xl">
+                  Narrative Intelligence
+                </h3>
+                <p className="mt-5 text-base leading-relaxed text-[var(--muted)] md:text-lg">
+                  We build around the story, not the slogan. Every campaign
+                  needs a setup, a turn, and a payoff.
+                </p>
               </div>
             </div>
 
-            <div className="rounded-[28px] border border-white/8 bg-white/[0.02] p-8">
-              <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
-                Intelligence Layer
-              </p>
-              <h3 className="mt-4 text-3xl leading-none md:text-4xl">
-                AI strategy and implementation
-              </h3>
-              <p className="mt-5 text-base leading-relaxed text-[var(--muted)] md:text-lg">
-                For businesses ready to move from scattered AI usage to practical
-                systems, workflows, and measurable value.
-              </p>
-              <div className="mt-8">
-                <a
-                  href="/intelligence-layer"
-                  className="inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm text-[var(--foreground)] transition hover:bg-white/5"
-                >
-                  Explore Intelligence Layer
-                </a>
+            <div className="service-reveal-item">
+              <div className="service-card rounded-[28px] border border-white/8 bg-white/[0.02] p-8">
+                <h3 className="text-3xl leading-none md:text-4xl">
+                  Entertainment-Driven Advertising
+                </h3>
+                <p className="mt-5 text-base leading-relaxed text-[var(--muted)] md:text-lg">
+                  If it feels like an ad, it’s already losing. The work has to
+                  earn attention before it asks for anything.
+                </p>
               </div>
             </div>
-          </div>
+
+            <div className="service-reveal-item">
+              <div className="service-card rounded-[28px] border border-white/8 bg-white/[0.02] p-8">
+                <h3 className="text-3xl leading-none md:text-4xl">
+                  AI-Native Production
+                </h3>
+                <p className="mt-5 text-base leading-relaxed text-[var(--muted)] md:text-lg">
+                  Cinematic, bold, and built to feel bigger than the budget.
+                </p>
+              </div>
+            </div>
+          </ServicesGridReveal>
         </div>
       </section>
 
@@ -250,78 +265,80 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="border-t border-white/8">
-  <div className="mx-auto w-full max-w-7xl px-6 py-28 md:px-10">
-    <div className="mx-auto max-w-3xl text-center">
-      <p className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
-        Next Step
-      </p>
+      <section className="next-step-section border-t border-white/8">
+        <div className="next-step-bg" aria-hidden />
+        <div className="next-step-fade" aria-hidden />
+        <div className="next-step-content mx-auto w-full max-w-7xl px-6 py-28 md:px-10">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
+              Next Step
+            </p>
 
-      <h2 className="mt-4 text-4xl leading-none md:text-6xl">
-        Choose the path that fits
-        <br />
-        what you need next.
-      </h2>
+            <h2 className="mt-4 text-4xl leading-none md:text-6xl">
+              Choose the path that fits
+              <br />
+              what you need next.
+            </h2>
 
-      <p className="mt-6 text-lg leading-relaxed text-[var(--muted)] md:text-xl">
-        Whether you need a campaign that earns attention or systems that create
-        leverage, Pixel Narratives is built to help you move.
-      </p>
-    </div>
+            <p className="mt-6 text-lg leading-relaxed text-[var(--muted)] md:text-xl">
+              Whether you need a campaign that earns attention or systems that
+              create leverage, Pixel Narratives is built to help you move.
+            </p>
+          </div>
 
-    <div className="mt-14 grid gap-6 md:grid-cols-2">
-      <div className="rounded-[28px] border border-white/8 bg-white/[0.02] p-8 text-left">
-        <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
-          Studio
-        </p>
+          <div className="mt-14 grid gap-6 md:grid-cols-2">
+            <div className="rounded-[28px] border border-white/8 bg-white/[0.02] p-8 text-left">
+              <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
+                Studio
+              </p>
 
-        <h3 className="mt-4 text-3xl leading-none md:text-4xl">
-          Build a campaign
-        </h3>
+              <h3 className="mt-4 text-3xl leading-none md:text-4xl">
+                Build a campaign
+              </h3>
 
-        <p className="mt-5 text-base leading-relaxed text-[var(--muted)] md:text-lg">
-          For brands that want cinematic, concept-driven creative built to be
-          watched, remembered, and shared.
-        </p>
+              <p className="mt-5 text-base leading-relaxed text-[var(--muted)] md:text-lg">
+                For brands that want cinematic, concept-driven creative built
+                to be watched, remembered, and shared.
+              </p>
 
-        <div className="mt-8">
-          <a
-            href="https://calendly.com/pixelnarratives"
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center rounded-full border border-white/10 bg-[var(--foreground)] px-6 py-3 text-sm font-medium text-black transition hover:opacity-90"
-          >
-            Book a Creative Call
-          </a>
+              <div className="mt-8">
+                <a
+                  href="https://calendly.com/pixelnarratives"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="cta-pulse-filled inline-flex items-center rounded-full border border-white/10 bg-[var(--foreground)] px-6 py-3 text-sm font-medium text-black transition hover:opacity-90"
+                >
+                  Book a Creative Call
+                </a>
+              </div>
+            </div>
+
+            <div className="rounded-[28px] border border-white/8 bg-white/[0.02] p-8 text-left">
+              <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
+                Intelligence Layer
+              </p>
+
+              <h3 className="mt-4 text-3xl leading-none md:text-4xl">
+                Build your AI systems
+              </h3>
+
+              <p className="mt-5 text-base leading-relaxed text-[var(--muted)] md:text-lg">
+                For businesses ready to move from scattered AI usage to practical
+                workflows, stronger systems, and measurable value.
+              </p>
+
+              <div className="mt-8">
+                <a
+                  href="/intelligence-layer"
+                  className="cta-pulse-outline inline-flex items-center rounded-full border border-white/10 px-6 py-3 text-sm text-[var(--foreground)] transition hover:border-white/20 hover:bg-white/5"
+                >
+                  Explore Intelligence Layer
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-
-      <div className="rounded-[28px] border border-white/8 bg-white/[0.02] p-8 text-left">
-        <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
-          Intelligence Layer
-        </p>
-
-        <h3 className="mt-4 text-3xl leading-none md:text-4xl">
-          Build your AI systems
-        </h3>
-
-        <p className="mt-5 text-base leading-relaxed text-[var(--muted)] md:text-lg">
-          For businesses ready to move from scattered AI usage to practical
-          workflows, stronger systems, and measurable value.
-        </p>
-
-        <div className="mt-8">
-          <a
-            href="/intelligence-layer"
-            className="inline-flex items-center rounded-full border border-white/10 px-6 py-3 text-sm text-[var(--foreground)] transition hover:bg-white/5"
-          >
-            Explore Intelligence Layer
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
 
       <footer className="border-t border-white/8">
         <div className="mx-auto flex w-full max-w-7xl flex-col gap-3 px-6 py-10 text-sm text-[var(--muted)] md:flex-row md:items-center md:justify-between md:px-10">

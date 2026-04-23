@@ -1,4 +1,5 @@
 import Nav from "../../components/Nav";
+import IntelligenceLayerProcessFlow from "../../components/IntelligenceLayerProcessFlow";
 
 export default function IntelligenceLayerPage() {
   return (
@@ -27,14 +28,14 @@ export default function IntelligenceLayerPage() {
                 href="https://calendly.com/pixelnarratives"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center rounded-full border border-white/10 bg-[var(--foreground)] px-5 py-2.5 text-sm font-medium text-black transition hover:opacity-90"
+                className="cta-pulse-filled inline-flex items-center rounded-full border border-white/10 bg-[var(--foreground)] px-5 py-2.5 text-sm font-medium text-black transition hover:opacity-90"
               >
                 Book a Discovery Call
               </a>
 
               <a
                 href="/contact"
-                className="inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm text-[var(--foreground)] transition hover:bg-white/5"
+                className="cta-pulse-outline inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm text-[var(--foreground)] transition hover:border-white/20 hover:bg-white/5"
               >
                 Contact Us
               </a>
@@ -117,16 +118,21 @@ export default function IntelligenceLayerPage() {
                 href="https://calendly.com/pixelnarratives"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm text-[var(--foreground)] transition hover:bg-white/5"
+                className="cta-pulse-outline inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm text-[var(--foreground)] transition hover:border-white/20 hover:bg-white/5"
               >
                 Start with the Blueprint
               </a>
             </div>
           </div>
         </div>
+      </section>
 
-        <div className="mt-16 space-y-16">
-          <div className="grid gap-8 md:grid-cols-[1.1fr_0.9fr] md:items-start">
+      <IntelligenceLayerProcessFlow />
+
+      <section className="border-t border-white/8">
+        <div className="mx-auto w-full max-w-7xl px-6 py-16 md:px-10 md:py-20">
+          <div className="space-y-16">
+            <div className="grid gap-8 md:grid-cols-[1.1fr_0.9fr] md:items-start">
             <div className="rounded-[24px] border border-white/8 bg-black p-8">
               <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
                 Ongoing Support
@@ -141,9 +147,9 @@ export default function IntelligenceLayerPage() {
               </p>
 
               <p className="mt-6 text-base leading-relaxed text-[var(--muted)] md:text-lg">
-  Build and stabilize your AI layer over a structured engagement.
+  Deliver outcomes through implementation over a structured engagement.
   This is where the real work happens: implementing core systems over time, refining
-  them, and making sure your team actually uses them.
+  them, and making sure your team is trained to use them.
 </p>
             </div>
 
@@ -153,7 +159,7 @@ export default function IntelligenceLayerPage() {
               </p>
 
               <ul className="mt-4 space-y-2 text-sm text-[var(--foreground)] md:text-base">
-                <li>Build 2–4 core AI workflows inside your business</li>
+                <li>Build core AI workflows inside your business</li>
                 <li>Tool setup and system integration</li>
                 <li>Ongoing refinement and troubleshooting</li>
                 <li>Monthly working sessions</li>
@@ -262,47 +268,54 @@ export default function IntelligenceLayerPage() {
             <div className="rounded-[24px] border border-white/8 bg-white/[0.02] p-8">
               <ul className="space-y-3 text-sm text-[var(--foreground)] md:text-base">
                 <li>Owner led businesses curious about AI but not sure where to start</li>
-                <li>Teams already experimenting with AI but lacking structure</li>
-                <li>Owners who want practical implementation</li>
+                <li>Enterprises already experimenting with AI but lacking structure</li>
+                <li>CEOs who want practical implementation</li>
                 <li>
                   Companies looking to save time, reduce friction, and move faster
                 </li>
               </ul>
             </div>
           </div>
+          </div>
         </div>
+      </section>
 
-        <div className="mt-16 rounded-[24px] border border-white/8 bg-white/[0.02] p-8 md:p-10">
-          <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
-            How We Work
-          </p>
+      <section className="next-step-section border-t border-white/8">
+        <div className="next-step-bg" aria-hidden />
+        <div className="next-step-fade" aria-hidden />
+        <div className="next-step-content mx-auto w-full max-w-7xl px-6 py-16 md:px-10 md:py-20">
+          <div className="rounded-[24px] border border-white/8 bg-white/[0.02] p-8 md:p-10">
+            <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
+              How We Work
+            </p>
 
-          <h2 className="mt-4 max-w-3xl text-3xl leading-none md:text-5xl">
-            Stop experimenting with AI. Start building it into the business.
-          </h2>
+            <h2 className="mt-4 max-w-3xl text-3xl leading-none md:text-5xl">
+              Stop experimenting with AI. Start building it into the business.
+            </h2>
 
-          <p className="mt-6 max-w-2xl text-base leading-relaxed text-[var(--muted)] md:text-lg">
-            The goal is not more tools for the sake of it. The goal is smarter
-            systems, better workflows, stronger team adoption, and a clearer
-            return on time and spend.
-          </p>
+            <p className="mt-6 max-w-2xl text-base leading-relaxed text-[var(--muted)] md:text-lg">
+              The goal is not more tools for the sake of it. The goal is
+              smarter systems, better workflows, stronger team adoption, and a
+              clearer return on time and spend.
+            </p>
 
-          <div className="mt-8 flex flex-wrap gap-4">
-            <a
-              href="https://calendly.com/pixelnarratives"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center rounded-full border border-white/10 bg-[var(--foreground)] px-5 py-2.5 text-sm font-medium text-black transition hover:opacity-90"
-            >
-              Book a Discovery Call
-            </a>
+            <div className="mt-8 flex flex-wrap gap-4">
+              <a
+                href="https://calendly.com/pixelnarratives"
+                target="_blank"
+                rel="noreferrer"
+                className="cta-pulse-filled inline-flex items-center rounded-full border border-white/10 bg-[var(--foreground)] px-5 py-2.5 text-sm font-medium text-black transition hover:opacity-90"
+              >
+                Book a Discovery Call
+              </a>
 
-            <a
-              href="/contact"
-              className="inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm text-[var(--foreground)] transition hover:bg-white/5"
-            >
-              Contact Us
-            </a>
+              <a
+                href="/contact"
+                className="cta-pulse-outline inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm text-[var(--foreground)] transition hover:border-white/20 hover:bg-white/5"
+              >
+                Contact Us
+              </a>
+            </div>
           </div>
         </div>
       </section>
