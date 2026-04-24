@@ -157,12 +157,6 @@ export default function Home() {
             </div>
           </div>
 
-          <p className="mx-auto mt-12 max-w-3xl text-center text-base leading-relaxed text-[var(--muted)] md:text-lg">
-            Pixel Narratives is headquartered in Mississippi, with roots in the
-            South and partnerships across the country. We work with business
-            owners who want to use AI and creative strategy to move faster,
-            operate more efficiently, and stand out in competitive markets.
-          </p>
         </div>
       </section>
 

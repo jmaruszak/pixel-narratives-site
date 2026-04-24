@@ -80,8 +80,11 @@ export default function AboutPage() {
             <p>That’s where things break down.</p>
             <p>That’s what we fix.</p>
             <p>
-              We help businesses turn AI into something real with clear
-              direction, better operations, and creative that actually performs.
+              Pixel Narratives is headquartered in Mississippi, with roots in
+              the South and partnerships across the country. We work with
+              business owners who want to use AI and creative strategy to move
+              faster, operate more efficiently, and stand out in competitive
+              markets.
             </p>
             <p>
               We started with creative work, building high-impact ads designed
