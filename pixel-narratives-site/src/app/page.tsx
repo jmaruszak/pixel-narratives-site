@@ -1,11 +1,59 @@
+import type { Metadata } from "next";
 import AdsProcessFlow from "../components/AdsProcessFlow";
+import Footer from "../components/Footer";
 import Nav from "../components/Nav";
 import ServicesGridReveal from "../components/ServicesGridReveal";
+
+export const metadata: Metadata = {
+  title: "Pixel Narratives | AI Ads + Business AI Systems",
+  description:
+    "Pixel Narratives builds AI-powered commercial ads and practical AI systems for brands that need attention, workflows, and measurable value.",
+  alternates: { canonical: "/" },
+};
+
+const homepageSchemas = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Pixel Narratives",
+    url: "https://pixelnarratives.studio",
+    description:
+      "AI-powered commercial production and business AI implementation studio.",
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "AI Commercial Production",
+    provider: { "@type": "Organization", name: "Pixel Narratives" },
+    areaServed: "United States",
+    serviceType: "AI-powered commercial video production",
+    description:
+      "Concept-driven AI commercial production for cinematic video ads and brand campaigns.",
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Intelligence Layer AI Consulting",
+    provider: { "@type": "Organization", name: "Pixel Narratives" },
+    areaServed: "United States",
+    serviceType: "AI consulting, workflow automation, and implementation",
+    description:
+      "AI consulting and implementation for workflows, automation, CRM systems, governance, and measurable business value.",
+  },
+];
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-[var(--background)] text-[var(--foreground)]">
       <Nav />
+
+      {homepageSchemas.map((schema) => (
+        <script
+          key={schema.name}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
 
       <section className="relative min-h-[90vh] overflow-hidden">
         <img
@@ -33,8 +81,8 @@ export default function Home() {
             </h1>
 
             <div className="hero-entrance hero-entrance-delay-1 mt-8 space-y-2 text-lg text-white/70 md:text-xl">
-              <p>Strategy-first storytelling.</p>
-              <p>AI-native creative and systems.</p>
+              <p>AI-powered ads built around a real concept.</p>
+              <p>Practical AI systems built around measurable value.</p>
             </div>
 
             <div className="hero-entrance hero-entrance-delay-2 mt-10">
@@ -74,8 +122,8 @@ export default function Home() {
                 Pixel Narratives Studio
               </h3>
               <p className="mt-5 text-base leading-relaxed text-[var(--muted)] md:text-lg">
-                Cinematic, concept-driven campaigns built to make brands more
-                watchable, memorable, and distinct.
+                Cinematic, AI-powered commercial production built around
+                concepts people actually want to watch, remember, and share.
               </p>
               <div className="mt-8">
                 <a
@@ -95,8 +143,8 @@ export default function Home() {
                 AI strategy and implementation
               </h3>
               <p className="mt-5 text-base leading-relaxed text-[var(--muted)] md:text-lg">
-                For businesses ready to move from scattered AI usage to practical
-                systems, workflows, and measurable value.
+                For businesses ready to turn scattered AI usage into practical
+                workflows, automation, governance, and measurable operating value.
               </p>
               <div className="mt-8">
                 <a
@@ -126,11 +174,11 @@ export default function Home() {
 
           <div className="flex max-w-xl items-end">
             <div className="space-y-6 text-lg leading-relaxed text-[var(--muted)] md:text-xl">
-              <p>Generic messaging. No narrative spine.</p>
+              <p>Generic content rarely earns attention on its own.</p>
               <p>
-                You don’t need more content.
+                You don’t need more output.
                 <br />
-                You need a concept.
+                You need a sharper concept and a smarter system behind it.
               </p>
             </div>
           </div>
@@ -340,18 +388,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="border-t border-white/8">
-        <div className="mx-auto flex w-full max-w-7xl flex-col gap-3 px-6 py-10 text-sm text-[var(--muted)] md:flex-row md:items-center md:justify-between md:px-10">
-          <p>© {new Date().getFullYear()} Pixel Narratives</p>
-
-          <a
-            href="mailto:hello@pixelnarratives.studio"
-            className="transition hover:text-[var(--foreground)]"
-          >
-            hello@pixelnarratives.studio
-          </a>
-        </div>
-      </footer>
+      <Footer />
     </main>
   );
 }

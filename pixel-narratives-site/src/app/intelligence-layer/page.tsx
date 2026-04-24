@@ -1,3 +1,4 @@
+import Footer from "../../components/Footer";
 import Nav from "../../components/Nav";
 import IntelligenceLayerProcessFlow from "../../components/IntelligenceLayerProcessFlow";
 
@@ -319,6 +320,7 @@ export default function IntelligenceLayerPage() {
           </div>
         </div>
       </section>
+      <Footer />
     </main>
   );
 }

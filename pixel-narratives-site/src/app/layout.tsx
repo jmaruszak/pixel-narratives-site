@@ -14,8 +14,16 @@ const bebas = Bebas_Neue({
 });
 
 export const metadata: Metadata = {
-  title: "Pixel Narratives",
-  description: "Narrative strategy. AI-native production. Ads built to share.",
+  metadataBase: new URL("https://pixelnarratives.studio"),
+  title: {
+    default: "Pixel Narratives | AI Ads + Business AI Systems",
+    template: "%s",
+  },
+  description:
+    "Pixel Narratives builds AI-powered commercial ads and practical AI systems for brands that need attention, workflows, and measurable value.",
+  alternates: {
+    canonical: "/",
+  },
 };
 
 export default function RootLayout({
