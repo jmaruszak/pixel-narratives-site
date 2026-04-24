@@ -26,6 +26,12 @@ export default function Nav() {
               Projects
             </a>
             <a
+              href="/about"
+              className="text-sm text-[var(--muted)] transition hover:text-[var(--foreground)]"
+            >
+              About
+            </a>
+            <a
               href="/intelligence-layer"
               className="text-sm text-[var(--muted)] transition hover:text-[var(--foreground)]"
             >

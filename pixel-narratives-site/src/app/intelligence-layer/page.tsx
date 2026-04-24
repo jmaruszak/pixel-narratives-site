@@ -23,6 +23,11 @@ export default function IntelligenceLayerPage() {
               have turned that activity into policy, process, workflow, and
               measurable business value. Intelligence Layer helps close that gap.
             </p>
+            <p className="mt-5 max-w-xl text-base leading-relaxed text-[var(--muted)] md:text-lg">
+              Think of it as a practical Fractional AI Officer for growing
+              businesses: part strategy, part implementation, part
+              accountability.
+            </p>
 
             <div className="mt-10 flex flex-wrap gap-4">
               <a

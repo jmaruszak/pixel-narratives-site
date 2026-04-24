@@ -4,7 +4,14 @@ import { landingPageSlugs } from "../lib/seoLandingPages";
 const baseUrl = "https://pixelnarratives.studio";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticRoutes = ["", "projects", "intelligence-layer", "contact"];
+  const staticRoutes = [
+    "",
+    "about",
+    "projects",
+    "intelligence-layer",
+    "contact",
+    "how-to-use-ai-in-your-business",
+  ];
   const routes = [...staticRoutes, ...landingPageSlugs];
 
   return routes.map((route) => ({

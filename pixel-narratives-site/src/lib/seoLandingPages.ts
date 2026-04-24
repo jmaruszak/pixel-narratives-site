@@ -364,13 +364,13 @@ export const seoLandingPages: Record<string, SeoLandingPage> = {
     offer: "intelligence",
     h1: "AI Consulting for Businesses That Need Practical Value",
     intro:
-      "Pixel Narratives helps businesses move from scattered AI experimentation to structured workflows, automation, policy, and measurable business outcomes.",
+      "Pixel Narratives helps businesses move from scattered AI experimentation to structured workflows, automation, policy, and measurable business outcomes. Think of Intelligence Layer as a practical Fractional AI Officer for growing businesses.",
     cta: "Get an AI audit",
     sections: [
       {
         heading: "What is AI consulting for businesses?",
         answer:
-          "AI consulting helps a business identify where AI can save time, improve workflows, reduce friction, or create new capacity.",
+          "AI consulting helps a business identify where AI can save time, improve workflows, reduce friction, or create new capacity. In practice, Intelligence Layer functions like a Fractional AI Officer: strategy, implementation, and accountability without adding a full-time executive role.",
       },
       {
         heading: "Why AI consulting matters now",
@@ -403,7 +403,12 @@ export const seoLandingPages: Record<string, SeoLandingPage> = {
       {
         question: "What does an AI consultant do?",
         answer:
-          "An AI consultant identifies practical AI opportunities, recommends tools, designs workflows, and helps teams implement systems.",
+          "An AI consultant identifies practical AI opportunities, recommends tools, designs workflows, and helps teams implement systems. A Fractional AI Officer also adds ongoing direction and accountability.",
+      },
+      {
+        question: "What is a Fractional AI Officer?",
+        answer:
+          "A Fractional AI Officer is a part-time strategic AI leader who helps a business choose the right use cases, implement workflows, guide adoption, and measure results.",
       },
       {
         question: "Who needs AI consulting?",
