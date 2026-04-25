@@ -1,8 +1,6 @@
 import { NextResponse } from "next/server";
 
-/** Default when `CRM_ASSESSMENT_ENDPOINT` is unset (e.g. local dev). */
-const defaultCrmAssessmentEndpoint =
-  "https://crm.pixelnarratives.studio/api/public/assessment-lead";
+const LOG_PREFIX = "[assessment-lead]";
 
 type AssessmentLeadPayload = {
   name?: string;
@@ -20,18 +18,26 @@ function isValidEmail(email: string) {
 }
 
 export async function POST(request: Request) {
-  const crmEndpoint =
-    process.env.CRM_ASSESSMENT_ENDPOINT?.trim() || defaultCrmAssessmentEndpoint;
-  const apiKey =
-    process.env.CRM_ASSESSMENT_API_KEY?.trim() ||
-    process.env.ASSESSMENT_API_KEY?.trim();
+  const crmEndpoint = process.env.CRM_ASSESSMENT_ENDPOINT?.trim() ?? "";
+  const apiKey = process.env.CRM_ASSESSMENT_API_KEY?.trim() ?? "";
+  const hasCrmEndpoint = crmEndpoint.length > 0;
+  const hasCrmApiKey = apiKey.length > 0;
 
-  if (!apiKey) {
+  console.info(`${LOG_PREFIX} env check`, {
+    hasCrmAssessmentEndpoint: hasCrmEndpoint,
+    hasCrmAssessmentApiKey: hasCrmApiKey,
+  });
+
+  if (!hasCrmEndpoint || !hasCrmApiKey) {
+    console.error(`${LOG_PREFIX} missing configuration`, {
+      hasCrmAssessmentEndpoint: hasCrmEndpoint,
+      hasCrmAssessmentApiKey: hasCrmApiKey,
+    });
     return NextResponse.json(
       {
         success: false,
         error:
-          "CRM assessment API key is not configured. Set CRM_ASSESSMENT_API_KEY on the server.",
+          "Server configuration is incomplete. Set CRM_ASSESSMENT_ENDPOINT and CRM_ASSESSMENT_API_KEY for this deployment.",
       },
       { status: 500 }
     );
@@ -91,6 +97,10 @@ export async function POST(request: Request) {
     const data = (await response.json().catch(() => null)) as unknown;
 
     if (!response.ok) {
+      console.error(`${LOG_PREFIX} CRM HTTP error`, {
+        status: response.status,
+        statusText: response.statusText,
+      });
       return NextResponse.json(
         {
           success: false,
@@ -101,8 +111,11 @@ export async function POST(request: Request) {
       );
     }
 
+    console.info(`${LOG_PREFIX} CRM accepted submission`, { status: response.status });
     return NextResponse.json(data, { status: 201 });
-  } catch {
+  } catch (err) {
+    const message = err instanceof Error ? err.message : "unknown error";
+    console.error(`${LOG_PREFIX} CRM request failed`, { errorMessage: message });
     return NextResponse.json(
       { success: false, error: "CRM submission failed." },
       { status: 500 }
