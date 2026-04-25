@@ -90,6 +90,13 @@ export async function POST(request: Request) {
     category: payload.category,
     source: payload.source || "pixelnarratives.studio",
     notes,
+    /**
+     * Some CRMs only render the lead note from `answers` (or fall back to a
+     * default template when it is empty). This is the same human summary as
+     * `notes`—not a full response dump. Prefer this or top-level `notes` in
+     * the CRM so the multi-line plan output appears in the UI.
+     */
+    answers: { notes },
   };
 
   try {
