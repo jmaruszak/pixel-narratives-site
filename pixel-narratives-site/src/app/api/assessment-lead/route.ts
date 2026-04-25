@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 
-const crmEndpoint =
+/** Default when `CRM_ASSESSMENT_ENDPOINT` is unset (e.g. local dev). */
+const defaultCrmAssessmentEndpoint =
   "https://crm.pixelnarratives.studio/api/public/assessment-lead";
 
 type AssessmentLeadPayload = {
@@ -19,11 +20,19 @@ function isValidEmail(email: string) {
 }
 
 export async function POST(request: Request) {
-  const apiKey = process.env.ASSESSMENT_API_KEY;
+  const crmEndpoint =
+    process.env.CRM_ASSESSMENT_ENDPOINT?.trim() || defaultCrmAssessmentEndpoint;
+  const apiKey =
+    process.env.CRM_ASSESSMENT_API_KEY?.trim() ||
+    process.env.ASSESSMENT_API_KEY?.trim();
 
   if (!apiKey) {
     return NextResponse.json(
-      { success: false, error: "Assessment API key is not configured." },
+      {
+        success: false,
+        error:
+          "CRM assessment API key is not configured. Set CRM_ASSESSMENT_API_KEY on the server.",
+      },
       { status: 500 }
     );
   }
