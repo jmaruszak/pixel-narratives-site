@@ -76,10 +76,10 @@ export default function WorkPage() {
 
                 <div>
                   <a
-                    href="mailto:hello@pixelnarratives.studio"
+                    href="/contact"
                     className="inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm text-[var(--foreground)] transition hover:bg-white/5"
                   >
-                    Ask About a Campaign
+                    Request a Concept
                   </a>
                 </div>
               </div>
@@ -139,10 +139,10 @@ export default function WorkPage() {
 
                 <div>
                   <a
-                    href="mailto:hello@pixelnarratives.studio"
+                    href="/contact"
                     className="inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm text-[var(--foreground)] transition hover:bg-white/5"
                   >
-                    Start a Project
+                    Request a Concept
                   </a>
                 </div>
               </div>

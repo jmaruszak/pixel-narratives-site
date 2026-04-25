@@ -40,10 +40,10 @@ export default function IntelligenceLayerPage() {
               </a>
 
               <a
-                href="/contact"
+                href="/ai-readiness-assessment"
                 className="cta-pulse-outline inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm text-[var(--foreground)] transition hover:border-white/20 hover:bg-white/5"
               >
-                Contact Us
+                Take the AI Readiness Assessment
               </a>
             </div>
           </div>
@@ -128,6 +128,15 @@ export default function IntelligenceLayerPage() {
               >
                 Start with the Blueprint
               </a>
+              <p className="mt-4 text-sm leading-relaxed text-[var(--muted)]">
+                Not sure where you stand?{" "}
+                <a
+                  href="/ai-readiness-assessment"
+                  className="text-[var(--foreground)] transition hover:opacity-80"
+                >
+                  Take the AI Readiness Assessment.
+                </a>
+              </p>
             </div>
           </div>
         </div>

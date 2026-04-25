@@ -31,12 +31,12 @@ export default function ContactPage() {
             </p>
 
             <h2 className="mt-4 text-2xl leading-none md:text-3xl">
-              Book a call
+              Book a Zoom call
             </h2>
 
             <p className="mt-4 max-w-xl text-base leading-relaxed text-[var(--muted)]">
-              The fastest way to get started. We’ll talk through your goals,
-              where you are today, and what the right next step looks like.
+              Schedule a Zoom call to talk through your goals, where you are
+              today, and what the right next step looks like.
             </p>
 
             <div className="mt-6">
@@ -46,7 +46,32 @@ export default function ContactPage() {
                 rel="noreferrer"
                 className="inline-flex items-center rounded-full border border-white/10 bg-[var(--foreground)] px-6 py-3 text-sm font-medium text-black transition hover:opacity-90"
               >
-                Book a Call
+                Book a Zoom Call
+              </a>
+            </div>
+          </div>
+
+          <div className="rounded-[32px] border border-white/8 bg-white/[0.02] p-8 md:p-10">
+            <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
+              Creative / Ads
+            </p>
+
+            <h2 className="mt-4 text-2xl leading-none md:text-3xl">
+              Request a concept
+            </h2>
+
+            <p className="mt-4 max-w-xl text-base leading-relaxed text-[var(--muted)]">
+              Tell us what you’re promoting, who it’s for, where the ad will run,
+              and what you want people to remember. If you have a website, offer
+              page, or existing creative, include that too.
+            </p>
+
+            <div className="mt-6">
+              <a
+                href="mailto:hello@pixelnarratives.studio?subject=Request%20a%20Concept"
+                className="inline-flex items-center rounded-full border border-white/10 px-6 py-3 text-sm text-[var(--foreground)] transition hover:bg-white/5"
+              >
+                Email the Brief
               </a>
             </div>
           </div>
@@ -65,6 +90,23 @@ export default function ContactPage() {
 
             <p className="mt-4 text-sm text-[var(--muted)]">
               We reply within 1–2 business days.
+            </p>
+          </div>
+
+          <div className="rounded-[32px] border border-white/8 bg-white/[0.02] p-8 md:p-10">
+            <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
+              Prefer phone?
+            </p>
+
+            <a
+              href="tel:+19045247269"
+              className="mt-4 inline-block text-xl text-[var(--foreground)] transition hover:text-white"
+            >
+              904-524-7269
+            </a>
+
+            <p className="mt-4 text-sm text-[var(--muted)]">
+              For direct questions about a campaign, AI workflow, or next step.
             </p>
           </div>
         </div>

@@ -68,18 +68,6 @@ export default function AboutPage() {
           </div>
           <div className="space-y-6 text-lg leading-relaxed text-[var(--muted)] md:text-xl">
             <p>
-              Most businesses aren’t struggling with access to AI.
-              <br />
-              They’re struggling with how to actually use it.
-            </p>
-            <p>
-              There are more tools than ever,
-              <br />
-              but not a lot of clarity on what to do with them.
-            </p>
-            <p>That’s where things break down.</p>
-            <p>That’s what we fix.</p>
-            <p>
               Pixel Narratives is headquartered in Mississippi, with roots in
               the South and partnerships across the country. We work with
               business owners who want to use AI and creative strategy to move
@@ -186,7 +174,7 @@ export default function AboutPage() {
             <div className="mt-8 grid gap-6 md:grid-cols-2">
               <div className="rounded-[24px] border border-white/8 bg-white/[0.02] p-6">
                 <h2 className="text-3xl leading-none">
-                  Creative (Ads Built to Be Shared)
+                  Narrative Intelligence
                 </h2>
                 <p className="mt-4 text-base leading-relaxed text-[var(--muted)]">
                   High-impact, AI-driven creative designed to capture attention
@@ -195,7 +183,7 @@ export default function AboutPage() {
               </div>
               <div className="rounded-[24px] border border-white/8 bg-white/[0.02] p-6">
                 <h2 className="text-3xl leading-none">
-                  Intelligence Layer (AI for Business)
+                  Intelligence Layer
                 </h2>
                 <p className="mt-4 text-base leading-relaxed text-[var(--muted)]">
                   Helping companies implement AI in a way that drives real

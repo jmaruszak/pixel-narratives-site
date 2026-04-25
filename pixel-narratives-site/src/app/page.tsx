@@ -66,8 +66,8 @@ export default function Home() {
           className="hero-ambient-gradient pointer-events-none absolute inset-0 z-[1]"
           aria-hidden
         />
-        <div className="absolute inset-0 z-[2] bg-gradient-to-r from-black/75 via-black/35 to-transparent" />
-        <div className="absolute inset-0 z-[2] bg-gradient-to-t from-black/55 via-transparent to-transparent" />
+        <div className="absolute inset-0 z-[2] bg-gradient-to-r from-black/85 via-black/45 to-black/10" />
+        <div className="absolute inset-0 z-[2] bg-gradient-to-t from-black/60 via-transparent to-transparent" />
 
         <div className="relative z-10 mx-auto flex min-h-[90vh] w-full max-w-7xl items-center px-6 py-32 md:px-10">
           <div className="max-w-3xl">
@@ -81,19 +81,8 @@ export default function Home() {
             </h1>
 
             <div className="hero-entrance hero-entrance-delay-1 mt-8 space-y-2 text-lg text-white/70 md:text-xl">
-              <p>AI-powered ads built around a real concept.</p>
+              <p>Strategy First Storytelling Powered by AI</p>
               <p>Practical AI systems built around measurable value.</p>
-            </div>
-
-            <div className="hero-entrance hero-entrance-delay-2 mt-10">
-              <a
-                href="https://calendly.com/pixelnarratives"
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center rounded-full bg-white px-6 py-3 text-sm font-medium text-black transition hover:opacity-90"
-              >
-                Start a Project
-              </a>
             </div>
           </div>
         </div>
@@ -217,11 +206,11 @@ export default function Home() {
             <div className="service-reveal-item">
               <div className="service-card rounded-[28px] border border-white/8 bg-white/[0.02] p-8">
                 <h3 className="text-3xl leading-none md:text-4xl">
-                  Entertainment-Driven Advertising
+                  Entertainment-First
                 </h3>
                 <p className="mt-5 text-base leading-relaxed text-[var(--muted)] md:text-lg">
-                  If it feels like an ad, it’s already losing. The work has to
-                  earn attention before it asks for anything.
+                  Built to be watched first. The ask only works after the story
+                  lands.
                 </p>
               </div>
             </div>
@@ -302,10 +291,10 @@ export default function Home() {
 
                 <div className="pt-2">
                   <a
-                    href="mailto:hello@pixelnarratives.studio"
+                    href="/contact"
                     className="inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm text-[var(--foreground)] transition hover:bg-white/5"
                   >
-                    Ask About a Campaign
+                    Request a Concept
                   </a>
                 </div>
               </div>
@@ -352,12 +341,10 @@ export default function Home() {
 
               <div className="mt-8">
                 <a
-                  href="https://calendly.com/pixelnarratives"
-                  target="_blank"
-                  rel="noreferrer"
+                  href="/contact"
                   className="cta-pulse-filled inline-flex items-center rounded-full border border-white/10 bg-[var(--foreground)] px-6 py-3 text-sm font-medium text-black transition hover:opacity-90"
                 >
-                  Book a Creative Call
+                  Request a Concept
                 </a>
               </div>
             </div>
@@ -383,6 +370,15 @@ export default function Home() {
                 >
                   Explore Intelligence Layer
                 </a>
+                <p className="mt-4 text-sm leading-relaxed text-[var(--muted)]">
+                  Not sure where to start?{" "}
+                  <a
+                    href="/ai-readiness-assessment"
+                    className="text-[var(--foreground)] transition hover:opacity-80"
+                  >
+                    Take the AI Readiness Assessment.
+                  </a>
+                </p>
               </div>
             </div>
           </div>

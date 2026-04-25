@@ -10,7 +10,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "projects",
     "intelligence-layer",
     "contact",
+    "privacy",
     "how-to-use-ai-in-your-business",
+    "ai-readiness-assessment",
   ];
   const routes = [...staticRoutes, ...landingPageSlugs];
 

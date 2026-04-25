@@ -4,6 +4,7 @@ const studioLinks = [
   { href: "/about", label: "About" },
   { href: "/intelligence-layer", label: "Intelligence Layer" },
   { href: "/contact", label: "Contact" },
+  { href: "/privacy", label: "Privacy Policy" },
 ];
 
 const adLinks = [
@@ -27,6 +28,10 @@ const intelligenceLinks = [
     href: "/how-to-use-ai-in-your-business",
     label: "How to Use AI in Your Business",
   },
+  {
+    href: "/ai-readiness-assessment",
+    label: "AI Readiness Assessment",
+  },
   { href: "/ai-crm-automation", label: "AI CRM Automation" },
 ];
 
@@ -45,6 +50,12 @@ export default function Footer() {
           >
             hello@pixelnarratives.studio
           </a>
+          <a
+            href="tel:+19045247269"
+            className="mt-2 block transition hover:text-[var(--foreground)]"
+          >
+            904-524-7269
+          </a>
           <div className="mt-5">
             <a
               href="https://calendly.com/pixelnarratives"
@@ -52,7 +63,7 @@ export default function Footer() {
               rel="noreferrer"
               className="inline-flex items-center rounded-full border border-white/10 px-4 py-2 text-xs text-[var(--foreground)] transition hover:bg-white/5"
             >
-              Book a Call
+              Book a Zoom Call
             </a>
           </div>
         </div>

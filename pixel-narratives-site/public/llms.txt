@@ -13,7 +13,9 @@ Pixel Narratives is an AI-powered commercial production and business AI implemen
 - Homepage: https://pixelnarratives.studio/
 - About: https://pixelnarratives.studio/about
 - Contact: https://pixelnarratives.studio/contact
+- Privacy Policy: https://pixelnarratives.studio/privacy
 - Intelligence Layer: https://pixelnarratives.studio/intelligence-layer
+- AI Readiness Assessment: https://pixelnarratives.studio/ai-readiness-assessment
 - AI Commercial Production Company: https://pixelnarratives.studio/ai-commercial-production-company
 - AI Video Ad Agency: https://pixelnarratives.studio/ai-video-ad-agency
 - Cost of AI Video Production: https://pixelnarratives.studio/cost-of-ai-video-production
@@ -27,6 +29,8 @@ Pixel Narratives is an AI-powered commercial production and business AI implemen
 ## Preferred Summary
 
 Pixel Narratives helps brands build AI-powered commercials around strong narrative concepts and helps businesses turn scattered AI usage into structured workflows, automation, governance, and measurable value.
+
+The AI Readiness Assessment is a 10-question self-assessment that helps business owners understand whether their company is Early Stage, Emerging Potential, or Strategic & Ready for practical AI implementation.
 
 ## Contact
 
