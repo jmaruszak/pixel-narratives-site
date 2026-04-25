@@ -431,3 +431,104 @@ export function buildAnswerPayload(answers: AssessmentAnswers) {
     points: getQuestionPoints(question, answers[question.id]),
   }));
 }
+
+const focusValueLabels: Record<string, string> = {
+  efficiency: "Efficiency",
+  experience: "Experience",
+  revenue: "Revenue",
+  insights: "Insights",
+  unsure: "Clarifying goals",
+};
+
+type ResponseEntry = { id: string; answer?: unknown };
+
+function getResponseById(
+  entries: unknown,
+  id: string
+): ResponseEntry | undefined {
+  if (!Array.isArray(entries)) return undefined;
+  for (const item of entries) {
+    if (
+      item &&
+      typeof item === "object" &&
+      "id" in item &&
+      (item as ResponseEntry).id === id
+    ) {
+      return item as ResponseEntry;
+    }
+  }
+  return undefined;
+}
+
+/**
+ * Human-readable summary for the CRM. Uses the client `answers` payload shape
+ * (not raw AssessmentAnswers) because it reads `responses` from the POST body.
+ */
+export function buildAssessmentLeadNotes(
+  answers: unknown,
+  score: number,
+  category: string
+): string {
+  const a = answers as {
+    responses?: Array<{ id: string; answer?: unknown }>;
+  } | null;
+  const responses = a?.responses;
+
+  const line1 = `AI Readiness: ${category} (${score}/10)`;
+
+  const importanceEntry = getResponseById(responses, "importance");
+  const rawImportance = importanceEntry?.answer;
+  const importanceNum =
+    typeof rawImportance === "number" && rawImportance >= 1 && rawImportance <= 10
+      ? Math.round(rawImportance)
+      : null;
+  const line2 = `Urgency: ${
+    importanceNum != null ? `${importanceNum}/10` : "—"
+  }`;
+
+  const goalsEntry = getResponseById(responses, "success_goals");
+  const goalValues = Array.isArray(goalsEntry?.answer)
+    ? (goalsEntry?.answer as string[])
+    : [];
+  const nonUnsure = goalValues.filter((v) => v !== "unsure");
+  const focusParts: string[] = [];
+  for (const v of nonUnsure) {
+    const label = focusValueLabels[v];
+    if (label) focusParts.push(label);
+  }
+  if (nonUnsure.length === 0 && goalValues.includes("unsure")) {
+    focusParts.push("Clarifying goals");
+  }
+  const focusText =
+    focusParts.length > 0 ? focusParts.join(", ") : "Not specified";
+  const line3 = `Focus: ${focusText}`;
+
+  const toolsEntry = getResponseById(responses, "tools_in_use");
+  const resultsEntry = getResponseById(responses, "current_results");
+  const q1 = toolsEntry?.answer;
+  const q2 = resultsEntry?.answer;
+  const lowToolUse = q1 === "A" || q1 === "B";
+  const lowResults = q2 === "A" || q2 === "B";
+  const lowUsage = lowToolUse || lowResults;
+  const higherUrgency = importanceNum != null && importanceNum >= 7;
+  const multipleNonUnsureGoals = nonUnsure.length >= 2;
+
+  let insight: string;
+  if (lowUsage && (higherUrgency || multipleNonUnsureGoals)) {
+    insight =
+      "Low AI usage and limited structure so far, but the goals and priority are clear—strong opportunity to build a clean foundation and early wins with an AI Blueprint.";
+  } else if (lowUsage) {
+    insight =
+      "AI usage is still early; the highest leverage is to move from ad-hoc testing to a simple plan, one or two target workflows, and light governance.";
+  } else if (higherUrgency) {
+    insight =
+      "Priority is high; focus on scaling what already works, tightening standards, and proving impact with a few measurable pilots before expanding.";
+  } else {
+    insight =
+      "The next move is to align on outcomes, pick a focused workflow, and measure whether adoption and results improve before growing scope.";
+  }
+  const line4 = `Insight: ${insight}`;
+  const line5 = "Next Step: AI Blueprint";
+
+  return [line1, line2, line3, line4, line5].join("\n");
+}

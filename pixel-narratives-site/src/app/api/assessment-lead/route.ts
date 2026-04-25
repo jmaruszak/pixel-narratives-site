@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
 
+import { buildAssessmentLeadNotes } from "@/lib/aiReadinessAssessment";
+
 const LOG_PREFIX = "[assessment-lead]";
 
 type AssessmentLeadPayload = {
@@ -73,6 +75,12 @@ export async function POST(request: Request) {
     );
   }
 
+  const notes = buildAssessmentLeadNotes(
+    payload.answers,
+    payload.score,
+    payload.category
+  );
+
   const crmPayload = {
     name: name || "",
     email,
@@ -80,8 +88,8 @@ export async function POST(request: Request) {
     phone: phone || "",
     score: payload.score,
     category: payload.category,
-    answers: payload.answers,
     source: payload.source || "pixelnarratives.studio",
+    notes,
   };
 
   try {
@@ -111,7 +119,10 @@ export async function POST(request: Request) {
       );
     }
 
-    console.info(`${LOG_PREFIX} CRM accepted submission`, { status: response.status });
+    console.info(`${LOG_PREFIX} CRM accepted submission`, {
+      status: response.status,
+      notesLength: notes.length,
+    });
     return NextResponse.json(data, { status: 201 });
   } catch (err) {
     const message = err instanceof Error ? err.message : "unknown error";
