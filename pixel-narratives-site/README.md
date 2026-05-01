@@ -29,7 +29,15 @@ Required environment variables:
 ```bash
 CRM_ASSESSMENT_ENDPOINT=
 CRM_ASSESSMENT_API_KEY=
+
+# Deep Dive AI (optional — see docs/deployment.md)
+OPENAI_API_KEY=
+OPENAI_MODEL=
 ```
+
+Use [`.env.example`](.env.example) as a template.
+
+**Operational behavior** (Deep Dive AI fallbacks, in-memory rate limits, staging smoke tests): **[docs/deployment.md](docs/deployment.md)**.
 
 CRM request failures and timeouts are logged server-side with the `[assessment-lead]` prefix.
 
