@@ -1,8 +1,13 @@
 import { NextResponse } from "next/server";
 
 import { buildAssessmentLeadNotes } from "@/lib/aiReadinessAssessment";
+import type { DeepDiveReportMeta } from "@/lib/deepDiveReport";
 
 const LOG_PREFIX = "[assessment-lead]";
+const CRM_REQUEST_TIMEOUT_MS = 5000;
+
+/** Deep Dive payloads include structured report JSON; generous cap avoids CRM DoS-sized bodies. */
+const MAX_ASSESSMENT_LEAD_BODY_BYTES = 256 * 1024;
 
 type AssessmentLeadPayload = {
   name?: string;
@@ -13,6 +18,12 @@ type AssessmentLeadPayload = {
   category?: string;
   answers?: unknown;
   source?: string;
+  /** Nested copy of contact fields when present (deep dive flow). */
+  leadForm?: unknown;
+  deepDiveResponses?: unknown;
+  leadType?: string;
+  deepDiveGeneratedReport?: unknown;
+  deepDiveReportMeta?: DeepDiveReportMeta;
 };
 
 function isValidEmail(email: string) {
@@ -45,10 +56,27 @@ export async function POST(request: Request) {
     );
   }
 
+  let raw: string;
+  try {
+    raw = await request.text();
+  } catch {
+    return NextResponse.json({ success: false, error: "Malformed request body." }, { status: 400 });
+  }
+
+  if (Buffer.byteLength(raw, "utf8") > MAX_ASSESSMENT_LEAD_BODY_BYTES) {
+    console.warn(`${LOG_PREFIX} payload too large`, {
+      limitBytes: MAX_ASSESSMENT_LEAD_BODY_BYTES,
+    });
+    return NextResponse.json(
+      { success: false, error: "Payload too large." },
+      { status: 413 }
+    );
+  }
+
   let payload: AssessmentLeadPayload;
 
   try {
-    payload = (await request.json()) as AssessmentLeadPayload;
+    payload = JSON.parse(raw) as AssessmentLeadPayload;
   } catch {
     return NextResponse.json(
       { success: false, error: "Invalid JSON payload." },
@@ -75,10 +103,19 @@ export async function POST(request: Request) {
     );
   }
 
+  const meta =
+    typeof payload.deepDiveReportMeta === "object" && payload.deepDiveReportMeta !== null
+      ? (payload.deepDiveReportMeta as DeepDiveReportMeta)
+      : null;
+
   const notes = buildAssessmentLeadNotes(
     payload.answers,
     payload.score,
-    payload.category
+    payload.category,
+    typeof payload.leadType === "string" ? payload.leadType : undefined,
+    payload.deepDiveResponses,
+    payload.deepDiveGeneratedReport,
+    meta
   );
 
   const crmPayload = {
@@ -90,6 +127,12 @@ export async function POST(request: Request) {
     category: payload.category,
     source: payload.source || "pixelnarratives.studio",
     notes,
+    ...(payload.leadType === "ai-readiness-deep-dive" && payload.deepDiveGeneratedReport != null
+      ? {
+          deepDiveGeneratedReport: payload.deepDiveGeneratedReport,
+          deepDiveReportMeta: meta ?? undefined,
+        }
+      : {}),
     /**
      * Some CRMs only render the lead note from `answers` (or fall back to a
      * default template when it is empty). This is the same human summary as
@@ -99,6 +142,9 @@ export async function POST(request: Request) {
     answers: { notes },
   };
 
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), CRM_REQUEST_TIMEOUT_MS);
+
   try {
     const response = await fetch(crmEndpoint, {
       method: "POST",
@@ -107,6 +153,7 @@ export async function POST(request: Request) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(crmPayload),
+      signal: controller.signal,
     });
 
     const data = (await response.json().catch(() => null)) as unknown;
@@ -133,10 +180,27 @@ export async function POST(request: Request) {
     return NextResponse.json(data, { status: 201 });
   } catch (err) {
     const message = err instanceof Error ? err.message : "unknown error";
-    console.error(`${LOG_PREFIX} CRM request failed`, { errorMessage: message });
+    const timedOut = err instanceof Error && err.name === "AbortError";
+    if (timedOut) {
+      console.error(`${LOG_PREFIX} CRM request timed out`, {
+        timeoutMs: CRM_REQUEST_TIMEOUT_MS,
+      });
+      return NextResponse.json(
+        { success: false, error: "CRM submission timed out." },
+        { status: 504 }
+      );
+    }
+
+    console.error(`${LOG_PREFIX} CRM request failed`, {
+      errorMessage: message,
+      timedOut,
+      timeoutMs: CRM_REQUEST_TIMEOUT_MS,
+    });
     return NextResponse.json(
       { success: false, error: "CRM submission failed." },
-      { status: 500 }
+      { status: 502 }
     );
+  } finally {
+    clearTimeout(timeout);
   }
 }

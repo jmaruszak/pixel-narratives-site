@@ -20,6 +20,27 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## AI Readiness Assessment Leads
+
+The AI Readiness Assessment submits lead details and calculated results to `POST /api/assessment-lead`. That route validates the basic lead fields, builds the CRM note summary, and forwards the lead to the configured CRM endpoint.
+
+Required environment variables:
+
+```bash
+CRM_ASSESSMENT_ENDPOINT=
+CRM_ASSESSMENT_API_KEY=
+
+# Deep Dive AI (optional — see docs/deployment.md)
+OPENAI_API_KEY=
+OPENAI_MODEL=
+```
+
+Use [`.env.example`](.env.example) as a template.
+
+**Operational behavior** (Deep Dive AI fallbacks, in-memory rate limits, staging smoke tests): **[docs/deployment.md](docs/deployment.md)**.
+
+CRM request failures and timeouts are logged server-side with the `[assessment-lead]` prefix.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

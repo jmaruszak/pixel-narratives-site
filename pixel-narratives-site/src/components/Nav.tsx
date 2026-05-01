@@ -1,10 +1,11 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Nav() {
   return (
     <header className="sticky top-0 z-50 border-b border-white/8 bg-black/40 backdrop-blur-md">
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 py-4 sm:px-6 md:px-10">
-        <a href="/" className="flex items-center gap-3">
+        <Link href="/" className="flex items-center gap-3">
           <Image
             src="/brand/logo-mark.png"
             alt="Pixel Narratives logo"
@@ -15,7 +16,7 @@ export default function Nav() {
           <span className="hidden text-sm uppercase tracking-[0.25em] text-[var(--foreground)] sm:block">
             Pixel Narratives
           </span>
-        </a>
+        </Link>
 
         <div className="flex items-center gap-4 sm:gap-6">
           <nav className="hidden items-center gap-6 md:flex">

@@ -1,3 +1,6 @@
+import type { DeepDiveReportMeta } from "@/lib/deepDiveReport";
+import { appendGeneratedDeepDiveToNotes } from "@/lib/deepDiveReport";
+
 export type SingleChoiceValue = "A" | "B" | "C" | "D";
 
 export type AssessmentAnswer =
@@ -5,6 +8,8 @@ export type AssessmentAnswer =
   | string[]
   | number
   | undefined;
+
+
 
 export type AssessmentAnswers = Record<string, AssessmentAnswer>;
 
@@ -467,7 +472,11 @@ function getResponseById(
 export function buildAssessmentLeadNotes(
   answers: unknown,
   score: number,
-  category: string
+  category: string,
+  leadType?: string,
+  deepDiveResponses?: unknown,
+  deepDiveGeneratedReport?: unknown,
+  deepDiveReportMeta?: DeepDiveReportMeta | null
 ): string {
   const a = answers as {
     responses?: Array<{ id: string; answer?: unknown }>;
@@ -530,5 +539,39 @@ export function buildAssessmentLeadNotes(
   const line4 = `Insight: ${insight}`;
   const line5 = "Next Step: AI Blueprint";
 
-  return [line1, line2, line3, line4, line5].join("\n");
+  const base = [line1, line2, line3, line4, line5].join("\n");
+
+  let notes =
+    leadType === "ai-readiness-deep-dive" && deepDiveResponses != null
+      ? `${base}\n\n---\n${formatDeepDiveNotesAppendix(deepDiveResponses)}`
+      : base;
+
+  notes = appendGeneratedDeepDiveToNotes(notes, deepDiveGeneratedReport, deepDiveReportMeta ?? undefined);
+
+  return notes;
+}
+
+/** Formats CRM note lines from client `deepDiveResponses` array. */
+export function formatDeepDiveNotesAppendix(deepDiveResponses: unknown): string {
+  if (!Array.isArray(deepDiveResponses)) {
+    return "Deep Dive\nLead type: AI Readiness Deep Dive";
+  }
+  const lines: string[] = ["Deep Dive (AI Opportunity Snapshot)", "Lead type: ai-readiness-deep-dive"];
+  for (const item of deepDiveResponses) {
+    if (!item || typeof item !== "object" || !("id" in item)) continue;
+    const row = item as {
+      id?: string;
+      question?: unknown;
+      answerLabels?: unknown;
+    };
+    const q =
+      typeof row.question === "string" ? row.question : row.id ?? "follow-up";
+    const labels = Array.isArray(row.answerLabels)
+      ? row.answerLabels.filter((x) => typeof x === "string").join("; ")
+      : typeof row.answerLabels === "string"
+        ? row.answerLabels
+        : "—";
+    lines.push(`${q}: ${labels}`);
+  }
+  return lines.join("\n");
 }
