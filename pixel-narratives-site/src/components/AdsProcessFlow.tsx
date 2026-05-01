@@ -1,6 +1,22 @@
 "use client";
 
-import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState, useSyncExternalStore } from "react";
+
+const REDUCED_MOTION_QUERY = "(prefers-reduced-motion: reduce)";
+
+function subscribeToReducedMotion(callback: () => void) {
+  const mql = window.matchMedia(REDUCED_MOTION_QUERY);
+  mql.addEventListener("change", callback);
+  return () => mql.removeEventListener("change", callback);
+}
+
+function getReducedMotionSnapshot() {
+  return window.matchMedia(REDUCED_MOTION_QUERY).matches;
+}
+
+function getReducedMotionServerSnapshot() {
+  return false;
+}
 
 const STEPS = [
   {
@@ -24,13 +40,13 @@ const STEPS = [
 export default function AdsProcessFlow() {
   const sectionRef = useRef<HTMLElement>(null);
   const [progress, setProgress] = useState(0);
-  const [reducedMotion, setReducedMotion] = useState(false);
+  const reducedMotion = useSyncExternalStore(
+    subscribeToReducedMotion,
+    getReducedMotionSnapshot,
+    getReducedMotionServerSnapshot
+  );
 
   const update = useCallback(() => {
-    if (reducedMotion) {
-      setProgress(1);
-      return;
-    }
     const el = sectionRef.current;
     if (!el) return;
     const { top, height } = el.getBoundingClientRect();
@@ -42,19 +58,10 @@ export default function AdsProcessFlow() {
     }
     const p = -top / scrollable;
     setProgress(Math.max(0, Math.min(1, p)));
-  }, [reducedMotion]);
-
-  useLayoutEffect(() => {
-    const mql = window.matchMedia("(prefers-reduced-motion: reduce)");
-    setReducedMotion(mql.matches);
-    const onMql = () => setReducedMotion(mql.matches);
-    mql.addEventListener("change", onMql);
-    return () => mql.removeEventListener("change", onMql);
   }, []);
 
   useEffect(() => {
     if (reducedMotion) {
-      setProgress(1);
       return;
     }
     const onScroll = () => requestAnimationFrame(update);
@@ -67,9 +74,10 @@ export default function AdsProcessFlow() {
     };
   }, [reducedMotion, update]);
 
-  const t = progress * 4;
-  const lineH = progress * 100;
-  const lineV = progress * 100;
+  const displayProgress = reducedMotion ? 1 : progress;
+  const t = displayProgress * 4;
+  const lineH = displayProgress * 100;
+  const lineV = displayProgress * 100;
 
   return (
     <section

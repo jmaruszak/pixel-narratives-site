@@ -3,6 +3,7 @@ import { NextResponse } from "next/server";
 import { buildAssessmentLeadNotes } from "@/lib/aiReadinessAssessment";
 
 const LOG_PREFIX = "[assessment-lead]";
+const CRM_REQUEST_TIMEOUT_MS = 5000;
 
 type AssessmentLeadPayload = {
   name?: string;
@@ -99,6 +100,9 @@ export async function POST(request: Request) {
     answers: { notes },
   };
 
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), CRM_REQUEST_TIMEOUT_MS);
+
   try {
     const response = await fetch(crmEndpoint, {
       method: "POST",
@@ -107,6 +111,7 @@ export async function POST(request: Request) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(crmPayload),
+      signal: controller.signal,
     });
 
     const data = (await response.json().catch(() => null)) as unknown;
@@ -133,10 +138,27 @@ export async function POST(request: Request) {
     return NextResponse.json(data, { status: 201 });
   } catch (err) {
     const message = err instanceof Error ? err.message : "unknown error";
-    console.error(`${LOG_PREFIX} CRM request failed`, { errorMessage: message });
+    const timedOut = err instanceof Error && err.name === "AbortError";
+    if (timedOut) {
+      console.error(`${LOG_PREFIX} CRM request timed out`, {
+        timeoutMs: CRM_REQUEST_TIMEOUT_MS,
+      });
+      return NextResponse.json(
+        { success: false, error: "CRM submission timed out." },
+        { status: 504 }
+      );
+    }
+
+    console.error(`${LOG_PREFIX} CRM request failed`, {
+      errorMessage: message,
+      timedOut,
+      timeoutMs: CRM_REQUEST_TIMEOUT_MS,
+    });
     return NextResponse.json(
       { success: false, error: "CRM submission failed." },
-      { status: 500 }
+      { status: 502 }
     );
+  } finally {
+    clearTimeout(timeout);
   }
 }
