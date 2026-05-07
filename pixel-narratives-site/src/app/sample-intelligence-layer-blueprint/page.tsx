@@ -5,8 +5,40 @@ import Nav from "../../components/Nav";
 export const metadata: Metadata = {
   title: "Sample Intelligence Layer Blueprint | Pixel Narratives",
   description:
-    "Preview the structure and thinking behind an Intelligence Layer Blueprint—business analysis, quick wins, workflow improvements, and scoped project opportunities.",
+    "Sample blueprint preview for Intelligence Layer: business analysis, quick wins, workflow improvements, and scoped projects. Full client reports include tools and implementation recommendations.",
+  keywords: [
+    "Intelligence Layer",
+    "sample blueprint",
+    "business analysis",
+    "workflow improvements",
+    "scoped projects",
+    "AI consulting",
+  ],
   alternates: { canonical: "/sample-intelligence-layer-blueprint" },
+  openGraph: {
+    title: "Sample Intelligence Layer Blueprint | Pixel Narratives",
+    description:
+      "Sample blueprint preview for Intelligence Layer: business analysis, quick wins, workflow improvements, and scoped projects. Full client reports include tools and implementation recommendations.",
+    url: "/sample-intelligence-layer-blueprint",
+    siteName: "Pixel Narratives",
+    locale: "en_US",
+    type: "website",
+    images: [
+      {
+        url: "/images/int-cinematic.jpg",
+        width: 2867,
+        height: 1600,
+        alt: "Cinematic visual for Pixel Narratives Intelligence Layer—structured AI and business systems consulting.",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sample Intelligence Layer Blueprint | Pixel Narratives",
+    description:
+      "Sample blueprint preview for Intelligence Layer: business analysis, quick wins, workflow improvements, and scoped projects. Full client reports include tools and implementation recommendations.",
+    images: ["/images/int-cinematic.jpg"],
+  },
 };
 
 const sampleCards = [
