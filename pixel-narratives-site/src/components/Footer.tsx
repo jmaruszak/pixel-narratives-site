@@ -32,6 +32,10 @@ const intelligenceLinks = [
     href: "/ai-readiness-assessment",
     label: "AI Readiness Assessment",
   },
+  {
+    href: "/sample-intelligence-layer-blueprint",
+    label: "Sample Intelligence Layer Blueprint",
+  },
   { href: "/ai-crm-automation", label: "AI CRM Automation" },
 ];
 

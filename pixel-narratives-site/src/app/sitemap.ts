@@ -23,6 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "about",
     "projects",
     "intelligence-layer",
+    "sample-intelligence-layer-blueprint",
     "contact",
     "privacy",
     "how-to-use-ai-in-your-business",
@@ -43,7 +44,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified = LASTMOD_OLD_STATIC;
       changeFrequency = "yearly";
       priority = 0.3;
-    } else if (route === "intelligence-layer" || route === "ai-readiness-assessment") {
+    } else if (
+      route === "intelligence-layer" ||
+      route === "sample-intelligence-layer-blueprint" ||
+      route === "ai-readiness-assessment"
+    ) {
       lastModified = LASTMOD_MAIN_BUSINESS;
       changeFrequency = "monthly";
       priority = 0.9;
