@@ -142,6 +142,52 @@ export default function IntelligenceLayerPage() {
         </div>
       </section>
 
+      <section className="border-t border-white/8">
+        <div className="mx-auto w-full max-w-7xl px-6 py-16 md:px-10 md:py-20">
+          <div className="rounded-[24px] border border-white/8 bg-white/[0.02] p-8 md:p-10">
+            <h2 className="max-w-3xl text-3xl leading-none md:text-4xl">
+              See a Sample Blueprint
+            </h2>
+            <div className="mt-6 max-w-3xl space-y-5 text-base leading-relaxed text-[var(--muted)] md:text-lg">
+              <p>
+                A lot of businesses do not need more random AI ideas. They need
+                someone to look at how the business actually runs and find where
+                time, money, attention, and follow-up are leaking.
+              </p>
+              <p>
+                This sample shows the structure and thinking behind an
+                Intelligence Layer Blueprint: business analysis, quick wins,
+                workflow improvements, and scoped project opportunities.
+              </p>
+              <p>
+                Actual client blueprints go deeper. They include AI tools,
+                services, process changes, automation ideas, and implementation
+                recommendations specific to your business.
+              </p>
+              <p className="text-[var(--foreground)]">
+                In many cases, the best starting point is not a flashy AI tool.
+                It is organizing the data, workflows, and handoffs that AI will
+                eventually depend on.
+              </p>
+            </div>
+            <div className="mt-8 flex flex-wrap gap-4">
+              <a
+                href="/sample-intelligence-layer-blueprint"
+                className="cta-pulse-filled inline-flex items-center rounded-full border border-white/10 bg-[var(--foreground)] px-5 py-2.5 text-sm font-medium text-black transition hover:opacity-90"
+              >
+                View Sample Blueprint
+              </a>
+              <a
+                href="/ai-readiness-assessment"
+                className="cta-pulse-outline inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm text-[var(--foreground)] transition hover:border-white/20 hover:bg-white/5"
+              >
+                Take the AI Readiness Assessment
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <IntelligenceLayerProcessFlow />
 
       <section className="border-t border-white/8">

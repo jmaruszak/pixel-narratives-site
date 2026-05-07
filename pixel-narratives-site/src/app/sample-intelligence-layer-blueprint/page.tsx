@@ -1,0 +1,166 @@
+import type { Metadata } from "next";
+import Footer from "../../components/Footer";
+import Nav from "../../components/Nav";
+
+export const metadata: Metadata = {
+  title: "Sample Intelligence Layer Blueprint | Pixel Narratives",
+  description:
+    "Preview the structure and thinking behind an Intelligence Layer Blueprint—business analysis, quick wins, workflow improvements, and scoped project opportunities.",
+  alternates: { canonical: "/sample-intelligence-layer-blueprint" },
+};
+
+const sampleCards = [
+  {
+    title: "Business Snapshot",
+    body: "A plain-English view of what is happening inside the business before recommending tools or projects.",
+  },
+  {
+    title: "Quick Wins",
+    body: "In actual client blueprints, Quick Wins include AI tools, services, process changes, and simple improvements that can usually be completed in under two hours.",
+  },
+  {
+    title: "Scoped Project Examples",
+    body: "Larger implementation opportunities that may involve automation, workflow design, dashboards, client portals, intake systems, or internal operating tools.",
+  },
+  {
+    title: "Next Steps",
+    body: "A practical path from discovery to blueprint, quick wins, scoped projects, implementation, and ongoing improvement.",
+  },
+] as const;
+
+export default function SampleIntelligenceLayerBlueprintPage() {
+  return (
+    <main className="min-h-screen bg-[var(--background)] text-[var(--foreground)]">
+      <Nav />
+
+      <section className="mx-auto w-full max-w-7xl px-6 py-20 md:px-10 md:py-24">
+        <p className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
+          Intelligence Layer
+        </p>
+        <h1 className="mt-4 max-w-4xl text-3xl leading-none sm:text-4xl md:text-5xl">
+          Sample Intelligence Layer Blueprint
+        </h1>
+        <div className="mt-8 max-w-3xl space-y-6 text-lg leading-relaxed text-[var(--muted)] md:text-xl">
+          <p>
+            Before we recommend tools, automations, AI workflows, or scoped
+            builds, we look at how the business actually runs.
+          </p>
+          <p>
+            This sample blueprint shows the structure and style of thinking
+            behind our Intelligence Layer work: where revenue may be leaking,
+            where follow-up is inconsistent, where workflows are scattered, and
+            where better systems could create capacity.
+          </p>
+          <p>
+            This sample does not include the full tool-specific detail of a
+            client blueprint. Actual client reports include AI tools, services,
+            process changes, automation ideas, and scoped implementation
+            recommendations specific to your business.
+          </p>
+          <p className="text-[var(--foreground)]">
+            This sample shows how we think. A real blueprint shows what we would
+            do for your specific business.
+          </p>
+        </div>
+
+        <div className="mt-10 flex flex-wrap gap-4">
+          <a
+            href="/sample/sample-intelligence-layer-blueprint.pdf"
+            target="_blank"
+            rel="noreferrer"
+            className="cta-pulse-filled inline-flex items-center rounded-full border border-white/10 bg-[var(--foreground)] px-5 py-2.5 text-sm font-medium text-black transition hover:opacity-90"
+          >
+            View the Sample Blueprint
+          </a>
+          <a
+            href="/ai-readiness-assessment"
+            className="cta-pulse-outline inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm text-[var(--foreground)] transition hover:border-white/20 hover:bg-white/5"
+          >
+            Take the AI Readiness Assessment
+          </a>
+        </div>
+      </section>
+
+      <section className="border-t border-white/8">
+        <div className="mx-auto w-full max-w-7xl px-6 py-16 md:px-10 md:py-20">
+          <h2 className="max-w-3xl text-3xl leading-none md:text-4xl">
+            What the Sample Shows
+          </h2>
+          <div className="mt-10 grid gap-6 md:grid-cols-2">
+            {sampleCards.map((card) => (
+              <div
+                key={card.title}
+                className="rounded-[24px] border border-white/8 bg-white/[0.02] p-8"
+              >
+                <h3 className="text-lg font-medium text-[var(--foreground)]">
+                  {card.title}
+                </h3>
+                <p className="mt-3 text-base leading-relaxed text-[var(--muted)]">
+                  {card.body}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-white/8">
+        <div className="mx-auto w-full max-w-7xl px-6 py-16 md:px-10 md:py-20">
+          <h2 className="max-w-3xl text-3xl leading-none md:text-4xl">
+            Why the First Step Is Often Data Cleanup
+          </h2>
+          <div className="mt-8 max-w-3xl space-y-6 text-base leading-relaxed text-[var(--muted)] md:text-lg">
+            <p>
+              A lot of businesses want to jump straight into AI. But if the
+              business information is scattered across inboxes, spreadsheets,
+              text threads, forms, notes, and memory, AI usually makes the mess
+              louder instead of making the business better.
+            </p>
+            <p>
+              That is why we often start with data organization and
+              centralization. Clean intake, clearer workflows, better handoffs,
+              and one place to track the important details create the foundation
+              for AI systems that are actually useful.
+            </p>
+            <p>
+              AI works better when the business has a cleaner operating layer
+              underneath it.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-white/8">
+        <div className="mx-auto w-full max-w-7xl px-6 py-16 md:px-10 md:py-20">
+          <div className="rounded-[24px] border border-white/8 bg-white/[0.02] p-8 md:p-10">
+            <h2 className="max-w-3xl text-3xl leading-none md:text-4xl">
+              Want one built around your business?
+            </h2>
+            <p className="mt-6 max-w-2xl text-base leading-relaxed text-[var(--muted)] md:text-lg">
+              Start with the AI Readiness Assessment. It gives us a clearer
+              picture of where your business is today, what is slowing things
+              down, and where better systems, automation, AI support, or scoped
+              implementation work could help.
+            </p>
+            <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center">
+              <a
+                href="/ai-readiness-assessment"
+                className="cta-pulse-filled inline-flex items-center justify-center rounded-full border border-white/10 bg-[var(--foreground)] px-5 py-2.5 text-sm font-medium text-black transition hover:opacity-90"
+              >
+                Take the AI Readiness Assessment
+              </a>
+              <a
+                href="/intelligence-layer"
+                className="text-sm text-[var(--foreground)] transition hover:opacity-80 sm:px-2"
+              >
+                Back to Intelligence Layer
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </main>
+  );
+}
