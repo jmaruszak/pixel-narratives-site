@@ -1,7 +1,26 @@
 import Footer from "../../components/Footer";
 import Nav from "../../components/Nav";
 
-export default function ContactPage() {
+function firstStringParam(
+  value: string | string[] | undefined,
+): string | undefined {
+  if (value === undefined) return undefined;
+  return Array.isArray(value) ? value[0] : value;
+}
+
+type ContactSearchParams = Record<string, string | string[] | undefined>;
+
+export default async function ContactPage({
+  searchParams,
+}: {
+  searchParams?: Promise<ContactSearchParams>;
+}) {
+  const params: ContactSearchParams = await (
+    searchParams ?? Promise.resolve({} as ContactSearchParams)
+  );
+  const fromWebIntelligence =
+    firstStringParam(params["utm_source"]) === "web-intelligence";
+
   return (
     <main className="min-h-screen bg-[var(--background)] text-[var(--foreground)]">
       <Nav />
@@ -23,6 +42,17 @@ export default function ContactPage() {
           Whether you’re looking to launch a campaign or implement AI across your
           business, we’ll help you take the next step.
         </p>
+
+        {fromWebIntelligence ? (
+          <p className="mt-5 max-w-2xl rounded-2xl border border-white/10 bg-white/[0.04] px-5 py-4 text-sm leading-relaxed text-[var(--muted)] md:text-base">
+            You’re here from{" "}
+            <span className="text-[var(--foreground)]">
+              Web Intelligence
+            </span>
+            . Mention what the scan flagged (or paste a summary) when you reach
+            out—useful context gets you a faster, more specific reply.
+          </p>
+        ) : null}
 
         <div className="mt-12 grid gap-6">
           <div className="rounded-[32px] border border-white/8 bg-white/[0.02] p-8 md:p-10">

@@ -1,3 +1,5 @@
+import { MARKETING_TO_WEB_INTEL_URL } from "../lib/webIntelligence";
+
 const studioLinks = [
   { href: "/", label: "Home" },
   { href: "/projects", label: "Projects" },
@@ -17,7 +19,12 @@ const adLinks = [
   },
 ];
 
-const intelligenceLinks = [
+const intelligenceLinks: {
+  href: string;
+  label: string;
+  external?: boolean;
+}[] = [
+  { href: MARKETING_TO_WEB_INTEL_URL, label: "Web Intelligence", external: true },
   { href: "/ai-consulting-for-businesses", label: "Fractional AI Officer" },
   { href: "/ai-workflow-automation", label: "AI Workflow Automation" },
   {
@@ -113,8 +120,11 @@ export default function Footer() {
           <div className="mt-4 flex flex-col gap-2">
             {intelligenceLinks.map((link) => (
               <a
-                key={link.href}
+                key={`${link.href}-${link.label}`}
                 href={link.href}
+                {...(link.external
+                  ? { target: "_blank" as const, rel: "noreferrer" }
+                  : {})}
                 className="transition hover:text-[var(--foreground)]"
               >
                 {link.label}

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Footer from "../../components/Footer";
 import Nav from "../../components/Nav";
+import { MARKETING_TO_WEB_INTEL_URL } from "../../lib/webIntelligence";
 
 export const metadata: Metadata = {
   title: "About Pixel Narratives | AI Creative Studio & AI Consulting",
@@ -82,17 +83,22 @@ export default function AboutPage() {
               That work made something clear: attention is only part of the
               equation.
             </p>
-            <p>Today, we operate in two lanes:</p>
-            <p>
-              We build high-impact creative for brands.
-              <br />
-              We help companies implement AI-driven systems to grow faster and
-              operate more efficiently.
-            </p>
+            <p>Today, we operate in three lanes:</p>
+            <ol className="mt-2 list-decimal space-y-3 pl-6 marker:text-[var(--muted)]">
+              <li>We build high-impact creative for brands.</li>
+              <li>
+                We help companies implement AI and train their teams so they can
+                grow faster and operate more efficiently.
+              </li>
+              <li>
+                We help businesses better incorporate SEO and AI visibility into
+                their websites.
+              </li>
+            </ol>
             <p>
               Some clients engage us for one.
               <br />
-              Others engage us for both.
+              Others engage us for all three.
             </p>
           </div>
         </div>
@@ -167,13 +173,14 @@ export default function AboutPage() {
               What We Do
             </p>
           </div>
-          <div>
+          <div className="min-w-0">
             <p className="text-lg leading-relaxed text-[var(--muted)] md:text-xl">
-              We operate across two core areas:
+              We help clients in three primary ways: high-impact advertising, AI
+              adoption with team enablement, and website visibility and design.
             </p>
-            <div className="mt-8 grid gap-6 md:grid-cols-2">
-              <div className="rounded-[24px] border border-white/8 bg-white/[0.02] p-6">
-                <h2 className="text-3xl leading-none">
+            <div className="mt-8 grid min-w-0 grid-cols-1 gap-6 lg:grid-cols-3">
+              <div className="min-w-0 overflow-hidden rounded-[24px] border border-white/8 bg-white/[0.02] p-6">
+                <h2 className="text-balance break-words text-2xl leading-snug lg:text-3xl">
                   Narrative Intelligence
                 </h2>
                 <p className="mt-4 text-base leading-relaxed text-[var(--muted)]">
@@ -181,13 +188,32 @@ export default function AboutPage() {
                   and actually move people.
                 </p>
               </div>
-              <div className="rounded-[24px] border border-white/8 bg-white/[0.02] p-6">
-                <h2 className="text-3xl leading-none">
+              <div className="min-w-0 overflow-hidden rounded-[24px] border border-white/8 bg-white/[0.02] p-6">
+                <h2 className="text-balance break-words text-2xl leading-snug lg:text-3xl">
                   Intelligence Layer
                 </h2>
                 <p className="mt-4 text-base leading-relaxed text-[var(--muted)]">
                   Helping companies implement AI in a way that drives real
                   operational results not just experimentation.
+                </p>
+              </div>
+              <div className="flex min-w-0 flex-col overflow-hidden rounded-[24px] border border-white/8 bg-white/[0.02] p-6">
+                <h2 className="text-balance break-words text-2xl leading-snug lg:text-3xl">
+                  Web Intelligence
+                </h2>
+                <p className="mt-4 text-base leading-relaxed text-[var(--muted)]">
+                  A practical read on your website for SEO, AI visibility, and
+                  improvement priorities.
+                </p>
+                <p className="mt-5 text-base">
+                  <a
+                    href={MARKETING_TO_WEB_INTEL_URL}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-[var(--foreground)] transition hover:opacity-80"
+                  >
+                    Open Web Intelligence
+                  </a>
                 </p>
               </div>
             </div>

@@ -7,6 +7,7 @@ Pixel Narratives is an AI-powered commercial production and business AI implemen
 - AI Ads: cinematic, concept-driven commercial production for brands that need ads people actually watch, remember, and share.
 - Intelligence Layer: AI consulting and implementation for businesses that need workflows, automation, CRM systems, governance, and measurable operating value.
 - Fractional AI Officer: a practical positioning for Intelligence Layer, combining AI strategy, implementation, workflow design, adoption support, and accountability without requiring a full-time executive role.
+- Web Intelligence by Pixel Narratives: a live website scan (SEO signals, AI visibility, revenue-leakage style observations, and a recommended game plan). Used in Intelligence Layer Blueprint engagements and available for self-serve use at https://intel.pixelnarratives.studio/
 
 ## Priority Pages
 
@@ -15,6 +16,7 @@ Pixel Narratives is an AI-powered commercial production and business AI implemen
 - Contact: https://pixelnarratives.studio/contact
 - Privacy Policy: https://pixelnarratives.studio/privacy
 - Intelligence Layer: https://pixelnarratives.studio/intelligence-layer
+- Web Intelligence (site scan app): https://intel.pixelnarratives.studio/
 - AI Readiness Assessment: https://pixelnarratives.studio/ai-readiness-assessment
 - AI Commercial Production Company: https://pixelnarratives.studio/ai-commercial-production-company
 - AI Video Ad Agency: https://pixelnarratives.studio/ai-video-ad-agency

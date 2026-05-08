@@ -3,6 +3,7 @@ import AdsProcessFlow from "../components/AdsProcessFlow";
 import Footer from "../components/Footer";
 import Nav from "../components/Nav";
 import ServicesGridReveal from "../components/ServicesGridReveal";
+import { MARKETING_TO_WEB_INTEL_URL } from "../lib/webIntelligence";
 
 export const metadata: Metadata = {
   title: "Pixel Narratives | AI Ads + Business AI Systems",
@@ -142,6 +143,18 @@ export default function Home() {
                 >
                   Explore Intelligence Layer
                 </a>
+                <p className="mt-6 text-sm leading-relaxed text-[var(--muted)]">
+                  Prefer a scan of your live site? Try{" "}
+                  <a
+                    href={MARKETING_TO_WEB_INTEL_URL}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-[var(--foreground)] transition hover:opacity-80"
+                  >
+                    Web Intelligence
+                  </a>
+                  .
+                </p>
               </div>
             </div>
           </div>
@@ -378,6 +391,18 @@ export default function Home() {
                   >
                     Take the AI Readiness Assessment.
                   </a>
+                </p>
+                <p className="mt-4 text-sm leading-relaxed text-[var(--muted)]">
+                  Already have your URL handy? Run{" "}
+                  <a
+                    href={MARKETING_TO_WEB_INTEL_URL}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-[var(--foreground)] transition hover:opacity-80"
+                  >
+                    Web Intelligence
+                  </a>{" "}
+                  for signals on SEO, AI visibility, and friction on the live site.
                 </p>
               </div>
             </div>

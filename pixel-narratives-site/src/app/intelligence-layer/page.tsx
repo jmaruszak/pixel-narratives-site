@@ -1,6 +1,7 @@
 import Footer from "../../components/Footer";
 import Nav from "../../components/Nav";
 import IntelligenceLayerProcessFlow from "../../components/IntelligenceLayerProcessFlow";
+import { MARKETING_TO_WEB_INTEL_URL } from "../../lib/webIntelligence";
 
 export default function IntelligenceLayerPage() {
   return (
@@ -44,6 +45,15 @@ export default function IntelligenceLayerPage() {
                 className="cta-pulse-outline inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm text-[var(--foreground)] transition hover:border-white/20 hover:bg-white/5"
               >
                 Take the AI Readiness Assessment
+              </a>
+
+              <a
+                href={MARKETING_TO_WEB_INTEL_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="cta-pulse-outline inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm text-[var(--foreground)] transition hover:border-white/20 hover:bg-white/5"
+              >
+                Try Web Intelligence
               </a>
             </div>
           </div>
@@ -176,6 +186,48 @@ export default function IntelligenceLayerPage() {
                 className="cta-pulse-filled inline-flex items-center rounded-full border border-white/10 bg-[var(--foreground)] px-5 py-2.5 text-sm font-medium text-black transition hover:opacity-90"
               >
                 View Sample Blueprint
+              </a>
+              <a
+                href="/ai-readiness-assessment"
+                className="cta-pulse-outline inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm text-[var(--foreground)] transition hover:border-white/20 hover:bg-white/5"
+              >
+                Take the AI Readiness Assessment
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-white/8">
+        <div className="mx-auto w-full max-w-7xl px-6 py-16 md:px-10 md:py-20">
+          <div className="rounded-[24px] border border-white/8 bg-white/[0.02] p-8 md:p-10">
+            <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
+              Web Intelligence
+            </p>
+            <h2 className="mt-4 max-w-3xl text-3xl leading-none md:text-4xl">
+              Web Intelligence by Pixel Narratives
+            </h2>
+            <div className="mt-6 max-w-3xl space-y-5 text-base leading-relaxed text-[var(--muted)] md:text-lg">
+              <p>
+                Enter a URL for a structured look at SEO signals, AI visibility,
+                operational friction points, and a pragmatic game plan. We use Web
+                Intelligence often during Intelligence Layer Blueprint work to
+                anchor recommendations in how your website behaves today.
+              </p>
+              <p>
+                You can try it anytime: the same scan can also help teams spot where
+                rebuilds, content, or technical improvements would move the needle.
+                It is a preview, not a substitute for a full blueprint engagement.
+              </p>
+            </div>
+            <div className="mt-8 flex flex-wrap gap-4">
+              <a
+                href={MARKETING_TO_WEB_INTEL_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="cta-pulse-filled inline-flex items-center rounded-full border border-white/10 bg-[var(--foreground)] px-5 py-2.5 text-sm font-medium text-black transition hover:opacity-90"
+              >
+                Open Web Intelligence
               </a>
               <a
                 href="/ai-readiness-assessment"
