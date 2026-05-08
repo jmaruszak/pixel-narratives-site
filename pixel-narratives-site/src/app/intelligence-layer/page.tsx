@@ -119,13 +119,13 @@ export default function IntelligenceLayerPage() {
                 Includes
               </p>
               <ul className="mt-3 space-y-2 text-sm text-[var(--foreground)] md:text-base">
-                <li>AI policy and governance guidance</li>
+                <li>Workflow and bottleneck review</li>
+                <li>AI and automation opportunity mapping</li>
                 <li>Tool stack recommendations</li>
-                <li>Team access strategy</li>
-                <li>Core use case identification</li>
-                <li>Prompt library foundation</li>
-                <li>Automation opportunity mapping</li>
-                <li>30–60 day roadmap</li>
+                <li>Team access and adoption guidance</li>
+                <li>Immediate quick-win recommendations</li>
+                <li>Scoped implementation project roadmap</li>
+                <li>30–60 day priority plan</li>
               </ul>
             </div>
 
