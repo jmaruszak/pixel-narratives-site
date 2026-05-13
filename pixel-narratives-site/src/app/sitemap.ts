@@ -31,7 +31,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
   const routes = [...staticRoutes, ...landingPageSlugs];
 
-  return routes.map((route) => {
+  const pages = routes.map((route) => {
     let lastModified: Date;
     let changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"];
     let priority: number;
@@ -77,4 +77,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority,
     };
   });
+
+  const sampleBlueprintPdf: MetadataRoute.Sitemap[number] = {
+    url: `${baseUrl}/sample/sample-intelligence-layer-blueprint.pdf`,
+    lastModified: LASTMOD_MAIN_BUSINESS,
+    changeFrequency: "monthly",
+    priority: 0.9,
+  };
+
+  return [...pages, sampleBlueprintPdf];
 }
