@@ -1,5 +1,13 @@
+import type { Metadata } from "next";
 import Footer from "../../components/Footer";
 import Nav from "../../components/Nav";
+
+export const metadata: Metadata = {
+  title: "Contact | Pixel Narratives",
+  description:
+    "Get in touch with Pixel Narratives about AI-powered commercial production, Intelligence Layer consulting, or your next campaign.",
+  alternates: { canonical: "/contact" },
+};
 
 function firstStringParam(
   value: string | string[] | undefined,

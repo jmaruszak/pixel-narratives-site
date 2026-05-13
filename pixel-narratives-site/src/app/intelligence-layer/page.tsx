@@ -1,7 +1,15 @@
+import type { Metadata } from "next";
 import Footer from "../../components/Footer";
 import Nav from "../../components/Nav";
 import IntelligenceLayerProcessFlow from "../../components/IntelligenceLayerProcessFlow";
 import { MARKETING_TO_WEB_INTEL_URL } from "../../lib/webIntelligence";
+
+export const metadata: Metadata = {
+  title: "Intelligence Layer | Pixel Narratives",
+  description:
+    "Move from AI experimentation to operational advantage: practical AI systems, workflows, automation, and the Intelligence Layer Blueprint for growing businesses.",
+  alternates: { canonical: "/intelligence-layer" },
+};
 
 export default function IntelligenceLayerPage() {
   return (

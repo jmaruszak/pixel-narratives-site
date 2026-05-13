@@ -21,9 +21,6 @@ export const metadata: Metadata = {
   },
   description:
     "Pixel Narratives builds AI-powered commercial ads and practical AI systems for brands that need attention, workflows, and measurable value.",
-  alternates: {
-    canonical: "/",
-  },
 };
 
 export default function RootLayout({

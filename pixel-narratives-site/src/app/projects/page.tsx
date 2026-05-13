@@ -1,5 +1,13 @@
+import type { Metadata } from "next";
 import Footer from "../../components/Footer";
 import Nav from "../../components/Nav";
+
+export const metadata: Metadata = {
+  title: "Projects | Pixel Narratives",
+  description:
+    "Selected cinematic, concept-driven commercial work from Pixel Narratives—ads built to be watched, remembered, and shared.",
+  alternates: { canonical: "/projects" },
+};
 
 export default function WorkPage() {
   return (
