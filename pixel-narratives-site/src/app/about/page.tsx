@@ -11,38 +11,16 @@ export const metadata: Metadata = {
   alternates: { canonical: "/about" },
 };
 
-const team = [
-  {
-    name: "Jordan Maruszak",
-    title: "Co-Founder, Head of Narrative & Strategy",
-    image: "/images/about-jordan.jpg",
-    body: [
-      "Jordan brings 16 years of experience working alongside business owners and leadership teams to navigate complex decisions, align strategy, and drive long-term outcomes.",
-      "At Pixel Narratives, he leads narrative and strategic direction by helping companies cut through noise, clarify what matters, and turn ideas into work that actually moves the needle.",
-      "His focus is simple: every project should have a clear purpose, a strong point of view, and a measurable impact.",
-    ],
-  },
-  {
-    name: "Lindsey Gresham",
-    title: "Co-Founder, Head of Strategic Relationships",
-    image: "/images/about-lindsey-placeholder.jpg",
-    body: [
-      "Lindsey brings 16 years of experience building trusted relationships and guiding clients through important decisions with clarity and confidence.",
-      "At Pixel Narratives, she leads strategic relationships and partnerships ensuring every engagement is aligned, intentional, and built for long-term value.",
-      "She is the steady hand across the table keeping communication clear, expectations grounded, and clients confident in both the process and the outcome.",
-    ],
-  },
-  {
-    name: "Amber Rogers",
-    title: "Co-Founder, Chief Momentum Officer",
-    image: "/images/about-amber-placeholder.jpg",
-    body: [
-      "Amber brings over 15 years of experience in operations, planning, and execution turning complex ideas into organized, actionable work.",
-      "At Pixel Narratives, she drives momentum across every project ensuring timelines hold, details are handled, and nothing falls through the cracks.",
-      "She is the force behind delivery making sure strategy doesn’t stall and great ideas get finished.",
-    ],
-  },
-];
+const founder = {
+  name: "Jordan Maruszak",
+  title: "Co-Founder, Head of Narrative & Strategy",
+  image: "/images/about-jordan.jpg",
+  body: [
+    "Jordan brings 16 years of experience working alongside business owners and leadership teams to navigate complex decisions, align strategy, and drive long-term outcomes.",
+    "At Pixel Narratives, he leads narrative and strategic direction by helping companies cut through noise, clarify what matters, and turn ideas into work that actually moves the needle.",
+    "His focus is simple: every project should have a clear purpose, a strong point of view, and a measurable impact.",
+  ],
+} as const;
 
 export default function AboutPage() {
   return (
@@ -113,7 +91,7 @@ export default function AboutPage() {
           </div>
           <div className="space-y-6 text-lg leading-relaxed text-[var(--muted)] md:text-xl">
             <p>
-              We bring over 15 years of experience each working alongside
+              Our leadership brings over 15 years of experience working alongside
               business owners and leadership teams in high-stakes environments.
             </p>
             <p>That experience shapes everything we do.</p>
@@ -132,36 +110,45 @@ export default function AboutPage() {
       <section className="border-t border-white/8">
         <div className="mx-auto w-full max-w-7xl px-6 py-20 md:px-10">
           <p className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
-            The Team
+            Founder
           </p>
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {team.map((member) => (
-              <article
-                key={member.name}
-                className="rounded-[28px] border border-white/8 bg-white/[0.02] p-6"
-              >
-                <div className="overflow-hidden rounded-[20px] border border-white/8 bg-black">
-                  <Image
-                    src={member.image}
-                    alt={member.name}
-                    width={1200}
-                    height={1500}
-                    className="aspect-[4/5] h-auto w-full object-cover"
-                  />
-                </div>
-                <h2 className="mt-6 text-3xl leading-none md:text-4xl">
-                  {member.name}
+          <article className="mt-10 max-w-4xl rounded-[28px] border border-white/8 bg-white/[0.02] p-6 md:p-8">
+            <div className="grid gap-8 md:grid-cols-[0.42fr_0.58fr] md:items-start">
+              <div className="overflow-hidden rounded-[20px] border border-white/8 bg-black">
+                <Image
+                  src={founder.image}
+                  alt={founder.name}
+                  width={1200}
+                  height={1500}
+                  className="aspect-[4/5] h-auto w-full object-cover"
+                />
+              </div>
+              <div>
+                <h2 className="text-3xl leading-none md:text-4xl">
+                  {founder.name}
                 </h2>
                 <p className="mt-3 text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
-                  {member.title}
+                  {founder.title}
                 </p>
                 <div className="mt-5 space-y-4 text-sm leading-relaxed text-[var(--muted)] md:text-base">
-                  {member.body.map((paragraph) => (
+                  {founder.body.map((paragraph) => (
                     <p key={paragraph}>{paragraph}</p>
                   ))}
                 </div>
-              </article>
-            ))}
+              </div>
+            </div>
+          </article>
+          <div className="mt-10 max-w-3xl rounded-[24px] border border-white/8 bg-white/[0.02] p-6 md:p-8">
+            <p className="text-base leading-relaxed text-[var(--muted)] md:text-lg">
+              Pixel Narratives was co-founded by a multidisciplinary team
+              spanning storytelling, creative production, operations, and business
+              strategy.
+            </p>
+            <p className="mt-4 text-base leading-relaxed text-[var(--muted)] md:text-lg">
+              Our team combines creative thinking, technical execution, and
+              practical business experience to help brands tell stories people
+              actually want to watch.
+            </p>
           </div>
         </div>
       </section>
