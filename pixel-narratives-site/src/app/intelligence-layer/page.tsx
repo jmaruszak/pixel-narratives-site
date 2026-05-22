@@ -4,10 +4,21 @@ import Nav from "../../components/Nav";
 import IntelligenceLayerProcessFlow from "../../components/IntelligenceLayerProcessFlow";
 import { MARKETING_TO_WEB_INTEL_URL } from "../../lib/webIntelligence";
 
+const IMPLEMENTATION_PROJECTS = [
+  "CRM automation",
+  "Website redesigns",
+  "AI workflow systems",
+  "Lead routing",
+  "Internal knowledge systems",
+  "AI visibility optimization",
+  "Custom GPTs",
+  "Reporting dashboards",
+] as const;
+
 export const metadata: Metadata = {
   title: "Intelligence Layer | Pixel Narratives",
   description:
-    "Move from AI experimentation to operational advantage: practical AI systems, workflows, automation, and the Intelligence Layer Blueprint for growing businesses.",
+    "Move from AI experimentation to operational advantage: AI implementation for businesses, workflow automation, operational AI consulting, and the Intelligence Layer Blueprint.",
   alternates: { canonical: "/intelligence-layer" },
 };
 
@@ -16,6 +27,7 @@ export default function IntelligenceLayerPage() {
     <main className="min-h-screen bg-[var(--background)] text-[var(--foreground)]">
       <Nav />
 
+      {/* Hero */}
       <section className="mx-auto w-full max-w-7xl px-6 py-20 md:px-10 md:py-24">
         <div className="grid gap-10 md:grid-cols-[0.95fr_1.05fr] md:items-center">
           <div className="max-w-2xl">
@@ -24,8 +36,8 @@ export default function IntelligenceLayerPage() {
             </p>
 
             <h1 className="mt-4 text-3xl leading-none sm:text-4xl md:text-5xl">
-  From AI experimentation to operational advantage.
-</h1>
+              From AI experimentation to operational advantage.
+            </h1>
 
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-[var(--muted)] md:text-xl">
               Most teams are already experimenting with AI. Very few businesses
@@ -40,52 +52,288 @@ export default function IntelligenceLayerPage() {
 
             <div className="mt-10 flex flex-wrap gap-4">
               <a
-                href="https://calendly.com/pixelnarratives"
-                target="_blank"
-                rel="noreferrer"
-                className="cta-pulse-filled inline-flex items-center rounded-full border border-white/10 bg-[var(--foreground)] px-5 py-2.5 text-sm font-medium text-black transition hover:opacity-90"
-              >
-                Book a Discovery Call
-              </a>
-
-              <a
                 href="/ai-readiness-assessment"
-                className="cta-pulse-outline inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm text-[var(--foreground)] transition hover:border-white/20 hover:bg-white/5"
+                className="cta-pulse-filled inline-flex items-center rounded-full border border-white/10 bg-[var(--foreground)] px-5 py-2.5 text-sm font-medium text-black transition hover:opacity-90"
               >
                 Take the AI Readiness Assessment
               </a>
 
               <a
-                href={MARKETING_TO_WEB_INTEL_URL}
+                href="https://calendly.com/pixelnarratives"
                 target="_blank"
                 rel="noreferrer"
                 className="cta-pulse-outline inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm text-[var(--foreground)] transition hover:border-white/20 hover:bg-white/5"
               >
-                Try Web Intelligence
+                Book a Discovery Call
               </a>
             </div>
           </div>
 
-          <div className="overflow-hidden rounded-[24px] border border-white/8 bg-black">
+          <div className="relative overflow-hidden rounded-[24px] border border-white/8 bg-black">
             <img
               src="/images/int-cinematic.jpg"
               alt="Cinematic Intelligence Layer hero image"
               className="block h-full w-full object-cover"
             />
+            <div
+              className="pointer-events-none absolute inset-0 grid grid-cols-3 grid-rows-3 gap-px p-6 opacity-[0.12]"
+              aria-hidden
+            >
+              {Array.from({ length: 9 }).map((_, i) => (
+                <div
+                  key={i}
+                  className="rounded-sm border border-white/40"
+                />
+              ))}
+            </div>
           </div>
         </div>
+      </section>
 
-        <div className="mt-16 grid gap-8 md:grid-cols-[1.2fr_0.8fr] md:items-start">
-          <div className="overflow-hidden rounded-[24px] border border-white/8 bg-white/[0.02] p-8 md:p-10">
+      <IntelligenceLayerProcessFlow />
+
+      {/* Pricing */}
+      <section className="border-t border-white/8">
+        <div className="mx-auto w-full max-w-7xl px-6 py-16 md:px-10 md:py-20">
+          <div className="max-w-2xl">
+            <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
+              Offerings
+            </p>
+            <h2 className="mt-4 text-3xl leading-none md:text-4xl">
+              A clear path from blueprint to implementation
+            </h2>
+          </div>
+
+          <div className="mt-12 grid gap-8 lg:grid-cols-3 lg:items-start">
+            {/* Intelligence Layer Blueprint */}
+            <div className="flex flex-col rounded-[24px] border border-white/8 bg-white/[0.02] p-8 lg:p-10">
+              <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
+                Best First Step
+              </p>
+
+              <h3 className="mt-4 text-2xl leading-none md:text-3xl">
+                Intelligence Layer Blueprint
+              </h3>
+
+              <p className="mt-4 text-sm uppercase tracking-[0.25em] text-[var(--muted)]">
+                $950
+              </p>
+
+              <p className="mt-6 text-base leading-relaxed text-[var(--muted)]">
+                A focused strategic engagement designed to identify where AI fits
+                in your business, what tools make sense, where access and cost
+                should be controlled, and what should happen next.
+              </p>
+
+              <div className="mt-8 flex-1">
+                <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
+                  Includes
+                </p>
+                <ul className="mt-3 space-y-2 text-sm text-[var(--foreground)] md:text-base">
+                  <li>Workflow and bottleneck review</li>
+                  <li>AI and automation opportunity mapping</li>
+                  <li>Tool stack recommendations</li>
+                  <li>Team access and adoption guidance</li>
+                  <li>Immediate quick-win recommendations</li>
+                  <li>Scoped implementation project roadmap</li>
+                  <li>30–60 day priority plan</li>
+                </ul>
+              </div>
+
+              <div className="mt-8">
+                <a
+                  href="https://calendly.com/pixelnarratives"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="cta-pulse-outline inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm text-[var(--foreground)] transition hover:border-white/20 hover:bg-white/5"
+                >
+                  Start with the Blueprint
+                </a>
+                <p className="mt-4 text-sm leading-relaxed text-[var(--muted)]">
+                  Not sure where you stand?{" "}
+                  <a
+                    href="/ai-readiness-assessment"
+                    className="text-[var(--foreground)] transition hover:opacity-80"
+                  >
+                    Take the AI Readiness Assessment.
+                  </a>
+                </p>
+              </div>
+            </div>
+
+            {/* Guided Implementation */}
+            <div className="flex flex-col rounded-[24px] border border-white/12 bg-white/[0.02] p-8 lg:p-10">
+              <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
+                Ongoing Support
+              </p>
+
+              <h3 className="mt-4 text-2xl leading-none md:text-3xl">
+                Guided Implementation
+              </h3>
+
+              <p className="mt-4 text-sm uppercase tracking-[0.25em] text-[var(--muted)]">
+                Starting at $1,200/month · 3-month minimum
+              </p>
+
+              <p className="mt-6 text-base leading-relaxed text-[var(--muted)]">
+                Deliver outcomes through implementation over a structured engagement.
+                This is where the real work happens: implementing core systems over time, refining
+                them, and making sure your team is trained to use them.
+              </p>
+
+              <div className="mt-8 flex-1">
+                <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
+                  What&apos;s Included
+                </p>
+                <ul className="mt-3 space-y-2 text-sm text-[var(--foreground)] md:text-base">
+                  <li>Build core AI workflows inside your business</li>
+                  <li>Tool setup and system integration</li>
+                  <li>Ongoing refinement and troubleshooting</li>
+                  <li>Monthly working sessions</li>
+                  <li>Ongoing support between sessions</li>
+                  <li>Team training and onboarding</li>
+                </ul>
+
+                <div className="mt-8">
+                  <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
+                    What to Expect
+                  </p>
+                  <p className="mt-2 text-sm text-[var(--muted)]">
+                    Every engagement is different, but most follow a progression like this:
+                  </p>
+                  <ul className="mt-4 space-y-2 text-sm text-[var(--foreground)] md:text-base">
+                    <li>Phase 1: Build core systems</li>
+                    <li>Phase 2: Improve and stabilize performance</li>
+                    <li>Phase 3: Drive adoption across your team</li>
+                    <li>Phase 4: Expand into new projects and opportunities</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="mt-8">
+                <a
+                  href="https://calendly.com/pixelnarratives"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="cta-pulse-outline inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm text-[var(--foreground)] transition hover:border-white/20 hover:bg-white/5"
+                >
+                  Book a Discovery Call
+                </a>
+              </div>
+            </div>
+
+            {/* Fractional Chief AI Officer */}
+            <div className="flex flex-col rounded-[24px] border border-white/8 bg-white/[0.02] p-8 lg:p-10">
+              <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
+                Operational Scale
+              </p>
+
+              <h3 className="mt-4 text-2xl leading-none md:text-3xl">
+                Fractional Chief AI Officer
+              </h3>
+
+              <p className="mt-4 text-sm uppercase tracking-[0.25em] text-[var(--muted)]">
+                Starting at $5,000/month
+              </p>
+
+              <p className="mt-6 text-base leading-relaxed text-[var(--muted)]">
+                For leadership teams ready to treat AI as an operational priority—not
+                a side experiment. We work at the executive level to align strategy,
+                systems, and implementation across the organization.
+              </p>
+
+              <div className="mt-8 flex-1">
+                <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
+                  What&apos;s Included
+                </p>
+                <ul className="mt-3 space-y-2 text-sm text-[var(--foreground)] md:text-base">
+                  <li>Executive AI strategy</li>
+                  <li>Operational redesign</li>
+                  <li>Implementation oversight</li>
+                  <li>Leadership advisory</li>
+                  <li>Quarterly initiatives</li>
+                </ul>
+              </div>
+
+              <div className="mt-8">
+                <a
+                  href="https://calendly.com/pixelnarratives"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="cta-pulse-outline inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm text-[var(--foreground)] transition hover:border-white/20 hover:bg-white/5"
+                >
+                  Book a Discovery Call
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-8 rounded-[24px] border border-white/8 bg-white/[0.02] p-8 md:p-10">
+            <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
+              Maintenance Support
+            </p>
+            <p className="mt-4 text-base leading-relaxed text-[var(--muted)] md:text-lg">
+              Ongoing support available for existing clients, pricing adjusted based on scope.
+              Keep your systems running smoothly without overpaying for build work. Once your
+              core systems are in place, we transition you to a lighter support model focused on
+              stability and small improvements.
+            </p>
+            <ul className="mt-6 grid gap-2 text-sm text-[var(--foreground)] sm:grid-cols-2 md:text-base">
+              <li>Ongoing system maintenance and adjustments</li>
+              <li>Quarterly optimization reviews</li>
+              <li>Ongoing support as needed</li>
+              <li>Minor workflow improvements as needed</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Implementation Projects */}
+      <section className="border-t border-white/8">
+        <div className="mx-auto w-full max-w-7xl px-6 py-16 md:px-10 md:py-20">
+          <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
+            Custom Solutions
+          </p>
+          <h2 className="mt-4 max-w-3xl text-3xl leading-none md:text-4xl">
+            Tailored AI systems and advanced workflow builds
+          </h2>
+          <p className="mt-6 max-w-3xl text-base leading-relaxed text-[var(--muted)] md:text-lg">
+            For businesses with more specific needs, we scope and build
+            tailored AI systems, internal tools, and advanced workflow
+            automations designed around the way your business actually
+            operates.
+          </p>
+
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {IMPLEMENTATION_PROJECTS.map((project) => (
+              <div
+                key={project}
+                className="rounded-2xl border border-white/8 bg-white/[0.02] px-5 py-4 text-sm text-[var(--foreground)] md:text-base"
+              >
+                {project}
+              </div>
+            ))}
+          </div>
+
+          <p className="mt-8 text-base leading-relaxed text-[var(--muted)] md:text-lg">
+            Typical implementation projects range from $3,000–$25,000+ depending on scope.
+          </p>
+        </div>
+      </section>
+
+      {/* The Gap */}
+      <section className="border-t border-white/8">
+        <div className="mx-auto w-full max-w-7xl px-6 py-16 md:px-10 md:py-20">
+          <div className="rounded-[24px] border border-white/8 bg-white/[0.02] p-8 md:p-10">
             <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
               The Gap
             </p>
 
-            <h2 className="mt-4 text-3xl leading-none md:text-4xl">
+            <h2 className="mt-4 max-w-3xl text-3xl leading-none md:text-4xl">
               Your team is using AI. But your business probably is not.
             </h2>
 
-            <div className="mt-8 space-y-5 text-base leading-relaxed text-[var(--muted)] md:text-lg">
+            <div className="mt-8 max-w-3xl space-y-5 text-base leading-relaxed text-[var(--muted)] md:text-lg">
               <p>
                 ChatGPT logins, scattered prompts, and one-off experiments do
                 not create business value on their own.
@@ -102,64 +350,63 @@ export default function IntelligenceLayerPage() {
               </p>
             </div>
           </div>
+        </div>
+      </section>
 
-          <div className="rounded-[24px] border border-white/8 bg-white/[0.02] p-8">
-            <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
-              Best First Step
-            </p>
-
-            <h2 className="mt-4 text-3xl leading-none md:text-4xl">
-              Intelligence Layer Blueprint
-            </h2>
-
-            <p className="mt-4 text-sm uppercase tracking-[0.25em] text-[var(--muted)]">
-              $950
-            </p>
-
-            <p className="mt-6 text-base leading-relaxed text-[var(--muted)] md:text-lg">
-              A focused strategic engagement designed to identify where AI fits
-              in your business, what tools make sense, where access and cost
-              should be controlled, and what should happen next.
-            </p>
-
-            <div className="mt-8">
+      {/* Case Study */}
+      <section className="border-t border-white/8">
+        <div className="mx-auto w-full max-w-7xl px-6 py-16 md:px-10 md:py-20">
+          <div className="grid gap-8 md:grid-cols-[1.1fr_0.9fr] md:items-start">
+            <div className="rounded-[24px] border border-white/8 bg-black p-8 md:p-10">
               <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
-                Includes
+                Implementation Example
               </p>
-              <ul className="mt-3 space-y-2 text-sm text-[var(--foreground)] md:text-base">
-                <li>Workflow and bottleneck review</li>
-                <li>AI and automation opportunity mapping</li>
-                <li>Tool stack recommendations</li>
-                <li>Team access and adoption guidance</li>
-                <li>Immediate quick-win recommendations</li>
-                <li>Scoped implementation project roadmap</li>
-                <li>30–60 day priority plan</li>
-              </ul>
+
+              <h2 className="mt-4 text-3xl leading-none md:text-4xl">
+                From fragmented systems to a clear roadmap
+              </h2>
+
+              <p className="mt-6 text-base leading-relaxed text-[var(--muted)] md:text-lg">
+                A professional services firm came to us with good tools, scattered
+                workflows, and no shared picture of what to fix first. Leads moved
+                through manual handoffs. Content lived in too many places. AI
+                experiments were happening, but nothing connected to how the
+                business actually ran.
+              </p>
             </div>
 
-            <div className="mt-8">
-              <a
-                href="https://calendly.com/pixelnarratives"
-                target="_blank"
-                rel="noreferrer"
-                className="cta-pulse-outline inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm text-[var(--foreground)] transition hover:border-white/20 hover:bg-white/5"
-              >
-                Start with the Blueprint
-              </a>
-              <p className="mt-4 text-sm leading-relaxed text-[var(--muted)]">
-                Not sure where you stand?{" "}
-                <a
-                  href="/ai-readiness-assessment"
-                  className="text-[var(--foreground)] transition hover:opacity-80"
-                >
-                  Take the AI Readiness Assessment.
-                </a>
+            <div className="rounded-[24px] border border-white/8 bg-white/[0.02] p-8 md:p-10">
+              <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
+                What We Did
               </p>
+
+              <ul className="mt-4 space-y-3 text-sm text-[var(--foreground)] md:text-base">
+                <li>Mapped workflows, tools, and bottlenecks across the business</li>
+                <li>Identified where time, follow-up, and handoffs were leaking</li>
+                <li>Delivered a scoped implementation roadmap with clear priorities</li>
+                <li>Defined practical next steps for systems, automation, and team adoption</li>
+              </ul>
+
+              <p className="mt-8 text-base leading-relaxed text-[var(--muted)]">
+                The outcome was not a pile of AI recommendations. It was a clearer
+                operating picture, a prioritized plan, and a practical path from
+                experimentation to implementation.
+              </p>
+
+              <div className="mt-8">
+                <a
+                  href="/sample-intelligence-layer-blueprint"
+                  className="text-sm text-[var(--foreground)] transition hover:opacity-80"
+                >
+                  See what a blueprint looks like →
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
+      {/* Sample Blueprint */}
       <section className="border-t border-white/8">
         <div className="mx-auto w-full max-w-7xl px-6 py-16 md:px-10 md:py-20">
           <div className="rounded-[24px] border border-white/8 bg-white/[0.02] p-8 md:p-10">
@@ -206,6 +453,7 @@ export default function IntelligenceLayerPage() {
         </div>
       </section>
 
+      {/* Web Intelligence */}
       <section className="border-t border-white/8">
         <div className="mx-auto w-full max-w-7xl px-6 py-16 md:px-10 md:py-20">
           <div className="rounded-[24px] border border-white/8 bg-white/[0.02] p-8 md:p-10">
@@ -248,133 +496,9 @@ export default function IntelligenceLayerPage() {
         </div>
       </section>
 
-      <IntelligenceLayerProcessFlow />
-
+      {/* Who This Is For */}
       <section className="border-t border-white/8">
         <div className="mx-auto w-full max-w-7xl px-6 py-16 md:px-10 md:py-20">
-          <div className="space-y-16">
-            <div className="grid gap-8 md:grid-cols-[1.1fr_0.9fr] md:items-start">
-            <div className="rounded-[24px] border border-white/8 bg-black p-8">
-              <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
-                Ongoing Support
-              </p>
-
-              <h2 className="mt-4 text-3xl leading-none md:text-4xl">
-                Growth Tier
-              </h2>
-
-              <p className="mt-4 text-sm uppercase tracking-[0.25em] text-[var(--muted)]">
-                Starting at $2,000/month
-              </p>
-
-              <p className="mt-6 text-base leading-relaxed text-[var(--muted)] md:text-lg">
-  Deliver outcomes through implementation over a structured engagement.
-  This is where the real work happens: implementing core systems over time, refining
-  them, and making sure your team is trained to use them.
-</p>
-            </div>
-
-            <div className="rounded-[24px] border border-white/8 bg-white/[0.02] p-8">
-              <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
-                What’s Included
-              </p>
-
-              <ul className="mt-4 space-y-2 text-sm text-[var(--foreground)] md:text-base">
-                <li>Build core AI workflows inside your business</li>
-                <li>Tool setup and system integration</li>
-                <li>Ongoing refinement and troubleshooting</li>
-                <li>Monthly working sessions</li>
-                <li>Ongoing support between sessions</li>
-                <li>Team training and onboarding</li>
-              </ul>
-
-              <div className="mt-8">
-  <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
-    What to Expect
-  </p>
-  <p className="mt-2 text-sm text-[var(--muted)]">
-  Every engagement is different, but most follow a progression like this:
-</p>
-  <ul className="mt-4 space-y-2 text-sm text-[var(--foreground)] md:text-base">
-    <li>Phase 1: Build core systems</li>
-    <li>Phase 2: Improve and stabilize performance</li>
-    <li>Phase 3: Drive adoption across your team</li>
-    <li>Phase 4: Expand into new projects and opportunities</li>
-  </ul>
-</div>
-
-              
-            </div>
-          </div>
-
-          <div className="grid gap-8 md:grid-cols-[1.1fr_0.9fr] md:items-start">
-            <div className="rounded-[24px] border border-white/8 bg-black p-8">
-              <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
-                Ongoing Support
-              </p>
-
-              <h2 className="mt-4 text-3xl leading-none md:text-4xl">
-                Maintenance Tier
-              </h2>
-
-              <p className="mt-4 text-sm uppercase tracking-[0.25em] text-[var(--muted)]">
-                Ongoing Support available for existing clients, pricing adjusted based on scope.
-              </p>
-
-              <p className="mt-6 text-base leading-relaxed text-[var(--muted)] md:text-lg">
-                Keep your systems running smoothly without overpaying for build
-                work. Once your core systems are in place, we transition you to
-                a lighter support model focused on stability and small
-                improvements.
-              </p>
-            </div>
-
-            <div className="rounded-[24px] border border-white/8 bg-white/[0.02] p-8">
-              <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
-                What’s Included
-              </p>
-
-              <ul className="mt-4 space-y-2 text-sm text-[var(--foreground)] md:text-base">
-                <li>Ongoing system maintenance and adjustments</li>
-                <li>Quarterly optimization reviews</li>
-                <li>Ongoing support as needed</li>
-                <li>Minor workflow improvements as needed</li>
-              </ul>
-
-              <p className="mt-8 text-base leading-relaxed text-[var(--muted)]">
-                Designed for long-term support.
-              </p>
-            </div>
-          </div>
-
-          <div className="grid gap-8 md:grid-cols-[1.1fr_0.9fr] md:items-start">
-            <div className="rounded-[24px] border border-white/8 bg-black p-8">
-              <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
-                Custom Solutions
-              </p>
-
-              <h2 className="mt-4 text-3xl leading-none md:text-4xl">
-                Tailored AI systems and advanced workflow builds
-              </h2>
-            </div>
-
-            <div className="rounded-[24px] border border-white/8 bg-white/[0.02] p-8">
-              <p className="text-base leading-relaxed text-[var(--muted)] md:text-lg">
-                For businesses with more specific needs, we scope and build
-                tailored AI systems, internal tools, and advanced workflow
-                automations designed around the way your business actually
-                operates.
-              </p>
-
-              <div className="mt-8">
-                <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
-                  Starting at
-                </p>
-                <p className="mt-2 text-2xl leading-none">$15,000</p>
-              </div>
-            </div>
-          </div>
-
           <div className="grid gap-8 md:grid-cols-[1.1fr_0.9fr] md:items-start">
             <div className="rounded-[24px] border border-white/8 bg-black p-8">
               <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
@@ -397,10 +521,10 @@ export default function IntelligenceLayerPage() {
               </ul>
             </div>
           </div>
-          </div>
         </div>
       </section>
 
+      {/* Bottom CTA */}
       <section className="next-step-section border-t border-white/8">
         <div className="next-step-bg" aria-hidden />
         <div className="next-step-fade" aria-hidden />
