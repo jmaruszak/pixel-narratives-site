@@ -316,7 +316,7 @@ export default function IntelligenceLayerPage() {
           </div>
 
           <p className="mt-8 text-base leading-relaxed text-[var(--muted)] md:text-lg">
-            Typical implementation projects range from $3,000–$25,000+ depending on scope.
+            Quoted based on scope.
           </p>
         </div>
       </section>
