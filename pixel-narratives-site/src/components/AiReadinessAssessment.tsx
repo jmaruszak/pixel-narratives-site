@@ -1,6 +1,6 @@
 "use client";
 
-import { FormEvent, useMemo, useState } from "react";
+import { FormEvent, useMemo, useRef, useState } from "react";
 import {
   assessmentQuestions,
   buildAnswerPayload,
@@ -15,6 +15,7 @@ import {
   type DeepDiveReportMeta,
   type UnifiedDeepDiveReport,
 } from "../lib/deepDiveReport";
+import { useWebMcpForm, webMcpForm, webMcpParam } from "../lib/webMcpAttributes";
 
 type LeadForm = {
   name: string;
@@ -397,6 +398,16 @@ export default function AiReadinessAssessment() {
   const [crmSyncNotice, setCrmSyncNotice] = useState("");
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const leadFormRef = useRef<HTMLFormElement>(null);
+
+  useWebMcpForm(
+    leadFormRef,
+    webMcpForm({
+      toolname: "submit_ai_readiness_snapshot",
+      tooldescription:
+        "Submit contact details to generate and receive the AI Readiness Deep Dive snapshot",
+    }),
+  );
 
   const currentQuestion = assessmentQuestions[questionIndex];
   const scoreBreakdown = useMemo(
@@ -750,7 +761,10 @@ export default function AiReadinessAssessment() {
                 <p className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
                   {currentQuestion.section}
                 </p>
-                <h2 className="mt-4 max-w-3xl text-3xl leading-[1.08] md:text-5xl">
+                <h2
+                  id={`question-${currentQuestion.id}`}
+                  className="mt-4 max-w-3xl text-3xl leading-[1.08] md:text-5xl"
+                >
                   {currentQuestion.question}
                 </h2>
                 {"helper" in currentQuestion ? (
@@ -764,7 +778,11 @@ export default function AiReadinessAssessment() {
               </p>
             </div>
 
-            <div className="mt-8 grid gap-3">
+            <div
+              className="mt-8 grid gap-3"
+              role="group"
+              aria-labelledby={`question-${currentQuestion.id}`}
+            >
               {currentQuestion.type === "single"
                 ? currentQuestion.options.map((option) => {
                     const active = answers[currentQuestion.id] === option.value;
@@ -772,6 +790,7 @@ export default function AiReadinessAssessment() {
                       <button
                         type="button"
                         key={option.value}
+                        aria-pressed={active}
                         onClick={() => updateAnswer(currentQuestion, option.value)}
                         className={[
                           "rounded-[20px] border p-5 text-left text-base leading-relaxed transition",
@@ -797,6 +816,7 @@ export default function AiReadinessAssessment() {
                       <button
                         type="button"
                         key={option.value}
+                        aria-pressed={active}
                         onClick={() => toggleMultiAnswer(currentQuestion, option.value)}
                         className={[
                           "rounded-[20px] border p-5 text-left text-base leading-relaxed transition",
@@ -819,6 +839,8 @@ export default function AiReadinessAssessment() {
                       <button
                         type="button"
                         key={value}
+                        aria-pressed={active}
+                        aria-label={`${value} of 10`}
                         onClick={() => updateAnswer(currentQuestion, value)}
                         className={[
                           "aspect-square rounded-full border text-sm transition md:text-base",
@@ -851,6 +873,7 @@ export default function AiReadinessAssessment() {
                 type="button"
                 onClick={goNext}
                 disabled={!canContinue}
+                aria-disabled={!canContinue}
                 className="inline-flex items-center rounded-full border border-white/10 bg-[var(--foreground)] px-5 py-2.5 text-sm font-medium text-black transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-40"
               >
                 {questionIndex === assessmentQuestions.length - 1
@@ -978,7 +1001,10 @@ export default function AiReadinessAssessment() {
                 <p className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
                   {currentDeepQuestion.section}
                 </p>
-                <h2 className="mt-4 max-w-3xl text-3xl leading-[1.08] md:text-5xl">
+                <h2
+                  id={`deep-dive-${currentDeepQuestion.id}`}
+                  className="mt-4 max-w-3xl text-3xl leading-[1.08] md:text-5xl"
+                >
                   {currentDeepQuestion.question}
                 </h2>
               </div>
@@ -987,7 +1013,11 @@ export default function AiReadinessAssessment() {
               </p>
             </div>
 
-            <div className="mt-8 grid gap-3">
+            <div
+              className="mt-8 grid gap-3"
+              role="group"
+              aria-labelledby={`deep-dive-${currentDeepQuestion.id}`}
+            >
               {currentDeepQuestion.type === "single"
                 ? currentDeepQuestion.options.map((option) => {
                     const active = deepDiveAnswers[currentDeepQuestion.id] === option.value;
@@ -995,6 +1025,7 @@ export default function AiReadinessAssessment() {
                       <button
                         type="button"
                         key={option.value}
+                        aria-pressed={active}
                         onClick={() => updateDeepDiveAnswer(currentDeepQuestion, option.value)}
                         className={[
                           "rounded-[20px] border p-5 text-left text-base leading-relaxed transition",
@@ -1019,6 +1050,7 @@ export default function AiReadinessAssessment() {
                       <button
                         type="button"
                         key={option.value}
+                        aria-pressed={active}
                         onClick={() =>
                           toggleDeepDiveMulti(currentDeepQuestion, option.value)
                         }
@@ -1048,6 +1080,7 @@ export default function AiReadinessAssessment() {
                 type="button"
                 onClick={goNext}
                 disabled={!canContinue}
+                aria-disabled={!canContinue}
                 className="inline-flex items-center rounded-full border border-white/10 bg-[var(--foreground)] px-5 py-2.5 text-sm font-medium text-black transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-40"
               >
                 Continue
@@ -1057,7 +1090,17 @@ export default function AiReadinessAssessment() {
         ) : null}
 
         {step === "deepDiveLead" ? (
-          <form onSubmit={submitDeepDiveLead} className="max-w-3xl">
+          <form
+            ref={leadFormRef}
+            onSubmit={submitDeepDiveLead}
+            className="max-w-3xl"
+            aria-describedby="deep-dive-lead-privacy"
+            {...webMcpForm({
+              toolname: "submit_ai_readiness_snapshot",
+              tooldescription:
+                "Submit contact details to generate and receive the AI Readiness Deep Dive snapshot",
+            })}
+          >
             <p className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
               Deep Dive
             </p>
@@ -1075,32 +1118,46 @@ export default function AiReadinessAssessment() {
             ) : null}
 
             <div className="mt-8 grid gap-4 md:grid-cols-2">
-              <label className="text-sm text-[var(--muted)]">
+              <label htmlFor="lead-name" className="text-sm text-[var(--muted)]">
                 Name
                 <input
+                  id="lead-name"
+                  name="name"
                   required
                   value={leadForm.name}
                   onChange={(event) =>
                     setLeadForm((current) => ({ ...current, name: event.target.value }))
                   }
+                  {...webMcpParam({
+                    toolparamdescription:
+                      "Full name of the person requesting the snapshot",
+                  })}
                   className="mt-2 w-full rounded-[16px] border border-white/10 bg-white/[0.03] px-4 py-3 text-[var(--foreground)] outline-none transition focus:border-white/25"
                 />
               </label>
-              <label className="text-sm text-[var(--muted)]">
+              <label htmlFor="lead-email" className="text-sm text-[var(--muted)]">
                 Email
                 <input
+                  id="lead-email"
+                  name="email"
                   required
                   type="email"
                   value={leadForm.email}
                   onChange={(event) =>
                     setLeadForm((current) => ({ ...current, email: event.target.value }))
                   }
+                  {...webMcpParam({
+                    toolparamdescription:
+                      "Work email where results may be followed up",
+                  })}
                   className="mt-2 w-full rounded-[16px] border border-white/10 bg-white/[0.03] px-4 py-3 text-[var(--foreground)] outline-none transition focus:border-white/25"
                 />
               </label>
-              <label className="text-sm text-[var(--muted)]">
+              <label htmlFor="lead-company" className="text-sm text-[var(--muted)]">
                 Company
                 <input
+                  id="lead-company"
+                  name="company"
                   required
                   value={leadForm.company}
                   onChange={(event) =>
@@ -1109,17 +1166,25 @@ export default function AiReadinessAssessment() {
                       company: event.target.value,
                     }))
                   }
+                  {...webMcpParam({
+                    toolparamdescription: "Company or organization name",
+                  })}
                   className="mt-2 w-full rounded-[16px] border border-white/10 bg-white/[0.03] px-4 py-3 text-[var(--foreground)] outline-none transition focus:border-white/25"
                 />
               </label>
-              <label className="text-sm text-[var(--muted)]">
+              <label htmlFor="lead-phone" className="text-sm text-[var(--muted)]">
                 Phone (optional)
                 <input
+                  id="lead-phone"
+                  name="phone"
                   type="tel"
                   value={leadForm.phone}
                   onChange={(event) =>
                     setLeadForm((current) => ({ ...current, phone: event.target.value }))
                   }
+                  {...webMcpParam({
+                    toolparamdescription: "Optional phone number for follow-up",
+                  })}
                   className="mt-2 w-full rounded-[16px] border border-white/10 bg-white/[0.03] px-4 py-3 text-[var(--foreground)] outline-none transition focus:border-white/25"
                 />
               </label>
@@ -1141,7 +1206,10 @@ export default function AiReadinessAssessment() {
                 {isSubmitting ? "Generating your snapshot…" : "Generate My Snapshot"}
               </button>
             </div>
-            <p className="mt-5 max-w-2xl text-xs leading-relaxed text-[var(--muted)]">
+            <p
+              id="deep-dive-lead-privacy"
+              className="mt-5 max-w-2xl text-xs leading-relaxed text-[var(--muted)]"
+            >
               By submitting this assessment, you agree that Pixel Narratives may
               use your information to generate your results and follow up about
               AI strategy, workflows, and related services. We do not sell your

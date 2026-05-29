@@ -60,6 +60,9 @@ export default function Home() {
         <img
           src="/images/hero-cinematic.jpg"
           alt="Businessman discovering a new type of studio"
+          width={1920}
+          height={1080}
+          fetchPriority="high"
           className="absolute inset-0 h-full w-full object-cover"
         />
 
@@ -261,9 +264,9 @@ export default function Home() {
           </div>
 
           <div className="mt-14 grid gap-8 md:grid-cols-[1.25fr_0.75fr] md:items-start">
-            <div className="overflow-hidden rounded-[24px] border border-white/8 bg-black">
+            <div className="aspect-video overflow-hidden rounded-[24px] border border-white/8 bg-black">
               <video
-                className="block w-full"
+                className="block h-full w-full"
                 controls
                 playsInline
                 preload="metadata"
@@ -273,7 +276,9 @@ export default function Home() {
                 <img
                   src="/images/runway-still.jpg"
                   alt="The Homie campaign still for Fizz Soda"
-                  className="block w-full object-cover"
+                  width={1920}
+                  height={1080}
+                  className="block h-full w-full object-cover"
                 />
               </video>
             </div>

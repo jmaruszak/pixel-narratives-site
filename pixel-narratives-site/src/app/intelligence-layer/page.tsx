@@ -69,10 +69,12 @@ export default function IntelligenceLayerPage() {
             </div>
           </div>
 
-          <div className="relative overflow-hidden rounded-[24px] border border-white/8 bg-black">
+          <div className="relative aspect-[16/10] overflow-hidden rounded-[24px] border border-white/8 bg-black">
             <img
               src="/images/int-cinematic.jpg"
               alt="Cinematic Intelligence Layer hero image"
+              width={1600}
+              height={1000}
               className="block h-full w-full object-cover"
             />
             <div

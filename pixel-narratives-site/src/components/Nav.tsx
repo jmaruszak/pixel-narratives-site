@@ -19,7 +19,7 @@ export default function Nav() {
         </Link>
 
         <div className="flex items-center gap-4 sm:gap-6">
-          <nav className="hidden items-center gap-6 md:flex">
+          <nav className="hidden items-center gap-6 md:flex" aria-label="Primary navigation">
             <a
               href="/projects"
               className="text-sm text-[var(--muted)] transition hover:text-[var(--foreground)]"
@@ -50,6 +50,7 @@ export default function Nav() {
             href="https://calendly.com/pixelnarratives"
             target="_blank"
             rel="noreferrer"
+            aria-label="Book a discovery call (opens Calendly in a new tab)"
             className="inline-flex items-center rounded-full border border-white/10 bg-[var(--foreground)] px-4 py-2 text-xs font-medium text-black transition hover:opacity-90 sm:px-5 sm:py-2.5 sm:text-sm"
           >
             Book a Call

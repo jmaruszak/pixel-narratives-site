@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Bebas_Neue } from "next/font/google";
+import WebMcpTools from "../components/WebMcpTools";
 import "./globals.css";
 
 const inter = Inter({
@@ -21,6 +22,9 @@ export const metadata: Metadata = {
   },
   description:
     "Pixel Narratives builds AI-powered commercial ads and practical AI systems for brands that need attention, workflows, and measurable value.",
+  other: {
+    "llms-txt": "https://pixelnarratives.studio/llms.txt",
+  },
 };
 
 export default function RootLayout({
@@ -31,6 +35,7 @@ export default function RootLayout({
   return (
     <html lang="en">
     <body className={`site-texture ${inter.variable} ${bebas.variable} antialiased`}>
+        <WebMcpTools />
         {children}
       </body>
     </html>

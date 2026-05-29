@@ -1,4 +1,8 @@
 import type { Metadata } from "next";
+import {
+  BookDiscoveryCallForm,
+  RequestCreativeConceptForm,
+} from "../../components/ContactForms";
 import Footer from "../../components/Footer";
 import Nav from "../../components/Nav";
 
@@ -39,21 +43,21 @@ export default async function ContactPage({
         </p>
 
         <h1 className="mt-4 max-w-3xl text-5xl leading-[1.05] md:text-7xl">
-  Let’s Build Something
-</h1>
-
-<p className="mt-6 max-w-2xl text-lg leading-relaxed text-[var(--muted)] md:text-xl">
-  Campaigns that capture attention. Systems that work.
-</p>
+          Let&apos;s Build Something
+        </h1>
 
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-[var(--muted)] md:text-xl">
-          Whether you’re looking to launch a campaign or implement AI across your
-          business, we’ll help you take the next step.
+          Campaigns that capture attention. Systems that work.
+        </p>
+
+        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-[var(--muted)] md:text-xl">
+          Whether you&apos;re looking to launch a campaign or implement AI across your
+          business, we&apos;ll help you take the next step.
         </p>
 
         {fromWebIntelligence ? (
           <p className="mt-5 max-w-2xl rounded-2xl border border-white/10 bg-white/[0.04] px-5 py-4 text-sm leading-relaxed text-[var(--muted)] md:text-base">
-            You’re here from{" "}
+            You&apos;re here from{" "}
             <span className="text-[var(--foreground)]">
               Web Intelligence
             </span>
@@ -77,16 +81,7 @@ export default async function ContactPage({
               today, and what the right next step looks like.
             </p>
 
-            <div className="mt-6">
-              <a
-                href="https://calendly.com/pixelnarratives"
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center rounded-full border border-white/10 bg-[var(--foreground)] px-6 py-3 text-sm font-medium text-black transition hover:opacity-90"
-              >
-                Book a Zoom Call
-              </a>
-            </div>
+            <BookDiscoveryCallForm />
           </div>
 
           <div className="rounded-[32px] border border-white/8 bg-white/[0.02] p-8 md:p-10">
@@ -99,19 +94,12 @@ export default async function ContactPage({
             </h2>
 
             <p className="mt-4 max-w-xl text-base leading-relaxed text-[var(--muted)]">
-              Tell us what you’re promoting, who it’s for, where the ad will run,
+              Tell us what you&apos;re promoting, who it&apos;s for, where the ad will run,
               and what you want people to remember. If you have a website, offer
               page, or existing creative, include that too.
             </p>
 
-            <div className="mt-6">
-              <a
-                href="mailto:hello@pixelnarratives.studio?subject=Request%20a%20Concept"
-                className="inline-flex items-center rounded-full border border-white/10 px-6 py-3 text-sm text-[var(--foreground)] transition hover:bg-white/5"
-              >
-                Email the Brief
-              </a>
-            </div>
+            <RequestCreativeConceptForm />
           </div>
 
           <div className="rounded-[32px] border border-white/8 bg-white/[0.02] p-8 md:p-10">
@@ -121,6 +109,7 @@ export default async function ContactPage({
 
             <a
               href="mailto:hello@pixelnarratives.studio"
+              aria-label="Email hello@pixelnarratives.studio"
               className="mt-4 inline-block text-xl text-[var(--foreground)] transition hover:text-white"
             >
               hello@pixelnarratives.studio
@@ -138,6 +127,7 @@ export default async function ContactPage({
 
             <a
               href="tel:+19045247269"
+              aria-label="Call Pixel Narratives at 904-524-7269"
               className="mt-4 inline-block text-xl text-[var(--foreground)] transition hover:text-white"
             >
               904-524-7269

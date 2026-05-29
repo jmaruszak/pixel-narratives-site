@@ -33,9 +33,9 @@ export default function WorkPage() {
         <div className="mt-14 space-y-16">
           {/* Project 1 */}
           <div className="grid gap-8 md:grid-cols-[1.25fr_0.75fr] md:items-start">
-            <div className="overflow-hidden rounded-[24px] border border-white/8 bg-black">
+            <div className="aspect-video overflow-hidden rounded-[24px] border border-white/8 bg-black">
               <video
-                className="block w-full"
+                className="block h-full w-full"
                 controls
                 playsInline
                 preload="metadata"
@@ -45,7 +45,9 @@ export default function WorkPage() {
                 <img
                   src="/images/studio-launch-still.jpg"
                   alt="Pixel Narratives Studio Launch still"
-                  className="block w-full object-cover"
+                  width={1920}
+                  height={1080}
+                  className="block h-full w-full object-cover"
                 />
               </video>
             </div>
@@ -96,9 +98,9 @@ export default function WorkPage() {
 
           {/* Project 2 */}
           <div className="grid gap-8 md:grid-cols-[1.25fr_0.75fr] md:items-start">
-            <div className="overflow-hidden rounded-[24px] border border-white/8 bg-black">
+            <div className="aspect-video overflow-hidden rounded-[24px] border border-white/8 bg-black">
               <video
-                className="block w-full"
+                className="block h-full w-full"
                 controls
                 playsInline
                 preload="metadata"
@@ -108,7 +110,9 @@ export default function WorkPage() {
                 <img
                   src="/images/cinder-wealth-still.jpg"
                   alt="Cinder Wealth brand spot still"
-                  className="block w-full object-cover"
+                  width={1920}
+                  height={1080}
+                  className="block h-full w-full object-cover"
                 />
               </video>
             </div>
