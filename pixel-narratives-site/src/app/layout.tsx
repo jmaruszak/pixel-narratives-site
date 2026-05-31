@@ -1,6 +1,6 @@
-import type { Metadata } from "next";
 import { Inter, Bebas_Neue } from "next/font/google";
 import WebMcpTools from "../components/WebMcpTools";
+import { rootMetadata } from "../lib/siteMetadata";
 import "./globals.css";
 
 const inter = Inter({
@@ -14,18 +14,7 @@ const bebas = Bebas_Neue({
   variable: "--font-bebas",
 });
 
-export const metadata: Metadata = {
-  metadataBase: new URL("https://pixelnarratives.studio"),
-  title: {
-    default: "Pixel Narratives | AI Ads + Business AI Systems",
-    template: "%s",
-  },
-  description:
-    "Pixel Narratives builds AI-powered commercial ads and practical AI systems for brands that need attention, workflows, and measurable value.",
-  other: {
-    "llms-txt": "https://pixelnarratives.studio/llms.txt",
-  },
-};
+export const metadata = rootMetadata;
 
 export default function RootLayout({
   children,
@@ -34,7 +23,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-    <body className={`site-texture ${inter.variable} ${bebas.variable} antialiased`}>
+      <body className={`site-texture ${inter.variable} ${bebas.variable} antialiased`}>
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:border focus:border-white/10 focus:bg-[var(--foreground)] focus:px-4 focus:py-2 focus:text-sm focus:font-medium focus:text-black"
+        >
+          Skip to content
+        </a>
         <WebMcpTools />
         {children}
       </body>

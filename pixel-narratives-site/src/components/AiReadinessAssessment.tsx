@@ -227,7 +227,7 @@ function buildDeepDiveSnapshot(
   );
 
   suggest.push(
-    `You described a credible 90-day “win shape” (${aiGoal === "save_time" ? "recovering senior time through fewer manual loops" : aiGoal === "increase_revenue" ? "lifting conversion or pipeline quality" : aiGoal === "improve_cx" ? "smoother customer experience" : aiGoal === "better_decisions" ? "cleaner operational signals" : aiGoal === "reduce_followup" ? "fewer dropped follow-ups" : "better sales and marketing assets"}), paired with comfort level (${comfort === "not_comfortable" ? "starting from low data exposure until policies feel clear" : comfort === "public_ok" ? "lighter-touch data use initially" : comfort === "internal_controlled" ? "controlled internal access" : comfort === "clear_governance" ? "explicit review and permission guardrails" : "hands-on adoption with sensitive data"}). That combination usually defines how fast—and how boldly—you should sequence early initiatives.`
+    `You described a credible 90-day “win shape” (${aiGoal === "save_time" ? "recovering senior time through fewer manual loops" : aiGoal === "increase_revenue" ? "lifting conversion or pipeline quality" : aiGoal === "improve_cx" ? "smoother customer experience" : aiGoal === "better_decisions" ? "cleaner operational signals" : aiGoal === "reduce_followup" ? "fewer dropped follow-ups" : "better sales and marketing assets"}), paired with comfort level (${comfort === "not_comfortable" ? "starting from low data exposure until policies feel clear" : comfort === "public_ok" ? "lighter-touch data use initially" : comfort === "internal_controlled" ? "controlled internal access" : comfort === "clear_governance" ? "explicit review and permission guardrails" : "hands-on adoption with sensitive data"}). That combination usually defines how fast, and how boldly, you should sequence early initiatives.`
   );
 
   const opps: string[] = [];
@@ -266,7 +266,7 @@ function buildDeepDiveSnapshot(
 
   if (weakestSection.id === "readinessGaps") {
     opps.push(
-      "Bringing explicit expectations for how humans and automation split work—enough governance to spread safely, without paralyzing speed."
+      "Bringing explicit expectations for how humans and automation split work: enough governance to spread safely, without paralyzing speed."
     );
   } else if (weakestSection.id === "usage") {
     opps.push(
@@ -274,7 +274,7 @@ function buildDeepDiveSnapshot(
     );
   } else {
     opps.push(
-      "Aligning urgency and sequencing so near-term ambitions map to observable outcomes Leadership can recognize—not just more activity."
+      "Aligning urgency and sequencing so near-term ambitions map to observable outcomes Leadership can recognize, not just more activity."
     );
   }
 
@@ -290,7 +290,7 @@ function buildDeepDiveSnapshot(
     );
   } else {
     opps.push(
-      "Defining scope honestly up front—even without exact revenue disclosures—helps avoid scattering effort across hypothetical big-company priorities."
+      "Defining scope honestly up front, even without exact revenue disclosures, helps avoid scattering effort across hypothetical big-company priorities."
     );
   }
 
@@ -320,11 +320,11 @@ function buildDeepDiveSnapshot(
 
   if (comfort === "not_comfortable" || comfort === "public_ok") {
     gaps.push(
-      "A conservative stance on sensitive data—while prudent—often delays documenting even lightweight review habits that would unlock pragmatic internal pilots."
+      "A conservative stance on sensitive data, while prudent, often delays documenting even lightweight review habits that would unlock pragmatic internal pilots."
     );
   } else {
     gaps.push(
-      "Comfort with richer data participation still needs crisp boundaries—without them, shortcuts can quietly become informal policy."
+      "Comfort with richer data participation still needs crisp boundaries. Without them, shortcuts can quietly become informal policy."
     );
   }
 
@@ -335,7 +335,7 @@ function buildDeepDiveSnapshot(
 
   if (comfort === "not_comfortable" || comfort === "public_ok") {
     moves.push(
-      "Stand up lightweight review language now—who approves AI-assisted summaries, where outputs live, what never leaves the building—without waiting for perfection."
+      "Stand up lightweight review language now (who approves AI-assisted summaries, where outputs live, what never leaves the building) without waiting for perfection."
     );
   } else {
     moves.push(
@@ -345,16 +345,16 @@ function buildDeepDiveSnapshot(
 
   if (fragmentedData) {
     moves.push(
-      "Align on one canonical narrative for critical customer milestones—even if spreadsheets remain—for 90 days, so debate shifts from locating truth to acting on it."
+      "Align on one canonical narrative for critical customer milestones, even if spreadsheets remain, for 90 days, so debate shifts from locating truth to acting on it."
     );
   } else {
     moves.push(
-      "Pair leaders and operators briefly on realistic adoption timing so experiments match how people already work—not an abstract future org chart."
+      "Pair leaders and operators briefly on realistic adoption timing so experiments match how people already work, not an abstract future org chart."
     );
   }
 
   const blueprintContrast =
-    "This snapshot aligns patterns from your readiness score and follow-up picks so you know where directional energy tends to matter in the next quarter. An AI Readiness Blueprint is different: it ingests workflow reality, stakeholder constraints, sequencing risk, adoption habits, and the specific tradeoffs worth taking now versus later—in other words the actual path from ambiguity to rollout you can steward week by week.";
+    "This snapshot aligns patterns from your readiness score and follow-up picks so you know where directional energy tends to matter in the next quarter. An AI Readiness Blueprint is different: it ingests workflow reality, stakeholder constraints, sequencing risk, adoption habits, and the specific tradeoffs worth taking now versus later. In other words, the actual path from ambiguity to rollout you can steward week by week.";
 
   return {
     whatYourAnswersSuggest: suggest.slice(0, 3),
@@ -367,7 +367,7 @@ function buildDeepDiveSnapshot(
 
 function formatDeepDiveFallbackReason(code: string): string {
   const phrases: Record<string, string> = {
-    rate_limit: "too many requests in a short window—try again in a bit",
+    rate_limit: "too many requests in a short window. Try again in a bit",
     timeout: "the AI request timed out",
     openai_disabled: "the optional narrative layer isn’t enabled in this environment",
     network: "a network or connection issue",
@@ -677,13 +677,13 @@ export default function AiReadinessAssessment() {
         const text = await response.text();
         console.error("Assessment CRM sync failed after Deep Dive snapshot", text);
         setCrmSyncNotice(
-          "We couldn't sync this lead to our team inbox yet. Your snapshot is still shown above—feel free to contact us directly if you don't hear back."
+          "We couldn't sync this lead to our team inbox yet. Your snapshot is still shown above. Feel free to contact us directly if you don't hear back."
         );
       }
     } catch (error) {
       console.error("Assessment CRM sync failed after Deep Dive snapshot", error);
       setCrmSyncNotice(
-        "We couldn't sync this lead to our team inbox yet. Your snapshot is still shown above—feel free to contact us directly if you don't hear back."
+        "We couldn't sync this lead to our team inbox yet. Your snapshot is still shown above. Feel free to contact us directly if you don't hear back."
       );
     }
   }
@@ -741,7 +741,7 @@ export default function AiReadinessAssessment() {
               </p>
               <p>
                 This quick 10-question assessment takes about 3 minutes. Answer
-                honestly — there are no wrong answers.
+                honestly. There are no wrong answers.
               </p>
             </div>
             <button
@@ -1248,7 +1248,7 @@ export default function AiReadinessAssessment() {
             {deepDiveReportMeta.generationSource === "deterministic_fallback" &&
             deepDiveReportMeta.openAiErrorCategory ? (
               <p className="mt-6 max-w-3xl rounded-[20px] border border-white/10 bg-white/[0.03] px-4 py-3 text-sm leading-relaxed text-[var(--muted)]">
-                This report is complete and grounded in your answers—we build it the same way for
+                This report is complete and grounded in your answers. We build it the same way for
                 everyone. The optional wording pass didn’t run ({formatDeepDiveFallbackReason(String(deepDiveReportMeta.openAiErrorCategory))}).
               </p>
             ) : null}

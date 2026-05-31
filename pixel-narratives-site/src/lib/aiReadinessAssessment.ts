@@ -135,7 +135,7 @@ export const assessmentQuestions: AssessmentQuestion[] = [
     type: "single",
     question: "What best describes your company’s current AI results?",
     options: [
-      { value: "A", label: "Mostly hype — very little measurable impact" },
+      { value: "A", label: "Mostly hype: very little measurable impact" },
       {
         value: "B",
         label: "Some time savings on small tasks, but nothing strategic",
@@ -171,13 +171,13 @@ export const assessmentQuestions: AssessmentQuestion[] = [
     options: [
       {
         value: "A",
-        label: "Not confident — lots of hesitation or misuse risk",
+        label: "Not confident: lots of hesitation or misuse risk",
       },
       { value: "B", label: "Somewhat confident in a few people" },
       { value: "C", label: "Most of the team is capable but inconsistent" },
       {
         value: "D",
-        label: "High confidence — we have training and standards",
+        label: "High confidence: we have training and standards",
       },
     ],
   },
@@ -214,13 +214,13 @@ export const assessmentQuestions: AssessmentQuestion[] = [
     options: [
       {
         value: "A",
-        label: "Not aligned — AI feels disconnected from strategy",
+        label: "Not aligned: AI feels disconnected from strategy",
       },
       { value: "B", label: "Somewhat aligned" },
       { value: "C", label: "Mostly aligned for a few initiatives" },
       {
         value: "D",
-        label: "Strongly aligned — AI is part of how we plan growth",
+        label: "Strongly aligned: AI is part of how we plan growth",
       },
     ],
   },
@@ -246,14 +246,14 @@ export const assessmentQuestions: AssessmentQuestion[] = [
     options: [
       {
         value: "A",
-        label: "Very difficult — resistance or skill gaps",
+        label: "Very difficult: resistance or skill gaps",
       },
       {
         value: "B",
         label: "Possible but would need significant hand-holding",
       },
       { value: "C", label: "Fairly straightforward with good training" },
-      { value: "D", label: "Smooth — we’ve done it successfully before" },
+      { value: "D", label: "Smooth: we've done it successfully before" },
     ],
   },
   {
@@ -492,7 +492,7 @@ export function buildAssessmentLeadNotes(
       ? Math.round(rawImportance)
       : null;
   const line2 = `Urgency: ${
-    importanceNum != null ? `${importanceNum}/10` : "—"
+    importanceNum != null ? `${importanceNum}/10` : "Not specified"
   }`;
 
   const goalsEntry = getResponseById(responses, "success_goals");
@@ -525,7 +525,7 @@ export function buildAssessmentLeadNotes(
   let insight: string;
   if (lowUsage && (higherUrgency || multipleNonUnsureGoals)) {
     insight =
-      "Low AI usage and limited structure so far, but the goals and priority are clear—strong opportunity to build a clean foundation and early wins with an AI Blueprint.";
+      "Low AI usage and limited structure so far, but the goals and priority are clear. Strong opportunity to build a clean foundation and early wins with an AI Blueprint.";
   } else if (lowUsage) {
     insight =
       "AI usage is still early; the highest leverage is to move from ad-hoc testing to a simple plan, one or two target workflows, and light governance.";
@@ -570,7 +570,7 @@ export function formatDeepDiveNotesAppendix(deepDiveResponses: unknown): string 
       ? row.answerLabels.filter((x) => typeof x === "string").join("; ")
       : typeof row.answerLabels === "string"
         ? row.answerLabels
-        : "—";
+        : "Not specified";
     lines.push(`${q}: ${labels}`);
   }
   return lines.join("\n");

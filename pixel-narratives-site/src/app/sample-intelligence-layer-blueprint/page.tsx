@@ -28,7 +28,7 @@ export const metadata: Metadata = {
         url: "/images/int-cinematic.jpg",
         width: 2867,
         height: 1600,
-        alt: "Cinematic visual for Pixel Narratives Intelligence Layer—structured AI and business systems consulting.",
+        alt: "Cinematic visual for Pixel Narratives Intelligence Layer, structured AI and business systems consulting.",
       },
     ],
   },

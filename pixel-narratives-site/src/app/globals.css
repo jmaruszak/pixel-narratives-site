@@ -434,6 +434,19 @@ a {
   z-index: 2;
 }
 
+.home-stage-grain {
+  opacity: 0.035;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 0.5px, transparent 0.5px);
+  background-size: 4px 4px;
+  mix-blend-mode: overlay;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-stage-grain {
+    display: none;
+  }
+}
+
 .site-texture::before {
   content: "";
   position: fixed;

@@ -9,5 +9,10 @@
 export const MARKETING_TO_WEB_INTEL_URL =
   "https://intel.pixelnarratives.studio/?utm_source=pixelnarratives&utm_medium=intelligence-layer&utm_campaign=web-intelligence";
 
+export const WEB_INTEL_PAGE_TOOL_URL =
+  "https://intel.pixelnarratives.studio/?utm_source=pixelnarratives&utm_medium=web-intelligence-page&utm_campaign=web-intelligence";
+
+export const WEB_INTEL_PAGE_URL = "/web-intelligence";
+
 export const EXPERT_CONTACT_URL_WITH_INTEL_UTM =
   "https://pixelnarratives.studio/contact?utm_source=web-intelligence&utm_medium=app&utm_campaign=expert";

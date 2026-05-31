@@ -37,6 +37,8 @@ export type DeterministicDeepDiveSnapshotInput = {
   whereBlueprintGoesDeeper: string;
 };
 
+const EMPTY_LIST_ITEM = "Not identified";
+
 function normalizeThree(strings: readonly string[], fallback: string): string[] {
   const cleaned = strings.map((s) => s.trim()).filter(Boolean);
   const out = [...cleaned];
@@ -66,12 +68,12 @@ export function deterministicSnapshotToUnified(
       summaryParagraphs.length > 0
         ? summaryParagraphs
         : summaryToParagraphs(summary.length > 0 ? summary : "Directional Deep Dive snapshot."),
-    topOpportunities: normalizeThree(snapshot.topOpportunities, "—"),
-    commonGaps: normalizeThree(snapshot.commonGaps, "—"),
-    suggestedNextMoves: normalizeThree(snapshot.suggestedNextMoves, "—"),
+    topOpportunities: normalizeThree(snapshot.topOpportunities, EMPTY_LIST_ITEM),
+    commonGaps: normalizeThree(snapshot.commonGaps, EMPTY_LIST_ITEM),
+    suggestedNextMoves: normalizeThree(snapshot.suggestedNextMoves, EMPTY_LIST_ITEM),
     blueprintBridge: snapshot.whereBlueprintGoesDeeper,
     internalSalesNotes:
-      "[Fallback snapshot] Generated locally — OpenAI report unavailable or misconfigured.",
+      "[Fallback snapshot] Generated locally. OpenAI report unavailable or misconfigured.",
     generationSource: "deterministic_fallback",
   };
 }
@@ -97,14 +99,14 @@ export function parseOpenAiDeepDivePayload(data: unknown): UnifiedDeepDiveReport
     (x): x is string => typeof x === "string"
   );
 
-  const topOpportunities = normalizeThree(topStrings, "—");
-  const commonGaps = normalizeThree(gapStrings, "—");
-  const suggestedNextMoves = normalizeThree(moveStrings, "—");
+  const topOpportunities = normalizeThree(topStrings, EMPTY_LIST_ITEM);
+  const commonGaps = normalizeThree(gapStrings, EMPTY_LIST_ITEM);
+  const suggestedNextMoves = normalizeThree(moveStrings, EMPTY_LIST_ITEM);
 
   const blueprintBridge =
     typeof o.blueprintBridge === "string" && o.blueprintBridge.trim()
       ? o.blueprintBridge.trim()
-      : "The Blueprint expands this directional view into practical sequencing anchored in how your team actually operates—without replacing your judgment.";
+      : "The Blueprint expands this directional view into practical sequencing anchored in how your team actually operates, without replacing your judgment.";
 
   const internalSalesNotes =
     typeof o.internalSalesNotes === "string" ? o.internalSalesNotes.trim() : "";
@@ -147,7 +149,7 @@ export function formatUnifiedDeepDiveForCRM(r: UnifiedDeepDiveReport): string {
     r.blueprintBridge,
     "",
     "Internal sales notes:",
-    r.internalSalesNotes || "—",
+    r.internalSalesNotes || "None provided",
   ];
   return lines.join("\n");
 }

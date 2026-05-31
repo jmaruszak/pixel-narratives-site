@@ -1,8 +1,19 @@
-import type { Metadata } from "next";
+import CinematicPageHero from "../../components/CinematicPageHero";
 import Footer from "../../components/Footer";
 import Nav from "../../components/Nav";
 import IntelligenceLayerProcessFlow from "../../components/IntelligenceLayerProcessFlow";
-import { MARKETING_TO_WEB_INTEL_URL } from "../../lib/webIntelligence";
+import PageBottomCta from "../../components/PageBottomCta";
+import { DESTINATION_CTAS } from "../../lib/destinationCtas";
+import { buildPageMetadata } from "../../lib/siteMetadata";
+
+export const metadata = buildPageMetadata({
+  title: "Intelligence Layer | Pixel Narratives",
+  description:
+    "Move from AI experimentation to operational advantage: AI implementation for businesses, workflow automation, operational AI consulting, and the Intelligence Layer Blueprint.",
+  path: "/intelligence-layer",
+  image: "/images/int-cinematic.jpg",
+  imageAlt: "Intelligence Layer cinematic visual for Pixel Narratives",
+});
 
 const IMPLEMENTATION_PROJECTS = [
   "CRM automation",
@@ -15,82 +26,47 @@ const IMPLEMENTATION_PROJECTS = [
   "Reporting dashboards",
 ] as const;
 
-export const metadata: Metadata = {
-  title: "Intelligence Layer | Pixel Narratives",
-  description:
-    "Move from AI experimentation to operational advantage: AI implementation for businesses, workflow automation, operational AI consulting, and the Intelligence Layer Blueprint.",
-  alternates: { canonical: "/intelligence-layer" },
-};
-
 export default function IntelligenceLayerPage() {
   return (
     <main className="min-h-screen bg-[var(--background)] text-[var(--foreground)]">
       <Nav />
 
-      {/* Hero */}
-      <section className="mx-auto w-full max-w-7xl px-6 py-20 md:px-10 md:py-24">
-        <div className="grid gap-10 md:grid-cols-[0.95fr_1.05fr] md:items-center">
-          <div className="max-w-2xl">
-            <p className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
-              Intelligence Layer
-            </p>
-
-            <h1 className="mt-4 text-3xl leading-none sm:text-4xl md:text-5xl">
-              From AI experimentation to operational advantage.
-            </h1>
-
-            <p className="mt-6 max-w-xl text-lg leading-relaxed text-[var(--muted)] md:text-xl">
-              Most teams are already experimenting with AI. Very few businesses
-              have turned that activity into policy, process, workflow, and
-              measurable business value. Intelligence Layer helps close that gap.
-            </p>
-            <p className="mt-5 max-w-xl text-base leading-relaxed text-[var(--muted)] md:text-lg">
-              Think of it as a practical Fractional AI Officer for growing
-              businesses: part strategy, part implementation, part
-              accountability.
-            </p>
-
-            <div className="mt-10 flex flex-wrap gap-4">
-              <a
-                href="/ai-readiness-assessment"
-                className="cta-pulse-filled inline-flex items-center rounded-full border border-white/10 bg-[var(--foreground)] px-5 py-2.5 text-sm font-medium text-black transition hover:opacity-90"
-              >
-                Take the AI Readiness Assessment
-              </a>
-
-              <a
-                href="https://calendly.com/pixelnarratives"
-                target="_blank"
-                rel="noreferrer"
-                className="cta-pulse-outline inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm text-[var(--foreground)] transition hover:border-white/20 hover:bg-white/5"
-              >
-                Book a Discovery Call
-              </a>
-            </div>
-          </div>
-
-          <div className="relative aspect-[16/10] overflow-hidden rounded-[24px] border border-white/8 bg-black">
-            <img
-              src="/images/int-cinematic.jpg"
-              alt="Cinematic Intelligence Layer hero image"
-              width={1600}
-              height={1000}
-              className="block h-full w-full object-cover"
-            />
-            <div
-              className="pointer-events-none absolute inset-0 grid grid-cols-3 grid-rows-3 gap-px p-6 opacity-[0.12]"
-              aria-hidden
-            >
-              {Array.from({ length: 9 }).map((_, i) => (
-                <div
-                  key={i}
-                  className="rounded-sm border border-white/40"
-                />
-              ))}
-            </div>
-          </div>
+      <CinematicPageHero
+        contentScrim
+        imageSrc="/images/int-cinematic.jpg"
+        imageAlt="Cinematic Intelligence Layer hero image"
+        title="Intelligence Layer"
+        subtitle="From AI experimentation to operational advantage."
+      >
+        <div className="hero-entrance hero-entrance-delay-1 mt-8 space-y-5 text-lg leading-relaxed text-white/70 md:text-xl">
+          <p>
+            Most teams are already experimenting with AI. Very few businesses
+            have turned that activity into policy, process, workflow, and
+            measurable business value. Intelligence Layer helps close that gap.
+          </p>
+          <p className="text-base md:text-lg">
+            Think of it as a practical Fractional AI Officer for growing
+            businesses: part strategy, part implementation, part
+            accountability.
+          </p>
         </div>
-      </section>
+        <div className="hero-entrance hero-entrance-delay-2 mt-10 flex flex-wrap gap-4">
+          <a
+            href="/ai-readiness-assessment"
+            className="cta-pulse-filled inline-flex items-center rounded-full border border-white/10 bg-[var(--foreground)] px-5 py-2.5 text-sm font-medium text-black transition hover:opacity-90"
+          >
+            Take the AI Readiness Assessment
+          </a>
+          <a
+            href="https://calendly.com/pixelnarratives"
+            target="_blank"
+            rel="noreferrer"
+            className="cta-pulse-outline inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm text-[var(--foreground)] transition hover:border-white/20 hover:bg-white/5"
+          >
+            Book a Discovery Call
+          </a>
+        </div>
+      </CinematicPageHero>
 
       <IntelligenceLayerProcessFlow />
 
@@ -239,7 +215,7 @@ export default function IntelligenceLayerPage() {
               </p>
 
               <p className="mt-6 text-base leading-relaxed text-[var(--muted)]">
-                For leadership teams ready to treat AI as an operational priority—not
+                For leadership teams ready to treat AI as an operational priority, not
                 a side experiment. We work at the executive level to align strategy,
                 systems, and implementation across the organization.
               </p>
@@ -455,49 +431,6 @@ export default function IntelligenceLayerPage() {
         </div>
       </section>
 
-      {/* Web Intelligence */}
-      <section className="border-t border-white/8">
-        <div className="mx-auto w-full max-w-7xl px-6 py-16 md:px-10 md:py-20">
-          <div className="rounded-[24px] border border-white/8 bg-white/[0.02] p-8 md:p-10">
-            <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
-              Web Intelligence
-            </p>
-            <h2 className="mt-4 max-w-3xl text-3xl leading-none md:text-4xl">
-              Web Intelligence by Pixel Narratives
-            </h2>
-            <div className="mt-6 max-w-3xl space-y-5 text-base leading-relaxed text-[var(--muted)] md:text-lg">
-              <p>
-                Enter a URL for a structured look at SEO signals, AI visibility,
-                operational friction points, and a pragmatic game plan. We use Web
-                Intelligence often during Intelligence Layer Blueprint work to
-                anchor recommendations in how your website behaves today.
-              </p>
-              <p>
-                You can try it anytime: the same scan can also help teams spot where
-                rebuilds, content, or technical improvements would move the needle.
-                It is a preview, not a substitute for a full blueprint engagement.
-              </p>
-            </div>
-            <div className="mt-8 flex flex-wrap gap-4">
-              <a
-                href={MARKETING_TO_WEB_INTEL_URL}
-                target="_blank"
-                rel="noreferrer"
-                className="cta-pulse-filled inline-flex items-center rounded-full border border-white/10 bg-[var(--foreground)] px-5 py-2.5 text-sm font-medium text-black transition hover:opacity-90"
-              >
-                Open Web Intelligence
-              </a>
-              <a
-                href="/ai-readiness-assessment"
-                className="cta-pulse-outline inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm text-[var(--foreground)] transition hover:border-white/20 hover:bg-white/5"
-              >
-                Take the AI Readiness Assessment
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Who This Is For */}
       <section className="border-t border-white/8">
         <div className="mx-auto w-full max-w-7xl px-6 py-16 md:px-10 md:py-20">
@@ -526,46 +459,7 @@ export default function IntelligenceLayerPage() {
         </div>
       </section>
 
-      {/* Bottom CTA */}
-      <section className="next-step-section border-t border-white/8">
-        <div className="next-step-bg" aria-hidden />
-        <div className="next-step-fade" aria-hidden />
-        <div className="next-step-content mx-auto w-full max-w-7xl px-6 py-16 md:px-10 md:py-20">
-          <div className="rounded-[24px] border border-white/8 bg-white/[0.02] p-8 md:p-10">
-            <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
-              How We Work
-            </p>
-
-            <h2 className="mt-4 max-w-3xl text-3xl leading-none md:text-5xl">
-              Stop experimenting with AI. Start building it into the business.
-            </h2>
-
-            <p className="mt-6 max-w-2xl text-base leading-relaxed text-[var(--muted)] md:text-lg">
-              The goal is not more tools for the sake of it. The goal is
-              smarter systems, better workflows, stronger team adoption, and a
-              clearer return on time and spend.
-            </p>
-
-            <div className="mt-8 flex flex-wrap gap-4">
-              <a
-                href="https://calendly.com/pixelnarratives"
-                target="_blank"
-                rel="noreferrer"
-                className="cta-pulse-filled inline-flex items-center rounded-full border border-white/10 bg-[var(--foreground)] px-5 py-2.5 text-sm font-medium text-black transition hover:opacity-90"
-              >
-                Book a Discovery Call
-              </a>
-
-              <a
-                href="/contact"
-                className="cta-pulse-outline inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm text-[var(--foreground)] transition hover:border-white/20 hover:bg-white/5"
-              >
-                Contact Us
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PageBottomCta {...DESTINATION_CTAS.intelligenceLayer} />
       <Footer />
     </main>
   );

@@ -30,7 +30,7 @@ export default function WebMcpTools() {
                   aiAds: {
                     summary:
                       "Cinematic, concept-driven AI commercial production for brands.",
-                    projectsUrl: `${SITE_URL}/projects`,
+                    url: `${SITE_URL}/narrative-intelligence`,
                   },
                   intelligenceLayer: {
                     summary:
@@ -60,7 +60,8 @@ export default function WebMcpTools() {
                   webIntelligence: {
                     summary:
                       "URL scan for SEO, AI visibility, friction points, and a pragmatic game plan.",
-                    url: WEB_INTEL_URL,
+                    marketingPage: `${SITE_URL}/web-intelligence`,
+                    appUrl: WEB_INTEL_URL,
                   },
                   aiReadinessAssessment: {
                     summary:

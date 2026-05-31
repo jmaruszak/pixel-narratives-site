@@ -1,10 +1,9 @@
-import { MARKETING_TO_WEB_INTEL_URL } from "../lib/webIntelligence";
-
 const studioLinks = [
   { href: "/", label: "Home" },
-  { href: "/projects", label: "Projects" },
+  { href: "/narrative-intelligence", label: "Narrative Intelligence" },
   { href: "/about", label: "About" },
   { href: "/intelligence-layer", label: "Intelligence Layer" },
+  { href: "/web-intelligence", label: "Web Intelligence" },
   { href: "/contact", label: "Contact" },
   { href: "/privacy", label: "Privacy Policy" },
 ];
@@ -24,7 +23,7 @@ const intelligenceLinks: {
   label: string;
   external?: boolean;
 }[] = [
-  { href: MARKETING_TO_WEB_INTEL_URL, label: "Web Intelligence", external: true },
+  { href: "/web-intelligence", label: "Web Intelligence" },
   { href: "/ai-consulting-for-businesses", label: "Fractional AI Officer" },
   { href: "/ai-workflow-automation", label: "AI Workflow Automation" },
   {

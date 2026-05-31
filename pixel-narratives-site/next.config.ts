@@ -2,6 +2,15 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   trailingSlash: false,
+  async redirects() {
+    return [
+      {
+        source: "/projects",
+        destination: "/narrative-intelligence",
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {

@@ -1,17 +1,19 @@
-import type { Metadata } from "next";
 import {
   BookDiscoveryCallForm,
   RequestCreativeConceptForm,
 } from "../../components/ContactForms";
 import Footer from "../../components/Footer";
 import Nav from "../../components/Nav";
+import { buildPageMetadata } from "../../lib/siteMetadata";
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
   title: "Contact | Pixel Narratives",
   description:
     "Get in touch with Pixel Narratives about AI-powered commercial production, Intelligence Layer consulting, or your next campaign.",
-  alternates: { canonical: "/contact" },
-};
+  path: "/contact",
+  image: "/images/home-cinematic.jpg",
+  imageAlt: "Contact Pixel Narratives",
+});
 
 function firstStringParam(
   value: string | string[] | undefined,
@@ -46,13 +48,13 @@ export default async function ContactPage({
           Let&apos;s Build Something
         </h1>
 
-        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-[var(--muted)] md:text-xl">
-          Campaigns that capture attention. Systems that work.
+        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-[var(--foreground)] md:text-xl">
+          Visibility. Attention. Scale.
         </p>
 
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-[var(--muted)] md:text-xl">
-          Whether you&apos;re looking to launch a campaign or implement AI across your
-          business, we&apos;ll help you take the next step.
+          Whether you&apos;re looking to improve your website, launch a campaign, or
+          implement AI across your business, we&apos;ll help you take the next step.
         </p>
 
         {fromWebIntelligence ? (
@@ -62,7 +64,7 @@ export default async function ContactPage({
               Web Intelligence
             </span>
             . Mention what the scan flagged (or paste a summary) when you reach
-            out—useful context gets you a faster, more specific reply.
+            out. Useful context gets you a faster, more specific reply.
           </p>
         ) : null}
 

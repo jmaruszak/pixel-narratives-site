@@ -127,8 +127,8 @@ export default function HowToUseAiInYourBusinessPage() {
               <p>From there, expand, team by team, use case by use case.</p>
               <p>At the same time, two things matter more than most people expect:</p>
               <ul className="space-y-2 text-[var(--foreground)]">
-                <li>Education — getting your team comfortable with the tools</li>
-                <li>Behavior — changing how work actually gets done</li>
+                <li>Education: getting your team comfortable with the tools</li>
+                <li>Behavior: changing how work actually gets done</li>
               </ul>
               <p>That’s where most implementations stall.</p>
             </div>

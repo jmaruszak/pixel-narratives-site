@@ -106,7 +106,7 @@ export default function IntelligenceLayerProcessFlow() {
               id="il-process-heading"
               className="mt-4 text-2xl font-normal leading-snug text-[var(--foreground)] sm:text-3xl md:max-w-xl"
             >
-              A structured path from goals to systems—and measurable follow-through.
+              A structured path from goals to systems and measurable follow-through.
             </h2>
           </div>
 
