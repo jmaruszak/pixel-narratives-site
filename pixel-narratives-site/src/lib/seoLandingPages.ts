@@ -437,6 +437,7 @@ export const seoLandingPages: Record<string, SeoLandingPage> = {
       },
     ],
     relatedLinks: [
+      { href: "/how-to-use-ai-in-your-business", label: "how to use AI in your business" },
       { href: "/how-to-implement-ai-in-your-business", label: "how to implement AI in your business" },
       { href: "/ai-workflow-automation", label: "AI workflow automation" },
       { href: "/ai-crm-automation", label: "AI CRM automation" },
@@ -519,6 +520,7 @@ export const seoLandingPages: Record<string, SeoLandingPage> = {
       },
     ],
     relatedLinks: [
+      { href: "/how-to-use-ai-in-your-business", label: "how to use AI in your business" },
       { href: "/ai-consulting-for-businesses", label: "AI consulting for businesses" },
       { href: "/ai-crm-automation", label: "AI CRM automation" },
       { href: "/how-to-implement-ai-in-your-business", label: "AI implementation roadmap" },
@@ -601,6 +603,7 @@ export const seoLandingPages: Record<string, SeoLandingPage> = {
       },
     ],
     relatedLinks: [
+      { href: "/how-to-use-ai-in-your-business", label: "how to use AI in your business" },
       { href: "/ai-consulting-for-businesses", label: "AI consulting for businesses" },
       { href: "/ai-workflow-automation", label: "AI workflow automation" },
       { href: "/ai-crm-automation", label: "AI CRM automation" },
@@ -672,6 +675,7 @@ export const seoLandingPages: Record<string, SeoLandingPage> = {
       },
     ],
     relatedLinks: [
+      { href: "/how-to-use-ai-in-your-business", label: "how to use AI in your business" },
       { href: "/ai-workflow-automation", label: "AI workflow automation" },
       { href: "/ai-consulting-for-businesses", label: "AI consulting for businesses" },
       { href: "/how-to-implement-ai-in-your-business", label: "how to implement AI in your business" },

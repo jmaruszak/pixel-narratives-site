@@ -194,12 +194,18 @@ export default function HowToUseAiInYourBusinessPage() {
               <h2 className="text-4xl leading-none md:text-6xl">
                 Want to see where AI could actually work in your business?
               </h2>
-              <div className="mt-8">
+              <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
                 <a
                   href="/contact"
                   className="inline-flex items-center rounded-full border border-white/10 bg-[var(--foreground)] px-6 py-3 text-sm font-medium text-black transition hover:opacity-90"
                 >
                   Start the Conversation
+                </a>
+                <a
+                  href="/how-to-implement-ai-in-your-business"
+                  className="inline-flex items-center rounded-full border border-white/10 px-6 py-3 text-sm text-[var(--foreground)] transition hover:bg-white/5"
+                >
+                  AI Implementation Guide
                 </a>
               </div>
             </div>

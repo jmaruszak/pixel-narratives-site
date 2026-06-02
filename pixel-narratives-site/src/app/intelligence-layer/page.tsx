@@ -72,7 +72,7 @@ export default function IntelligenceLayerPage() {
 
       {/* Pricing */}
       <section className="border-t border-white/8">
-        <div className="mx-auto w-full max-w-7xl px-6 py-16 md:px-10 md:py-20">
+        <div className="mx-auto w-full max-w-7xl px-6 pn-section md:px-10">
           <div className="max-w-2xl">
             <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
               Offerings
@@ -268,7 +268,7 @@ export default function IntelligenceLayerPage() {
 
       {/* Implementation Projects */}
       <section className="border-t border-white/8">
-        <div className="mx-auto w-full max-w-7xl px-6 py-16 md:px-10 md:py-20">
+        <div className="mx-auto w-full max-w-7xl px-6 pn-section md:px-10">
           <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
             Custom Solutions
           </p>
@@ -301,7 +301,7 @@ export default function IntelligenceLayerPage() {
 
       {/* The Gap */}
       <section className="border-t border-white/8">
-        <div className="mx-auto w-full max-w-7xl px-6 py-16 md:px-10 md:py-20">
+        <div className="mx-auto w-full max-w-7xl px-6 pn-section md:px-10">
           <div className="rounded-[24px] border border-white/8 bg-white/[0.02] p-8 md:p-10">
             <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
               The Gap
@@ -333,7 +333,7 @@ export default function IntelligenceLayerPage() {
 
       {/* Case Study */}
       <section className="border-t border-white/8">
-        <div className="mx-auto w-full max-w-7xl px-6 py-16 md:px-10 md:py-20">
+        <div className="mx-auto w-full max-w-7xl px-6 pn-section md:px-10">
           <div className="grid gap-8 md:grid-cols-[1.1fr_0.9fr] md:items-start">
             <div className="rounded-[24px] border border-white/8 bg-black p-8 md:p-10">
               <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
@@ -386,7 +386,7 @@ export default function IntelligenceLayerPage() {
 
       {/* Sample Blueprint */}
       <section className="border-t border-white/8">
-        <div className="mx-auto w-full max-w-7xl px-6 py-16 md:px-10 md:py-20">
+        <div className="mx-auto w-full max-w-7xl px-6 pn-section md:px-10">
           <div className="rounded-[24px] border border-white/8 bg-white/[0.02] p-8 md:p-10">
             <h2 className="max-w-3xl text-3xl leading-none md:text-4xl">
               See a Sample Blueprint
@@ -431,9 +431,41 @@ export default function IntelligenceLayerPage() {
         </div>
       </section>
 
+      {/* Guides */}
+      <section className="border-t border-white/8">
+        <div className="mx-auto w-full max-w-7xl px-6 pn-section md:px-10">
+          <div className="rounded-[24px] border border-white/8 bg-white/[0.02] p-8 md:p-10">
+            <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
+              Guides
+            </p>
+            <h2 className="mt-4 max-w-3xl text-3xl leading-none md:text-4xl">
+              Start with the right questions before choosing tools.
+            </h2>
+            <p className="mt-6 max-w-3xl text-base leading-relaxed text-[var(--muted)] md:text-lg">
+              Two practical reads on using AI without wasted spend, and turning
+              experiments into workflows your team can actually adopt.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <a
+                href="/how-to-use-ai-in-your-business"
+                className="inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm text-[var(--foreground)] transition hover:border-white/20 hover:bg-white/5"
+              >
+                Using AI in Business
+              </a>
+              <a
+                href="/how-to-implement-ai-in-your-business"
+                className="inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm text-[var(--foreground)] transition hover:border-white/20 hover:bg-white/5"
+              >
+                AI Implementation Guide
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Who This Is For */}
       <section className="border-t border-white/8">
-        <div className="mx-auto w-full max-w-7xl px-6 py-16 md:px-10 md:py-20">
+        <div className="mx-auto w-full max-w-7xl px-6 pn-section md:px-10">
           <div className="grid gap-8 md:grid-cols-[1.1fr_0.9fr] md:items-start">
             <div className="rounded-[24px] border border-white/8 bg-black p-8">
               <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">

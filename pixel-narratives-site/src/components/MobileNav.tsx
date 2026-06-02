@@ -94,11 +94,11 @@ export default function MobileNav() {
       </button>
 
       {open ? (
-        <div className="fixed inset-0 z-[60]">
+        <div className="fixed inset-0 z-[60] isolation-isolate">
           <button
             type="button"
             aria-label="Close menu overlay"
-            className="absolute inset-0 bg-black/70 backdrop-blur-sm"
+            className="absolute inset-0 bg-black/85 backdrop-blur-md"
             onClick={close}
           />
           <div
@@ -107,7 +107,7 @@ export default function MobileNav() {
             role="dialog"
             aria-modal="true"
             aria-label="Primary navigation"
-            className="absolute right-0 top-0 flex h-full w-[min(100%,20rem)] flex-col border-l border-white/8 bg-[var(--background)] p-6 pt-[max(1.5rem,env(safe-area-inset-top))] shadow-2xl"
+            className="absolute right-0 top-0 flex h-full w-[min(100%,20rem)] flex-col border-l border-white/10 bg-[#0b0c0f] p-6 pt-[max(1.5rem,env(safe-area-inset-top))] shadow-[-8px_0_32px_rgba(0,0,0,0.6)] backdrop-blur-xl"
           >
             <div className="flex items-center justify-between">
               <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">

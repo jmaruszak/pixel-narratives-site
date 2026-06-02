@@ -81,7 +81,7 @@ export default function WebIntelligencePage() {
           key={section.eyebrow}
           className={`border-t border-white/8 ${index % 2 === 1 ? "bg-white/[0.01]" : ""}`}
         >
-          <div className="mx-auto grid w-full max-w-7xl gap-10 px-6 py-20 md:grid-cols-2 md:items-center md:px-10 md:py-24">
+          <div className="mx-auto grid w-full max-w-7xl gap-10 px-6 pn-section md:grid-cols-2 md:items-center md:px-10">
             <div className={index % 2 === 1 ? "md:order-2" : ""}>
               <p className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
                 {section.eyebrow}

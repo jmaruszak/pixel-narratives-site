@@ -36,7 +36,7 @@ export default function NarrativeIntelligencePage() {
       </CinematicPageHero>
 
       <section className="border-t border-white/8">
-        <div className="mx-auto grid w-full max-w-7xl gap-12 px-6 py-24 md:grid-cols-2 md:px-10">
+        <div className="mx-auto grid w-full max-w-7xl gap-12 px-6 pn-section md:grid-cols-2 md:px-10">
           <div>
             <p className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
               The Problem
@@ -63,7 +63,7 @@ export default function NarrativeIntelligencePage() {
       <AdsProcessFlow />
 
       <section className="border-t border-white/8">
-        <div className="mx-auto w-full max-w-7xl px-6 py-24 md:px-10">
+        <div className="mx-auto w-full max-w-7xl px-6 pn-section md:px-10">
           <div className="max-w-3xl">
             <p className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
               What We Do

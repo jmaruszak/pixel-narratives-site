@@ -23,6 +23,7 @@ Pixel Narratives is an AI-powered commercial production and business AI implemen
 - [AI Commercial Production Company](https://pixelnarratives.studio/ai-commercial-production-company): Landing page for brands seeking AI-powered commercial video production.
 - [AI Consulting for Businesses](https://pixelnarratives.studio/ai-consulting-for-businesses): Landing page for operational AI consulting and structured implementation.
 - [AI Workflow Automation](https://pixelnarratives.studio/ai-workflow-automation): Landing page for workflow automation, integrations, and internal AI systems.
+- [How to Use AI in Your Business](https://pixelnarratives.studio/how-to-use-ai-in-your-business): Practical guide on using AI without wasted spend, starting with outcomes and workflows.
 - [How to Implement AI in Your Business](https://pixelnarratives.studio/how-to-implement-ai-in-your-business): Educational guide aligned with Intelligence Layer methodology.
 - [Privacy Policy](https://pixelnarratives.studio/privacy): How assessment, contact, and lead data are collected and used.
 

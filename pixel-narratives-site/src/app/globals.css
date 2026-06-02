@@ -6,6 +6,12 @@
   --foreground: #f5f1e8;
   --muted: #a6a29a;
   --border: rgba(255, 255, 255, 0.08);
+  --section-y: 6rem;
+  --section-y-lg: 8rem;
+  --card-radius: 24px;
+  --card-padding: 2rem;
+  --eyebrow-tracking: 0.25em;
+  --body-leading: 1.65;
 }
 
 html {
@@ -34,6 +40,61 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.pn-eyebrow {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  letter-spacing: var(--eyebrow-tracking);
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.pn-section {
+  padding-top: var(--section-y);
+  padding-bottom: var(--section-y);
+}
+
+@media (min-width: 768px) {
+  .pn-section {
+    padding-top: var(--section-y-lg);
+    padding-bottom: var(--section-y-lg);
+  }
+}
+
+.pn-card {
+  border-radius: var(--card-radius);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.pn-body {
+  font-size: 1rem;
+  line-height: var(--body-leading);
+  color: var(--muted);
+}
+
+@media (min-width: 768px) {
+  .pn-body {
+    font-size: 1.125rem;
+  }
+}
+
+.pn-grid-accent {
+  position: relative;
+}
+
+.pn-grid-accent::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.025;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.12) 1px, transparent 1px);
+  background-size: 24px 24px;
+  mask-image: radial-gradient(ellipse at center, black 30%, transparent 85%);
 }
 
 /* Hero: entrance + ambient gradient (respects reduced motion) */
@@ -137,6 +198,7 @@ a {
 }
 
 /* Service-style cards (What We Do, How We Work): lift, depth, border glow */
+.pn-card-interactive,
 .service-card {
   transition:
     transform 0.2s ease,
@@ -146,6 +208,7 @@ a {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
 }
 
+.pn-card-interactive:hover,
 .service-card:hover {
   transform: translate3d(0, -2px, 0);
   background: rgba(255, 255, 255, 0.04);
@@ -443,6 +506,10 @@ a {
 
 @media (prefers-reduced-motion: reduce) {
   .home-stage-grain {
+    display: none;
+  }
+
+  .pn-grid-accent::before {
     display: none;
   }
 }

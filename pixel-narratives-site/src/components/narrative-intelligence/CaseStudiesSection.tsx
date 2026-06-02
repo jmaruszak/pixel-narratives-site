@@ -3,7 +3,7 @@ import { CASE_STUDIES, FEATURED_CAMPAIGN } from "../../lib/siteContent";
 export default function CaseStudiesSection() {
   return (
     <section className="border-t border-white/8">
-      <div className="mx-auto w-full max-w-7xl px-6 py-24 md:px-10">
+      <div className="mx-auto w-full max-w-7xl px-6 pn-section md:px-10">
         <div className="max-w-3xl">
           <p className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
             Case Studies
@@ -91,7 +91,7 @@ export default function CaseStudiesSection() {
 export function FeaturedCampaignSection() {
   return (
     <section className="border-t border-white/8">
-      <div className="mx-auto w-full max-w-7xl px-6 py-24 md:px-10">
+      <div className="mx-auto w-full max-w-7xl px-6 pn-section md:px-10">
         <div className="max-w-2xl">
           <p className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
             {FEATURED_CAMPAIGN.eyebrow}

@@ -1,55 +1,43 @@
-const studioLinks = [
-  { href: "/", label: "Home" },
-  { href: "/narrative-intelligence", label: "Narrative Intelligence" },
-  { href: "/about", label: "About" },
-  { href: "/intelligence-layer", label: "Intelligence Layer" },
-  { href: "/web-intelligence", label: "Web Intelligence" },
-  { href: "/contact", label: "Contact" },
-  { href: "/privacy", label: "Privacy Policy" },
-];
+import {
+  ADS_FOOTER_LINKS,
+  AI_SYSTEMS_FOOTER_LINKS,
+  GUIDES_FOOTER_LINKS,
+  STUDIO_FOOTER_LINKS,
+  type FooterLink,
+} from "../lib/footerLinks";
 
-const adLinks = [
-  { href: "/ai-commercial-production-company", label: "AI Commercial Production" },
-  { href: "/ai-video-ad-agency", label: "AI Video Ad Agency" },
-  { href: "/cost-of-ai-video-production", label: "AI Video Production Cost" },
-  {
-    href: "/how-to-create-ads-people-actually-watch",
-    label: "Ads People Actually Watch",
-  },
-];
+type FooterNavColumnProps = {
+  ariaLabel: string;
+  heading: string;
+  links: FooterLink[];
+};
 
-const intelligenceLinks: {
-  href: string;
-  label: string;
-  external?: boolean;
-}[] = [
-  { href: "/web-intelligence", label: "Web Intelligence" },
-  { href: "/ai-consulting-for-businesses", label: "Fractional AI Officer" },
-  { href: "/ai-workflow-automation", label: "AI Workflow Automation" },
-  {
-    href: "/how-to-implement-ai-in-your-business",
-    label: "Implement AI in Your Business",
-  },
-  {
-    href: "/how-to-use-ai-in-your-business",
-    label: "How to Use AI in Your Business",
-  },
-  {
-    href: "/ai-readiness-assessment",
-    label: "AI Readiness Assessment",
-  },
-  {
-    href: "/sample-intelligence-layer-blueprint",
-    label: "Sample Intelligence Layer Blueprint",
-  },
-  { href: "/ai-crm-automation", label: "AI CRM Automation" },
-];
+function FooterNavColumn({ ariaLabel, heading, links }: FooterNavColumnProps) {
+  return (
+    <nav aria-label={ariaLabel} className="max-w-[11rem]">
+      <p className="text-xs uppercase tracking-[0.25em] text-[var(--foreground)]">
+        {heading}
+      </p>
+      <div className="mt-4 flex flex-col gap-y-2.5">
+        {links.map((link) => (
+          <a
+            key={link.href}
+            href={link.href}
+            className="transition hover:text-[var(--foreground)]"
+          >
+            {link.label}
+          </a>
+        ))}
+      </div>
+    </nav>
+  );
+}
 
 export default function Footer() {
   return (
     <footer className="border-t border-white/8">
-      <div className="mx-auto grid w-full max-w-7xl gap-10 px-6 py-10 text-sm text-[var(--muted)] sm:grid-cols-2 lg:grid-cols-[1.2fr_auto_auto_auto] md:px-10">
-        <div className="max-w-sm">
+      <div className="mx-auto grid w-full max-w-7xl items-start gap-10 px-6 py-10 text-sm text-[var(--muted)] sm:grid-cols-2 lg:grid-cols-[minmax(0,1.25fr)_repeat(4,minmax(0,10.5rem))] md:px-10">
+        <div className="max-w-sm sm:col-span-2 lg:col-span-1">
           <p>© {new Date().getFullYear()} Pixel Narratives</p>
           <p className="mt-3 max-w-xs leading-relaxed">
             AI-powered ads and practical AI systems for brands ready to move.
@@ -78,59 +66,26 @@ export default function Footer() {
           </div>
         </div>
 
-        <nav aria-label="Studio footer links">
-          <p className="text-xs uppercase tracking-[0.25em] text-[var(--foreground)]">
-            Studio
-          </p>
-          <div className="mt-4 flex flex-col gap-2">
-            {studioLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="transition hover:text-[var(--foreground)]"
-              >
-                {link.label}
-              </a>
-            ))}
-          </div>
-        </nav>
-
-        <nav aria-label="AI Ads footer links">
-          <p className="text-xs uppercase tracking-[0.25em] text-[var(--foreground)]">
-            AI Ads
-          </p>
-          <div className="mt-4 flex flex-col gap-2">
-            {adLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="transition hover:text-[var(--foreground)]"
-              >
-                {link.label}
-              </a>
-            ))}
-          </div>
-        </nav>
-
-        <nav aria-label="Intelligence Layer footer links">
-          <p className="text-xs uppercase tracking-[0.25em] text-[var(--foreground)]">
-            Intelligence Layer
-          </p>
-          <div className="mt-4 flex flex-col gap-2">
-            {intelligenceLinks.map((link) => (
-              <a
-                key={`${link.href}-${link.label}`}
-                href={link.href}
-                {...(link.external
-                  ? { target: "_blank" as const, rel: "noreferrer" }
-                  : {})}
-                className="transition hover:text-[var(--foreground)]"
-              >
-                {link.label}
-              </a>
-            ))}
-          </div>
-        </nav>
+        <FooterNavColumn
+          ariaLabel="Studio footer links"
+          heading="Studio"
+          links={STUDIO_FOOTER_LINKS}
+        />
+        <FooterNavColumn
+          ariaLabel="AI Ads footer links"
+          heading="AI Ads"
+          links={ADS_FOOTER_LINKS}
+        />
+        <FooterNavColumn
+          ariaLabel="AI Systems footer links"
+          heading="AI Systems"
+          links={AI_SYSTEMS_FOOTER_LINKS}
+        />
+        <FooterNavColumn
+          ariaLabel="Guides footer links"
+          heading="Guides"
+          links={GUIDES_FOOTER_LINKS}
+        />
       </div>
     </footer>
   );

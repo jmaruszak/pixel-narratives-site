@@ -1,5 +1,12 @@
 export const CINEMATIC_EASE = [0.22, 1, 0.36, 1] as const;
 
+export const DESTINATION_REVEAL = {
+  headerDuration: 1.35,
+  cardDuration: 1.15,
+  cardStagger: 0.18,
+  ease: CINEMATIC_EASE,
+} as const;
+
 export const SCRUB_SPRING = { stiffness: 40, damping: 20 } as const;
 
 export const PARALLAX = {
