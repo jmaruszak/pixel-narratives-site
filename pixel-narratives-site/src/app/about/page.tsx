@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import Footer from "../../components/Footer";
 import Nav from "../../components/Nav";
+import { buildOrganizationSchema } from "../../lib/businessLocation";
 import { MARKETING_TO_WEB_INTEL_URL } from "../../lib/webIntelligence";
 
 export const metadata: Metadata = {
   title: "About Pixel Narratives | AI Creative Studio & AI Consulting",
   description:
-    "Meet Pixel Narratives, an AI-native creative and implementation studio headquartered in Mississippi, with roots in the South and partnerships across the country.",
+    "Meet Pixel Narratives, headquartered in Madison, Mississippi. We help businesses with visibility, attention, and implementation across the South and nationwide.",
   alternates: { canonical: "/about" },
 };
 
@@ -26,6 +28,13 @@ export default function AboutPage() {
   return (
     <main className="min-h-screen bg-[var(--background)] text-[var(--foreground)]">
       <Nav />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildOrganizationSchema()),
+        }}
+      />
 
       <section className="mx-auto w-full max-w-7xl px-6 py-20 md:px-10 md:py-24">
         <div className="max-w-3xl">
@@ -47,11 +56,20 @@ export default function AboutPage() {
           </div>
           <div className="space-y-6 text-lg leading-relaxed text-[var(--muted)] md:text-xl">
             <p>
-              Pixel Narratives is headquartered in Mississippi, with roots in
-              the South and partnerships across the country. We work with
-              business owners who want to use AI and creative strategy to move
-              faster, operate more efficiently, and stand out in competitive
-              markets.
+              Pixel Narratives is headquartered in Madison, Mississippi. We work
+              with business owners who want stronger visibility, clearer
+              messaging, and practical AI implementation.
+            </p>
+            <p>
+              We are based in Madison and work with teams across Mississippi and
+              the broader South.{" "}
+              <Link
+                href="/serving-the-south"
+                className="text-[var(--foreground)] transition hover:opacity-80"
+              >
+                See where we work most often
+              </Link>
+              .
             </p>
             <p>
               We started with creative work, building high-impact ads designed

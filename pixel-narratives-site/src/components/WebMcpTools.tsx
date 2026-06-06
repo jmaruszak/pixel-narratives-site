@@ -2,10 +2,13 @@
 
 import { useEffect } from "react";
 
-const CALENDLY_URL = "https://calendly.com/pixelnarratives";
-const CONTACT_EMAIL = "hello@pixelnarratives.studio";
-const CONTACT_PHONE = "904-524-7269";
-const SITE_URL = "https://pixelnarratives.studio";
+import {
+  CALENDLY_URL,
+  CONTACT_EMAIL,
+  CONTACT_PHONE,
+  HEADQUARTERS,
+} from "../lib/businessLocation";
+import { SITE_URL } from "../lib/siteMetadata";
 const WEB_INTEL_URL = "https://intel.pixelnarratives.studio/";
 
 export default function WebMcpTools() {
@@ -25,6 +28,7 @@ export default function WebMcpTools() {
             text: JSON.stringify(
               {
                 studio: "Pixel Narratives",
+                headquarters: `${HEADQUARTERS.locality}, ${HEADQUARTERS.region}`,
                 site: SITE_URL,
                 offers: {
                   aiAds: {

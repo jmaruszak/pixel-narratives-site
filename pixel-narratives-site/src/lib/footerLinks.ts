@@ -6,6 +6,7 @@ export type FooterLink = {
 export const STUDIO_FOOTER_LINKS: FooterLink[] = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
+  { href: "/serving-the-south", label: "Serving the South" },
   { href: "/narrative-intelligence", label: "Narrative Intelligence" },
   { href: "/intelligence-layer", label: "Business Intelligence" },
   { href: "/web-intelligence", label: "Web Intelligence" },
@@ -30,6 +31,7 @@ export const AI_SYSTEMS_FOOTER_LINKS: FooterLink[] = [
 ];
 
 export const GUIDES_FOOTER_LINKS: FooterLink[] = [
+  { href: "/visibility-in-the-age-of-ai", label: "Visibility in the Age of AI" },
   { href: "/sample-intelligence-layer-blueprint", label: "Blueprint Sample" },
   { href: "/ai-readiness-assessment", label: "AI Readiness Assessment" },
   { href: "/how-to-use-ai-in-your-business", label: "Using AI in Business" },

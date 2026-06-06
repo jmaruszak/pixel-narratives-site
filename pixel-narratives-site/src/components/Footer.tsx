@@ -1,4 +1,9 @@
 import {
+  CONTACT_EMAIL,
+  CONTACT_PHONE,
+  CONTACT_PHONE_TEL,
+} from "../lib/businessLocation";
+import {
   ADS_FOOTER_LINKS,
   AI_SYSTEMS_FOOTER_LINKS,
   GUIDES_FOOTER_LINKS,
@@ -42,17 +47,26 @@ export default function Footer() {
           <p className="mt-3 max-w-xs leading-relaxed">
             AI-powered ads and practical AI systems for brands ready to move.
           </p>
+          <p className="mt-3 max-w-xs leading-relaxed">
+            Madison, Mississippi.{" "}
+            <a
+              href="/serving-the-south"
+              className="transition hover:text-[var(--foreground)]"
+            >
+              Serving the South
+            </a>
+          </p>
           <a
-            href="mailto:hello@pixelnarratives.studio"
+            href={`mailto:${CONTACT_EMAIL}`}
             className="mt-3 inline-block transition hover:text-[var(--foreground)]"
           >
-            hello@pixelnarratives.studio
+            {CONTACT_EMAIL}
           </a>
           <a
-            href="tel:+19045247269"
+            href={`tel:${CONTACT_PHONE_TEL}`}
             className="mt-2 block transition hover:text-[var(--foreground)]"
           >
-            904-524-7269
+            {CONTACT_PHONE}
           </a>
           <div className="mt-5">
             <a

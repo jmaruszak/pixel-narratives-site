@@ -99,6 +99,31 @@ export default function WebIntelligencePage() {
         </section>
       ))}
 
+      <section className="border-t border-white/8">
+        <div className="mx-auto w-full max-w-7xl px-6 pn-section md:px-10">
+          <div className="rounded-[24px] border border-white/8 bg-white/[0.02] p-8 md:p-10">
+            <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
+              Guide
+            </p>
+            <h2 className="mt-4 max-w-3xl text-3xl leading-none md:text-4xl">
+              Visibility in the Age of AI
+            </h2>
+            <p className="mt-6 max-w-3xl text-base leading-relaxed text-[var(--muted)] md:text-lg">
+              Learn how search, SEO, AI visibility, E-E-A-T, and YouTube shape
+              how customers discover and trust businesses online.
+            </p>
+            <div className="mt-8">
+              <a
+                href="/visibility-in-the-age-of-ai"
+                className="inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm text-[var(--foreground)] transition hover:border-white/20 hover:bg-white/5"
+              >
+                Read the guide
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <PageBottomCta {...DESTINATION_CTAS.webIntelligence} />
 
       <Footer />

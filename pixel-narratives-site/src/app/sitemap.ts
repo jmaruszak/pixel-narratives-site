@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { locationLandingSlugs } from "../lib/locationLandingPages";
 import { landingPageSlugs } from "../lib/seoLandingPages";
 
 const baseUrl = "https://pixelnarratives.studio";
@@ -14,6 +15,7 @@ const LASTMOD_OLD_STATIC = new Date("2025-06-02T00:00:00.000Z");
 function isEducationalHowTo(route: string): boolean {
   return (
     route === "how-to-use-ai-in-your-business" ||
+    route === "visibility-in-the-age-of-ai" ||
     route.startsWith("how-to-")
   );
 }
@@ -29,7 +31,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "contact",
     "privacy",
     "how-to-use-ai-in-your-business",
+    "visibility-in-the-age-of-ai",
     "ai-readiness-assessment",
+    "serving-the-south",
+    ...locationLandingSlugs,
   ];
   const routes = [...staticRoutes, ...landingPageSlugs];
 
@@ -56,6 +61,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified = LASTMOD_MAIN_BUSINESS;
       changeFrequency = "monthly";
       priority = 0.9;
+    } else if (
+      route === "serving-the-south" ||
+      locationLandingSlugs.includes(route)
+    ) {
+      lastModified = LASTMOD_ABOUT_CONTACT;
+      changeFrequency = "monthly";
+      priority = 0.75;
     } else if (route === "about") {
       lastModified = LASTMOD_ABOUT_CONTACT;
       changeFrequency = "monthly";

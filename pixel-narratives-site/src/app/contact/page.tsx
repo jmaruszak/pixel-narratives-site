@@ -4,6 +4,12 @@ import {
 } from "../../components/ContactForms";
 import Footer from "../../components/Footer";
 import Nav from "../../components/Nav";
+import {
+  CONTACT_EMAIL,
+  CONTACT_PHONE,
+  CONTACT_PHONE_TEL,
+  buildLocalBusinessSchema,
+} from "../../lib/businessLocation";
 import { buildPageMetadata } from "../../lib/siteMetadata";
 
 export const metadata = buildPageMetadata({
@@ -39,6 +45,13 @@ export default async function ContactPage({
     <main className="min-h-screen bg-[var(--background)] text-[var(--foreground)]">
       <Nav />
 
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildLocalBusinessSchema()),
+        }}
+      />
+
       <section className="mx-auto w-full max-w-4xl px-6 py-24 md:px-10">
         <p className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
           Contact
@@ -55,6 +68,11 @@ export default async function ContactPage({
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-[var(--muted)] md:text-xl">
           Whether you&apos;re looking to improve your website, launch a campaign, or
           implement AI across your business, we&apos;ll help you take the next step.
+        </p>
+
+        <p className="mt-4 max-w-2xl text-base leading-relaxed text-[var(--muted)] md:text-lg">
+          Based in Madison, Mississippi. Working with teams across the South and
+          nationwide.
         </p>
 
         {fromWebIntelligence ? (
@@ -110,11 +128,11 @@ export default async function ContactPage({
             </p>
 
             <a
-              href="mailto:hello@pixelnarratives.studio"
-              aria-label="Email hello@pixelnarratives.studio"
+              href={`mailto:${CONTACT_EMAIL}`}
+              aria-label={`Email ${CONTACT_EMAIL}`}
               className="mt-4 inline-block text-xl text-[var(--foreground)] transition hover:text-white"
             >
-              hello@pixelnarratives.studio
+              {CONTACT_EMAIL}
             </a>
 
             <p className="mt-4 text-sm text-[var(--muted)]">
@@ -128,11 +146,11 @@ export default async function ContactPage({
             </p>
 
             <a
-              href="tel:+19045247269"
-              aria-label="Call Pixel Narratives at 904-524-7269"
+              href={`tel:${CONTACT_PHONE_TEL}`}
+              aria-label={`Call Pixel Narratives at ${CONTACT_PHONE}`}
               className="mt-4 inline-block text-xl text-[var(--foreground)] transition hover:text-white"
             >
-              904-524-7269
+              {CONTACT_PHONE}
             </a>
 
             <p className="mt-4 text-sm text-[var(--muted)]">

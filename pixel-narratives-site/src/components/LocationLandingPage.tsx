@@ -2,35 +2,11 @@ import Link from "next/link";
 
 import Footer from "./Footer";
 import Nav from "./Nav";
-import { buildAreaServedSchema } from "../lib/businessLocation";
-import type { SeoLandingPage } from "../lib/seoLandingPages";
+import { SERVICE_PILLARS, buildLocationServiceSchema } from "../lib/businessLocation";
+import type { LocationLandingPage } from "../lib/locationLandingPages";
+import { WEB_INTEL_PAGE_TOOL_URL } from "../lib/webIntelligence";
 
-const siteUrl = "https://pixelnarratives.studio";
-
-export function buildServiceSchema(page: SeoLandingPage) {
-  return {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    name:
-      page.offer === "ads"
-        ? "AI Commercial Production"
-        : "Business Intelligence",
-    provider: {
-      "@type": "Organization",
-      name: "Pixel Narratives",
-      url: siteUrl,
-    },
-    areaServed: buildAreaServedSchema(),
-    serviceType:
-      page.offer === "ads"
-        ? "AI-powered commercial video production"
-        : "AI consulting, workflow automation, and implementation",
-    description: page.intro,
-    url: `${siteUrl}/${page.slug}`,
-  };
-}
-
-export function buildFaqSchema(page: SeoLandingPage) {
+function buildFaqSchema(page: LocationLandingPage) {
   return {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -45,16 +21,25 @@ export function buildFaqSchema(page: SeoLandingPage) {
   };
 }
 
-export default function SeoLandingPageView({ page }: { page: SeoLandingPage }) {
+export default function LocationLandingPageView({
+  page,
+}: {
+  page: LocationLandingPage;
+}) {
+  const serviceSchema = buildLocationServiceSchema({
+    name: `Pixel Narratives in ${page.marketLabel}`,
+    description: page.intro,
+    url: `/${page.slug}`,
+    areaServed: page.areaServed,
+  });
+
   return (
     <main className="min-h-screen bg-[var(--background)] text-[var(--foreground)]">
       <Nav />
 
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(buildServiceSchema(page)),
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
       <script
         type="application/ld+json"
@@ -67,7 +52,7 @@ export default function SeoLandingPageView({ page }: { page: SeoLandingPage }) {
         <div className="mx-auto w-full max-w-7xl px-6 py-20 md:px-10 md:py-24">
           <div className="max-w-4xl">
             <p className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
-              {page.offer === "ads" ? "AI Ads" : "Business Intelligence"}
+              {page.marketLabel}
             </p>
             <h1 className="mt-4 text-4xl leading-[1.05] md:text-6xl">
               {page.h1}
@@ -76,19 +61,67 @@ export default function SeoLandingPageView({ page }: { page: SeoLandingPage }) {
               {page.intro}
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
-              <a
+              <Link
                 href="/contact"
                 className="inline-flex items-center rounded-full border border-white/10 bg-[var(--foreground)] px-6 py-3 text-sm font-medium text-black transition hover:opacity-90"
               >
-                {page.cta}
-              </a>
-              <Link
-                href="/"
+                Book a call
+              </Link>
+              <a
+                href={WEB_INTEL_PAGE_TOOL_URL}
+                target="_blank"
+                rel="noreferrer"
                 className="inline-flex items-center rounded-full border border-white/10 px-6 py-3 text-sm text-[var(--foreground)] transition hover:bg-white/5"
               >
-                Visit Pixel Narratives
+                Run a free website scan
+              </a>
+              <Link
+                href="/ai-readiness-assessment"
+                className="inline-flex items-center rounded-full border border-white/10 px-6 py-3 text-sm text-[var(--foreground)] transition hover:bg-white/5"
+              >
+                AI Readiness Assessment
               </Link>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-white/8">
+        <div className="mx-auto w-full max-w-7xl px-6 py-16 md:px-10 md:py-20">
+          <div className="max-w-3xl">
+            <p className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
+              How we help
+            </p>
+            <h2 className="mt-4 text-4xl leading-none md:text-5xl">
+              Visibility, Attention, Implementation
+            </h2>
+          </div>
+          <div className="mt-10 grid gap-6 lg:grid-cols-3">
+            {SERVICE_PILLARS.map((pillar) => (
+              <article
+                key={pillar.headline}
+                className="rounded-[28px] border border-white/8 bg-white/[0.02] p-8"
+              >
+                <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
+                  {pillar.eyebrow}
+                </p>
+                <h3 className="mt-3 text-2xl leading-snug md:text-3xl">
+                  {pillar.headline}
+                </h3>
+                <p className="mt-3 text-sm font-medium text-[var(--foreground)]">
+                  {pillar.outcome}
+                </p>
+                <p className="mt-4 text-base leading-relaxed text-[var(--muted)]">
+                  {pillar.body}
+                </p>
+                <Link
+                  href={pillar.href}
+                  className="mt-5 inline-block text-sm text-[var(--foreground)] transition hover:opacity-80"
+                >
+                  Explore {pillar.headline}
+                </Link>
+              </article>
+            ))}
           </div>
         </div>
       </section>
@@ -104,12 +137,7 @@ export default function SeoLandingPageView({ page }: { page: SeoLandingPage }) {
                 <h2 className="text-3xl leading-none md:text-4xl">
                   {section.heading}
                 </h2>
-                {section.answer ? (
-                  <p className="mt-5 text-base leading-relaxed text-[var(--muted)] md:text-lg">
-                    {section.answer}
-                  </p>
-                ) : null}
-                {section.body?.map((paragraph) => (
+                {section.body.map((paragraph) => (
                   <p
                     key={paragraph}
                     className="mt-5 text-base leading-relaxed text-[var(--muted)] md:text-lg"
@@ -117,39 +145,6 @@ export default function SeoLandingPageView({ page }: { page: SeoLandingPage }) {
                     {paragraph}
                   </p>
                 ))}
-                {section.bullets ? (
-                  <ul className="mt-5 space-y-3 text-base leading-relaxed text-[var(--muted)] md:text-lg">
-                    {section.bullets.map((bullet) => (
-                      <li key={bullet}>{bullet}</li>
-                    ))}
-                  </ul>
-                ) : null}
-                {section.table ? (
-                  <div className="mt-6 overflow-hidden rounded-[18px] border border-white/8">
-                    <table className="w-full border-collapse text-left text-sm md:text-base">
-                      <thead className="bg-white/[0.04] text-[var(--foreground)]">
-                        <tr>
-                          {section.table.headers.map((header) => (
-                            <th key={header} className="px-4 py-3 font-normal">
-                              {header}
-                            </th>
-                          ))}
-                        </tr>
-                      </thead>
-                      <tbody className="divide-y divide-white/8 text-[var(--muted)]">
-                        {section.table.rows.map((row) => (
-                          <tr key={row.join("-")}>
-                            {row.map((cell) => (
-                              <td key={cell} className="px-4 py-3 align-top">
-                                {cell}
-                              </td>
-                            ))}
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
-                  </div>
-                ) : null}
               </article>
             ))}
           </div>
@@ -163,10 +158,9 @@ export default function SeoLandingPageView({ page }: { page: SeoLandingPage }) {
               FAQ
             </p>
             <h2 className="mt-4 text-4xl leading-none md:text-5xl">
-              Direct Answers to Common Questions
+              Common questions
             </h2>
           </div>
-
           <div className="mt-10 grid gap-4 md:grid-cols-2">
             {page.faqs.map((faq) => (
               <article
@@ -192,24 +186,18 @@ export default function SeoLandingPageView({ page }: { page: SeoLandingPage }) {
               Related
             </p>
             <h2 className="mt-4 text-3xl leading-none md:text-5xl">
-              Keep exploring the right path.
+              Keep exploring
             </h2>
             <div className="mt-8 flex flex-wrap gap-3">
               {page.relatedLinks.map((link) => (
-                <a
+                <Link
                   key={link.href}
                   href={link.href}
                   className="inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm text-[var(--foreground)] transition hover:border-white/20 hover:bg-white/5"
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
-              <a
-                href="/contact"
-                className="inline-flex items-center rounded-full border border-white/10 bg-[var(--foreground)] px-5 py-2.5 text-sm font-medium text-black transition hover:opacity-90"
-              >
-                {page.cta}
-              </a>
             </div>
           </div>
         </div>

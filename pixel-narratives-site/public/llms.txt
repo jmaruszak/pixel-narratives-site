@@ -1,6 +1,6 @@
 # Pixel Narratives
 
-Pixel Narratives is an AI-powered commercial production and business AI implementation studio at https://pixelnarratives.studio.
+Pixel Narratives is an AI advisory and implementation studio headquartered in Madison, Mississippi at https://pixelnarratives.studio. We help businesses with visibility, attention, and implementation across the South and nationwide.
 
 ## Core Offers
 
@@ -14,11 +14,18 @@ Pixel Narratives is an AI-powered commercial production and business AI implemen
 - [Homepage](https://pixelnarratives.studio/): Scroll-driven entry with three paths to growth: Visibility (Web Intelligence), Attention (Narrative Intelligence), and Implementation (Business Intelligence).
 - [Narrative Intelligence](https://pixelnarratives.studio/narrative-intelligence): Cinematic AI commercial production: creative process, services, featured campaigns, and case studies.
 - [Web Intelligence](https://pixelnarratives.studio/web-intelligence): Marketing page for the live website scan tool (SEO, AI visibility, friction, redesign opportunities).
+- [Visibility in the Age of AI](https://pixelnarratives.studio/visibility-in-the-age-of-ai): Guide on search visibility, AI visibility, E-E-A-T, authority signals, and YouTube for the Visibility pillar.
 - [Business Intelligence](https://pixelnarratives.studio/intelligence-layer): Service ladder, pricing, and how Pixel Narratives implements AI operationally (Blueprint → Guided Implementation → Fractional CAIO).
 - [Sample Intelligence Layer Blueprint](https://pixelnarratives.studio/sample-intelligence-layer-blueprint): Example Blueprint structure: workflow analysis, quick wins, scoped projects (not a substitute for a client engagement).
 - [AI Readiness Assessment](https://pixelnarratives.studio/ai-readiness-assessment): Free 10-question self-assessment with optional Deep Dive snapshot; exposes a WebMCP lead form for agents.
 - [Contact](https://pixelnarratives.studio/contact): Book a discovery call, email a creative brief, or reach the team directly.
 - [About](https://pixelnarratives.studio/about): Founder story, three service lanes, and how the studio works.
+- [Serving the South](https://pixelnarratives.studio/serving-the-south): Regional hub for Mississippi and Southern markets (Madison HQ).
+- [Mississippi AI Studio](https://pixelnarratives.studio/mississippi-ai-studio): Visibility, attention, and implementation for Mississippi businesses, including Oxford and Gulfport.
+- [Birmingham AI Studio](https://pixelnarratives.studio/birmingham-ai-studio): Regional page for Birmingham, Alabama businesses.
+- [Gulf Coast AI Studio](https://pixelnarratives.studio/gulf-coast-ai-studio): Regional page for Mobile, Alabama and the Florida Panhandle.
+- [Jacksonville AI Studio](https://pixelnarratives.studio/jacksonville-ai-studio): Regional page for Jacksonville, Florida businesses.
+- [Memphis AI Studio](https://pixelnarratives.studio/memphis-ai-studio): Regional page for Memphis, Tennessee businesses.
 - [Web Intelligence app](https://intel.pixelnarratives.studio/): Enter a URL for an automated site scan and pragmatic improvement plan.
 - [AI Commercial Production Company](https://pixelnarratives.studio/ai-commercial-production-company): Landing page for brands seeking AI-powered commercial video production.
 - [AI Consulting for Businesses](https://pixelnarratives.studio/ai-consulting-for-businesses): Landing page for operational AI consulting and structured implementation.
