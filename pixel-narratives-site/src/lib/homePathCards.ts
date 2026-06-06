@@ -34,13 +34,13 @@ export const HOME_PATH_CARDS: HomePathCard[] = [
   },
   {
     id: "intelligence-layer",
-    eyebrow: "Scale",
-    headline: "Intelligence Layer",
-    outcome: "Grow smarter.",
-    body: "Implement AI, workflows, and operational systems that help your business grow.",
+    eyebrow: "Implementation",
+    headline: "Business Intelligence",
+    outcome: "Get results.",
+    body: "Implement AI, workflows, and operational systems built to deliver measurable results.",
     primaryAction: {
       href: "/intelligence-layer",
-      label: "Explore Intelligence Layer",
+      label: "Explore Business Intelligence",
     },
   },
 ];

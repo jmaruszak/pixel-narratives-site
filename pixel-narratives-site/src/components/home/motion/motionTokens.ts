@@ -56,7 +56,7 @@ export const CHAPTER_COPY = {
     headline: "Get Remembered",
   },
   scale: {
-    label: "Scale",
-    headline: "Get More Done",
+    label: "Implementation",
+    headline: "Get Results",
   },
 } as const;

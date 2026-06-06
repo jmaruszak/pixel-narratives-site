@@ -5,16 +5,16 @@ Pixel Narratives is an AI-powered commercial production and business AI implemen
 ## Core Offers
 
 - **AI Ads**: Cinematic, concept-driven commercial production for brands that need ads people watch, remember, and share.
-- **Intelligence Layer**: AI consulting and implementation: workflows, automation, CRM systems, governance, and measurable operating value for growing businesses.
-- **Fractional AI Officer**: Practical Intelligence Layer positioning: strategy, implementation, workflow design, adoption support, and accountability without a full-time executive hire.
+- **Business Intelligence**: AI consulting and implementation: workflows, automation, CRM systems, governance, and measurable operating value for growing businesses.
+- **Fractional AI Officer**: Practical Business Intelligence positioning: strategy, implementation, workflow design, adoption support, and accountability without a full-time executive hire.
 - **Web Intelligence**: Live website scan (SEO signals, AI visibility, operational friction, recommended game plan). Self-serve at https://intel.pixelnarratives.studio/; used in Blueprint engagements.
 
 ## Priority Pages
 
-- [Homepage](https://pixelnarratives.studio/): Scroll-driven entry with three paths to growth: Visibility (Web Intelligence), Attention (Narrative Intelligence), and Scale (Intelligence Layer).
+- [Homepage](https://pixelnarratives.studio/): Scroll-driven entry with three paths to growth: Visibility (Web Intelligence), Attention (Narrative Intelligence), and Implementation (Business Intelligence).
 - [Narrative Intelligence](https://pixelnarratives.studio/narrative-intelligence): Cinematic AI commercial production: creative process, services, featured campaigns, and case studies.
 - [Web Intelligence](https://pixelnarratives.studio/web-intelligence): Marketing page for the live website scan tool (SEO, AI visibility, friction, redesign opportunities).
-- [Intelligence Layer](https://pixelnarratives.studio/intelligence-layer): Service ladder, pricing, and how Pixel Narratives implements AI operationally (Blueprint → Guided Implementation → Fractional CAIO).
+- [Business Intelligence](https://pixelnarratives.studio/intelligence-layer): Service ladder, pricing, and how Pixel Narratives implements AI operationally (Blueprint → Guided Implementation → Fractional CAIO).
 - [Sample Intelligence Layer Blueprint](https://pixelnarratives.studio/sample-intelligence-layer-blueprint): Example Blueprint structure: workflow analysis, quick wins, scoped projects (not a substitute for a client engagement).
 - [AI Readiness Assessment](https://pixelnarratives.studio/ai-readiness-assessment): Free 10-question self-assessment with optional Deep Dive snapshot; exposes a WebMCP lead form for agents.
 - [Contact](https://pixelnarratives.studio/contact): Book a discovery call, email a creative brief, or reach the team directly.
@@ -24,7 +24,7 @@ Pixel Narratives is an AI-powered commercial production and business AI implemen
 - [AI Consulting for Businesses](https://pixelnarratives.studio/ai-consulting-for-businesses): Landing page for operational AI consulting and structured implementation.
 - [AI Workflow Automation](https://pixelnarratives.studio/ai-workflow-automation): Landing page for workflow automation, integrations, and internal AI systems.
 - [How to Use AI in Your Business](https://pixelnarratives.studio/how-to-use-ai-in-your-business): Practical guide on using AI without wasted spend, starting with outcomes and workflows.
-- [How to Implement AI in Your Business](https://pixelnarratives.studio/how-to-implement-ai-in-your-business): Educational guide aligned with Intelligence Layer methodology.
+- [How to Implement AI in Your Business](https://pixelnarratives.studio/how-to-implement-ai-in-your-business): Educational guide aligned with Business Intelligence methodology.
 - [Privacy Policy](https://pixelnarratives.studio/privacy): How assessment, contact, and lead data are collected and used.
 
 ## Preferred Summary

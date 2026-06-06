@@ -13,7 +13,7 @@ export function buildServiceSchema(page: SeoLandingPage) {
     name:
       page.offer === "ads"
         ? "AI Commercial Production"
-        : "Intelligence Layer AI Consulting",
+        : "Business Intelligence",
     provider: {
       "@type": "Organization",
       name: "Pixel Narratives",
@@ -66,7 +66,7 @@ export default function SeoLandingPageView({ page }: { page: SeoLandingPage }) {
         <div className="mx-auto w-full max-w-7xl px-6 py-20 md:px-10 md:py-24">
           <div className="max-w-4xl">
             <p className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
-              {page.offer === "ads" ? "AI Ads" : "Intelligence Layer"}
+              {page.offer === "ads" ? "AI Ads" : "Business Intelligence"}
             </p>
             <h1 className="mt-4 text-4xl leading-[1.05] md:text-6xl">
               {page.h1}

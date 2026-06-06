@@ -35,12 +35,12 @@ export default function DestinationCards() {
               There are three paths to growth.
             </h2>
             <p className="mt-4 text-lg text-[var(--foreground)] md:text-xl">
-              Visibility. Attention. Scale.
+              Visibility. Attention. Implementation.
             </p>
             <p className="pn-body mt-6">
               Every business is trying to grow. The challenge is knowing where
               to focus next. Whether you need to be found, earn more attention,
-              or build systems that scale, we&apos;ll help you choose the right
+              or build systems that deliver results, we&apos;ll help you choose the right
               path forward.
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-x-3 gap-y-2 text-sm text-[var(--muted)]">

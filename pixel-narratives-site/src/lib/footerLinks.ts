@@ -7,7 +7,7 @@ export const STUDIO_FOOTER_LINKS: FooterLink[] = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/narrative-intelligence", label: "Narrative Intelligence" },
-  { href: "/intelligence-layer", label: "Intelligence Layer" },
+  { href: "/intelligence-layer", label: "Business Intelligence" },
   { href: "/web-intelligence", label: "Web Intelligence" },
   { href: "/contact", label: "Contact" },
   { href: "/privacy", label: "Privacy Policy" },

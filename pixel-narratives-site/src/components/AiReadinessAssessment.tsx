@@ -729,7 +729,7 @@ export default function AiReadinessAssessment() {
         {step === "intro" ? (
           <div className="max-w-3xl">
             <p className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
-              Intelligence Layer
+              Business Intelligence
             </p>
             <h1 className="mt-4 text-4xl leading-[1.05] md:text-6xl">
               AI Readiness Self-Assessment
@@ -988,7 +988,7 @@ export default function AiReadinessAssessment() {
                 href="/intelligence-layer"
                 className="inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm text-[var(--foreground)] transition hover:bg-white/5"
               >
-                Explore Intelligence Layer
+                Explore Business Intelligence
               </a>
             </div>
           </div>
@@ -1340,7 +1340,7 @@ export default function AiReadinessAssessment() {
                   href="/intelligence-layer"
                   className="inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm text-[var(--foreground)] transition hover:bg-white/5"
                 >
-                  Explore Intelligence Layer
+                  Explore Business Intelligence
                 </a>
               </div>
             </div>

@@ -364,13 +364,13 @@ export const seoLandingPages: Record<string, SeoLandingPage> = {
     offer: "intelligence",
     h1: "AI Consulting for Businesses That Need Practical Value",
     intro:
-      "Pixel Narratives helps businesses move from scattered AI experimentation to structured workflows, automation, policy, and measurable business outcomes. Think of Intelligence Layer as a practical Fractional AI Officer for growing businesses.",
+      "Pixel Narratives helps businesses move from scattered AI experimentation to structured workflows, automation, policy, and measurable business outcomes. Think of Business Intelligence as a practical Fractional AI Officer for growing businesses.",
     cta: "Get an AI audit",
     sections: [
       {
         heading: "What is AI consulting for businesses?",
         answer:
-          "AI consulting helps a business identify where AI can save time, improve workflows, reduce friction, or create new capacity. In practice, Intelligence Layer functions like a Fractional AI Officer: strategy, implementation, and accountability without adding a full-time executive role.",
+          "AI consulting helps a business identify where AI can save time, improve workflows, reduce friction, or create new capacity. In practice, Business Intelligence functions like a Fractional AI Officer: strategy, implementation, and accountability without adding a full-time executive role.",
       },
       {
         heading: "Why AI consulting matters now",
@@ -378,7 +378,7 @@ export const seoLandingPages: Record<string, SeoLandingPage> = {
           "McKinsey reports that 88% of organizations use AI in at least one function, but many have not scaled it into measurable value. The gap is not access to tools; it is workflow design.",
       },
       {
-        heading: "What Intelligence Layer helps with",
+        heading: "What Business Intelligence helps with",
         bullets: [
           "AI use case discovery and workflow mapping.",
           "Tool selection, prompt systems, and governance.",
@@ -433,7 +433,7 @@ export const seoLandingPages: Record<string, SeoLandingPage> = {
       {
         question: "Does Pixel Narratives implement systems too?",
         answer:
-          "Yes. Intelligence Layer covers strategy, workflow design, implementation, and optimization.",
+          "Yes. Business Intelligence covers strategy, workflow design, implementation, and optimization.",
       },
     ],
     relatedLinks: [
@@ -671,7 +671,7 @@ export const seoLandingPages: Record<string, SeoLandingPage> = {
       {
         question: "Can Pixel Narratives build this?",
         answer:
-          "Yes. Intelligence Layer can audit, design, implement, and optimize CRM automation workflows.",
+          "Yes. Business Intelligence can audit, design, implement, and optimize CRM automation workflows.",
       },
     ],
     relatedLinks: [

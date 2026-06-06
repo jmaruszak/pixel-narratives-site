@@ -9,7 +9,7 @@ import { buildPageMetadata } from "../../lib/siteMetadata";
 export const metadata = buildPageMetadata({
   title: "Contact | Pixel Narratives",
   description:
-    "Get in touch with Pixel Narratives about AI-powered commercial production, Intelligence Layer consulting, or your next campaign.",
+    "Get in touch with Pixel Narratives about AI-powered commercial production, Business Intelligence consulting, or your next campaign.",
   path: "/contact",
   image: "/images/home-cinematic.jpg",
   imageAlt: "Contact Pixel Narratives",
@@ -49,7 +49,7 @@ export default async function ContactPage({
         </h1>
 
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-[var(--foreground)] md:text-xl">
-          Visibility. Attention. Scale.
+          Visibility. Attention. Implementation.
         </p>
 
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-[var(--muted)] md:text-xl">

@@ -67,7 +67,7 @@ export default function ServicesNavMenu() {
         <div
           id={menuId}
           role="menu"
-          className="absolute left-0 top-[calc(100%+0.75rem)] z-50 min-w-[14rem] rounded-2xl border border-white/10 bg-[var(--background)] p-2 shadow-2xl"
+          className="absolute left-0 top-[calc(100%+0.75rem)] z-50 min-w-[14rem] rounded-2xl border border-white/10 bg-[#0b0c0f] p-2 shadow-2xl"
         >
           {SERVICE_NAV_LINKS.map((link) => (
             <a

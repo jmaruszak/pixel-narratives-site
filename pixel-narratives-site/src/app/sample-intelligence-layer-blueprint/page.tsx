@@ -5,9 +5,9 @@ import Nav from "../../components/Nav";
 export const metadata: Metadata = {
   title: "Sample Intelligence Layer Blueprint | Pixel Narratives",
   description:
-    "Sample blueprint preview for Intelligence Layer: business analysis, quick wins, workflow improvements, and scoped projects. Full client reports include tools and implementation recommendations.",
+    "Sample blueprint preview for Business Intelligence: business analysis, quick wins, workflow improvements, and scoped projects. Full client reports include tools and implementation recommendations.",
   keywords: [
-    "Intelligence Layer",
+    "Business Intelligence",
     "sample blueprint",
     "business analysis",
     "workflow improvements",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Sample Intelligence Layer Blueprint | Pixel Narratives",
     description:
-      "Sample blueprint preview for Intelligence Layer: business analysis, quick wins, workflow improvements, and scoped projects. Full client reports include tools and implementation recommendations.",
+      "Sample blueprint preview for Business Intelligence: business analysis, quick wins, workflow improvements, and scoped projects. Full client reports include tools and implementation recommendations.",
     url: "/sample-intelligence-layer-blueprint",
     siteName: "Pixel Narratives",
     locale: "en_US",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
         url: "/images/int-cinematic.jpg",
         width: 2867,
         height: 1600,
-        alt: "Cinematic visual for Pixel Narratives Intelligence Layer, structured AI and business systems consulting.",
+        alt: "Cinematic visual for Pixel Narratives Business Intelligence, structured AI and business systems consulting.",
       },
     ],
   },
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Sample Intelligence Layer Blueprint | Pixel Narratives",
     description:
-      "Sample blueprint preview for Intelligence Layer: business analysis, quick wins, workflow improvements, and scoped projects. Full client reports include tools and implementation recommendations.",
+      "Sample blueprint preview for Business Intelligence: business analysis, quick wins, workflow improvements, and scoped projects. Full client reports include tools and implementation recommendations.",
     images: ["/images/int-cinematic.jpg"],
   },
 };
@@ -67,7 +67,7 @@ export default function SampleIntelligenceLayerBlueprintPage() {
 
       <section className="mx-auto w-full max-w-7xl px-6 py-20 md:px-10 md:py-24">
         <p className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
-          Intelligence Layer
+          Business Intelligence
         </p>
         <h1 className="mt-4 max-w-4xl text-3xl leading-none sm:text-4xl md:text-5xl">
           Sample Intelligence Layer Blueprint
@@ -79,7 +79,7 @@ export default function SampleIntelligenceLayerBlueprintPage() {
           </p>
           <p>
             This sample blueprint shows the structure and style of thinking
-            behind our Intelligence Layer work: where revenue may be leaking,
+            behind our Business Intelligence work: where revenue may be leaking,
             where follow-up is inconsistent, where workflows are scattered, and
             where better systems could create capacity.
           </p>
@@ -185,7 +185,7 @@ export default function SampleIntelligenceLayerBlueprintPage() {
                 href="/intelligence-layer"
                 className="text-sm text-[var(--foreground)] transition hover:opacity-80 sm:px-2"
               >
-                Back to Intelligence Layer
+                Back to Business Intelligence
               </a>
             </div>
           </div>

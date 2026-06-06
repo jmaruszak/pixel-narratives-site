@@ -5,9 +5,9 @@ import HomeMotionExperience from "../components/home/HomeMotionExperience";
 import { buildPageMetadata } from "../lib/siteMetadata";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Pixel Narratives | Visibility, Attention, Scale",
+  title: "Pixel Narratives | Visibility, Attention, Implementation",
   description:
-    "Every business is trying to grow. Pixel Narratives helps with visibility, attention, and scale through Web Intelligence, Narrative Intelligence, and the Intelligence Layer.",
+    "Every business is trying to grow. Pixel Narratives helps with visibility, attention, and implementation through Web Intelligence, Narrative Intelligence, and Business Intelligence.",
   path: "/",
   image: "/images/home-cinematic.jpg",
   imageAlt: "Pixel Narratives homepage cinematic visual",
@@ -36,7 +36,7 @@ const homepageSchemas = [
   {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: "Intelligence Layer AI Consulting",
+    name: "Business Intelligence",
     provider: { "@type": "Organization", name: "Pixel Narratives" },
     areaServed: "United States",
     serviceType: "AI consulting, workflow automation, and implementation",

@@ -7,12 +7,12 @@ import { DESTINATION_CTAS } from "../../lib/destinationCtas";
 import { buildPageMetadata } from "../../lib/siteMetadata";
 
 export const metadata = buildPageMetadata({
-  title: "Intelligence Layer | Pixel Narratives",
+  title: "Business Intelligence | Pixel Narratives",
   description:
     "Move from AI experimentation to operational advantage: AI implementation for businesses, workflow automation, operational AI consulting, and the Intelligence Layer Blueprint.",
   path: "/intelligence-layer",
   image: "/images/int-cinematic.jpg",
-  imageAlt: "Intelligence Layer cinematic visual for Pixel Narratives",
+  imageAlt: "Business Intelligence cinematic visual for Pixel Narratives",
 });
 
 const IMPLEMENTATION_PROJECTS = [
@@ -34,15 +34,15 @@ export default function IntelligenceLayerPage() {
       <CinematicPageHero
         contentScrim
         imageSrc="/images/int-cinematic.jpg"
-        imageAlt="Cinematic Intelligence Layer hero image"
-        title="Intelligence Layer"
+        imageAlt="Cinematic Business Intelligence hero image"
+        title="Business Intelligence"
         subtitle="From AI experimentation to operational advantage."
       >
         <div className="hero-entrance hero-entrance-delay-1 mt-8 space-y-5 text-lg leading-relaxed text-white/70 md:text-xl">
           <p>
             Most teams are already experimenting with AI. Very few businesses
             have turned that activity into policy, process, workflow, and
-            measurable business value. Intelligence Layer helps close that gap.
+            measurable business value. Business Intelligence helps close that gap.
           </p>
           <p className="text-base md:text-lg">
             Think of it as a practical Fractional AI Officer for growing
@@ -323,7 +323,7 @@ export default function IntelligenceLayerPage() {
                 advantage.
               </p>
               <p>
-                Intelligence Layer is built to help owners move from curiosity
+                Business Intelligence is built to help owners move from curiosity
                 to execution.
               </p>
             </div>

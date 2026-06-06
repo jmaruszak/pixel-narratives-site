@@ -100,7 +100,7 @@ export default function IntelligenceLayerProcessFlow() {
         <div className="mx-auto w-full max-w-7xl px-6 py-20 md:px-10 md:py-24">
           <div className="max-w-2xl">
             <p className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
-              Intelligence Layer Process
+              Business Intelligence Process
             </p>
             <h2
               id="il-process-heading"

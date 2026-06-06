@@ -17,7 +17,7 @@ export default function HowToUseAiInYourBusinessPage() {
       <article>
         <section className="mx-auto w-full max-w-4xl px-6 py-20 md:px-10 md:py-24">
           <p className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
-            Intelligence Layer
+            Business Intelligence
           </p>
           <h1 className="mt-4 text-4xl leading-[1.05] md:text-6xl">
             How to Use AI in Your Business (Without Wasting Money)

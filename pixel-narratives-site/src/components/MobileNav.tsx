@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useId, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import {
   CALENDLY_URL,
   PRIMARY_NAV_LINKS,
@@ -38,11 +39,16 @@ function MobileNavLink({
 
 export default function MobileNav() {
   const [open, setOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const panelId = useId();
   const buttonRef = useRef<HTMLButtonElement>(null);
   const panelRef = useRef<HTMLDivElement>(null);
 
   const close = () => setOpen(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     if (!open) return;
@@ -64,6 +70,93 @@ export default function MobileNav() {
       window.removeEventListener("keydown", onKeyDown);
     };
   }, [open]);
+
+  const menuOverlay =
+    open && mounted ? (
+      <div className="fixed inset-0 z-[110] isolation-isolate">
+        <button
+          type="button"
+          aria-label="Close menu overlay"
+          className="absolute inset-0 bg-[#0b0c0f]"
+          onClick={close}
+        />
+        <div
+          ref={panelRef}
+          id={panelId}
+          role="dialog"
+          aria-modal="true"
+          aria-label="Primary navigation"
+          className="absolute right-0 top-0 z-10 flex h-full w-[min(100%,20rem)] flex-col overscroll-contain border-l border-white/10 bg-[#0b0c0f] p-6 pt-[max(1.5rem,env(safe-area-inset-top))] shadow-[-8px_0_32px_rgba(0,0,0,0.6)]"
+        >
+          <div className="flex items-center justify-between">
+            <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
+              Menu
+            </p>
+            <button
+              type="button"
+              aria-label="Close menu"
+              onClick={close}
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-[var(--foreground)] transition hover:bg-white/5"
+            >
+              <svg
+                aria-hidden
+                viewBox="0 0 24 24"
+                className="h-5 w-5"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.5"
+              >
+                <path strokeLinecap="round" d="M6 6l12 12M18 6L6 18" />
+              </svg>
+            </button>
+          </div>
+
+          <nav
+            className="mt-6 flex flex-col gap-1"
+            aria-label="Mobile primary navigation"
+          >
+            {PRIMARY_NAV_LINKS.map((link, index) => (
+              <span key={link.href} className="contents">
+                <MobileNavLink
+                  href={link.href}
+                  label={link.label}
+                  onNavigate={close}
+                />
+                {index === 0 ? (
+                  <div className="mt-4 mb-1 px-3">
+                    <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
+                      Services
+                    </p>
+                    <div className="mt-2 flex flex-col gap-1">
+                      {SERVICE_NAV_LINKS.map((service) => (
+                        <MobileNavLink
+                          key={service.href}
+                          href={service.href}
+                          label={service.label}
+                          onNavigate={close}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                ) : null}
+              </span>
+            ))}
+          </nav>
+
+          <div className="mt-auto pt-8">
+            <a
+              href={CALENDLY_URL}
+              target="_blank"
+              rel="noreferrer"
+              onClick={close}
+              className="inline-flex w-full items-center justify-center rounded-full border border-white/10 bg-[var(--foreground)] px-5 py-3 text-sm font-medium text-black transition hover:opacity-90"
+            >
+              Book a Call
+            </a>
+          </div>
+        </div>
+      </div>
+    ) : null;
 
   return (
     <div className="md:hidden">
@@ -93,91 +186,9 @@ export default function MobileNav() {
         </svg>
       </button>
 
-      {open ? (
-        <div className="fixed inset-0 z-[60] isolation-isolate">
-          <button
-            type="button"
-            aria-label="Close menu overlay"
-            className="absolute inset-0 bg-black/85 backdrop-blur-md"
-            onClick={close}
-          />
-          <div
-            ref={panelRef}
-            id={panelId}
-            role="dialog"
-            aria-modal="true"
-            aria-label="Primary navigation"
-            className="absolute right-0 top-0 flex h-full w-[min(100%,20rem)] flex-col border-l border-white/10 bg-[#0b0c0f] p-6 pt-[max(1.5rem,env(safe-area-inset-top))] shadow-[-8px_0_32px_rgba(0,0,0,0.6)] backdrop-blur-xl"
-          >
-            <div className="flex items-center justify-between">
-              <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
-                Menu
-              </p>
-              <button
-                type="button"
-                aria-label="Close menu"
-                onClick={close}
-                className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-[var(--foreground)] transition hover:bg-white/5"
-              >
-                <svg
-                  aria-hidden
-                  viewBox="0 0 24 24"
-                  className="h-5 w-5"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                >
-                  <path strokeLinecap="round" d="M6 6l12 12M18 6L6 18" />
-                </svg>
-              </button>
-            </div>
-
-            <nav
-              className="mt-6 flex flex-col gap-1"
-              aria-label="Mobile primary navigation"
-            >
-              {PRIMARY_NAV_LINKS.map((link, index) => (
-                <span key={link.href} className="contents">
-                  <MobileNavLink
-                    href={link.href}
-                    label={link.label}
-                    onNavigate={close}
-                  />
-                  {index === 0 ? (
-                    <div className="mt-4 mb-1 px-3">
-                      <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
-                        Services
-                      </p>
-                      <div className="mt-2 flex flex-col gap-1">
-                        {SERVICE_NAV_LINKS.map((service) => (
-                          <MobileNavLink
-                            key={service.href}
-                            href={service.href}
-                            label={service.label}
-                            onNavigate={close}
-                          />
-                        ))}
-                      </div>
-                    </div>
-                  ) : null}
-                </span>
-              ))}
-            </nav>
-
-            <div className="mt-auto pt-8">
-              <a
-                href={CALENDLY_URL}
-                target="_blank"
-                rel="noreferrer"
-                onClick={close}
-                className="inline-flex w-full items-center justify-center rounded-full border border-white/10 bg-[var(--foreground)] px-5 py-3 text-sm font-medium text-black transition hover:opacity-90"
-              >
-                Book a Call
-              </a>
-            </div>
-          </div>
-        </div>
-      ) : null}
+      {menuOverlay && mounted
+        ? createPortal(menuOverlay, document.body)
+        : null}
     </div>
   );
 }

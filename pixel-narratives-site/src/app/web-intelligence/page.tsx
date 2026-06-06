@@ -71,7 +71,7 @@ export default function WebIntelligencePage() {
             href="/intelligence-layer"
             className="cta-pulse-outline inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm text-[var(--foreground)] transition hover:border-white/20 hover:bg-white/5"
           >
-            Explore Intelligence Layer
+            Explore Business Intelligence
           </a>
         </div>
       </CinematicPageHero>

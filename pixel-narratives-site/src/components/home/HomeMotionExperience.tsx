@@ -184,7 +184,7 @@ function ScrollDrivenStage() {
                   Every business is trying to get somewhere.
                 </h1>
                 <p className="hero-entrance hero-entrance-delay-2 mt-6 max-w-2xl text-lg text-[var(--foreground)] md:text-xl">
-                  More visibility. More attention. More scale.
+                  More visibility. More attention. More results.
                 </p>
               </div>
             </m.div>
@@ -261,7 +261,7 @@ function ReducedMotionHome() {
             Every business is trying to get somewhere.
           </h1>
           <p className="mt-6 text-lg text-[var(--foreground)] md:text-xl">
-            More visibility. More attention. More scale.
+            More visibility. More attention. More results.
           </p>
         </div>
       </section>

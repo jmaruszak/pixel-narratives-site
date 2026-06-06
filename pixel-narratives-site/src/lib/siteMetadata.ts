@@ -4,7 +4,7 @@ export const SITE_NAME = "Pixel Narratives";
 export const SITE_URL = "https://pixelnarratives.studio";
 
 export const DEFAULT_DESCRIPTION =
-  "Every business is trying to grow. Pixel Narratives helps with visibility, attention, and scale through Web Intelligence, Narrative Intelligence, and the Intelligence Layer.";
+  "Every business is trying to grow. Pixel Narratives helps with visibility, attention, and implementation through Web Intelligence, Narrative Intelligence, and Business Intelligence.";
 
 export const DEFAULT_OG_IMAGE = "/images/home-cinematic.jpg";
 
@@ -57,7 +57,7 @@ export function buildPageMetadata({
 export const rootMetadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Pixel Narratives | Visibility, Attention, Scale",
+    default: "Pixel Narratives | Visibility, Attention, Implementation",
     template: "%s",
   },
   description: DEFAULT_DESCRIPTION,
@@ -66,7 +66,7 @@ export const rootMetadata: Metadata = {
     apple: "/brand/logo-mark.png",
   },
   openGraph: {
-    title: "Pixel Narratives | Visibility, Attention, Scale",
+    title: "Pixel Narratives | Visibility, Attention, Implementation",
     description: DEFAULT_DESCRIPTION,
     url: SITE_URL,
     siteName: SITE_NAME,
@@ -83,7 +83,7 @@ export const rootMetadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Pixel Narratives | Visibility, Attention, Scale",
+    title: "Pixel Narratives | Visibility, Attention, Implementation",
     description: DEFAULT_DESCRIPTION,
     images: [DEFAULT_OG_IMAGE],
   },

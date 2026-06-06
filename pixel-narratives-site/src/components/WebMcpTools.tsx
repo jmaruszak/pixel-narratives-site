@@ -16,7 +16,7 @@ export default function WebMcpTools() {
     modelContext.registerTool({
       name: "getServiceInfo",
       description:
-        "Return structured information about Pixel Narratives services: AI Ads, Intelligence Layer offerings, Web Intelligence, and the AI Readiness Assessment.",
+        "Return structured information about Pixel Narratives services: AI Ads, Business Intelligence offerings, Web Intelligence, and the AI Readiness Assessment.",
       inputSchema: { type: "object", properties: {} },
       execute: async () => ({
         content: [
