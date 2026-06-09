@@ -18,7 +18,7 @@ const founder = {
   title: "Co-Founder, Head of Narrative & Strategy",
   image: "/images/about-jordan.jpg",
   body: [
-    "Jordan brings 16 years of experience working alongside business owners and leadership teams to navigate complex decisions, align strategy, and drive long-term outcomes.",
+    "Jordan brings over 15 years of experience working alongside business owners and leadership teams to navigate complex decisions, align strategy, and drive long-term outcomes.",
     "At Pixel Narratives, he leads narrative and strategic direction by helping companies cut through noise, clarify what matters, and turn ideas into work that actually moves the needle.",
     "His focus is simple: every project should have a clear purpose, a strong point of view, and a measurable impact.",
   ],
@@ -79,22 +79,28 @@ export default function AboutPage() {
               That work made something clear: attention is only part of the
               equation.
             </p>
-            <p>Today, we operate in three lanes:</p>
-            <ol className="mt-2 list-decimal space-y-3 pl-6 marker:text-[var(--muted)]">
-              <li>We build high-impact creative for brands.</li>
-              <li>
-                We help companies implement AI and train their teams so they can
-                grow faster and operate more efficiently.
-              </li>
-              <li>
-                We help businesses better incorporate SEO and AI visibility into
-                their websites.
-              </li>
-            </ol>
+            <p>Businesses need to be found.</p>
+            <p>They need to earn attention.</p>
             <p>
-              Some clients engage us for one.
-              <br />
-              Others engage us for all three.
+              And when attention creates opportunity, they need the systems and
+              processes to turn that opportunity into results.
+            </p>
+            <p>
+              That&apos;s why everything we do is built around three ideas:
+            </p>
+            <p className="text-[var(--foreground)]">
+              Visibility. Attention. Implementation.
+            </p>
+            <p>
+              Some clients engage us to improve visibility. Others need help
+              capturing attention. And many come to us specifically for
+              implementation, using AI and better processes to improve how their
+              business operates.
+            </p>
+            <p>
+              Whether we&apos;re improving a company&apos;s online presence,
+              creating a commercial, or helping a team adopt AI, the goal is the
+              same: helping businesses grow.
             </p>
           </div>
         </div>
@@ -180,8 +186,8 @@ export default function AboutPage() {
           </div>
           <div className="min-w-0">
             <p className="text-lg leading-relaxed text-[var(--muted)] md:text-xl">
-              We help clients in three primary ways: high-impact advertising, AI
-              adoption with team enablement, and website visibility and design.
+              We help clients improve Visibility, Attention, and Implementation
+              through three core services.
             </p>
             <div className="mt-8 grid min-w-0 grid-cols-1 gap-6 lg:grid-cols-3">
               <div className="min-w-0 overflow-hidden rounded-[24px] border border-white/8 bg-white/[0.02] p-6">
