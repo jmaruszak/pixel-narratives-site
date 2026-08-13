@@ -19,7 +19,7 @@ export default function WebMcpTools() {
     modelContext.registerTool({
       name: "getServiceInfo",
       description:
-        "Return structured information about Pixel Narratives services: AI Ads, Business Intelligence offerings, Web Intelligence, and the AI Readiness Assessment.",
+        "Return structured information about Pixel Narratives services: automation and implementation, training, websites and online visibility, marketing, and the optional AI + Automation Assessment.",
       inputSchema: { type: "object", properties: {} },
       execute: async () => ({
         content: [
@@ -31,45 +31,50 @@ export default function WebMcpTools() {
                 headquarters: `${HEADQUARTERS.locality}, ${HEADQUARTERS.region}`,
                 site: SITE_URL,
                 offers: {
-                  aiAds: {
+                  automation: {
                     summary:
-                      "Cinematic, concept-driven AI commercial production for brands.",
-                    url: `${SITE_URL}/narrative-intelligence`,
-                  },
-                  intelligenceLayer: {
-                    summary:
-                      "Operational AI consulting and implementation for growing businesses.",
-                    url: `${SITE_URL}/intelligence-layer`,
+                      "Turn repetitive work into better systems: workflows, CRM, scheduling, reporting, and internal tools.",
+                    url: `${SITE_URL}/automation`,
                     tiers: [
                       {
-                        name: "Intelligence Layer Blueprint",
+                        name: "Implementation Assessment",
                         price: "From $950",
                         description:
-                          "Workflow audit, tool recommendations, quick wins, and implementation roadmap.",
+                          "Optional diagnostic: workflow audit, tool recommendations, quick wins, and implementation roadmap.",
                       },
                       {
                         name: "Guided Implementation",
                         price: "From $1,200/month (3-month minimum)",
                         description:
-                          "Hands-on implementation, monthly working sessions, and team onboarding.",
+                          "Done With You: hands-on implementation, monthly working sessions, and team onboarding.",
                       },
                       {
                         name: "Fractional Chief AI Officer",
                         price: "From $5,000/month",
                         description:
-                          "Executive AI strategy, operational redesign, and organization-wide oversight.",
+                          "Done For You: we own the build and keep the systems running.",
                       },
                     ],
                   },
-                  webIntelligence: {
+                  training: {
                     summary:
-                      "URL scan for SEO, AI visibility, friction points, and a pragmatic game plan.",
-                    marketingPage: `${SITE_URL}/web-intelligence`,
-                    appUrl: WEB_INTEL_URL,
+                      "Workshops, role-specific training, and playbooks so teams can use AI in the work they already do.",
+                    url: `${SITE_URL}/training`,
                   },
-                  aiReadinessAssessment: {
+                  websites: {
                     summary:
-                      "10-question self-assessment with optional Deep Dive snapshot.",
+                      "Website improvement, SEO, local search, conversion, and a free live-site scan for online visibility.",
+                    url: `${SITE_URL}/websites`,
+                    scanUrl: WEB_INTEL_URL,
+                  },
+                  marketing: {
+                    summary:
+                      "Campaigns, ads, video, content, and lead generation. AI-assisted production is how work gets done.",
+                    url: `${SITE_URL}/marketing`,
+                  },
+                  aiAutomationAssessment: {
+                    summary:
+                      "Optional 10-question self-assessment with optional Deep Dive snapshot. Not the default next step.",
                     url: `${SITE_URL}/ai-readiness-assessment`,
                   },
                 },
@@ -85,7 +90,7 @@ export default function WebMcpTools() {
     modelContext.registerTool({
       name: "bookDiscoveryCall",
       description:
-        "Get the Calendly URL to schedule a Zoom discovery call with Pixel Narratives about campaigns or AI implementation.",
+        "Get the Calendly URL to schedule a Zoom discovery call with Pixel Narratives about automation, training, websites, or marketing.",
       inputSchema: {
         type: "object",
         properties: {

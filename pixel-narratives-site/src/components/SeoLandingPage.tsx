@@ -13,8 +13,8 @@ export function buildServiceSchema(page: SeoLandingPage) {
     "@type": "Service",
     name:
       page.offer === "ads"
-        ? "AI Commercial Production"
-        : "Business Intelligence",
+        ? "Marketing"
+        : "Automation + Implementation",
     provider: {
       "@type": "Organization",
       name: "Pixel Narratives",
@@ -23,8 +23,8 @@ export function buildServiceSchema(page: SeoLandingPage) {
     areaServed: buildAreaServedSchema(),
     serviceType:
       page.offer === "ads"
-        ? "AI-powered commercial video production"
-        : "AI consulting, workflow automation, and implementation",
+        ? "Campaigns, ads, video, and lead generation"
+        : "Automation, workflow implementation, and operational systems",
     description: page.intro,
     url: `${siteUrl}/${page.slug}`,
   };
@@ -67,7 +67,7 @@ export default function SeoLandingPageView({ page }: { page: SeoLandingPage }) {
         <div className="mx-auto w-full max-w-7xl px-6 py-20 md:px-10 md:py-24">
           <div className="max-w-4xl">
             <p className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
-              {page.offer === "ads" ? "AI Ads" : "Business Intelligence"}
+              {page.offer === "ads" ? "Marketing" : "Automation"}
             </p>
             <h1 className="mt-4 text-4xl leading-[1.05] md:text-6xl">
               {page.h1}
@@ -77,16 +77,16 @@ export default function SeoLandingPageView({ page }: { page: SeoLandingPage }) {
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <a
-                href="/contact"
+                href={page.offer === "ads" ? "/contact?need=marketing" : "/contact?need=automation"}
                 className="inline-flex items-center rounded-full border border-white/10 bg-[var(--foreground)] px-6 py-3 text-sm font-medium text-black transition hover:opacity-90"
               >
                 {page.cta}
               </a>
               <Link
-                href="/"
+                href={page.offer === "ads" ? "/marketing" : "/automation"}
                 className="inline-flex items-center rounded-full border border-white/10 px-6 py-3 text-sm text-[var(--foreground)] transition hover:bg-white/5"
               >
-                Visit Pixel Narratives
+                {page.offer === "ads" ? "Marketing" : "Automation + Implementation"}
               </Link>
             </div>
           </div>
@@ -205,7 +205,7 @@ export default function SeoLandingPageView({ page }: { page: SeoLandingPage }) {
                 </a>
               ))}
               <a
-                href="/contact"
+                href={page.offer === "ads" ? "/contact?need=marketing" : "/contact?need=automation"}
                 className="inline-flex items-center rounded-full border border-white/10 bg-[var(--foreground)] px-5 py-2.5 text-sm font-medium text-black transition hover:opacity-90"
               >
                 {page.cta}

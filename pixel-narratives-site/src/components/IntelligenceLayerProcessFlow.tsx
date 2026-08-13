@@ -28,8 +28,8 @@ const STEPS = [
     body: "We map your workflows, tools, and bottlenecks to identify where value is being lost.",
   },
   {
-    title: "Build Your Blueprint",
-    body: "You get a clear, actionable plan for automation, AI tools, and workflow improvements.",
+    title: "Build the Plan",
+    body: "You get a clear plan for automation, tools, and workflow improvements.",
   },
   {
     title: "Implement & Optimize",
@@ -100,7 +100,7 @@ export default function IntelligenceLayerProcessFlow() {
         <div className="mx-auto w-full max-w-7xl px-6 py-20 md:px-10 md:py-24">
           <div className="max-w-2xl">
             <p className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
-              Business Intelligence Process
+              How implementation works
             </p>
             <h2
               id="il-process-heading"

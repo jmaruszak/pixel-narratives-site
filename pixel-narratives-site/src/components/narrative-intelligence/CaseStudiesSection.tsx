@@ -14,8 +14,8 @@ export default function CaseStudiesSection() {
             work.
           </h2>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-[var(--muted)] md:text-xl">
-            Cinematic, concept-driven campaigns built to make brands more
-            watchable, memorable, and distinct.
+            Cinematic campaign work. These pieces are marketing examples, not
+            automation case studies.
           </p>
         </div>
 
@@ -54,10 +54,26 @@ export default function CaseStudiesSection() {
                 <div className="mt-8 space-y-8">
                   <div>
                     <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
-                      Overview
+                      Problem
                     </p>
                     <p className="mt-3 text-base leading-relaxed text-[var(--muted)] md:text-lg">
-                      {study.overview}
+                      {study.problem}
+                    </p>
+                  </div>
+                  <div>
+                    <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
+                      Solution
+                    </p>
+                    <p className="mt-3 text-base leading-relaxed text-[var(--muted)] md:text-lg">
+                      {study.solution}
+                    </p>
+                  </div>
+                  <div>
+                    <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
+                      Result
+                    </p>
+                    <p className="mt-3 text-base leading-relaxed text-[var(--muted)] md:text-lg">
+                      {study.result}
                     </p>
                   </div>
                   <div>
@@ -72,10 +88,10 @@ export default function CaseStudiesSection() {
                   </div>
                   <div>
                     <a
-                      href="/contact"
+                      href="/contact?need=marketing"
                       className="inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm text-[var(--foreground)] transition hover:bg-white/5"
                     >
-                      Request a Concept
+                      Discuss a Campaign
                     </a>
                   </div>
                 </div>
@@ -136,6 +152,30 @@ export function FeaturedCampaignSection() {
             <div className="mt-10 space-y-8">
               <div>
                 <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
+                  Problem
+                </p>
+                <p className="mt-3 text-base leading-relaxed text-[var(--muted)] md:text-lg">
+                  {FEATURED_CAMPAIGN.problem}
+                </p>
+              </div>
+              <div>
+                <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
+                  Solution
+                </p>
+                <p className="mt-3 text-base leading-relaxed text-[var(--muted)] md:text-lg">
+                  {FEATURED_CAMPAIGN.solution}
+                </p>
+              </div>
+              <div>
+                <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
+                  Result
+                </p>
+                <p className="mt-3 text-base leading-relaxed text-[var(--muted)] md:text-lg">
+                  {FEATURED_CAMPAIGN.result}
+                </p>
+              </div>
+              <div>
+                <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
                   Deliverables
                 </p>
                 <ul className="mt-3 space-y-2 text-sm text-[var(--foreground)] md:text-base">
@@ -146,10 +186,10 @@ export function FeaturedCampaignSection() {
               </div>
               <div className="pt-2">
                 <a
-                  href="/contact"
+                  href="/contact?need=marketing"
                   className="inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm text-[var(--foreground)] transition hover:bg-white/5"
                 >
-                  Request a Concept
+                  Discuss a Campaign
                 </a>
               </div>
             </div>

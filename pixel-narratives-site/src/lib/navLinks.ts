@@ -1,12 +1,14 @@
+import { SERVICES } from "./services";
+
 export const PRIMARY_NAV_LINKS = [
+  { href: "/work", label: "Work" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ] as const;
 
-export const SERVICE_NAV_LINKS = [
-  { href: "/web-intelligence", label: "Visibility" },
-  { href: "/narrative-intelligence", label: "Attention" },
-  { href: "/intelligence-layer", label: "Implementation" },
-] as const;
+export const SERVICE_NAV_LINKS = SERVICES.map((service) => ({
+  href: service.href,
+  label: service.navLabel,
+}));
 
 export const CALENDLY_URL = "https://calendly.com/pixelnarratives";

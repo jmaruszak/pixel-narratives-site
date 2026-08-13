@@ -24,10 +24,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [
     "",
     "about",
-    "narrative-intelligence",
-    "web-intelligence",
-    "intelligence-layer",
-    "sample-intelligence-layer-blueprint",
+    "automation",
+    "training",
+    "websites",
+    "marketing",
+    "work",
+    "sample-implementation-assessment",
     "contact",
     "privacy",
     "how-to-use-ai-in-your-business",
@@ -52,11 +54,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency = "yearly";
       priority = 0.3;
     } else if (
-      route === "intelligence-layer" ||
-      route === "sample-intelligence-layer-blueprint" ||
-      route === "ai-readiness-assessment" ||
-      route === "narrative-intelligence" ||
-      route === "web-intelligence"
+      route === "automation" ||
+      route === "training" ||
+      route === "websites" ||
+      route === "marketing" ||
+      route === "work" ||
+      route === "sample-implementation-assessment" ||
+      route === "ai-readiness-assessment"
     ) {
       lastModified = LASTMOD_MAIN_BUSINESS;
       changeFrequency = "monthly";

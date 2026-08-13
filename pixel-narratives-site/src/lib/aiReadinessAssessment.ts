@@ -415,7 +415,7 @@ export function getReadinessTier(score: number): ReadinessTier {
       category: "Emerging Potential",
       range: "4–6",
       summary:
-        "There’s momentum here, but it needs direction. The next move is to choose one high-value use case, build it into the way your team already works, and measure whether it actually improves the business.",
+        "There’s momentum here, but it needs direction. The next move is to choose one high-value use case, build it into the way your team already works, and measure whether it improves the business.",
     };
   }
 

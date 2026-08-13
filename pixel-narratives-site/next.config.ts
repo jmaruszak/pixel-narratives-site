@@ -5,8 +5,28 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
+        source: "/intelligence-layer",
+        destination: "/automation",
+        permanent: true,
+      },
+      {
+        source: "/web-intelligence",
+        destination: "/websites",
+        permanent: true,
+      },
+      {
+        source: "/narrative-intelligence",
+        destination: "/marketing",
+        permanent: true,
+      },
+      {
         source: "/projects",
-        destination: "/narrative-intelligence",
+        destination: "/work",
+        permanent: true,
+      },
+      {
+        source: "/sample-intelligence-layer-blueprint",
+        destination: "/sample-implementation-assessment",
         permanent: true,
       },
     ];

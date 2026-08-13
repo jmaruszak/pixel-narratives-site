@@ -354,7 +354,7 @@ function buildDeepDiveSnapshot(
   }
 
   const blueprintContrast =
-    "This snapshot aligns patterns from your readiness score and follow-up picks so you know where directional energy tends to matter in the next quarter. An AI Readiness Blueprint is different: it ingests workflow reality, stakeholder constraints, sequencing risk, adoption habits, and the specific tradeoffs worth taking now versus later. In other words, the actual path from ambiguity to rollout you can steward week by week.";
+    "This snapshot aligns patterns from your readiness score and follow-up picks so you know where directional energy tends to matter in the next quarter. An Implementation Assessment is different: it looks at how work runs, what is blocking follow-through, and which automations or process changes are worth doing now versus later.";
 
   return {
     whatYourAnswersSuggest: suggest.slice(0, 3),
@@ -729,10 +729,10 @@ export default function AiReadinessAssessment() {
         {step === "intro" ? (
           <div className="max-w-3xl">
             <p className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
-              Business Intelligence
+              Optional diagnostic
             </p>
             <h1 className="mt-4 text-4xl leading-[1.05] md:text-6xl">
-              AI Readiness Self-Assessment
+              AI + Automation Assessment
             </h1>
             <div className="mt-6 space-y-4 text-base leading-relaxed text-[var(--muted)] md:text-lg">
               <p>
@@ -963,8 +963,8 @@ export default function AiReadinessAssessment() {
                 Get My Deep Dive
               </button>
               <p className="mt-4 max-w-2xl text-xs leading-relaxed text-[var(--muted)]">
-                Directional guidance only. The full Blueprint builds the
-                implementation roadmap.
+                Directional guidance only. The Implementation Assessment builds
+                the implementation roadmap.
               </p>
             </div>
 
@@ -985,10 +985,10 @@ export default function AiReadinessAssessment() {
                 Book a strategy call
               </a>
               <a
-                href="/intelligence-layer"
+                href="/automation"
                 className="inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm text-[var(--foreground)] transition hover:bg-white/5"
               >
-                Explore Business Intelligence
+                Talk About Automation
               </a>
             </div>
           </div>
@@ -1310,7 +1310,7 @@ export default function AiReadinessAssessment() {
 
               <section>
                 <h3 className="text-lg font-normal text-[var(--foreground)] md:text-xl">
-                  Where the Blueprint goes deeper
+                  Where the Implementation Assessment goes deeper
                 </h3>
                 <p className="mt-4 text-base leading-relaxed text-[var(--muted)] md:text-lg">
                   {unifiedForDeepDiveReport.blueprintBridge}
@@ -1320,27 +1320,25 @@ export default function AiReadinessAssessment() {
 
             <div className="mt-14 rounded-[28px] border border-white/8 bg-white/[0.02] p-8 md:p-10">
               <h3 className="text-2xl leading-tight md:text-3xl">
-                Want the actual roadmap?
+                Want the implementation roadmap?
               </h3>
               <p className="mt-4 max-w-3xl text-base leading-relaxed text-[var(--muted)] md:text-lg">
-                The Deep Dive is a directional snapshot. The AI Readiness Blueprint
-                maps your actual workflows, data, priorities, and implementation
-                sequence into a practical plan.
+                The Deep Dive is a directional snapshot. The Implementation
+                Assessment maps your workflows, data, priorities, and
+                implementation sequence into a practical plan.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <a
-                  href="https://calendly.com/pixelnarratives"
-                  target="_blank"
-                  rel="noreferrer"
+                  href="/contact?need=automation"
                   className="inline-flex items-center rounded-full border border-white/10 bg-[var(--foreground)] px-5 py-2.5 text-sm font-medium text-black transition hover:opacity-90"
                 >
-                  Book a Blueprint Call
+                  Discuss a Project
                 </a>
                 <a
-                  href="/intelligence-layer"
+                  href="/automation"
                   className="inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm text-[var(--foreground)] transition hover:bg-white/5"
                 >
-                  Explore Business Intelligence
+                  Talk About Automation
                 </a>
               </div>
             </div>

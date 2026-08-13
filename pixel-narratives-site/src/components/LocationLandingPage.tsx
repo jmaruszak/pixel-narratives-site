@@ -79,7 +79,7 @@ export default function LocationLandingPageView({
                 href="/ai-readiness-assessment"
                 className="inline-flex items-center rounded-full border border-white/10 px-6 py-3 text-sm text-[var(--foreground)] transition hover:bg-white/5"
               >
-                AI Readiness Assessment
+                AI + Automation Assessment
               </Link>
             </div>
           </div>
@@ -93,10 +93,10 @@ export default function LocationLandingPageView({
               How we help
             </p>
             <h2 className="mt-4 text-4xl leading-none md:text-5xl">
-              Visibility, Attention, Implementation
+              What we help with
             </h2>
           </div>
-          <div className="mt-10 grid gap-6 lg:grid-cols-3">
+          <div className="mt-10 grid gap-6 lg:grid-cols-2">
             {SERVICE_PILLARS.map((pillar) => (
               <article
                 key={pillar.headline}

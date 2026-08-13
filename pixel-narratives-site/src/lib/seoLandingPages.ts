@@ -35,8 +35,8 @@ export const seoLandingPages: Record<string, SeoLandingPage> = {
     offer: "ads",
     h1: "AI Commercial Production Company for Shareable Brand Ads",
     intro:
-      "Pixel Narratives creates cinematic, AI-powered commercials built around strategy, story, and distribution reality. We help brands move from generic content to ads people actually watch.",
-    cta: "Request a concept",
+      "Pixel Narratives creates cinematic, AI-powered commercials built around strategy, story, and distribution reality. We help brands move from generic content to ads people watch.",
+    cta: "Discuss a Campaign",
     sections: [
       {
         heading: "What is an AI commercial production company?",
@@ -107,6 +107,7 @@ export const seoLandingPages: Record<string, SeoLandingPage> = {
       },
     ],
     relatedLinks: [
+      { href: "/marketing", label: "Marketing" },
       { href: "/ai-video-ad-agency", label: "AI video ad agency" },
       { href: "/cost-of-ai-video-production", label: "cost of AI video production" },
       {
@@ -124,7 +125,7 @@ export const seoLandingPages: Record<string, SeoLandingPage> = {
     h1: "AI Video Ad Agency for Concept-Driven Campaigns",
     intro:
       "Pixel Narratives is an AI video ad agency for brands that want commercials with a narrative spine, not generic content. We build ads around a concept before we build the asset.",
-    cta: "See what we’d create for you",
+    cta: "Discuss a Campaign",
     sections: [
       {
         heading: "What does an AI video ad agency do?",
@@ -188,6 +189,7 @@ export const seoLandingPages: Record<string, SeoLandingPage> = {
       },
     ],
     relatedLinks: [
+      { href: "/marketing", label: "Marketing" },
       { href: "/ai-commercial-production-company", label: "AI commercial production company" },
       {
         href: "/how-to-create-ads-people-actually-watch",
@@ -269,6 +271,7 @@ export const seoLandingPages: Record<string, SeoLandingPage> = {
       },
     ],
     relatedLinks: [
+      { href: "/marketing", label: "Marketing" },
       { href: "/ai-commercial-production-company", label: "AI commercial production" },
       { href: "/ai-video-ad-agency", label: "AI video ad agency" },
       {
@@ -286,7 +289,7 @@ export const seoLandingPages: Record<string, SeoLandingPage> = {
     h1: "How to Create Ads People Actually Watch",
     intro:
       "People watch ads when the ad earns attention before asking for action. Start with the audience problem, build a concept, create a turn, and end with a memorable payoff.",
-    cta: "Request a shareable ad concept",
+    cta: "Discuss a Campaign",
     sections: [
       {
         heading: "Why do most ads get ignored?",
@@ -351,6 +354,7 @@ export const seoLandingPages: Record<string, SeoLandingPage> = {
       },
     ],
     relatedLinks: [
+      { href: "/marketing", label: "Marketing" },
       { href: "/ai-video-ad-agency", label: "AI video ad agency" },
       { href: "/ai-commercial-production-company", label: "AI commercial production company" },
       { href: "/cost-of-ai-video-production", label: "AI video production cost" },
@@ -364,13 +368,13 @@ export const seoLandingPages: Record<string, SeoLandingPage> = {
     offer: "intelligence",
     h1: "AI Consulting for Businesses That Need Practical Value",
     intro:
-      "Pixel Narratives helps businesses move from scattered AI experimentation to structured workflows, automation, policy, and measurable business outcomes. Think of Business Intelligence as a practical Fractional AI Officer for growing businesses.",
-    cta: "Get an AI audit",
+      "Pixel Narratives helps businesses move from scattered AI experimentation to structured workflows, automation, and measurable operating results. We implement systems the team will use.",
+    cta: "Talk About Automation",
     sections: [
       {
         heading: "What is AI consulting for businesses?",
         answer:
-          "AI consulting helps a business identify where AI can save time, improve workflows, reduce friction, or create new capacity. In practice, Business Intelligence functions like a Fractional AI Officer: strategy, implementation, and accountability without adding a full-time executive role.",
+          "AI work helps a business identify where automation can save time, improve workflows, reduce friction, or create new capacity. In practice that means mapping the work, choosing tools, implementing them, and staying with the team until the process sticks.",
       },
       {
         heading: "Why AI consulting matters now",
@@ -378,7 +382,7 @@ export const seoLandingPages: Record<string, SeoLandingPage> = {
           "McKinsey reports that 88% of organizations use AI in at least one function, but many have not scaled it into measurable value. The gap is not access to tools; it is workflow design.",
       },
       {
-        heading: "What Business Intelligence helps with",
+        heading: "What automation and implementation help with",
         bullets: [
           "AI use case discovery and workflow mapping.",
           "Tool selection, prompt systems, and governance.",
@@ -403,12 +407,12 @@ export const seoLandingPages: Record<string, SeoLandingPage> = {
       {
         question: "What does an AI consultant do?",
         answer:
-          "An AI consultant identifies practical AI opportunities, recommends tools, designs workflows, and helps teams implement systems. A Fractional AI Officer also adds ongoing direction and accountability.",
+          "We identify practical opportunities, recommend tools, design workflows, and help teams implement systems. Ongoing implementation support is available when you want a partner after the first build.",
       },
       {
-        question: "What is a Fractional AI Officer?",
+        question: "What does ongoing implementation support look like?",
         answer:
-          "A Fractional AI Officer is a part-time strategic AI leader who helps a business choose the right use cases, implement workflows, guide adoption, and measure results.",
+          "It is a part-time operating partner who helps a business choose the right use cases, implement workflows, guide adoption, and measure results. You are buying follow-through, not an executive title.",
       },
       {
         question: "Who needs AI consulting?",
@@ -433,10 +437,11 @@ export const seoLandingPages: Record<string, SeoLandingPage> = {
       {
         question: "Does Pixel Narratives implement systems too?",
         answer:
-          "Yes. Business Intelligence covers strategy, workflow design, implementation, and optimization.",
+          "Yes. We cover workflow design, implementation, and optimization, not just recommendations.",
       },
     ],
     relatedLinks: [
+      { href: "/automation", label: "Automation + Implementation" },
       { href: "/how-to-use-ai-in-your-business", label: "how to use AI in your business" },
       { href: "/how-to-implement-ai-in-your-business", label: "how to implement AI in your business" },
       { href: "/ai-workflow-automation", label: "AI workflow automation" },
@@ -520,6 +525,7 @@ export const seoLandingPages: Record<string, SeoLandingPage> = {
       },
     ],
     relatedLinks: [
+      { href: "/automation", label: "Automation + Implementation" },
       { href: "/how-to-use-ai-in-your-business", label: "how to use AI in your business" },
       { href: "/ai-consulting-for-businesses", label: "AI consulting for businesses" },
       { href: "/ai-crm-automation", label: "AI CRM automation" },
@@ -603,6 +609,7 @@ export const seoLandingPages: Record<string, SeoLandingPage> = {
       },
     ],
     relatedLinks: [
+      { href: "/automation", label: "Automation + Implementation" },
       { href: "/how-to-use-ai-in-your-business", label: "how to use AI in your business" },
       { href: "/ai-consulting-for-businesses", label: "AI consulting for businesses" },
       { href: "/ai-workflow-automation", label: "AI workflow automation" },
@@ -639,7 +646,7 @@ export const seoLandingPages: Record<string, SeoLandingPage> = {
       {
         heading: "Why CRM automation matters",
         answer:
-          "A CRM only creates value when the data is current, structured, and actually used. AI can reduce the manual work that causes CRM decay.",
+          "A CRM only creates value when the data is current, structured, and used. AI can reduce the manual work that causes CRM decay.",
       },
     ],
     faqs: [
@@ -671,10 +678,11 @@ export const seoLandingPages: Record<string, SeoLandingPage> = {
       {
         question: "Can Pixel Narratives build this?",
         answer:
-          "Yes. Business Intelligence can audit, design, implement, and optimize CRM automation workflows.",
+          "Yes. We can audit, design, implement, and optimize CRM automation workflows.",
       },
     ],
     relatedLinks: [
+      { href: "/automation", label: "Automation + Implementation" },
       { href: "/how-to-use-ai-in-your-business", label: "how to use AI in your business" },
       { href: "/ai-workflow-automation", label: "AI workflow automation" },
       { href: "/ai-consulting-for-businesses", label: "AI consulting for businesses" },

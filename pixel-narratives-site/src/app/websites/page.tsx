@@ -7,38 +7,38 @@ import { buildPageMetadata } from "../../lib/siteMetadata";
 import { WEB_INTEL_PAGE_TOOL_URL } from "../../lib/webIntelligence";
 
 export const metadata = buildPageMetadata({
-  title: "Web Intelligence | Pixel Narratives",
+  title: "Websites + Online Visibility | Pixel Narratives",
   description:
-    "Scan your live website for SEO signals, AI discoverability, conversion friction, and redesign opportunities, then get a pragmatic game plan.",
-  path: "/web-intelligence",
+    "Get found online. Website design, SEO, local SEO, Google Business Profile, conversion, and AI search visibility from Pixel Narratives.",
+  path: "/websites",
   image: "/images/web-cinematic.jpg",
-  imageAlt: "Web Intelligence cinematic visual for Pixel Narratives",
+  imageAlt: "Websites and online visibility cinematic visual for Pixel Narratives",
 });
 
 const SECTIONS = [
   {
-    eyebrow: "Website Visibility",
-    title: "See how your site shows up today.",
-    body: "Web Intelligence reads your live URL for search signals, structure, and content gaps, so you know what is helping or hurting visibility before you invest in a rebuild.",
+    eyebrow: "Website",
+    title: "A site that helps people take action.",
+    body: "Design, development, landing pages, performance, and conversion work so visitors can understand the offer and contact you.",
   },
   {
-    eyebrow: "AI Discoverability",
-    title: "Understand how AI systems might read you.",
-    body: "As discovery shifts toward AI-assisted search and recommendations, your site needs clear structure, useful content, and signals that machines can interpret. We surface where you are strong and where you are invisible.",
+    eyebrow: "Search",
+    title: "Show up where customers are looking.",
+    body: "SEO, local SEO, Google Business Profile, schema, and technical cleanup. AI search visibility is part of this work. It is not the whole service.",
   },
   {
-    eyebrow: "Conversion Friction",
+    eyebrow: "Conversion",
     title: "Spot what slows people down.",
-    body: "Slow paths, unclear CTAs, and operational friction points cost leads. The scan highlights practical fixes, not abstract scores, so you can prioritize what moves conversion.",
+    body: "Unclear calls to action, slow pages, and messy paths cost leads. We prioritize practical fixes, not abstract scores.",
   },
   {
-    eyebrow: "Redesign Opportunities",
-    title: "Know when a refresh is worth it.",
-    body: "Sometimes the answer is copy and structure. Sometimes it is a rebuild. Web Intelligence helps you see where a redesign, content pass, or technical cleanup would create the most leverage.",
+    eyebrow: "Live scan",
+    title: "Start with your URL.",
+    body: "Run a free look at your live site for search signals, structure, friction, and improvement priorities. Then we can talk about what to change.",
   },
 ] as const;
 
-export default function WebIntelligencePage() {
+export default function WebsitesPage() {
   return (
     <main className="min-h-screen bg-[var(--background)] text-[var(--foreground)]">
       <Nav />
@@ -46,16 +46,15 @@ export default function WebIntelligencePage() {
       <CinematicPageHero
         contentScrim
         imageSrc="/images/web-cinematic.jpg"
-        imageAlt="Analyst reviewing a holographic website intelligence map against a city skyline at night"
-        title="Web Intelligence"
-        subtitle="Visibility starts with your URL."
+        imageAlt="Analyst reviewing a website map against a city skyline at night"
+        title="Get Found Online"
+        subtitle="Websites + Online Visibility"
       >
         <div className="hero-entrance hero-entrance-delay-1 mt-8 max-w-2xl text-lg leading-relaxed text-white/70 md:text-xl">
           <p>
-            Enter a URL for a structured look at SEO signals, AI visibility,
-            operational friction points, and a pragmatic game plan. We use Web
-            Intelligence often during Intelligence Layer Blueprint work, and you
-            can try it anytime.
+            Help more of the right customers find the business and take action.
+            We improve websites, search visibility, and the pages that turn
+            interest into contact.
           </p>
         </div>
         <div className="hero-entrance hero-entrance-delay-2 mt-10 flex flex-wrap gap-4">
@@ -65,13 +64,13 @@ export default function WebIntelligencePage() {
             rel="noreferrer"
             className="cta-pulse-filled inline-flex items-center rounded-full border border-white/10 bg-[var(--foreground)] px-5 py-2.5 text-sm font-medium text-black transition hover:opacity-90"
           >
-            Open Web Intelligence
+            Check My Online Visibility
           </a>
           <a
-            href="/intelligence-layer"
+            href="/contact?need=websites"
             className="cta-pulse-outline inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm text-[var(--foreground)] transition hover:border-white/20 hover:bg-white/5"
           >
-            Explore Business Intelligence
+            Improve My Website
           </a>
         </div>
       </CinematicPageHero>
@@ -109,8 +108,8 @@ export default function WebIntelligencePage() {
               Visibility in the Age of AI
             </h2>
             <p className="mt-6 max-w-3xl text-base leading-relaxed text-[var(--muted)] md:text-lg">
-              Learn how search, SEO, AI visibility, E-E-A-T, and YouTube shape
-              how customers discover and trust businesses online.
+              How search, local presence, and AI answers shape how customers
+              discover and trust businesses online.
             </p>
             <div className="mt-8">
               <a
@@ -124,8 +123,7 @@ export default function WebIntelligencePage() {
         </div>
       </section>
 
-      <PageBottomCta {...DESTINATION_CTAS.webIntelligence} />
-
+      <PageBottomCta {...DESTINATION_CTAS.websites} />
       <Footer />
     </main>
   );

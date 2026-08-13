@@ -278,7 +278,7 @@ export default function VisibilityInTheAgeOfAiPage() {
           <p>E-E-A-T stands for:</p>
 
           <Subsection title="Experience">
-            <p>Have you actually done the thing you&apos;re talking about?</p>
+            <p>Have you done the thing you&apos;re talking about?</p>
             <p>
               A restaurant owner discussing restaurant operations demonstrates
               experience.
@@ -373,7 +373,7 @@ export default function VisibilityInTheAgeOfAiPage() {
             </ul>
             <p>
               Video helps both humans and AI understand what your business
-              actually does.
+              does.
             </p>
             <p>
               Many businesses invest heavily in social media while ignoring
@@ -411,12 +411,12 @@ export default function VisibilityInTheAgeOfAiPage() {
           <p>
             Our{" "}
             <Link
-              href="/web-intelligence"
+              href="/websites"
               className="text-[var(--foreground)] transition hover:opacity-80"
             >
-              Web Intelligence
+              Websites + Online Visibility
             </Link>{" "}
-            scan evaluates visibility across three key areas.{" "}
+            work includes a live-site scan.{" "}
             <a
               href={WEB_INTEL_PAGE_TOOL_URL}
               target="_blank"
@@ -462,23 +462,22 @@ export default function VisibilityInTheAgeOfAiPage() {
               <p>
                 Visibility works best when paired with{" "}
                 <Link
-                  href="/narrative-intelligence"
+                  href="/marketing"
                   className="text-[var(--foreground)] transition hover:opacity-80"
                 >
-                  Narrative Intelligence
+                  Marketing
                 </Link>
                 , because being found matters more when people remember you.
               </p>
               <p>
-                The final step is{" "}
+                The next step is often{" "}
                 <Link
-                  href="/intelligence-layer"
+                  href="/automation"
                   className="text-[var(--foreground)] transition hover:opacity-80"
                 >
-                  Business Intelligence
+                  Automation + Implementation
                 </Link>
-                , turning visibility and attention into practical
-                implementation.
+                , turning visibility and attention into practical systems.
               </p>
             </div>
           </div>
@@ -493,7 +492,7 @@ export default function VisibilityInTheAgeOfAiPage() {
                 Want to know how visible your business is?
               </h2>
               <p className="pn-body mt-6">
-                Run a free Web Intelligence scan to see how your website
+                Run a free website scan to see how your website
                 performs across search visibility, AI visibility, authority
                 signals, and conversion opportunities.
               </p>

@@ -6,12 +6,13 @@ import { useRef } from "react";
 import CtaCard from "../CtaCard";
 import NextStepSection from "../NextStepSection";
 import { HOME_PATH_CARDS } from "../../lib/homePathCards";
+import { WEB_INTEL_PAGE_TOOL_URL } from "../../lib/webIntelligence";
 import { DESTINATION_REVEAL } from "./motion/motionTokens";
 
 const TRUST_SIGNALS = [
-  { href: "/narrative-intelligence", label: "Campaign proof" },
-  { href: "/sample-intelligence-layer-blueprint", label: "Blueprint sample" },
-  { href: "/web-intelligence", label: "Free website scan" },
+  { href: "/work", label: "See the work" },
+  { href: WEB_INTEL_PAGE_TOOL_URL, label: "Free website scan", external: true },
+  { href: "/contact", label: "Discuss a project" },
 ] as const;
 
 export default function DestinationCards() {
@@ -32,16 +33,14 @@ export default function DestinationCards() {
             }}
           >
             <h2 className="text-4xl leading-none md:text-6xl">
-              There are three paths to growth.
+              What do you want to improve?
             </h2>
             <p className="mt-4 text-lg text-[var(--foreground)] md:text-xl">
-              Visibility. Attention. Implementation.
+              Save time. Use AI better. Get found. Reach more customers.
             </p>
             <p className="pn-body mt-6">
-              Every business is trying to grow. The challenge is knowing where
-              to focus next. Whether you need to be found, earn more attention,
-              or build systems that deliver results, we&apos;ll help you choose the right
-              path forward.
+              Pick the problem that matters most right now. We will help you
+              choose the right next step.
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-x-3 gap-y-2 text-sm text-[var(--muted)]">
               {TRUST_SIGNALS.map((item, index) => (
@@ -53,6 +52,9 @@ export default function DestinationCards() {
                   ) : null}
                   <Link
                     href={item.href}
+                    {...("external" in item && item.external
+                      ? { target: "_blank", rel: "noreferrer" }
+                      : {})}
                     className="transition hover:text-[var(--foreground)]"
                   >
                     {item.label}
@@ -62,7 +64,7 @@ export default function DestinationCards() {
             </div>
           </m.div>
 
-          <div className="mt-14 grid gap-6 lg:grid-cols-3 lg:items-stretch">
+          <div className="mt-14 grid gap-6 md:grid-cols-2 lg:items-stretch">
             {HOME_PATH_CARDS.map((card, index) => (
               <m.div
                 key={card.id}

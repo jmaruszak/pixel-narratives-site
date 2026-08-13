@@ -4,9 +4,9 @@ import {
   CONTACT_PHONE_TEL,
 } from "../lib/businessLocation";
 import {
-  ADS_FOOTER_LINKS,
-  AI_SYSTEMS_FOOTER_LINKS,
   GUIDES_FOOTER_LINKS,
+  MORE_FOOTER_LINKS,
+  SERVICES_FOOTER_LINKS,
   STUDIO_FOOTER_LINKS,
   type FooterLink,
 } from "../lib/footerLinks";
@@ -45,7 +45,9 @@ export default function Footer() {
         <div className="max-w-sm sm:col-span-2 lg:col-span-1">
           <p>© {new Date().getFullYear()} Pixel Narratives</p>
           <p className="mt-3 max-w-xs leading-relaxed">
-            AI-powered ads and practical AI systems for brands ready to move.
+            Pixel Narratives helps businesses save time, win more customers, and
+            get more done through automation, implementation, training, online
+            visibility, and marketing.
           </p>
           <p className="mt-3 max-w-xs leading-relaxed">
             Madison, Mississippi.{" "}
@@ -81,19 +83,19 @@ export default function Footer() {
         </div>
 
         <FooterNavColumn
+          ariaLabel="Services footer links"
+          heading="Services"
+          links={SERVICES_FOOTER_LINKS}
+        />
+        <FooterNavColumn
           ariaLabel="Studio footer links"
           heading="Studio"
           links={STUDIO_FOOTER_LINKS}
         />
         <FooterNavColumn
-          ariaLabel="AI Ads footer links"
-          heading="AI Ads"
-          links={ADS_FOOTER_LINKS}
-        />
-        <FooterNavColumn
-          ariaLabel="AI Systems footer links"
-          heading="AI Systems"
-          links={AI_SYSTEMS_FOOTER_LINKS}
+          ariaLabel="More footer links"
+          heading="More"
+          links={MORE_FOOTER_LINKS}
         />
         <FooterNavColumn
           ariaLabel="Guides footer links"

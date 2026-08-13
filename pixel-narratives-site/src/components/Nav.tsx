@@ -27,11 +27,9 @@ export default function Nav() {
             className="hidden items-center gap-5 md:flex lg:gap-6"
             aria-label="Primary navigation"
           >
-            {PRIMARY_NAV_LINKS.map((link, index) => (
-              <span key={link.href} className="contents">
-                <NavLink href={link.href} label={link.label} />
-                {index === 0 ? <ServicesNavMenu /> : null}
-              </span>
+            <ServicesNavMenu />
+            {PRIMARY_NAV_LINKS.map((link) => (
+              <NavLink key={link.href} href={link.href} label={link.label} />
             ))}
           </nav>
 

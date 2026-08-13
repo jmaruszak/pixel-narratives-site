@@ -29,29 +29,29 @@ export type LocationLandingPage = {
 const sharedRelatedLinks = [
   { href: "/serving-the-south", label: "Serving the South" },
   { href: "/contact", label: "Book a call" },
-  { href: "/ai-readiness-assessment", label: "AI Readiness Assessment" },
-  { href: "/web-intelligence", label: "Web Intelligence" },
-  { href: "/intelligence-layer", label: "Business Intelligence" },
-  { href: "/narrative-intelligence", label: "Narrative Intelligence" },
+  { href: "/automation", label: "Automation + Implementation" },
+  { href: "/training", label: "Training" },
+  { href: "/websites", label: "Websites + Online Visibility" },
+  { href: "/marketing", label: "Marketing" },
 ];
 
 export const locationLandingPages: Record<string, LocationLandingPage> = {
   "mississippi-ai-studio": {
     slug: "mississippi-ai-studio",
-    title: "AI Advisory and Growth Support for Mississippi | Pixel Narratives",
+    title: "Automation, Websites, and Marketing for Mississippi | Pixel Narratives",
     description:
-      "Pixel Narratives helps Mississippi businesses with visibility, attention, and implementation. Based in Madison, serving business owners statewide including Oxford and Gulfport.",
-    h1: "Visibility, Attention, and Implementation for Mississippi Businesses",
+      "Pixel Narratives helps Mississippi businesses save time, win more customers, and get more done. Based in Madison, serving business owners statewide including Oxford and Gulfport.",
+    h1: "Save Time, Win Customers, and Get More Done for Mississippi Businesses",
     marketLabel: "Mississippi",
     intro:
-      "Pixel Narratives is headquartered in Madison, Mississippi. We help business owners across the state with website visibility, strategic campaigns, and practical AI implementation. Most work starts with a Zoom call, then we advise and deliver from our office.",
+      "Pixel Narratives is headquartered in Madison, Mississippi. We help business owners across the state with automation, training, websites, online visibility, and marketing. Most work starts with a Zoom call, then we deliver from our office.",
     areaServed: [{ type: "State", name: "Mississippi" }],
     sections: [
       {
         heading: "How we work with Mississippi teams",
         body: [
           "We work with Mississippi businesses over Zoom and from our Madison office.",
-          "That model works well for owners who want clear advice, honest priorities, and help turning AI and visibility into real business results.",
+          "That model works well for owners who want clear priorities and help turning automation, websites, and marketing into real business results.",
         ],
       },
       {
@@ -76,33 +76,33 @@ export const locationLandingPages: Record<string, LocationLandingPage> = {
           "Our headquarters is in Madison, Mississippi. We serve business owners across the state over Zoom and from our office.",
       },
       {
-        question: "What do you actually help with?",
+        question: "What do you help with?",
         answer:
-          "We help in three ways: visibility through Web Intelligence, attention through Narrative Intelligence, and implementation through Business Intelligence. Many clients start with one path and expand from there.",
+          "We help with automation and implementation, team training, websites and online visibility, and marketing. Many clients start with one path and expand from there.",
       },
       {
         question: "Where should a Mississippi business start?",
         answer:
-          "If you are unsure, start with a free website scan or the AI Readiness Assessment. Both give you a clearer picture before you book a call.",
+          "If you are unsure, start with a free website scan or a call. The AI + Automation Assessment is optional if you want a clearer picture first.",
       },
     ],
     relatedLinks: sharedRelatedLinks,
   },
   "birmingham-ai-studio": {
     slug: "birmingham-ai-studio",
-    title: "AI Consulting and Visibility for Birmingham, AL | Pixel Narratives",
+    title: "Automation, Websites, and Marketing for Birmingham, AL | Pixel Narratives",
     description:
-      "Visibility, attention, and implementation for Birmingham businesses. Pixel Narratives works with Alabama business owners on website visibility, campaigns, and AI advisory.",
-    h1: "Visibility, Attention, and Implementation for Birmingham Businesses",
+      "Automation, websites, and marketing for Birmingham businesses. Pixel Narratives works with Alabama business owners on operations, online visibility, and campaigns.",
+    h1: "Save Time, Win Customers, and Get More Done for Birmingham Businesses",
     marketLabel: "Birmingham, Alabama",
     intro:
-      "Pixel Narratives works with Birmingham area businesses that want stronger visibility, clearer messaging, and practical AI implementation. We are based in Madison, Mississippi, and serve the region over Zoom and from our office.",
+      "Pixel Narratives works with Birmingham area businesses that want to save time, get found online, and reach more customers. We are based in Madison, Mississippi, and serve the region over Zoom and from our office.",
     areaServed: [{ type: "City", name: "Birmingham", region: "AL" }],
     sections: [
       {
         heading: "How we work with Birmingham teams",
         body: [
-          "Most engagements start with a Zoom call to understand your goals, then we handle visibility work, campaign direction, and AI implementation from our office.",
+          "Most engagements start with a Zoom call to understand your goals, then we handle automation, website work, training, and campaigns from our office.",
           "That approach fits growing businesses that want senior-level thinking without adding a full in-house team.",
         ],
       },
@@ -110,7 +110,7 @@ export const locationLandingPages: Record<string, LocationLandingPage> = {
         heading: "What Birmingham businesses often need",
         body: [
           "Many teams know they need better website visibility and a clearer story, but they are not sure where to start with AI.",
-          "We help you prioritize: what will help you get found, what will help you get chosen, and what will help you get measurable results from implementation.",
+          "We help you prioritize: what will save time, what will help you get found, what will help your team use AI better, and what will help you reach more customers.",
         ],
       },
     ],
@@ -121,9 +121,9 @@ export const locationLandingPages: Record<string, LocationLandingPage> = {
           "Our headquarters is in Madison, Mississippi. We work with Birmingham business owners over Zoom and from our office.",
       },
       {
-        question: "What do you actually help with?",
+        question: "What do you help with?",
         answer:
-          "Visibility through Web Intelligence, attention through Narrative Intelligence, and implementation through Business Intelligence. We keep all three in view so you are not solving one problem while ignoring the others.",
+          "Automation and implementation, team training, websites and online visibility, and marketing. We keep all four in view so you are not solving one problem while ignoring the others.",
       },
       {
         question: "Is this only for large Birmingham companies?",
@@ -135,13 +135,13 @@ export const locationLandingPages: Record<string, LocationLandingPage> = {
   },
   "gulf-coast-ai-studio": {
     slug: "gulf-coast-ai-studio",
-    title: "AI and Visibility for Mobile, AL and the Florida Panhandle | Pixel Narratives",
+    title: "Automation, Websites, and Marketing for Mobile, AL and the Florida Panhandle | Pixel Narratives",
     description:
-      "Visibility, attention, and implementation for Mobile, Alabama and Florida Panhandle businesses. Website visibility, campaigns, and AI advisory from Pixel Narratives.",
-    h1: "Visibility, Attention, and Implementation for the Gulf Coast",
+      "Automation, websites, and marketing for Mobile, Alabama and Florida Panhandle businesses. Pixel Narratives helps Gulf Coast owners save time and win more customers.",
+    h1: "Save Time, Win Customers, and Get More Done for the Gulf Coast",
     marketLabel: "Mobile, Alabama and the Florida Panhandle",
     intro:
-      "Pixel Narratives works with businesses along the Gulf Coast corridor, including Mobile, Alabama and communities across the Florida Panhandle. We help with website visibility, campaign direction, and AI implementation from our Madison, Mississippi office.",
+      "Pixel Narratives works with businesses along the Gulf Coast corridor, including Mobile, Alabama and communities across the Florida Panhandle. We help with automation, training, websites, online visibility, and marketing from our Madison, Mississippi office.",
     areaServed: [
       { type: "City", name: "Mobile", region: "AL" },
       { type: "AdministrativeArea", name: "Florida Panhandle", region: "FL" },
@@ -169,9 +169,9 @@ export const locationLandingPages: Record<string, LocationLandingPage> = {
           "Our headquarters is in Madison, Mississippi. We work with business owners in Mobile, the Florida Panhandle, and along the corridor over Zoom and from our office.",
       },
       {
-        question: "What do you actually help with?",
+        question: "What do you help with?",
         answer:
-          "We help with visibility through Web Intelligence, attention through Narrative Intelligence, and implementation through Business Intelligence. You can start with one area or work across all three.",
+          "We help with automation and implementation, team training, websites and online visibility, and marketing. You can start with one area or work across all four.",
       },
       {
         question: "Does the Gulf Coast page cover my specific city?",
@@ -183,19 +183,19 @@ export const locationLandingPages: Record<string, LocationLandingPage> = {
   },
   "jacksonville-ai-studio": {
     slug: "jacksonville-ai-studio",
-    title: "AI Advisory and Implementation for Jacksonville, FL | Pixel Narratives",
+    title: "Automation, Websites, and Marketing for Jacksonville, FL | Pixel Narratives",
     description:
-      "Visibility, attention, and implementation for Jacksonville businesses. Website visibility, strategic campaigns, and AI advisory from Pixel Narratives.",
-    h1: "Visibility, Attention, and Implementation for Jacksonville Businesses",
+      "Automation, websites, and marketing for Jacksonville businesses. Pixel Narratives helps Florida business owners save time, get found, and reach more customers.",
+    h1: "Save Time, Win Customers, and Get More Done for Jacksonville Businesses",
     marketLabel: "Jacksonville, Florida",
     intro:
-      "Pixel Narratives works with Jacksonville area businesses on visibility, attention, and implementation. We are headquartered in Madison, Mississippi, and serve Florida business owners over Zoom and from our office.",
+      "Pixel Narratives works with Jacksonville area businesses on automation, training, websites, and marketing. We are headquartered in Madison, Mississippi, and serve Florida business owners over Zoom and from our office.",
     areaServed: [{ type: "City", name: "Jacksonville", region: "FL" }],
     sections: [
       {
         heading: "How we work with Jacksonville teams",
         body: [
-          "Most work starts with a Zoom call, then we help with website visibility, campaign direction, and AI implementation from our office.",
+          "Most work starts with a Zoom call, then we help with automation, website visibility, training, and campaigns from our office.",
           "Business owners use us when they want a clear plan and a partner who can help execute, not just recommend tools.",
         ],
       },
@@ -214,41 +214,41 @@ export const locationLandingPages: Record<string, LocationLandingPage> = {
           "Our headquarters is in Madison, Mississippi. We work with Jacksonville business owners over Zoom and from our office.",
       },
       {
-        question: "What do you actually help with?",
+        question: "What do you help with?",
         answer:
-          "Visibility through Web Intelligence, attention through Narrative Intelligence, and implementation through Business Intelligence. We help you choose the right starting point based on your goals.",
+          "Automation and implementation, team training, websites and online visibility, and marketing. We help you choose the right starting point based on your goals.",
       },
       {
         question: "Can we start without a big project?",
         answer:
-          "Yes. Many teams start with a free website scan, the AI Readiness Assessment, or a discovery call to clarify priorities before committing to a larger engagement.",
+          "Yes. Many teams start with a free website scan or a discovery call to clarify priorities before committing to a larger engagement. The AI + Automation Assessment is optional.",
       },
     ],
     relatedLinks: sharedRelatedLinks,
   },
   "memphis-ai-studio": {
     slug: "memphis-ai-studio",
-    title: "AI Consulting and Visibility for Memphis, TN | Pixel Narratives",
+    title: "Automation, Websites, and Marketing for Memphis, TN | Pixel Narratives",
     description:
-      "Visibility, attention, and implementation for Memphis businesses. Website visibility, campaigns, and AI advisory from Pixel Narratives.",
-    h1: "Visibility, Attention, and Implementation for Memphis Businesses",
+      "Automation, websites, and marketing for Memphis businesses. Pixel Narratives helps Tennessee business owners save time, get found, and reach more customers.",
+    h1: "Save Time, Win Customers, and Get More Done for Memphis Businesses",
     marketLabel: "Memphis, Tennessee",
     intro:
-      "Pixel Narratives works with Memphis area businesses that want stronger visibility, clearer messaging, and practical AI implementation. We are based in Madison, Mississippi, and serve the region over Zoom and from our office.",
+      "Pixel Narratives works with Memphis area businesses that want to save time, get found online, and reach more customers. We are based in Madison, Mississippi, and serve the region over Zoom and from our office.",
     areaServed: [{ type: "City", name: "Memphis", region: "TN" }],
     sections: [
       {
         heading: "How we work with Memphis teams",
         body: [
-          "We work with Memphis business owners over Zoom and deliver visibility, campaign, and AI implementation work from our office.",
-          "That model fits owners who want experienced guidance without building a full internal marketing or AI team.",
+          "We work with Memphis business owners over Zoom and deliver automation, website, training, and campaign work from our office.",
+          "That model fits owners who want experienced help without building a full internal marketing or operations team.",
         ],
       },
       {
         heading: "What Memphis businesses often need",
         body: [
           "Many Memphis teams are strong operationally but need help being found online, standing out in crowded categories, and using AI with discipline.",
-          "We help you connect visibility, attention, and implementation so each step supports the next.",
+          "We help you connect automation, training, websites, and marketing so each step supports the next.",
         ],
       },
     ],
@@ -259,9 +259,9 @@ export const locationLandingPages: Record<string, LocationLandingPage> = {
           "Our headquarters is in Madison, Mississippi. We work with Memphis business owners over Zoom and from our office.",
       },
       {
-        question: "What do you actually help with?",
+        question: "What do you help with?",
         answer:
-          "We help with visibility through Web Intelligence, attention through Narrative Intelligence, and implementation through Business Intelligence.",
+          "We help with automation and implementation, team training, websites and online visibility, and marketing.",
       },
       {
         question: "Why work with a team based in Mississippi?",
@@ -284,7 +284,7 @@ export const hubMarketCards = [
   {
     slug: "birmingham-ai-studio",
     label: "Birmingham, Alabama",
-    description: "Visibility, campaigns, and AI advisory for Birmingham area businesses.",
+    description: "Automation, websites, and marketing for Birmingham area businesses.",
   },
   {
     slug: "gulf-coast-ai-studio",
@@ -294,12 +294,12 @@ export const hubMarketCards = [
   {
     slug: "jacksonville-ai-studio",
     label: "Jacksonville, Florida",
-    description: "Visibility, attention, and implementation for Jacksonville business owners.",
+    description: "Automation, websites, and marketing for Jacksonville business owners.",
   },
   {
     slug: "memphis-ai-studio",
     label: "Memphis, Tennessee",
-    description: "Website visibility, campaigns, and AI advisory for Memphis businesses.",
+    description: "Automation, websites, and marketing for Memphis businesses.",
   },
 ] as const;
 

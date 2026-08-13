@@ -16,35 +16,38 @@ export type DestinationCtaConfig = {
 };
 
 export const DESTINATION_CTAS = {
-  webIntelligence: {
-    id: "web-intelligence",
-    eyebrow: "Try it now",
-    headline: "Run a scan on your live site.",
-    body: "Start with Web Intelligence. Build from there.",
+  automation: {
+    id: "automation",
+    eyebrow: "Next Step",
+    headline: "Tell us what is slowing you down.",
+    body: "We will look at the repetitive work, the disconnected tools, and the follow-up that falls through. Then we will talk about what to build first.",
+    primaryAction: { href: "/contact?need=automation", label: "Talk About Automation" },
+    secondaryAction: { href: "/contact", label: "Discuss a Project" },
+  },
+  training: {
+    id: "training",
+    eyebrow: "Next Step",
+    headline: "Help your team use AI in the work they already do.",
+    body: "Workshops, role-specific training, and playbooks so people leave knowing what to do on Monday.",
+    primaryAction: { href: "/contact?need=training", label: "Discuss Team Training" },
+  },
+  websites: {
+    id: "websites",
+    eyebrow: "Next Step",
+    headline: "Help more of the right customers find you.",
+    body: "Start with a look at your live site, or talk through a website and visibility project.",
     primaryAction: {
       href: WEB_INTEL_PAGE_TOOL_URL,
-      label: "Open Web Intelligence",
+      label: "Check My Online Visibility",
       external: true,
     },
-    secondaryAction: { href: "/contact", label: "Talk to the team" },
+    secondaryAction: { href: "/contact?need=websites", label: "Improve My Website" },
   },
-  narrativeIntelligence: {
-    id: "narrative-intelligence",
+  marketing: {
+    id: "marketing",
     eyebrow: "Next Step",
-    headline: "Ready for a concept worth watching?",
-    body: "We'll explore a cinematic direction built around your brand.",
-    primaryAction: { href: "/contact", label: "Request a Concept" },
-  },
-  intelligenceLayer: {
-    id: "intelligence-layer",
-    eyebrow: "How We Work",
-    headline: "Stop experimenting with AI. Start building it into the business.",
-    body: "We'll implement smarter systems, better workflows, stronger team adoption, and a clearer return on investment, time and spend.",
-    primaryAction: {
-      href: "https://calendly.com/pixelnarratives",
-      label: "Book a Discovery Call",
-      external: true,
-    },
-    secondaryAction: { href: "/contact", label: "Contact Us" },
+    headline: "Ready to reach more customers?",
+    body: "Tell us who you need to reach and what you want them to do. We will talk through campaigns, ads, video, and content.",
+    primaryAction: { href: "/contact?need=marketing", label: "Discuss a Campaign" },
   },
 } as const satisfies Record<string, DestinationCtaConfig>;

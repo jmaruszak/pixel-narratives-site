@@ -3,23 +3,23 @@ import Footer from "../../components/Footer";
 import Nav from "../../components/Nav";
 
 export const metadata: Metadata = {
-  title: "Sample Intelligence Layer Blueprint | Pixel Narratives",
+  title: "Sample Implementation Assessment | Pixel Narratives",
   description:
-    "Sample blueprint preview for Business Intelligence: business analysis, quick wins, workflow improvements, and scoped projects. Full client reports include tools and implementation recommendations.",
+    "Sample Implementation Assessment preview: business analysis, quick wins, workflow improvements, and scoped projects. Full client reports include tools and implementation recommendations.",
   keywords: [
-    "Business Intelligence",
-    "sample blueprint",
+    "Implementation Assessment",
+    "sample assessment",
     "business analysis",
     "workflow improvements",
     "scoped projects",
-    "AI consulting",
+    "automation",
   ],
-  alternates: { canonical: "/sample-intelligence-layer-blueprint" },
+  alternates: { canonical: "/sample-implementation-assessment" },
   openGraph: {
-    title: "Sample Intelligence Layer Blueprint | Pixel Narratives",
+    title: "Sample Implementation Assessment | Pixel Narratives",
     description:
-      "Sample blueprint preview for Business Intelligence: business analysis, quick wins, workflow improvements, and scoped projects. Full client reports include tools and implementation recommendations.",
-    url: "/sample-intelligence-layer-blueprint",
+      "Sample Implementation Assessment preview: business analysis, quick wins, workflow improvements, and scoped projects. Full client reports include tools and implementation recommendations.",
+    url: "/sample-implementation-assessment",
     siteName: "Pixel Narratives",
     locale: "en_US",
     type: "website",
@@ -28,15 +28,15 @@ export const metadata: Metadata = {
         url: "/images/int-cinematic.jpg",
         width: 2867,
         height: 1600,
-        alt: "Cinematic visual for Pixel Narratives Business Intelligence, structured AI and business systems consulting.",
+        alt: "Cinematic visual for Pixel Narratives Implementation Assessment.",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sample Intelligence Layer Blueprint | Pixel Narratives",
+    title: "Sample Implementation Assessment | Pixel Narratives",
     description:
-      "Sample blueprint preview for Business Intelligence: business analysis, quick wins, workflow improvements, and scoped projects. Full client reports include tools and implementation recommendations.",
+      "Sample Implementation Assessment preview: business analysis, quick wins, workflow improvements, and scoped projects. Full client reports include tools and implementation recommendations.",
     images: ["/images/int-cinematic.jpg"],
   },
 };
@@ -48,7 +48,7 @@ const sampleCards = [
   },
   {
     title: "Quick Wins",
-    body: "In actual client blueprints, Quick Wins include AI tools, services, process changes, and simple improvements that can usually be completed in under two hours.",
+    body: "In client assessments, Quick Wins include tools, services, process changes, and simple improvements that can usually be completed in under two hours.",
   },
   {
     title: "Scoped Project Examples",
@@ -56,42 +56,42 @@ const sampleCards = [
   },
   {
     title: "Next Steps",
-    body: "A practical path from discovery to blueprint, quick wins, scoped projects, implementation, and ongoing improvement.",
+    body: "A practical path from discovery to assessment, quick wins, scoped projects, implementation, and ongoing improvement.",
   },
 ] as const;
 
-export default function SampleIntelligenceLayerBlueprintPage() {
+export default function SampleImplementationAssessmentPage() {
   return (
     <main className="min-h-screen bg-[var(--background)] text-[var(--foreground)]">
       <Nav />
 
       <section className="mx-auto w-full max-w-7xl px-6 py-20 md:px-10 md:py-24">
         <p className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
-          Business Intelligence
+          Optional diagnostic
         </p>
         <h1 className="mt-4 max-w-4xl text-3xl leading-none sm:text-4xl md:text-5xl">
-          Sample Intelligence Layer Blueprint
+          Sample Implementation Assessment
         </h1>
         <div className="mt-8 max-w-3xl space-y-6 text-lg leading-relaxed text-[var(--muted)] md:text-xl">
           <p>
-            Before we recommend tools, automations, AI workflows, or scoped
-            builds, we look at how the business actually runs.
+            Before we recommend tools, automations, or scoped builds, we look at
+            how the business runs.
           </p>
           <p>
-            This sample blueprint shows the structure and style of thinking
-            behind our Business Intelligence work: where revenue may be leaking,
-            where follow-up is inconsistent, where workflows are scattered, and
-            where better systems could create capacity.
+            This sample shows the structure and style of thinking behind our
+            Implementation Assessment: where revenue may be leaking, where
+            follow-up is inconsistent, where workflows are scattered, and where
+            better systems could create capacity.
           </p>
           <p>
             This sample does not include the full tool-specific detail of a
-            client blueprint. Actual client reports include AI tools, services,
+            client assessment. Actual client reports include tools, services,
             process changes, automation ideas, and scoped implementation
             recommendations specific to your business.
           </p>
           <p className="text-[var(--foreground)]">
-            This sample shows how we think. A real blueprint shows what we would
-            do for your specific business.
+            This sample shows how we think. A real assessment shows what we
+            would do for your specific business.
           </p>
         </div>
 
@@ -102,13 +102,13 @@ export default function SampleIntelligenceLayerBlueprintPage() {
             rel="noreferrer"
             className="cta-pulse-filled inline-flex items-center rounded-full border border-white/10 bg-[var(--foreground)] px-5 py-2.5 text-sm font-medium text-black transition hover:opacity-90"
           >
-            View the Sample Blueprint
+            View the Sample Assessment
           </a>
           <a
-            href="/ai-readiness-assessment"
+            href="/contact?need=automation"
             className="cta-pulse-outline inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm text-[var(--foreground)] transition hover:border-white/20 hover:bg-white/5"
           >
-            Take the AI Readiness Assessment
+            Discuss a Project
           </a>
         </div>
       </section>
@@ -145,18 +145,18 @@ export default function SampleIntelligenceLayerBlueprintPage() {
             <p>
               A lot of businesses want to jump straight into AI. But if the
               business information is scattered across inboxes, spreadsheets,
-              text threads, forms, notes, and memory, AI usually makes the mess
-              louder instead of making the business better.
+              text threads, forms, notes, and memory, new tools usually make the
+              mess louder instead of making the business better.
             </p>
             <p>
               That is why we often start with data organization and
               centralization. Clean intake, clearer workflows, better handoffs,
               and one place to track the important details create the foundation
-              for AI systems that are actually useful.
+              for systems that are useful.
             </p>
             <p>
-              AI works better when the business has a cleaner operating layer
-              underneath it.
+              Automation works better when the business has a cleaner operating
+              layer underneath it.
             </p>
           </div>
         </div>
@@ -169,23 +169,28 @@ export default function SampleIntelligenceLayerBlueprintPage() {
               Want one built around your business?
             </h2>
             <p className="mt-6 max-w-2xl text-base leading-relaxed text-[var(--muted)] md:text-lg">
-              Start with the AI Readiness Assessment. It gives us a clearer
-              picture of where your business is today, what is slowing things
-              down, and where better systems, automation, AI support, or scoped
-              implementation work could help.
+              Discuss a project if you already know where work is getting stuck.
+              The AI + Automation Assessment is optional if you want a clearer
+              picture first.
             </p>
             <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center">
               <a
-                href="/ai-readiness-assessment"
+                href="/contact?need=automation"
                 className="cta-pulse-filled inline-flex items-center justify-center rounded-full border border-white/10 bg-[var(--foreground)] px-5 py-2.5 text-sm font-medium text-black transition hover:opacity-90"
               >
-                Take the AI Readiness Assessment
+                Discuss a Project
               </a>
               <a
-                href="/intelligence-layer"
+                href="/ai-readiness-assessment"
+                className="cta-pulse-outline inline-flex items-center justify-center rounded-full border border-white/10 px-5 py-2.5 text-sm text-[var(--foreground)] transition hover:border-white/20 hover:bg-white/5"
+              >
+                Take the assessment
+              </a>
+              <a
+                href="/automation"
                 className="text-sm text-[var(--foreground)] transition hover:opacity-80 sm:px-2"
               >
-                Back to Business Intelligence
+                Back to Automation
               </a>
             </div>
           </div>

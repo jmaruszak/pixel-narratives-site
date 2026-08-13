@@ -4,12 +4,13 @@ import Link from "next/link";
 import Footer from "../../components/Footer";
 import Nav from "../../components/Nav";
 import { buildOrganizationSchema } from "../../lib/businessLocation";
+import { SERVICES } from "../../lib/services";
 import { MARKETING_TO_WEB_INTEL_URL } from "../../lib/webIntelligence";
 
 export const metadata: Metadata = {
-  title: "About Pixel Narratives | AI Creative Studio & AI Consulting",
+  title: "About Pixel Narratives",
   description:
-    "Meet Pixel Narratives, headquartered in Madison, Mississippi. We help businesses with visibility, attention, and implementation across the South and nationwide.",
+    "Pixel Narratives is an execution company based in Madison, Mississippi. We help businesses save time, win more customers, and get more done through automation, training, websites, and marketing.",
   alternates: { canonical: "/about" },
 };
 
@@ -19,7 +20,7 @@ const founder = {
   image: "/images/about-jordan.jpg",
   body: [
     "Jordan brings over 15 years of experience working alongside business owners and leadership teams to navigate complex decisions, align strategy, and drive long-term outcomes.",
-    "At Pixel Narratives, he leads narrative and strategic direction by helping companies cut through noise, clarify what matters, and turn ideas into work that actually moves the needle.",
+    "At Pixel Narratives, he leads narrative and strategic direction by helping companies cut through noise, clarify what matters, and turn ideas into work that moves the needle.",
     "His focus is simple: every project should have a clear purpose, a strong point of view, and a measurable impact.",
   ],
 } as const;
@@ -57,8 +58,8 @@ export default function AboutPage() {
           <div className="space-y-6 text-lg leading-relaxed text-[var(--muted)] md:text-xl">
             <p>
               Pixel Narratives is headquartered in Madison, Mississippi. We work
-              with business owners who want stronger visibility, clearer
-              messaging, and practical AI implementation.
+              with business owners who want to save time, win more customers,
+              and get more done.
             </p>
             <p>
               We are based in Madison and work with teams across Mississippi and
@@ -76,31 +77,28 @@ export default function AboutPage() {
               to capture attention.
             </p>
             <p>
-              That work made something clear: attention is only part of the
-              equation.
+              That work made something clear: a campaign only helps if the
+              business can be found, follow up, and deliver.
             </p>
-            <p>Businesses need to be found.</p>
-            <p>They need to earn attention.</p>
+            <p>Businesses need better systems.</p>
+            <p>They need teams who know how to use the tools they already have.</p>
+            <p>They need to be found online, and they need marketing that gets acted on.</p>
             <p>
-              And when attention creates opportunity, they need the systems and
-              processes to turn that opportunity into results.
-            </p>
-            <p>
-              That&apos;s why everything we do is built around three ideas:
+              That is why everything we do is built around four services:
             </p>
             <p className="text-[var(--foreground)]">
-              Visibility. Attention. Implementation.
+              Automation + Implementation. Training. Websites + Online
+              Visibility. Marketing.
             </p>
             <p>
-              Some clients engage us to improve visibility. Others need help
-              capturing attention. And many come to us specifically for
-              implementation, using AI and better processes to improve how their
-              business operates.
+              Some clients start with repetitive work that is eating the week.
+              Others need website visibility, a campaign, or team training. AI
+              is how a lot of the work gets done. You are buying the outcome.
             </p>
             <p>
-              Whether we&apos;re improving a company&apos;s online presence,
-              creating a commercial, or helping a team adopt AI, the goal is the
-              same: helping businesses grow.
+              Whether we are improving a company&apos;s online presence,
+              creating a campaign, training a team, or building better systems,
+              the goal is the same: helping businesses grow.
             </p>
           </div>
         </div>
@@ -171,7 +169,7 @@ export default function AboutPage() {
             <p className="mt-4 text-base leading-relaxed text-[var(--muted)] md:text-lg">
               Our team combines creative thinking, technical execution, and
               practical business experience to help brands tell stories people
-              actually want to watch.
+              want to watch.
             </p>
           </div>
         </div>
@@ -186,47 +184,44 @@ export default function AboutPage() {
           </div>
           <div className="min-w-0">
             <p className="text-lg leading-relaxed text-[var(--muted)] md:text-xl">
-              We help clients improve Visibility, Attention, and Implementation
-              through three core services.
+              We help clients save time, use AI better, get found, and reach
+              more customers.
             </p>
-            <div className="mt-8 grid min-w-0 grid-cols-1 gap-6 lg:grid-cols-3">
-              <div className="min-w-0 overflow-hidden rounded-[24px] border border-white/8 bg-white/[0.02] p-6">
-                <h2 className="text-balance break-words text-2xl leading-snug lg:text-3xl">
-                  Narrative Intelligence
-                </h2>
-                <p className="mt-4 text-base leading-relaxed text-[var(--muted)]">
-                  High-impact, AI-driven creative designed to capture attention
-                  and actually move people.
-                </p>
-              </div>
-              <div className="min-w-0 overflow-hidden rounded-[24px] border border-white/8 bg-white/[0.02] p-6">
-                <h2 className="text-balance break-words text-2xl leading-snug lg:text-3xl">
-                  Business Intelligence
-                </h2>
-                <p className="mt-4 text-base leading-relaxed text-[var(--muted)]">
-                  Helping companies implement AI in a way that drives real
-                  operational results not just experimentation.
-                </p>
-              </div>
-              <div className="flex min-w-0 flex-col overflow-hidden rounded-[24px] border border-white/8 bg-white/[0.02] p-6">
-                <h2 className="text-balance break-words text-2xl leading-snug lg:text-3xl">
-                  Web Intelligence
-                </h2>
-                <p className="mt-4 text-base leading-relaxed text-[var(--muted)]">
-                  A practical read on your website for SEO, AI visibility, and
-                  improvement priorities.
-                </p>
-                <p className="mt-5 text-base">
-                  <a
-                    href={MARKETING_TO_WEB_INTEL_URL}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-[var(--foreground)] transition hover:opacity-80"
-                  >
-                    Open Web Intelligence
-                  </a>
-                </p>
-              </div>
+            <div className="mt-8 grid min-w-0 grid-cols-1 gap-6 lg:grid-cols-2">
+              {SERVICES.map((service) => (
+                <div
+                  key={service.id}
+                  className="flex min-w-0 flex-col overflow-hidden rounded-[24px] border border-white/8 bg-white/[0.02] p-6"
+                >
+                  <h2 className="text-balance break-words text-2xl leading-snug lg:text-3xl">
+                    {service.name}
+                  </h2>
+                  <p className="mt-4 text-base leading-relaxed text-[var(--muted)]">
+                    {service.body}
+                  </p>
+                  {service.id === "websites" ? (
+                    <p className="mt-5 text-base">
+                      <a
+                        href={MARKETING_TO_WEB_INTEL_URL}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-[var(--foreground)] transition hover:opacity-80"
+                      >
+                        Check My Online Visibility
+                      </a>
+                    </p>
+                  ) : (
+                    <p className="mt-5 text-base">
+                      <Link
+                        href={service.href}
+                        className="text-[var(--foreground)] transition hover:opacity-80"
+                      >
+                        {service.ctaLabel}
+                      </Link>
+                    </p>
+                  )}
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -256,7 +251,7 @@ export default function AboutPage() {
         <div className="next-step-content mx-auto w-full max-w-7xl px-6 py-20 md:px-10">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="text-4xl leading-none md:text-6xl">
-              Ready to see what AI can actually do for your business?
+              Ready to talk about what to improve?
             </h2>
             <div className="mt-8">
               <a

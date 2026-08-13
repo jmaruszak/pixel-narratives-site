@@ -106,7 +106,7 @@ export function parseOpenAiDeepDivePayload(data: unknown): UnifiedDeepDiveReport
   const blueprintBridge =
     typeof o.blueprintBridge === "string" && o.blueprintBridge.trim()
       ? o.blueprintBridge.trim()
-      : "The Blueprint expands this directional view into practical sequencing anchored in how your team actually operates, without replacing your judgment.";
+      : "The Implementation Assessment expands this directional view into practical sequencing anchored in how your team operates, without replacing your judgment.";
 
   const internalSalesNotes =
     typeof o.internalSalesNotes === "string" ? o.internalSalesNotes.trim() : "";

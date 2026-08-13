@@ -18,7 +18,7 @@ import { WEB_INTEL_PAGE_TOOL_URL } from "../../lib/webIntelligence";
 export const metadata: Metadata = buildPageMetadata({
   title: "Serving the South | Pixel Narratives",
   description:
-    "Visibility, attention, and implementation for Mississippi and Southern businesses. Pixel Narratives is headquartered in Madison, Mississippi.",
+    "Automation, websites, training, and marketing for Mississippi and Southern businesses. Pixel Narratives is headquartered in Madison, Mississippi.",
   path: "/serving-the-south",
 });
 
@@ -65,13 +65,13 @@ export default function ServingTheSouthPage() {
             Serving the South
           </p>
           <h1 className="mt-4 text-5xl leading-[1.05] md:text-7xl">
-            Visibility, Attention, and Implementation for Mississippi and the
+            Save Time, Win Customers, and Get More Done for Mississippi and the
             South
           </h1>
           <div className="mt-8 max-w-3xl space-y-5 text-lg leading-relaxed text-[var(--muted)] md:text-xl md:leading-8">
             <p>
-              Pixel Narratives helps Southern businesses with visibility,
-              attention, and implementation.
+              Pixel Narratives helps Southern businesses save time, win more
+              customers, and get more done.
             </p>
             <p>
               We are based in Madison, Mississippi, and work with business owners
@@ -102,7 +102,7 @@ export default function ServingTheSouthPage() {
               href="/ai-readiness-assessment"
               className="inline-flex items-center rounded-full border border-white/10 px-6 py-3 text-sm text-[var(--foreground)] transition hover:bg-white/5"
             >
-              AI Readiness Assessment
+              AI + Automation Assessment
             </Link>
           </div>
         </div>
@@ -115,10 +115,10 @@ export default function ServingTheSouthPage() {
               How we help
             </p>
             <h2 className="mt-4 text-4xl leading-none md:text-5xl">
-              Three paths to growth
+              What we help with
             </h2>
           </div>
-          <div className="mt-10 grid gap-6 lg:grid-cols-3">
+          <div className="mt-10 grid gap-6 lg:grid-cols-2">
             {SERVICE_PILLARS.map((pillar) => (
               <article
                 key={pillar.headline}
@@ -174,8 +174,8 @@ export default function ServingTheSouthPage() {
           </div>
           <p className="mt-10 max-w-3xl text-base leading-relaxed text-[var(--muted)] md:text-lg">
             We also work with business owners in {secondaryMentionLabels} and
-            across the South. Our focus is helping businesses in the region lead
-            in visibility, attention, and implementation. We work with clients
+            across the South. Our focus is helping businesses in the region save
+            time, win more customers, and get more done. We work with clients
             anywhere when the engagement is a good fit.
           </p>
         </div>
@@ -190,8 +190,8 @@ export default function ServingTheSouthPage() {
               Ready to talk about your market?
             </h2>
             <p className="pn-body mt-6">
-              Start with a call, a free website scan, or the AI Readiness
-              Assessment.
+              Start with a call or a free website scan. The AI + Automation
+              Assessment is optional.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-4">
               <Link

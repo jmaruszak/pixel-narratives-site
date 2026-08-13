@@ -34,29 +34,36 @@ export const SERVICE_AREA_HUB_MENTIONS: ServiceAreaPlace[] = [
 ];
 
 export const ORGANIZATION_DESCRIPTION =
-  "Pixel Narratives helps businesses with visibility, attention, and implementation through Web Intelligence, Narrative Intelligence, and Business Intelligence.";
+  "Pixel Narratives helps businesses save time, win more customers, and get more done through automation, implementation, training, online visibility, and marketing.";
 
 export const SERVICE_PILLARS = [
   {
-    eyebrow: "Visibility",
-    headline: "Web Intelligence",
-    outcome: "Get found.",
-    body: "Be found by customers and AI. Uncover visibility gaps and see where your website helps or holds back growth.",
-    href: "/web-intelligence",
+    eyebrow: "Save Time",
+    headline: "Automation + Implementation",
+    outcome: "Less manual work. Faster follow-up. Clearer operations.",
+    body: "Turn repetitive work into better systems: workflows, CRM, scheduling, reporting, and the tools your team uses every day.",
+    href: "/automation",
   },
   {
-    eyebrow: "Attention",
-    headline: "Narrative Intelligence",
-    outcome: "Get chosen.",
-    body: "Create campaigns, content, and experiences designed to earn attention and stay memorable.",
-    href: "/narrative-intelligence",
+    eyebrow: "Use AI Better",
+    headline: "Training",
+    outcome: "Your team leaves knowing how to use AI in the work they already do.",
+    body: "Practical workshops, role-specific training, and playbooks so people can use AI at work without wasting time on tools they will not keep.",
+    href: "/training",
   },
   {
-    eyebrow: "Implementation",
-    headline: "Business Intelligence",
-    outcome: "Get results.",
-    body: "Implement AI, workflows, and operational systems built to deliver measurable results.",
-    href: "/intelligence-layer",
+    eyebrow: "Get Found",
+    headline: "Websites + Online Visibility",
+    outcome: "Help more of the right customers find you and take action.",
+    body: "Website improvement, SEO, local search, and conversion work so your business shows up where customers are looking.",
+    href: "/websites",
+  },
+  {
+    eyebrow: "Reach More Customers",
+    headline: "Marketing",
+    outcome: "Campaigns that get seen, remembered, and acted on.",
+    body: "Campaigns, ads, video, content, and lead generation. We use AI where it helps production.",
+    href: "/marketing",
   },
 ] as const;
 
@@ -111,11 +118,14 @@ export function buildOrganizationSchema() {
     email: CONTACT_EMAIL,
     telephone: CONTACT_PHONE,
     knowsAbout: [
-      "Website visibility",
-      "AI discoverability",
-      "Strategic campaigns",
-      "AI advisory",
-      "Business AI implementation",
+      "Business automation",
+      "Workflow automation",
+      "CRM implementation",
+      "AI training",
+      "Website development",
+      "SEO",
+      "Local SEO",
+      "Digital marketing",
     ],
   };
 }
@@ -175,35 +185,46 @@ export function buildHomepageServiceSchemas() {
     {
       "@context": "https://schema.org",
       "@type": "Service",
-      name: "Web Intelligence",
+      name: "Automation + Implementation",
       provider,
       areaServed,
-      serviceType: "Website visibility and AI discoverability analysis",
+      serviceType: "Business process automation and systems implementation",
       description:
-        "Live website scan for SEO signals, AI visibility, conversion friction, and improvement priorities.",
-      url: `${SITE_URL}/web-intelligence`,
+        "Workflow automation, CRM implementation, scheduling, reporting, and custom business tools that reduce manual work.",
+      url: `${SITE_URL}/automation`,
     },
     {
       "@context": "https://schema.org",
       "@type": "Service",
-      name: "Narrative Intelligence",
+      name: "Training",
       provider,
       areaServed,
-      serviceType: "Strategic campaigns and messaging",
+      serviceType: "Workplace AI training",
       description:
-        "Campaigns and messaging built to earn attention and stay memorable.",
-      url: `${SITE_URL}/narrative-intelligence`,
+        "Team workshops, role-specific training, and playbooks so employees can use AI in the work they already do.",
+      url: `${SITE_URL}/training`,
     },
     {
       "@context": "https://schema.org",
       "@type": "Service",
-      name: "Business Intelligence",
+      name: "Websites + Online Visibility",
       provider,
       areaServed,
-      serviceType: "AI advisory, workflow automation, and implementation",
+      serviceType: "Website development, SEO, and online visibility",
       description:
-        "AI consulting and implementation for workflows, automation, governance, and measurable business value.",
-      url: `${SITE_URL}/intelligence-layer`,
+        "Website improvement, SEO, local search, conversion, and AI search visibility so more of the right customers find the business.",
+      url: `${SITE_URL}/websites`,
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      name: "Marketing",
+      provider,
+      areaServed,
+      serviceType: "Digital marketing and campaign production",
+      description:
+        "Marketing campaigns, paid advertising, video, content, and lead generation to reach more customers.",
+      url: `${SITE_URL}/marketing`,
     },
   ];
 }

@@ -1,285 +1,103 @@
 "use client";
 
-import {
-  LazyMotion,
-  domAnimation,
-  m,
-  useMotionValueEvent,
-  useTransform,
-} from "framer-motion";
-import dynamic from "next/dynamic";
-import { useRef, useState } from "react";
+import { LazyMotion, domAnimation } from "framer-motion";
+import Link from "next/link";
 import DestinationCards from "./DestinationCards";
-import HomeCinematicBackdrop from "./HomeCinematicBackdrop";
-import HomeLenisProvider from "./HomeLenisProvider";
-import {
-  CHAPTER_COPY,
-  SCROLL_TRACK_HEIGHT_VH,
-  SCROLL_TRACK_HEIGHT_VH_MOBILE,
-} from "./motion/motionTokens";
-import { getChapter, useChapterMotion, useHomeScrollProgress } from "./useHomeScrollProgress";
-import { useCoarsePointer } from "./useCoarsePointer";
-import { useReducedMotion } from "./useReducedMotion";
+import { SERVICE_LINE_SUMMARY } from "../../lib/services";
 
-const VisibilityChapter = dynamic(() => import("./chapters/VisibilityChapter"), {
-  ssr: false,
-});
-const AttentionChapter = dynamic(() => import("./chapters/AttentionChapter"), {
-  ssr: false,
-});
-const ScaleChapter = dynamic(() => import("./chapters/ScaleChapter"), {
-  ssr: false,
-});
-
-const PROGRESS_CHAPTERS = ["visibility", "attention", "scale"] as const;
-
-function ChapterHeadline({
-  scrollYProgress,
-  chapterTextVisibility,
-}: {
-  scrollYProgress: ReturnType<typeof useHomeScrollProgress>["scrollYProgress"];
-  chapterTextVisibility: ReturnType<typeof useChapterMotion>["chapterTextVisibility"];
-}) {
-  const [chapter, setChapter] = useState<
-    "visibility" | "attention" | "scale"
-  >("visibility");
-
-  useMotionValueEvent(scrollYProgress, "change", (value) => {
-    const next = getChapter(value);
-    if (next === "visibility" || next === "attention" || next === "scale") {
-      setChapter(next);
-    }
-  });
-
-  const copy = CHAPTER_COPY[chapter];
-
+function HomeHero() {
   return (
-    <m.div
-      className="pointer-events-none absolute left-6 top-28 z-20 max-w-xl md:left-10 md:top-32 lg:max-w-2xl"
-      style={{ opacity: chapterTextVisibility }}
-    >
-      <p
-        className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]"
-        aria-live="polite"
-      >
-        {copy.label}
-      </p>
-      <h2 className="mt-4 text-4xl leading-none md:text-5xl lg:text-6xl">
-        {copy.headline}
-      </h2>
-    </m.div>
-  );
-}
-
-function ChapterProgressRail({
-  scrollYProgress,
-}: {
-  scrollYProgress: ReturnType<typeof useHomeScrollProgress>["scrollYProgress"];
-}) {
-  const [chapter, setChapter] = useState<
-    "visibility" | "attention" | "scale" | "intro" | "release"
-  >("intro");
-
-  useMotionValueEvent(scrollYProgress, "change", (value) => {
-    setChapter(getChapter(value));
-  });
-
-  return (
-    <div
-      className="pointer-events-none absolute right-6 top-1/2 z-20 hidden -translate-y-1/2 flex-col gap-3 md:flex"
-      aria-hidden
-    >
-      {PROGRESS_CHAPTERS.map((segment) => (
-        <div
-          key={segment}
-          className={`h-10 w-px transition-colors duration-500 ${
-            chapter === segment ? "bg-[var(--foreground)]" : "bg-white/15"
-          }`}
-        />
-      ))}
-    </div>
-  );
-}
-
-function ScrollDrivenStage() {
-  const trackRef = useRef<HTMLDivElement>(null);
-  const isCoarsePointer = useCoarsePointer();
-  const scrollTrackHeightVh = isCoarsePointer
-    ? SCROLL_TRACK_HEIGHT_VH_MOBILE
-    : SCROLL_TRACK_HEIGHT_VH;
-  const { scrollYProgress } = useHomeScrollProgress(trackRef);
-  const {
-    introOpacity,
-    introScale,
-    introY,
-    introFilter,
-    introBackdropOpacity,
-    scrollHintOpacity,
-    visibilityOpacity,
-    attentionOpacity,
-    scaleOpacity,
-    chapterTextVisibility,
-    stageReleaseOpacity,
-  } = useChapterMotion(scrollYProgress);
-
-  const orbLeftY = useTransform(scrollYProgress, [0, 1], [0, -120]);
-  const orbRightY = useTransform(scrollYProgress, [0, 1], [0, 80]);
-
-  return (
-    <>
+    <section className="relative overflow-hidden">
+      <img
+        src="/images/home-hero.png"
+        alt=""
+        className="pointer-events-none absolute inset-0 h-full w-full object-cover"
+        aria-hidden
+      />
       <div
-        ref={trackRef}
-        className="relative"
-        style={{ height: `${scrollTrackHeightVh}vh` }}
-      >
-        <div className="sticky top-0 h-[100svh] overflow-hidden bg-[var(--background)]">
-          <HomeCinematicBackdrop
-            introBackdropOpacity={introBackdropOpacity}
-            visibilityOpacity={visibilityOpacity}
-            attentionOpacity={attentionOpacity}
-            scaleOpacity={scaleOpacity}
-          />
+        className="pointer-events-none absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/35"
+        aria-hidden
+      />
+      <div
+        className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/20"
+        aria-hidden
+      />
+      <div className="hero-ambient-gradient pointer-events-none absolute inset-0" aria-hidden />
+      <div className="home-stage-grain pointer-events-none absolute inset-0" aria-hidden />
 
-          <div className="pointer-events-none absolute inset-0 z-[1] bg-[radial-gradient(circle_at_50%_20%,rgba(245,241,232,0.06),transparent_55%)]" />
-
-          <m.div
-            className="pointer-events-none absolute -left-24 top-20 z-[1] h-72 w-72 rounded-full bg-white/[0.04] blur-3xl"
-            style={{ y: orbLeftY }}
-          />
-          <m.div
-            className="pointer-events-none absolute -right-16 bottom-16 z-[1] h-96 w-96 rounded-full bg-white/[0.03] blur-3xl"
-            style={{ y: orbRightY }}
-          />
-
-          <div
-            className="pointer-events-none absolute inset-0 z-[2] bg-[radial-gradient(ellipse_at_center,transparent_35%,rgba(11,12,15,0.55)_100%)]"
-            aria-hidden
-          />
-
-          <div
-            className="pointer-events-none absolute inset-0 z-[2] bg-[radial-gradient(ellipse_at_left_center,rgba(11,12,15,0.72)_0%,rgba(11,12,15,0.35)_42%,transparent_72%)]"
-            aria-hidden
-          />
-
-          <div className="home-stage-grain pointer-events-none absolute inset-0 z-[3]" aria-hidden />
-
-          <m.div
-            className="relative z-10 h-full"
-            style={{ opacity: stageReleaseOpacity }}
-          >
-            <m.div
-              className="pointer-events-none absolute inset-0 flex items-center px-6 md:px-10"
-              style={{
-                opacity: introOpacity,
-                scale: introScale,
-                y: introY,
-                filter: introFilter,
-              }}
-            >
-              <div className="max-w-3xl">
-                <p className="hero-entrance text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
-                  Pixel Narratives
-                </p>
-                <h1 className="hero-entrance hero-entrance-delay-1 mt-4 text-5xl leading-[0.95] md:text-7xl lg:text-8xl">
-                  Every business is trying to get somewhere.
-                </h1>
-                <p className="hero-entrance hero-entrance-delay-2 mt-6 max-w-2xl text-lg text-[var(--foreground)] md:text-xl">
-                  More visibility. More attention. More results.
-                </p>
-              </div>
-            </m.div>
-
-            <ChapterHeadline
-              scrollYProgress={scrollYProgress}
-              chapterTextVisibility={chapterTextVisibility}
-            />
-
-            <ChapterProgressRail scrollYProgress={scrollYProgress} />
-
-            <m.div
-              className="absolute inset-0 pt-36 md:pt-40"
-              style={{ opacity: visibilityOpacity }}
-            >
-              <VisibilityChapter scrollYProgress={scrollYProgress} />
-            </m.div>
-            <m.div
-              className="absolute inset-0 pt-36 md:pt-40"
-              style={{ opacity: attentionOpacity }}
-            >
-              <AttentionChapter scrollYProgress={scrollYProgress} />
-            </m.div>
-            <m.div
-              className="absolute inset-0 pt-36 md:pt-40"
-              style={{ opacity: scaleOpacity }}
-            >
-              <ScaleChapter scrollYProgress={scrollYProgress} />
-            </m.div>
-
-            <m.div
-              className="pointer-events-none absolute bottom-10 left-1/2 z-20 flex -translate-x-1/2 flex-col items-center gap-2 text-[var(--muted)]"
-              style={{ opacity: scrollHintOpacity }}
-            >
-              <span className="text-xs uppercase tracking-[0.35em]">Scroll</span>
-              <svg
-                aria-hidden
-                viewBox="0 0 24 24"
-                className="h-5 w-5 animate-pulse"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.5"
-              >
-                <path strokeLinecap="round" d="M12 5v14M6 13l6 6 6-6" />
-              </svg>
-            </m.div>
-          </m.div>
-        </div>
-      </div>
-      <DestinationCards />
-    </>
-  );
-}
-
-function ReducedMotionHome() {
-  return (
-    <>
-      <section className="relative mx-auto w-full max-w-7xl overflow-hidden px-6 py-24 md:px-10 md:py-32">
-        <img
-          src="/images/home-cinematic.jpg"
-          alt=""
-          className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-40"
-          aria-hidden
-        />
-        <div
-          className="pointer-events-none absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/40"
-          aria-hidden
-        />
-        <div className="relative max-w-3xl">
-          <p className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
+      <div className="relative mx-auto w-full max-w-7xl px-6 py-24 md:px-10 md:py-32">
+        <div className="max-w-4xl">
+          <p className="hero-entrance text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
             Pixel Narratives
           </p>
-          <h1 className="mt-4 text-5xl leading-[0.95] md:text-7xl">
-            Every business is trying to get somewhere.
+          <h1 className="hero-entrance hero-entrance-delay-1 mt-4 text-4xl leading-[1.05] md:text-6xl lg:text-7xl">
+            We Help Businesses Save Time, Win More Customers and Get More Done.
           </h1>
-          <p className="mt-6 text-lg text-[var(--foreground)] md:text-xl">
-            More visibility. More attention. More results.
+          <p className="hero-entrance hero-entrance-delay-2 mt-6 max-w-3xl text-lg text-[var(--foreground)] md:text-xl">
+            {SERVICE_LINE_SUMMARY}
           </p>
+          <div className="hero-entrance hero-entrance-delay-2 mt-10 flex flex-wrap gap-4">
+            <Link
+              href="/automation"
+              className="cta-pulse-filled inline-flex items-center rounded-full border border-white/10 bg-[var(--foreground)] px-6 py-3 text-sm font-medium text-black transition hover:opacity-90"
+            >
+              Talk About Automation
+            </Link>
+            <Link
+              href="/contact"
+              className="cta-pulse-outline inline-flex items-center rounded-full border border-white/10 px-6 py-3 text-sm text-[var(--foreground)] transition hover:border-white/20 hover:bg-white/5"
+            >
+              Tell Us What You&apos;re Trying to Improve
+            </Link>
+          </div>
         </div>
-      </section>
-      <DestinationCards />
-    </>
+      </div>
+    </section>
+  );
+}
+
+function AutomationHighlight() {
+  return (
+    <section className="border-t border-white/8">
+      <div className="mx-auto grid w-full max-w-7xl gap-10 px-6 py-20 md:grid-cols-[1.1fr_0.9fr] md:items-center md:px-10 md:py-24">
+        <div>
+          <p className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
+            Primary service
+          </p>
+          <h2 className="mt-4 text-4xl leading-none md:text-5xl">
+            Turn repetitive work into better systems.
+          </h2>
+          <p className="mt-6 max-w-xl text-lg leading-relaxed text-[var(--muted)] md:text-xl">
+            Employees lose hours to follow-up, scheduling, duplicate data entry,
+            and tools that do not talk to each other. We build the workflows,
+            CRM, reporting, and internal tools that get that time back.
+          </p>
+          <div className="mt-8">
+            <Link
+              href="/automation"
+              className="cta-pulse-filled inline-flex items-center rounded-full border border-white/10 bg-[var(--foreground)] px-6 py-3 text-sm font-medium text-black transition hover:opacity-90"
+            >
+              Talk About Automation
+            </Link>
+          </div>
+        </div>
+        <ul className="space-y-3 rounded-[28px] border border-white/8 bg-white/[0.02] p-8 text-base text-[var(--foreground)] md:text-lg">
+          <li>Slow lead response and inconsistent follow-up</li>
+          <li>Information spread across spreadsheets and inboxes</li>
+          <li>Manual scheduling and duplicate data entry</li>
+          <li>Disconnected tools and poor reporting</li>
+        </ul>
+      </div>
+    </section>
   );
 }
 
 export default function HomeMotionExperience() {
-  const reducedMotion = useReducedMotion();
-
   return (
-    <HomeLenisProvider enabled={!reducedMotion}>
-      <LazyMotion features={domAnimation}>
-        <section aria-label="Pixel Narratives homepage experience">
-          {reducedMotion ? <ReducedMotionHome /> : <ScrollDrivenStage />}
-        </section>
-      </LazyMotion>
-    </HomeLenisProvider>
+    <LazyMotion features={domAnimation}>
+      <HomeHero />
+      <AutomationHighlight />
+      <DestinationCards />
+    </LazyMotion>
   );
 }

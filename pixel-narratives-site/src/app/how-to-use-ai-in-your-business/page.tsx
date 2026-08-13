@@ -17,7 +17,7 @@ export default function HowToUseAiInYourBusinessPage() {
       <article>
         <section className="mx-auto w-full max-w-4xl px-6 py-20 md:px-10 md:py-24">
           <p className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
-            Business Intelligence
+            Automation
           </p>
           <h1 className="mt-4 text-4xl leading-[1.05] md:text-6xl">
             How to Use AI in Your Business (Without Wasting Money)
@@ -51,7 +51,7 @@ export default function HowToUseAiInYourBusinessPage() {
               <p>Most businesses jump straight to tools.</p>
               <p>But tools aren’t the starting point, outcomes are.</p>
               <p>
-                What are you actually trying to accomplish?
+                What are you trying to accomplish?
                 <br />
                 Save time? Improve speed? Increase output? Reduce errors?
               </p>
@@ -75,7 +75,7 @@ export default function HowToUseAiInYourBusinessPage() {
           <div className="mx-auto grid w-full max-w-7xl gap-12 px-6 py-20 md:grid-cols-[0.8fr_1.2fr] md:px-10">
             <div>
               <h2 className="text-4xl leading-none md:text-5xl">
-                Where AI Actually Works
+                Where AI Works
               </h2>
             </div>
             <div className="space-y-6 text-base leading-relaxed text-[var(--muted)] md:text-lg">
@@ -118,7 +118,7 @@ export default function HowToUseAiInYourBusinessPage() {
                 <li>A clear bottleneck</li>
               </ul>
               <p>Build a simple workflow around it.</p>
-              <p>Then measure what actually changed:</p>
+              <p>Then measure what changed:</p>
               <ul className="space-y-2 text-[var(--foreground)]">
                 <li>Time saved</li>
                 <li>Speed improved</li>
@@ -128,7 +128,7 @@ export default function HowToUseAiInYourBusinessPage() {
               <p>At the same time, two things matter more than most people expect:</p>
               <ul className="space-y-2 text-[var(--foreground)]">
                 <li>Education: getting your team comfortable with the tools</li>
-                <li>Behavior: changing how work actually gets done</li>
+                <li>Behavior: changing how work gets done</li>
               </ul>
               <p>That’s where most implementations stall.</p>
             </div>
@@ -174,13 +174,13 @@ export default function HowToUseAiInYourBusinessPage() {
             </div>
             <div className="space-y-6 text-base leading-relaxed text-[var(--muted)] md:text-lg">
               <p>
-                We help businesses identify where AI can actually create
+                We help businesses identify where AI can create
                 leverage, then build the workflows and systems to make it real.
               </p>
               <p>
                 Not theory. Not experimentation.
                 <br />
-                Clear outcomes, built into how your business actually operates.
+                Clear outcomes, built into how your business operates.
               </p>
             </div>
           </div>
@@ -192,20 +192,20 @@ export default function HowToUseAiInYourBusinessPage() {
           <div className="next-step-content mx-auto w-full max-w-7xl px-6 py-20 md:px-10">
             <div className="mx-auto max-w-3xl text-center">
               <h2 className="text-4xl leading-none md:text-6xl">
-                Want to see where AI could actually work in your business?
+                Want to see where AI could work in your business?
               </h2>
               <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
                 <a
-                  href="/contact"
+                  href="/contact?need=automation"
                   className="inline-flex items-center rounded-full border border-white/10 bg-[var(--foreground)] px-6 py-3 text-sm font-medium text-black transition hover:opacity-90"
                 >
-                  Start the Conversation
+                  Talk About Automation
                 </a>
                 <a
-                  href="/how-to-implement-ai-in-your-business"
+                  href="/training"
                   className="inline-flex items-center rounded-full border border-white/10 px-6 py-3 text-sm text-[var(--foreground)] transition hover:bg-white/5"
                 >
-                  AI Implementation Guide
+                  Discuss Team Training
                 </a>
               </div>
             </div>

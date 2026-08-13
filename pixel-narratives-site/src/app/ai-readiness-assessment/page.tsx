@@ -4,9 +4,9 @@ import Footer from "../../components/Footer";
 import Nav from "../../components/Nav";
 
 export const metadata: Metadata = {
-  title: "AI Readiness Assessment | Pixel Narratives",
+  title: "AI + Automation Assessment | Pixel Narratives",
   description:
-    "Take the Pixel Narratives AI Readiness Assessment to see whether your company is ready to turn AI into a real business advantage.",
+    "Optional AI + Automation Assessment from Pixel Narratives. See where repetitive work, follow-up, and disconnected tools are slowing your business down.",
   alternates: { canonical: "/ai-readiness-assessment" },
 };
 

@@ -115,31 +115,28 @@ export default function MobileNav() {
             className="mt-6 flex flex-col gap-1"
             aria-label="Mobile primary navigation"
           >
-            {PRIMARY_NAV_LINKS.map((link, index) => (
-              <span key={link.href} className="contents">
-                <MobileNavLink
-                  href={link.href}
-                  label={link.label}
-                  onNavigate={close}
-                />
-                {index === 0 ? (
-                  <div className="mt-4 mb-1 px-3">
-                    <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
-                      Services
-                    </p>
-                    <div className="mt-2 flex flex-col gap-1">
-                      {SERVICE_NAV_LINKS.map((service) => (
-                        <MobileNavLink
-                          key={service.href}
-                          href={service.href}
-                          label={service.label}
-                          onNavigate={close}
-                        />
-                      ))}
-                    </div>
-                  </div>
-                ) : null}
-              </span>
+            <div className="mb-1 px-3">
+              <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
+                Services
+              </p>
+              <div className="mt-2 flex flex-col gap-1">
+                {SERVICE_NAV_LINKS.map((service) => (
+                  <MobileNavLink
+                    key={service.href}
+                    href={service.href}
+                    label={service.label}
+                    onNavigate={close}
+                  />
+                ))}
+              </div>
+            </div>
+            {PRIMARY_NAV_LINKS.map((link) => (
+              <MobileNavLink
+                key={link.href}
+                href={link.href}
+                label={link.label}
+                onNavigate={close}
+              />
             ))}
           </nav>
 

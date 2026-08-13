@@ -4,7 +4,7 @@ type CinematicPageHeroProps = {
   imageSrc: string;
   imageAlt: string;
   title: string;
-  subtitle: string;
+  subtitle?: string;
   contentScrim?: boolean;
   children?: ReactNode;
 };
@@ -18,7 +18,7 @@ export default function CinematicPageHero({
   children,
 }: CinematicPageHeroProps) {
   return (
-    <section className="relative min-h-[90vh] overflow-hidden">
+    <section className="relative overflow-hidden">
       <img
         src={imageSrc}
         alt={imageAlt}
@@ -34,7 +34,7 @@ export default function CinematicPageHero({
       <div className="absolute inset-0 z-[2] bg-gradient-to-r from-black/85 via-black/45 to-black/10" />
       <div className="absolute inset-0 z-[2] bg-gradient-to-t from-black/60 via-transparent to-transparent" />
 
-      <div className="relative z-10 mx-auto flex min-h-[90vh] w-full max-w-7xl items-center px-6 py-32 md:px-10">
+      <div className="relative z-10 mx-auto flex w-full max-w-7xl items-center px-6 py-16 md:px-10 md:py-20">
         <div className="relative max-w-3xl">
           {contentScrim ? (
             <div
@@ -45,9 +45,11 @@ export default function CinematicPageHero({
           <div className="relative z-[1]">
             <h1 className="hero-entrance leading-none text-white font-semibold">
               <span className="block text-6xl md:text-8xl">{title}</span>
-              <span className="block text-3xl text-white/80 md:text-4xl">
-                {subtitle}
-              </span>
+              {subtitle ? (
+                <span className="block text-3xl text-white/80 md:text-4xl">
+                  {subtitle}
+                </span>
+              ) : null}
             </h1>
             {children}
           </div>
