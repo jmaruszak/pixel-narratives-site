@@ -15,7 +15,10 @@ export const HOME_PATH_CARDS: HomePathCard[] = SERVICES.map((service) => ({
   eyebrow: service.problem,
   headline: service.name,
   outcome: service.outcome,
-  body: service.body,
+  body:
+    service.id === "training"
+      ? "Practical workshops, role-specific training, and playbooks so people can use AI at work more effectively."
+      : service.body,
   primaryAction: {
     href: service.href,
     label: service.ctaLabel,

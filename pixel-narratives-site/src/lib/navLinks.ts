@@ -3,6 +3,7 @@ import { SERVICES } from "./services";
 export const PRIMARY_NAV_LINKS = [
   { href: "/work", label: "Work" },
   { href: "/about", label: "About" },
+  { href: "/news", label: "News" },
   { href: "/contact", label: "Contact" },
 ] as const;
 

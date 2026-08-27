@@ -113,11 +113,17 @@ export function buildOrganizationSchema() {
     name: SITE_NAME,
     url: SITE_URL,
     description: ORGANIZATION_DESCRIPTION,
+    logo: `${SITE_URL}/brand/logo-mark.png`,
     address: buildPostalAddressSchema(),
     areaServed: buildAreaServedSchema(),
     email: CONTACT_EMAIL,
     telephone: CONTACT_PHONE,
+    founder: {
+      "@type": "Person",
+      name: "Jordan Maruszak",
+    },
     knowsAbout: [
+      "AI implementation",
       "Business automation",
       "Workflow automation",
       "CRM implementation",
@@ -165,10 +171,34 @@ export function buildLocationServiceSchema({
       name: SITE_NAME,
       url: SITE_URL,
       address: buildPostalAddressSchema(),
+      telephone: CONTACT_PHONE,
+      email: CONTACT_EMAIL,
     },
     areaServed: buildAreaServedSchema(areaServed),
     description,
     url: `${SITE_URL}${url}`,
+    serviceType: [
+      "AI consulting",
+      "AI implementation",
+      "Business process automation",
+      "AI training",
+      "Fractional Chief AI Officer",
+    ],
+  };
+}
+
+export function buildBreadcrumbSchema(
+  items: Array<{ name: string; path: string }>,
+) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      item: item.path === "/" ? SITE_URL : `${SITE_URL}${item.path}`,
+    })),
   };
 }
 

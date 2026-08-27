@@ -4,6 +4,7 @@ import Link from "next/link";
 import Footer from "../../components/Footer";
 import Nav from "../../components/Nav";
 import { buildOrganizationSchema } from "../../lib/businessLocation";
+import { NEWS_ITEMS, newsPath } from "../../lib/news";
 import { SERVICES } from "../../lib/services";
 import { MARKETING_TO_WEB_INTEL_URL } from "../../lib/webIntelligence";
 
@@ -223,6 +224,57 @@ export default function AboutPage() {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-white/8">
+        <div className="mx-auto grid w-full max-w-7xl gap-12 px-6 py-20 md:grid-cols-[0.8fr_1.2fr] md:px-10">
+          <div>
+            <p className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
+              In the News
+            </p>
+          </div>
+          <div>
+            <p className="text-lg leading-relaxed text-[var(--muted)] md:text-xl">
+              Pixel Narratives has been featured for its work helping Mississippi
+              and Southeast businesses turn artificial intelligence into
+              practical business systems.
+            </p>
+            <div className="mt-8 space-y-6">
+              {NEWS_ITEMS.map((item) => (
+                <article key={item.slug}>
+                  <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
+                    {item.source}
+                  </p>
+                  <p className="mt-2 text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
+                    {item.typeLabel}
+                  </p>
+                  <h2 className="mt-2 text-2xl leading-snug md:text-3xl">
+                    <Link
+                      href={newsPath(item)}
+                      className="transition hover:opacity-80"
+                    >
+                      {item.title}
+                    </Link>
+                  </h2>
+                  <time
+                    dateTime={item.datePublished}
+                    className="mt-2 block text-sm text-[var(--muted)]"
+                  >
+                    {item.dateLabel}
+                  </time>
+                </article>
+              ))}
+            </div>
+            <p className="mt-8">
+              <Link
+                href="/news"
+                className="text-[var(--foreground)] transition hover:opacity-80"
+              >
+                View all news →
+              </Link>
+            </p>
           </div>
         </div>
       </section>

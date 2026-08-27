@@ -6,6 +6,7 @@ export type FooterLink = {
 export const STUDIO_FOOTER_LINKS: FooterLink[] = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
+  { href: "/news", label: "News" },
   { href: "/work", label: "Work" },
   { href: "/serving-the-south", label: "Serving the South" },
   { href: "/contact", label: "Contact" },

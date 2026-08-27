@@ -1,14 +1,14 @@
-import type { Metadata } from "next";
 import LocationLandingPageView from "../../components/LocationLandingPage";
 import { locationLandingPages } from "../../lib/locationLandingPages";
+import { buildPageMetadata } from "../../lib/siteMetadata";
 
 const page = locationLandingPages["mississippi-ai-studio"];
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
   title: page.title,
   description: page.description,
-  alternates: { canonical: "/mississippi-ai-studio" },
-};
+  path: `/${page.slug}`,
+});
 
 export default function MississippiAiStudioPage() {
   return <LocationLandingPageView page={page} />;
