@@ -307,3 +307,225 @@ export function RequestCreativeConceptForm() {
     </form>
   );
 }
+
+export function CorporateWorkshopInquiryForm() {
+  const formRef = useRef<HTMLFormElement>(null);
+  useWebMcpForm(
+    formRef,
+    webMcpForm({
+      toolname: "request_corporate_workshop",
+      tooldescription:
+        "Send a Corporate AI Workshop inquiry to Pixel Narratives",
+    }),
+  );
+
+  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    const data = new FormData(event.currentTarget);
+    const field = (name: string) => (data.get(name) as string | null)?.trim() || "";
+
+    const company = field("company");
+    const website = field("website");
+    const name = field("name");
+    const title = field("title");
+    const email = field("email");
+    const phone = field("phone");
+    const participantCount = field("participantCount");
+    const teamsInvolved = field("teamsInvolved");
+    const format = field("format");
+    const aiGoals = field("aiGoals");
+    const preferredTiming = field("preferredTiming");
+    const notes = field("notes");
+
+    const subject = `Corporate AI Workshop inquiry: ${company || name}`;
+    const body = [
+      "Corporate AI Workshop inquiry",
+      "Source: pixelnarratives.studio/training",
+      "Need: training",
+      "Product: corporate-ai-workshop",
+      "",
+      `Company: ${company}`,
+      `Website: ${website || "Not provided"}`,
+      `Name: ${name}`,
+      `Title: ${title}`,
+      `Email: ${email}`,
+      `Phone: ${phone || "Not provided"}`,
+      `Approximate participants: ${participantCount || "Not provided"}`,
+      `Teams involved: ${teamsInvolved || "Not provided"}`,
+      `Format: ${format || "Not provided"}`,
+      `What they want the team to get better at: ${aiGoals}`,
+      `Preferred timing: ${preferredTiming || "Not provided"}`,
+      `Anything else: ${notes || "None"}`,
+    ].join("\n");
+
+    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  }
+
+  const fieldClassName =
+    "mt-2 w-full rounded-[16px] border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-[var(--foreground)] outline-none transition focus:border-white/25";
+
+  return (
+    <form ref={formRef} onSubmit={handleSubmit} className="mt-8 space-y-4">
+      <div className="grid gap-4 md:grid-cols-2">
+        <label htmlFor="workshop-company" className="block text-sm text-[var(--muted)]">
+          Company
+          <input
+            id="workshop-company"
+            name="company"
+            type="text"
+            required
+            {...webMcpParam({ toolparamdescription: "Company name" })}
+            className={fieldClassName}
+          />
+        </label>
+        <label htmlFor="workshop-website" className="block text-sm text-[var(--muted)]">
+          Website
+          <input
+            id="workshop-website"
+            name="website"
+            type="text"
+            inputMode="url"
+            placeholder="yourwebsite.com"
+            {...webMcpParam({ toolparamdescription: "Company website URL" })}
+            className={fieldClassName}
+          />
+        </label>
+        <label htmlFor="workshop-name" className="block text-sm text-[var(--muted)]">
+          Name
+          <input
+            id="workshop-name"
+            name="name"
+            type="text"
+            required
+            {...webMcpParam({ toolparamdescription: "Contact name" })}
+            className={fieldClassName}
+          />
+        </label>
+        <label htmlFor="workshop-title" className="block text-sm text-[var(--muted)]">
+          Title
+          <input
+            id="workshop-title"
+            name="title"
+            type="text"
+            required
+            {...webMcpParam({ toolparamdescription: "Contact job title" })}
+            className={fieldClassName}
+          />
+        </label>
+        <label htmlFor="workshop-email" className="block text-sm text-[var(--muted)]">
+          Email
+          <input
+            id="workshop-email"
+            name="email"
+            type="email"
+            required
+            {...webMcpParam({ toolparamdescription: "Contact email" })}
+            className={fieldClassName}
+          />
+        </label>
+        <label htmlFor="workshop-phone" className="block text-sm text-[var(--muted)]">
+          Phone
+          <input
+            id="workshop-phone"
+            name="phone"
+            type="tel"
+            {...webMcpParam({ toolparamdescription: "Contact phone number" })}
+            className={fieldClassName}
+          />
+        </label>
+        <label htmlFor="workshop-participants" className="block text-sm text-[var(--muted)]">
+          Approximate number of participants
+          <input
+            id="workshop-participants"
+            name="participantCount"
+            type="text"
+            inputMode="numeric"
+            placeholder="About 20"
+            {...webMcpParam({
+              toolparamdescription: "Approximate number of workshop participants",
+            })}
+            className={fieldClassName}
+          />
+        </label>
+        <label htmlFor="workshop-format" className="block text-sm text-[var(--muted)]">
+          Workshop format
+          <select
+            id="workshop-format"
+            name="format"
+            required
+            defaultValue=""
+            {...webMcpParam({
+              toolparamdescription: "Preferred workshop format",
+            })}
+            className={`${fieldClassName} bg-[var(--background)]`}
+          >
+            <option value="" disabled>
+              Select one
+            </option>
+            <option value="Full day">Full day</option>
+            <option value="Two days">Two days</option>
+            <option value="Unsure">Unsure</option>
+          </select>
+        </label>
+        <label htmlFor="workshop-teams" className="block text-sm text-[var(--muted)] md:col-span-2">
+          Teams involved
+          <input
+            id="workshop-teams"
+            name="teamsInvolved"
+            type="text"
+            placeholder="Leadership, sales, operations, HR"
+            {...webMcpParam({
+              toolparamdescription: "Departments or teams that would attend",
+            })}
+            className={fieldClassName}
+          />
+        </label>
+        <label htmlFor="workshop-timing" className="block text-sm text-[var(--muted)] md:col-span-2">
+          Preferred timing
+          <input
+            id="workshop-timing"
+            name="preferredTiming"
+            type="text"
+            placeholder="This quarter, next quarter, a specific date"
+            {...webMcpParam({
+              toolparamdescription: "When the company wants the workshop",
+            })}
+            className={fieldClassName}
+          />
+        </label>
+      </div>
+      <label htmlFor="workshop-goals" className="block text-sm text-[var(--muted)]">
+        What would you like your team to get better at using AI for?
+        <textarea
+          id="workshop-goals"
+          name="aiGoals"
+          rows={3}
+          required
+          {...webMcpParam({
+            toolparamdescription:
+              "The work the company wants the team to use AI for",
+          })}
+          className={fieldClassName}
+        />
+      </label>
+      <label htmlFor="workshop-notes" className="block text-sm text-[var(--muted)]">
+        Anything else we should know?
+        <textarea
+          id="workshop-notes"
+          name="notes"
+          rows={3}
+          {...webMcpParam({
+            toolparamdescription: "Optional extra context for the workshop inquiry",
+          })}
+          className={fieldClassName}
+        />
+      </label>
+      <button
+        type="submit"
+        className="inline-flex items-center rounded-full border border-white/10 bg-[var(--foreground)] px-6 py-3 text-sm font-medium text-black transition hover:opacity-90"
+      >
+        Discuss a Workshop
+      </button>
+    </form>
+  );
+}

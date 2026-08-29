@@ -27,10 +27,15 @@ export const DESTINATION_CTAS = {
   },
   training: {
     id: "training",
-    eyebrow: "Next Step",
-    headline: "Help your team use AI in the work they already do.",
-    body: "Workshops, role-specific training, and playbooks so people leave knowing what to do on Monday.",
-    primaryAction: { href: "/contact?need=training", label: "Discuss Team Training" },
+    eyebrow: "Corporate AI Workshops",
+    headline: "Help your team get more done.",
+    body: "Corporate AI Workshops start at $15,000. We will start with a short conversation about your team, goals, and what would make the workshop useful.",
+    primaryAction: { href: "#workshop-inquiry", label: "Discuss a Workshop" },
+    secondaryAction: {
+      href: CALENDLY_URL,
+      label: "Book a Call",
+      external: true,
+    },
   },
   websites: {
     id: "websites",

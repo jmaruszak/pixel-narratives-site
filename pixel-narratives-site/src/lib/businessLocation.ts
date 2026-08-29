@@ -45,10 +45,10 @@ export const SERVICE_PILLARS = [
     href: "/automation",
   },
   {
-    eyebrow: "Use AI Better",
+    eyebrow: "Get More Done",
     headline: "Training",
-    outcome: "Your team leaves knowing how to use AI in the work they already do.",
-    body: "Practical workshops, role-specific training, and playbooks so people can use AI at work without wasting time on tools they will not keep.",
+    outcome: "Help your team get more done with practical AI workshops.",
+    body: "Corporate AI workshops starting at $15,000. We learn how your teams work and train around the tasks they already do.",
     href: "/training",
   },
   {
@@ -229,9 +229,9 @@ export function buildHomepageServiceSchemas() {
       name: "Training",
       provider,
       areaServed,
-      serviceType: "Workplace AI training",
+      serviceType: "Corporate AI workshops",
       description:
-        "Team workshops, role-specific training, and playbooks so employees can use AI in the work they already do.",
+        "Corporate AI workshops starting at $15,000. Practical training built around the work teams already do.",
       url: `${SITE_URL}/training`,
     },
     {

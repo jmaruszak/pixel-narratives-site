@@ -58,7 +58,7 @@ export default function WebMcpTools() {
                   },
                   training: {
                     summary:
-                      "Workshops, role-specific training, and playbooks so teams can use AI in the work they already do.",
+                      "Corporate AI workshops starting at $15,000, built around the work teams already do.",
                     url: `${SITE_URL}/training`,
                   },
                   websites: {
