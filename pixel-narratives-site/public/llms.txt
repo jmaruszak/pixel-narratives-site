@@ -36,7 +36,7 @@ AI is how a lot of the work gets done. Customers buy outcomes: automation, imple
 - [Visibility in the Age of AI](https://pixelnarratives.studio/visibility-in-the-age-of-ai): Guide on search visibility, AI visibility, and authority signals.
 - [How to Use AI in Your Business](https://pixelnarratives.studio/how-to-use-ai-in-your-business): Practical guide on using AI without wasted spend.
 - [How to Implement AI in Your Business](https://pixelnarratives.studio/how-to-implement-ai-in-your-business): Educational implementation guide.
-- [Privacy Policy](https://pixelnarratives.studio/privacy): How assessment, contact, and lead data are collected and used.
+- [Privacy Policy](https://pixelnarratives.studio/privacy): How assessment, contact, lead, cookie, pixel, and advertising-measurement data are collected and used.
 
 Redirected legacy URLs (do not treat as canonical): /intelligence-layer, /web-intelligence, /narrative-intelligence, /projects, /sample-intelligence-layer-blueprint.
 

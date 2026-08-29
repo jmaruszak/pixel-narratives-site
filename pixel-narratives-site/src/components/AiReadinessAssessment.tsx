@@ -17,6 +17,18 @@ import {
 } from "../lib/deepDiveReport";
 import { useWebMcpForm, webMcpForm, webMcpParam } from "../lib/webMcpAttributes";
 
+let vibeLeadEventSent = false;
+
+function trackVibeLeadConversion() {
+  if (vibeLeadEventSent) return;
+  vibeLeadEventSent = true;
+  try {
+    window.vbpx?.("event", "lead");
+  } catch {
+    // Pixel must never block assessment submission.
+  }
+}
+
 type LeadForm = {
   name: string;
   email: string;
@@ -679,6 +691,8 @@ export default function AiReadinessAssessment() {
         setCrmSyncNotice(
           "We couldn't sync this lead to our team inbox yet. Your snapshot is still shown above. Feel free to contact us directly if you don't hear back."
         );
+      } else {
+        trackVibeLeadConversion();
       }
     } catch (error) {
       console.error("Assessment CRM sync failed after Deep Dive snapshot", error);

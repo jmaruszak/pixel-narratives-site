@@ -70,6 +70,12 @@ export default function Footer() {
           >
             {CONTACT_PHONE}
           </a>
+          <a
+            href="/privacy"
+            className="mt-3 inline-block transition hover:text-[var(--foreground)]"
+          >
+            Privacy Policy
+          </a>
           <div className="mt-5">
             <a
               href="https://calendly.com/pixelnarratives"

@@ -17,12 +17,12 @@ export const metadata: Metadata = {
 
 const founder = {
   name: "Jordan Maruszak",
-  title: "Co-Founder, Head of Narrative & Strategy",
+  title: "Founder, Chief AI Officer and Head of Strategy",
   image: "/images/about-jordan.jpg",
   body: [
     "Jordan brings over 15 years of experience working alongside business owners and leadership teams to navigate complex decisions, align strategy, and drive long-term outcomes.",
-    "At Pixel Narratives, he leads narrative and strategic direction by helping companies cut through noise, clarify what matters, and turn ideas into work that moves the needle.",
-    "His focus is simple: every project should have a clear purpose, a strong point of view, and a measurable impact.",
+    "At Pixel Narratives, he leads AI strategy and implementation: helping companies save time, win more customers, and get more done through automation, training, websites, and marketing.",
+    "His focus is simple: every project should have a clear purpose, a practical next step, and a result the owner can measure in the business.",
   ],
 } as const;
 

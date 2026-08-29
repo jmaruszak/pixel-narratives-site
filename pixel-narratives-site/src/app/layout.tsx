@@ -1,4 +1,5 @@
 import { Inter, Bebas_Neue } from "next/font/google";
+import VibePixel from "../components/VibePixel";
 import WebMcpTools from "../components/WebMcpTools";
 import { rootMetadata } from "../lib/siteMetadata";
 import "./globals.css";
@@ -30,6 +31,7 @@ export default function RootLayout({
         >
           Skip to content
         </a>
+        <VibePixel />
         <WebMcpTools />
         {children}
       </body>
