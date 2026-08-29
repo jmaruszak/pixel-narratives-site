@@ -24,7 +24,7 @@ const SECTIONS = [
   {
     eyebrow: "Search",
     title: "Show up where customers are looking.",
-    body: "SEO, local SEO, Google Business Profile, schema, and technical cleanup. AI search visibility is part of this work. It is not the whole service.",
+    body: "Design, SEO, Google Business Profile, schema, AI search visibility and technical cleanup.",
   },
   {
     eyebrow: "Conversion",

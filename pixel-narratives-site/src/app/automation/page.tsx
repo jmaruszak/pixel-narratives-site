@@ -16,7 +16,7 @@ export const metadata = buildPageMetadata({
 });
 
 const PROBLEMS = [
-  "Employees wasting hours on repetitive work",
+  "Employees spending hours on repetitive work",
   "Slow lead response and inconsistent follow-up",
   "Disconnected tools that do not share information",
   "Data spread across spreadsheets and inboxes",
@@ -61,10 +61,6 @@ export default function AutomationPage() {
             Pixel Narratives builds practical solutions that reduce manual work,
             improve productivity, and help businesses run better.
           </p>
-          <p className="text-base md:text-lg">
-            We use AI where it helps. The product is not AI. The product is
-            time saved, faster follow-up, and systems your team will use.
-          </p>
         </div>
         <div className="hero-entrance hero-entrance-delay-2 mt-10 flex flex-wrap gap-4">
           <a
@@ -91,10 +87,6 @@ export default function AutomationPage() {
             <h2 className="mt-4 text-3xl leading-none md:text-4xl">
               Work piles up in the wrong places.
             </h2>
-            <p className="mt-6 text-base leading-relaxed text-[var(--muted)] md:text-lg">
-              Most businesses do not need another dashboard they will ignore.
-              They need the repetitive work to stop eating the day.
-            </p>
           </div>
           <ul className="space-y-3 text-base text-[var(--foreground)] md:text-lg">
             {PROBLEMS.map((item) => (

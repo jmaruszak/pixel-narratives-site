@@ -20,20 +20,24 @@ function getReducedMotionServerSnapshot() {
 
 const STEPS = [
   {
-    title: "Creative Consultation",
-    body: "We learn about your brand, audience, and goals.",
+    title: "Brief",
+    body: "The owner gives us the basics about the business, customer, geography, and goal. We confirm the campaign on a short call.",
   },
   {
-    title: "Build the Concept",
-    body: "We develop a high-impact, shareable ad idea tailored to your brand.",
+    title: "Concept",
+    body: "We develop the campaign idea, message, and creative direction.",
   },
   {
-    title: "Produce the Spot",
-    body: "We create the ad using AI-powered production and cinematic editing.",
+    title: "Produce",
+    body: "We create the finished commercial using AI-assisted production and a cinematic finishing process.",
   },
   {
-    title: "Launch + Amplify",
-    body: "You deploy the ad across your channels and campaigns.",
+    title: "Place",
+    body: "We set up the campaign across streaming and available live-sports inventory. Geography, audience, frequency, budget, and tracking stay with us.",
+  },
+  {
+    title: "Report",
+    body: "When the campaign is complete, we send the readout and recommendations. You can stop there, run another campaign, or continue with Attention Retainer.",
   },
 ] as const;
 
@@ -75,7 +79,7 @@ export default function AdsProcessFlow() {
   }, [reducedMotion, update]);
 
   const displayProgress = reducedMotion ? 1 : progress;
-  const t = displayProgress * 4;
+  const t = displayProgress * STEPS.length;
   const lineH = displayProgress * 100;
   const lineV = displayProgress * 100;
 
@@ -101,21 +105,21 @@ export default function AdsProcessFlow() {
         <div className="mx-auto w-full max-w-7xl px-6 py-20 md:px-10 md:py-28">
           <div className="max-w-2xl">
             <p className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
-              Ads Process
+              Process
             </p>
             <h2
               id="ads-process-heading"
               className="mt-4 text-4xl leading-[1.05] md:text-5xl"
             >
-              From insight
+              How an Attention
               <br />
-              to launch.
+              campaign works
             </h2>
           </div>
 
           <div className="ads-process-canvas relative mt-16 pl-7 md:mt-20 md:pl-0">
             <div
-              className="ads-process-rail-h pointer-events-none absolute z-0 hidden w-full md:block"
+              className="ads-process-rail-h pointer-events-none absolute z-0 hidden w-full lg:block"
               style={{ top: "1.55rem" }}
               aria-hidden
             >
@@ -130,7 +134,7 @@ export default function AdsProcessFlow() {
               </div>
             </div>
 
-            <ol className="relative z-[1] m-0 grid list-none gap-10 p-0 md:grid-cols-4 md:gap-2 md:gap-y-0">
+            <ol className="relative z-[1] m-0 grid list-none gap-10 p-0 md:grid-cols-2 lg:grid-cols-5 lg:gap-2 lg:gap-y-0">
               {STEPS.map((step, i) => {
                 const stepT = t - i;
                 const o = Math.min(1, Math.max(0.16, 0.16 + stepT * 0.95));
@@ -139,7 +143,7 @@ export default function AdsProcessFlow() {
                 return (
                   <li
                     key={step.title}
-                    className="relative m-0 pl-0 md:pt-0 md:text-center"
+                    className="relative m-0 pl-0 lg:pt-0 lg:text-center"
                     style={
                       reducedMotion
                         ? { opacity: 1, transform: "none" }
@@ -147,12 +151,12 @@ export default function AdsProcessFlow() {
                     }
                   >
                     <div
-                      className="ads-process-index mb-3 text-[0.65rem] font-mono font-medium leading-none tabular-nums transition-colors duration-500 md:mb-0 md:flex md:min-h-8 md:items-end md:justify-center md:pb-0.5"
+                      className="ads-process-index mb-3 text-[0.65rem] font-mono font-medium leading-none tabular-nums transition-colors duration-500 lg:mb-0 lg:flex lg:min-h-8 lg:items-end lg:justify-center lg:pb-0.5"
                       data-complete={complete ? "true" : "false"}
                     >
                       {String(i + 1).padStart(2, "0")}
                     </div>
-                    <h3 className="text-lg leading-snug text-[var(--foreground)] md:mt-0 md:text-balance md:text-lg">
+                    <h3 className="text-lg leading-snug text-[var(--foreground)] lg:mt-0 lg:text-balance lg:text-lg">
                       {step.title}
                     </h3>
                     <p className="mt-2.5 text-sm leading-relaxed text-balance text-[var(--muted)]">

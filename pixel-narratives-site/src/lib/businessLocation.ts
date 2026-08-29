@@ -253,7 +253,7 @@ export function buildHomepageServiceSchemas() {
       areaServed,
       serviceType: "Digital marketing and campaign production",
       description:
-        "Marketing campaigns, paid advertising, video, content, and lead generation to reach more customers.",
+        "Attention is a managed advertising campaign: concept, commercial, placement, and reporting to help businesses reach more customers.",
       url: `${SITE_URL}/marketing`,
     },
   ];

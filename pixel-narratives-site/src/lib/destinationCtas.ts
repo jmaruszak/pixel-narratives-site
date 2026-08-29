@@ -1,3 +1,4 @@
+import { CALENDLY_URL } from "./businessLocation";
 import { WEB_INTEL_PAGE_TOOL_URL } from "./webIntelligence";
 
 export type CtaAction = {
@@ -45,9 +46,14 @@ export const DESTINATION_CTAS = {
   },
   marketing: {
     id: "marketing",
-    eyebrow: "Next Step",
-    headline: "Ready to reach more customers?",
-    body: "Tell us who you need to reach and what you want them to do. We will talk through campaigns, ads, video, and content.",
-    primaryAction: { href: "/contact?need=marketing", label: "Discuss a Campaign" },
+    eyebrow: "Attention",
+    headline: "Start an Attention Pulse.",
+    body: "One campaign. One price. A defined finish line. We confirm fit on a short call before production starts.",
+    primaryAction: { href: "#attention-pulse-brief", label: "Start an Attention Pulse" },
+    secondaryAction: {
+      href: CALENDLY_URL,
+      label: "Book a Call",
+      external: true,
+    },
   },
 } as const satisfies Record<string, DestinationCtaConfig>;

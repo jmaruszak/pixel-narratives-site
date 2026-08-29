@@ -47,12 +47,8 @@ export default function TrainingPage() {
       >
         <div className="hero-entrance hero-entrance-delay-1 mt-8 max-w-2xl space-y-5 text-lg leading-relaxed text-white/70 md:text-xl">
           <p>
-            Employees should leave knowing how to use AI in the work they already do.
-            Not a list of tools. Not a theory session.
-          </p>
-          <p className="text-base md:text-lg">
-            We train around real workflows: writing, research, follow-up,
-            reporting, and the repetitive work that already eats the week.
+            Teams are equipped with the knowledge and best practices on how
+            to use AI in the work they do.
           </p>
         </div>
         <div className="hero-entrance hero-entrance-delay-2 mt-10">

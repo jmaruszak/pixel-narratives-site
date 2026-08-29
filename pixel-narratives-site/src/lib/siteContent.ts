@@ -13,25 +13,28 @@ export type CaseStudy = {
 
 export const FEATURED_CAMPAIGN = {
   eyebrow: "Featured Campaign",
-  client: "Fizz Soda",
-  title: "The Homie",
-  description:
-    "A spec campaign created for Fizz Soda as our entry into the Runway Big Ad Contest, built to show how much energy, personality, and cinematic style a brand spot can carry.",
-  problem:
-    "Category ads for drinks often look interchangeable. The brand needed a spot people would watch.",
-  solution:
-    "We built a concept-driven campaign around character and payoff, then produced it as a finished commercial piece.",
-  result:
-    "A shareable spec spot that shows how campaign work can feel bigger than a generic product demo.",
-  videoSrc: "/videos/the-last-fizz.mp4",
-  posterSrc: "/images/runway-still.jpg",
-  posterAlt: "The Homie campaign still for Fizz Soda",
-  deliverables: [
-    "Spec campaign",
-    "Creative direction",
-    "Concept development",
-    "Campaign production",
+  title: "Attention",
+  description: "Our own campaign, running in Mississippi now.",
+  commercials: [
+    {
+      title: "Chad G.P.T. — Introduction",
+      videoSrc: "/videos/pixel-narratives-chadgpt-ad.mp4",
+    },
+    {
+      title: "The Interception",
+      videoSrc: "/videos/pixel-narratives-football-ad.mp4",
+    },
   ],
+  details: [
+    { label: "Status", value: "Running Now" },
+    { label: "Market", value: "Mississippi" },
+    { label: "Goal", value: "Awareness" },
+    { label: "Focus", value: "Live Sports. College Football + NFL." },
+    { label: "Measuring", value: "Website Visits" },
+  ],
+  targets: ["10K to 20K Impressions", "Approximately 2K Households"],
+  actualResults: "TBD",
+  resultsNote: "We'll update this when the campaign wraps.",
 } as const;
 
 export type WorkProject = {
@@ -91,20 +94,25 @@ export const WORK_PROJECTS: WorkProject[] = [
 
 export const CASE_STUDIES: CaseStudy[] = [
   {
-    eyebrow: "Studio Launch",
-    title: "Pixel Narratives Launch Commercial",
+    eyebrow: "Spec Campaign",
+    title: "The Homie",
     overview:
-      "The first flagship campaign for the company, built to introduce tone, ambition, and a cinematic standard.",
+      "A spec campaign created for Fizz Soda as our entry into the Runway Big Ad Contest, built to show how much energy, personality, and cinematic style a brand spot can carry.",
     problem:
-      "A new company needed a clear first impression, not a generic explainer.",
+      "Category ads for drinks often look interchangeable. The brand needed a spot people would watch.",
     solution:
-      "We wrote and produced a launch commercial around a strong concept, then used it as the flagship piece.",
+      "We built a concept-driven campaign around character and payoff, then produced it as a finished commercial piece.",
     result:
-      "A finished campaign asset that still represents how Pixel Narratives approaches marketing work.",
-    deliverables: ["Launch commercial", "Creative direction", "Concept development"],
-    videoSrc: "/videos/pixel-narratives-launch.mp4",
-    posterSrc: "/images/studio-launch-still.jpg",
-    posterAlt: "Pixel Narratives Studio Launch still",
+      "A shareable spec spot that shows how campaign work can feel bigger than a generic product demo.",
+    deliverables: [
+      "Spec campaign",
+      "Creative direction",
+      "Concept development",
+      "Campaign production",
+    ],
+    videoSrc: "/videos/the-last-fizz.mp4",
+    posterSrc: "/images/runway-still.jpg",
+    posterAlt: "The Homie campaign still for Fizz Soda",
   },
   {
     eyebrow: "Brand Campaign",
