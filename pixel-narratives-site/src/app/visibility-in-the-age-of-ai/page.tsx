@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import Link from "next/link";
 import Footer from "../../components/Footer";
 import Nav from "../../components/Nav";
+import { JsonLd, buildWebPage, buildBreadcrumbs } from "../../lib/schema";
 import { buildPageMetadata } from "../../lib/siteMetadata";
 import { WEB_INTEL_PAGE_TOOL_URL } from "../../lib/webIntelligence";
 
@@ -86,6 +87,19 @@ export default function VisibilityInTheAgeOfAiPage() {
   return (
     <main className="min-h-screen bg-[var(--background)] text-[var(--foreground)]">
       <Nav />
+      <JsonLd
+        graph={[
+          buildWebPage({
+            path: "/visibility-in-the-age-of-ai",
+            name: "Visibility in the Age of AI | Pixel Narratives",
+            description: DESCRIPTION,
+          }),
+          buildBreadcrumbs([
+            { name: "Home", path: "/" },
+            { name: "Visibility in the Age of AI", path: "/visibility-in-the-age-of-ai" },
+          ]),
+        ]}
+      />
 
       <article>
         <section className="mx-auto w-full max-w-4xl px-6 py-20 md:px-10 md:py-24">

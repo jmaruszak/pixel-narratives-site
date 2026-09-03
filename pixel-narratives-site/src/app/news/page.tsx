@@ -1,7 +1,8 @@
 import Link from "next/link";
 import Footer from "../../components/Footer";
 import Nav from "../../components/Nav";
-import { buildNewsIndexSchema, NEWS_ITEMS, newsPath } from "../../lib/news";
+import { buildNewsIndexGraph, NEWS_ITEMS, newsPath } from "../../lib/news";
+import { JsonLd } from "../../lib/schema";
 import { buildPageMetadata } from "../../lib/siteMetadata";
 
 export const metadata = buildPageMetadata({
@@ -12,22 +13,13 @@ export const metadata = buildPageMetadata({
 });
 
 export default function NewsPage() {
-  const schemas = buildNewsIndexSchema();
-
   return (
     <main
       id="main-content"
       className="min-h-screen bg-[var(--background)] text-[var(--foreground)]"
     >
       <Nav />
-
-      {schemas.map((schema, index) => (
-        <script
-          key={"@type" in schema ? String(schema["@type"]) : `schema-${index}`}
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-        />
-      ))}
+      <JsonLd graph={buildNewsIndexGraph()} />
 
       <section className="mx-auto w-full max-w-7xl px-6 py-20 md:px-10 md:py-24">
         <div className="max-w-3xl">

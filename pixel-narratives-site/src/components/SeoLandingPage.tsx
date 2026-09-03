@@ -2,65 +2,47 @@ import Link from "next/link";
 
 import Footer from "./Footer";
 import Nav from "./Nav";
-import { buildAreaServedSchema } from "../lib/businessLocation";
 import type { SeoLandingPage } from "../lib/seoLandingPages";
-
-const siteUrl = "https://pixelnarratives.studio";
-
-export function buildServiceSchema(page: SeoLandingPage) {
-  return {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    name:
-      page.offer === "ads"
-        ? "Marketing"
-        : "Automation + Implementation",
-    provider: {
-      "@type": "Organization",
-      name: "Pixel Narratives",
-      url: siteUrl,
-    },
-    areaServed: buildAreaServedSchema(),
-    serviceType:
-      page.offer === "ads"
-        ? "Campaigns, ads, video, and lead generation"
-        : "Automation, workflow implementation, and operational systems",
-    description: page.intro,
-    url: `${siteUrl}/${page.slug}`,
-  };
-}
-
-export function buildFaqSchema(page: SeoLandingPage) {
-  return {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: page.faqs.map((faq) => ({
-      "@type": "Question",
-      name: faq.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: faq.answer,
-      },
-    })),
-  };
-}
+import { JsonLd, buildServicePageSchema, buildWebPage } from "../lib/schema";
+import { SITE_URL } from "../lib/siteMetadata";
 
 export default function SeoLandingPageView({ page }: { page: SeoLandingPage }) {
   return (
     <main className="min-h-screen bg-[var(--background)] text-[var(--foreground)]">
       <Nav />
 
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(buildServiceSchema(page)),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(buildFaqSchema(page)),
-        }}
+      <JsonLd
+        graph={[
+          buildServicePageSchema({
+            path: `/${page.slug}`,
+            name:
+              page.offer === "ads"
+                ? "Marketing"
+                : "Automation + Implementation",
+            description: page.intro,
+            serviceType:
+              page.offer === "ads"
+                ? "Campaigns, ads, video, and lead generation"
+                : "Automation, workflow implementation, and operational systems",
+          }),
+          buildWebPage({
+            path: `/${page.slug}`,
+            name: page.title,
+            description: page.description,
+            mainEntity: { "@id": `${SITE_URL}/${page.slug}#service` },
+          }),
+          {
+            "@type": "FAQPage" as const,
+            mainEntity: page.faqs.map((faq) => ({
+              "@type": "Question" as const,
+              name: faq.question,
+              acceptedAnswer: {
+                "@type": "Answer" as const,
+                text: faq.answer,
+              },
+            })),
+          },
+        ]}
       />
 
       <section className="border-t border-white/8">

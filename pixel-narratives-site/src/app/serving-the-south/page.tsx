@@ -6,14 +6,13 @@ import Nav from "../../components/Nav";
 import PageBottomCta from "../../components/PageBottomCta";
 import {
   SERVICE_PILLARS,
-  buildBreadcrumbSchema,
-  buildOrganizationSchema,
   formatServiceAreaList,
 } from "../../lib/businessLocation";
 import {
   hubMarketCards,
   hubSecondaryMentions,
 } from "../../lib/locationLandingPages";
+import { JsonLd, buildWebPage, buildBreadcrumbs } from "../../lib/schema";
 import { SITE_URL, buildPageMetadata } from "../../lib/siteMetadata";
 import { WEB_INTEL_PAGE_TOOL_URL } from "../../lib/webIntelligence";
 
@@ -24,31 +23,11 @@ export const metadata: Metadata = buildPageMetadata({
   path: "/serving-the-south",
 });
 
-const webPageSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  name: "AI Consulting & Implementation Across the South",
-  description:
-    "Regional hub for Pixel Narratives AI consulting and implementation across Mississippi and selected Southern markets.",
-  url: `${SITE_URL}/serving-the-south`,
-  about: {
-    "@type": "Organization",
-    name: "Pixel Narratives",
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Madison",
-      addressRegion: "MS",
-      addressCountry: "US",
-    },
-  },
-};
-
 const marketListSchema = {
-  "@context": "https://schema.org",
-  "@type": "ItemList",
+  "@type": "ItemList" as const,
   name: "Pixel Narratives Southern markets",
   itemListElement: hubMarketCards.map((market, index) => ({
-    "@type": "ListItem",
+    "@type": "ListItem" as const,
     position: index + 1,
     name: market.label,
     url: `${SITE_URL}/${market.slug}`,
@@ -57,10 +36,6 @@ const marketListSchema = {
 
 export default function ServingTheSouthPage() {
   const secondaryMentionLabels = formatServiceAreaList(hubSecondaryMentions);
-  const breadcrumbSchema = buildBreadcrumbSchema([
-    { name: "Home", path: "/" },
-    { name: "Serving the South", path: "/serving-the-south" },
-  ]);
 
   return (
     <main
@@ -69,23 +44,20 @@ export default function ServingTheSouthPage() {
     >
       <Nav />
 
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(buildOrganizationSchema()),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(marketListSchema) }}
+      <JsonLd
+        graph={[
+          buildWebPage({
+            path: "/serving-the-south",
+            name: "AI Consulting & Implementation Across the South",
+            description:
+              "Regional hub for Pixel Narratives AI consulting and implementation across Mississippi and selected Southern markets.",
+          }),
+          buildBreadcrumbs([
+            { name: "Home", path: "/" },
+            { name: "Serving the South", path: "/serving-the-south" },
+          ]),
+          marketListSchema,
+        ]}
       />
 
       <section className="mx-auto w-full max-w-7xl px-6 py-20 md:px-10 md:py-24">

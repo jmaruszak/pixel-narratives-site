@@ -6,10 +6,10 @@ import { landingPageSlugs } from "../lib/seoLandingPages";
 const baseUrl = "https://pixelnarratives.studio";
 
 /** Stable “recent update” timestamps for crawl hints (build-time homepage uses current date separately). */
-const LASTMOD_MAIN_BUSINESS = new Date("2026-05-19T00:00:00.000Z");
-const LASTMOD_SEO = new Date("2026-02-04T00:00:00.000Z");
-const LASTMOD_ABOUT_CONTACT = new Date("2026-05-19T00:00:00.000Z");
-const LASTMOD_LOCATION = new Date("2026-08-27T00:00:00.000Z");
+const LASTMOD_MAIN_BUSINESS = new Date("2026-09-03T00:00:00.000Z");
+const LASTMOD_SEO = new Date("2026-09-03T00:00:00.000Z");
+const LASTMOD_ABOUT_CONTACT = new Date("2026-09-03T00:00:00.000Z");
+const LASTMOD_LOCATION = new Date("2026-09-03T00:00:00.000Z");
 const LASTMOD_NEWS = new Date("2026-08-24T00:00:00.000Z");
 const LASTMOD_OLD_STATIC = new Date("2025-06-02T00:00:00.000Z");
 

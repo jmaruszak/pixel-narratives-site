@@ -6,6 +6,7 @@ import Nav from "../../components/Nav";
 import PageBottomCta from "../../components/PageBottomCta";
 import { CALENDLY_URL } from "../../lib/businessLocation";
 import { DESTINATION_CTAS } from "../../lib/destinationCtas";
+import { JsonLd, buildServicePageSchema, buildWebPage, buildBreadcrumbs } from "../../lib/schema";
 import { buildPageMetadata } from "../../lib/siteMetadata";
 import CaseStudiesSection, {
   FeaturedCampaignSection,
@@ -73,6 +74,26 @@ export default function MarketingPage() {
   return (
     <main className="min-h-screen bg-[var(--background)] text-[var(--foreground)]">
       <Nav />
+      <JsonLd
+        graph={[
+          buildServicePageSchema({
+            path: "/marketing",
+            name: "Marketing",
+            description:
+              "Managed advertising campaigns that get a business noticed: Attention Pulse and Attention Retainer. Distinct from website visibility work, which is about being found.",
+            serviceType: "Digital Marketing and Campaign Production",
+          }),
+          buildWebPage({
+            path: "/marketing",
+            name: "Marketing | Pixel Narratives",
+            mainEntity: { "@id": "https://pixelnarratives.studio/marketing#service" },
+          }),
+          buildBreadcrumbs([
+            { name: "Home", path: "/" },
+            { name: "Marketing", path: "/marketing" },
+          ]),
+        ]}
+      />
 
       <CinematicPageHero
         imageSrc="/images/hero-cinematic.jpg"
@@ -243,14 +264,15 @@ export default function MarketingPage() {
               Attention Retainer
             </h2>
             <p className="mt-4 text-sm uppercase tracking-[0.25em] text-[var(--muted)]">
-              $1,500/month · 3-month minimum
+              $2,250/month · 3-month minimum
             </p>
           </div>
 
           <div className="mt-10 rounded-[24px] border border-white/8 bg-white/[0.02] p-8 md:p-10">
             <p className="max-w-3xl text-base leading-relaxed text-[var(--muted)] md:text-lg">
               For businesses that want Pixel Narratives to stay on as a creative
-              partner and manage marketing campaigns.
+              partner and manage marketing campaigns. Visibility work helps
+              customers find you. Attention keeps the business noticed.
             </p>
             <p className="mt-4 max-w-3xl text-base leading-relaxed text-[var(--muted)] md:text-lg">
               Media is not included. Client media spend is separate and billed

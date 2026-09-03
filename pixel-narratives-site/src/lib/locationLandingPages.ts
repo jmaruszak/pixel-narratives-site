@@ -135,7 +135,7 @@ export const locationLandingPages: Record<string, LocationLandingPage> = {
       {
         question: "How much does AI consulting cost?",
         answer:
-          "Work is scoped to the job. Guided implementation starts at $1,200/month with a three-month minimum. Fractional Chief AI Officer support starts at $5,000/month. We will tell you what the work involves before you commit.",
+          "Work is scoped to the job. Guided implementation starts at $1,500/month with a three-month minimum. Fractional Chief AI Officer support starts at $5,000/month. We will tell you what the work involves before you commit.",
       },
       {
         question: "Does Pixel Narratives implement the systems it recommends?",
@@ -242,7 +242,7 @@ export const locationLandingPages: Record<string, LocationLandingPage> = {
       {
         question: "How much does AI consulting cost?",
         answer:
-          "It depends on scope. Guided implementation starts at $1,200/month with a three-month minimum. Fractional Chief AI Officer support starts at $5,000/month. We scope the work before you start.",
+          "It depends on scope. Guided implementation starts at $1,500/month with a three-month minimum. Fractional Chief AI Officer support starts at $5,000/month. We scope the work before you start.",
       },
       {
         question: "Does Pixel Narratives implement the systems it recommends?",
@@ -349,7 +349,7 @@ export const locationLandingPages: Record<string, LocationLandingPage> = {
       {
         question: "How much does AI consulting cost?",
         answer:
-          "Scope drives the number. Guided implementation starts at $1,200/month with a three-month minimum. Fractional Chief AI Officer support starts at $5,000/month.",
+          "Scope drives the number. Guided implementation starts at $1,500/month with a three-month minimum. Fractional Chief AI Officer support starts at $5,000/month.",
       },
       {
         question: "Does Pixel Narratives implement the systems it recommends?",
@@ -458,7 +458,7 @@ export const locationLandingPages: Record<string, LocationLandingPage> = {
       {
         question: "How much does AI consulting cost?",
         answer:
-          "Guided implementation starts at $1,200/month with a three-month minimum. Fractional Chief AI Officer support starts at $5,000/month. Projects are scoped before work begins.",
+          "Guided implementation starts at $1,500/month with a three-month minimum. Fractional Chief AI Officer support starts at $5,000/month. Projects are scoped before work begins.",
       },
       {
         question: "Does Pixel Narratives implement the systems it recommends?",
@@ -566,7 +566,7 @@ export const locationLandingPages: Record<string, LocationLandingPage> = {
       {
         question: "How much does AI consulting cost?",
         answer:
-          "Guided implementation starts at $1,200/month with a three-month minimum. Fractional Chief AI Officer support starts at $5,000/month. We scope the engagement first.",
+          "Guided implementation starts at $1,500/month with a three-month minimum. Fractional Chief AI Officer support starts at $5,000/month. We scope the engagement first.",
       },
       {
         question: "Does Pixel Narratives implement the systems it recommends?",

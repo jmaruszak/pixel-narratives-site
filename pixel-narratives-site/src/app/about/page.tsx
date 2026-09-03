@@ -3,8 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import Footer from "../../components/Footer";
 import Nav from "../../components/Nav";
-import { buildOrganizationSchema } from "../../lib/businessLocation";
 import { NEWS_ITEMS, newsPath } from "../../lib/news";
+import { JsonLd, buildWebPage, buildBreadcrumbs } from "../../lib/schema";
 import { SERVICES } from "../../lib/services";
 import { MARKETING_TO_WEB_INTEL_URL } from "../../lib/webIntelligence";
 
@@ -31,11 +31,20 @@ export default function AboutPage() {
     <main className="min-h-screen bg-[var(--background)] text-[var(--foreground)]">
       <Nav />
 
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(buildOrganizationSchema()),
-        }}
+      <JsonLd
+        graph={[
+          buildWebPage({
+            path: "/about",
+            name: "About Pixel Narratives",
+            description:
+              "Pixel Narratives is an execution company based in Madison, Mississippi. We help businesses save time, win more customers, and get more done through automation, training, websites, and marketing.",
+            additionalType: "AboutPage",
+          }),
+          buildBreadcrumbs([
+            { name: "Home", path: "/" },
+            { name: "About", path: "/about" },
+          ]),
+        ]}
       />
 
       <section className="mx-auto w-full max-w-7xl px-6 py-20 md:px-10 md:py-24">

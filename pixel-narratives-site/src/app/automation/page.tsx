@@ -4,6 +4,7 @@ import IntelligenceLayerProcessFlow from "../../components/IntelligenceLayerProc
 import Nav from "../../components/Nav";
 import PageBottomCta from "../../components/PageBottomCta";
 import { DESTINATION_CTAS } from "../../lib/destinationCtas";
+import { JsonLd, buildServicePageSchema, buildWebPage, buildBreadcrumbs } from "../../lib/schema";
 import { buildPageMetadata } from "../../lib/siteMetadata";
 
 export const metadata = buildPageMetadata({
@@ -48,6 +49,26 @@ export default function AutomationPage() {
   return (
     <main className="min-h-screen bg-[var(--background)] text-[var(--foreground)]">
       <Nav />
+      <JsonLd
+        graph={[
+          buildServicePageSchema({
+            path: "/automation",
+            name: "Automation + Implementation",
+            description:
+              "AI implementation and business automation: a paid assessment, Guided Implementation for owners implementing with expert coaching, custom implementation projects, and Fractional Chief AI Officer leadership.",
+            serviceType: "AI Implementation and Business Automation",
+          }),
+          buildWebPage({
+            path: "/automation",
+            name: "Automation + Implementation | Pixel Narratives",
+            mainEntity: { "@id": "https://pixelnarratives.studio/automation#service" },
+          }),
+          buildBreadcrumbs([
+            { name: "Home", path: "/" },
+            { name: "Automation + Implementation", path: "/automation" },
+          ]),
+        ]}
+      />
 
       <CinematicPageHero
         contentScrim
@@ -127,7 +148,7 @@ export default function AutomationPage() {
             </h2>
           </div>
 
-          <div className="mt-12 grid gap-8 lg:grid-cols-3 lg:items-start">
+          <div className="mt-12 grid gap-8 md:grid-cols-2 lg:items-start">
             <div className="flex flex-col rounded-[24px] border border-white/8 bg-white/[0.02] p-8 lg:p-10">
               <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
                 Optional first step
@@ -141,6 +162,8 @@ export default function AutomationPage() {
               <p className="mt-6 text-base leading-relaxed text-[var(--muted)]">
                 A focused look at how work moves through the business:
                 bottlenecks, tools, follow-up, and what should happen next.
+                From there, the right path may be Guided Implementation, a
+                custom project, or Fractional CAIO support.
               </p>
               <ul className="mt-8 flex-1 space-y-2 text-sm text-[var(--foreground)] md:text-base">
                 <li>Workflow and bottleneck review</li>
@@ -171,24 +194,27 @@ export default function AutomationPage() {
 
             <div className="flex flex-col rounded-[24px] border border-white/12 bg-white/[0.02] p-8 lg:p-10">
               <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
-                Done With You
+                We help you do it
               </p>
               <h3 className="mt-4 text-2xl leading-none md:text-3xl">
                 Guided Implementation
               </h3>
               <p className="mt-4 text-sm uppercase tracking-[0.25em] text-[var(--muted)]">
-                Starting at $1,200/month · 3-month minimum
+                $1,500/month · 3-month minimum
               </p>
               <p className="mt-6 text-base leading-relaxed text-[var(--muted)]">
-                We implement with your team. Working sessions, tool setup, and
-                training so people stay involved and can run what we build.
+                For business owners and internal leads who want expert
+                guidance while implementing AI themselves. Two working sessions
+                each month help you prioritize opportunities, choose tools,
+                build workflows, troubleshoot implementation and keep progress
+                moving.
               </p>
               <ul className="mt-8 flex-1 space-y-2 text-sm text-[var(--foreground)] md:text-base">
-                <li>Build core workflows inside the business</li>
-                <li>Tool setup and system integration</li>
-                <li>Monthly working sessions</li>
-                <li>Support between sessions</li>
-                <li>Team training and onboarding</li>
+                <li>Two virtual working sessions per month</li>
+                <li>Ongoing implementation guidance</li>
+                <li>Prioritization, tool choice, and troubleshooting</li>
+                <li>You implement inside the business, with us helping you succeed</li>
+                <li>3-month minimum</li>
               </ul>
               <div className="mt-8">
                 <a
@@ -202,7 +228,39 @@ export default function AutomationPage() {
 
             <div className="flex flex-col rounded-[24px] border border-white/8 bg-white/[0.02] p-8 lg:p-10">
               <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
-                Done For You
+                We build it for you
+              </p>
+              <h3 className="mt-4 text-2xl leading-none md:text-3xl">
+                Implementation Projects
+              </h3>
+              <p className="mt-4 text-sm uppercase tracking-[0.25em] text-[var(--muted)]">
+                Custom scoped
+              </p>
+              <p className="mt-6 text-base leading-relaxed text-[var(--muted)]">
+                Pixel Narratives builds the system. Automations, integrations,
+                workflows, internal tools, and operational improvements are
+                scoped to the complexity of the work.
+              </p>
+              <ul className="mt-8 flex-1 space-y-2 text-sm text-[var(--foreground)] md:text-base">
+                <li>Workflow automation and CRM implementation</li>
+                <li>Integrations between tools you already use</li>
+                <li>Scheduling, reporting, and internal tools</li>
+                <li>Custom AI systems where they fit the work</li>
+                <li>Scoped after we understand the process</li>
+              </ul>
+              <div className="mt-8">
+                <a
+                  href="/contact?need=automation"
+                  className="cta-pulse-outline inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm text-[var(--foreground)] transition hover:border-white/20 hover:bg-white/5"
+                >
+                  Discuss a Project
+                </a>
+              </div>
+            </div>
+
+            <div className="flex flex-col rounded-[24px] border border-white/8 bg-white/[0.02] p-8 lg:p-10">
+              <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
+                We help lead it
               </p>
               <h3 className="mt-4 text-2xl leading-none md:text-3xl">
                 Fractional Chief AI Officer
@@ -211,14 +269,16 @@ export default function AutomationPage() {
                 Starting at $5,000/month
               </p>
               <p className="mt-6 text-base leading-relaxed text-[var(--muted)]">
-                We own the build and keep the systems running. You get the
-                outcome without adding a full-time technical hire.
+                Ongoing AI leadership for companies that need strategy,
+                prioritization, and implementation oversight without a
+                full-time executive hire.
               </p>
               <ul className="mt-8 flex-1 space-y-2 text-sm text-[var(--foreground)] md:text-base">
-                <li>We build and maintain the systems</li>
-                <li>Operational redesign as work changes</li>
-                <li>Quarterly initiatives</li>
-                <li>Leadership working sessions</li>
+                <li>AI strategy and roadmap leadership</li>
+                <li>Prioritization and opportunity identification</li>
+                <li>Implementation oversight</li>
+                <li>Vendor and tool decisions</li>
+                <li>Executive guidance on organizational adoption</li>
               </ul>
               <div className="mt-8">
                 <a

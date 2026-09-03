@@ -5,12 +5,13 @@ import Nav from "../../components/Nav";
 import PageBottomCta from "../../components/PageBottomCta";
 import { CALENDLY_URL } from "../../lib/businessLocation";
 import { DESTINATION_CTAS } from "../../lib/destinationCtas";
+import { JsonLd, buildServicePageSchema, buildWebPage, buildBreadcrumbs } from "../../lib/schema";
 import { buildPageMetadata } from "../../lib/siteMetadata";
 
 export const metadata = buildPageMetadata({
   title: "Corporate AI Workshops | Pixel Narratives",
   description:
-    "Corporate AI Workshops starting at $15,000. Practical training built around the work your team already does, from Pixel Narratives.",
+    "Corporate AI Workshops starting at $15,000. Private, customized training for leadership, departments, and employees from Pixel Narratives.",
   path: "/training",
   image: "/images/int-cinematic.jpg",
   imageAlt: "Team training cinematic visual for Pixel Narratives",
@@ -148,6 +149,26 @@ export default function TrainingPage() {
   return (
     <main className="min-h-screen bg-[var(--background)] text-[var(--foreground)]">
       <Nav />
+      <JsonLd
+        graph={[
+          buildServicePageSchema({
+            path: "/training",
+            name: "Corporate AI Workshops",
+            description:
+              "Corporate AI workshops starting at $15,000. Private, customized training for leadership, departments, and employees. Full-day or two-day engagements, not monthly advisory coaching.",
+            serviceType: "Corporate AI Training and Workshops",
+          }),
+          buildWebPage({
+            path: "/training",
+            name: "Corporate AI Workshops | Pixel Narratives",
+            mainEntity: { "@id": "https://pixelnarratives.studio/training#service" },
+          }),
+          buildBreadcrumbs([
+            { name: "Home", path: "/" },
+            { name: "Training", path: "/training" },
+          ]),
+        ]}
+      />
 
       <CinematicPageHero
         contentScrim
@@ -162,7 +183,7 @@ export default function TrainingPage() {
           </p>
           <p className="text-base md:text-lg">
             We learn how your teams work, identify useful places for AI, and
-            build the workshop around your business priorities.
+            teach your team the skills relevant to their role.
           </p>
         </div>
         <div className="hero-entrance hero-entrance-delay-2 mt-10 flex flex-wrap gap-4">
@@ -287,8 +308,10 @@ export default function TrainingPage() {
             </p>
             <p className="mt-6 text-lg leading-relaxed text-[var(--muted)] md:text-xl">
               The primary engagement is a full-day or two-day corporate
-              workshop. Final scope depends on company size, number of teams,
-              format, customization, location, and follow-up needs.
+              workshop for leadership, departments, and employees. Custom
+              curriculum, hands-on exercises, and private delivery. Final scope
+              depends on company size, number of teams, format, customization,
+              location, and follow-up needs.
             </p>
           </div>
         </div>

@@ -5,9 +5,8 @@ import Nav from "./Nav";
 import PageBottomCta from "./PageBottomCta";
 import {
   SERVICE_PILLARS,
-  buildBreadcrumbSchema,
-  buildLocationServiceSchema,
 } from "../lib/businessLocation";
+import { JsonLd, buildLocationPageGraph } from "../lib/schema";
 import type { LocationLandingPage } from "../lib/locationLandingPages";
 import { WORK_PROJECTS } from "../lib/siteContent";
 import { WEB_INTEL_PAGE_TOOL_URL } from "../lib/webIntelligence";
@@ -47,21 +46,6 @@ const CONSULTING_ITEMS = [
   "Fractional Chief AI Officer support",
 ] as const;
 
-function buildFaqSchema(page: LocationLandingPage) {
-  return {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: page.faqs.map((faq) => ({
-      "@type": "Question",
-      name: faq.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: faq.answer,
-      },
-    })),
-  };
-}
-
 function Section({
   eyebrow,
   heading,
@@ -93,17 +77,14 @@ export default function LocationLandingPageView({
 }: {
   page: LocationLandingPage;
 }) {
-  const serviceSchema = buildLocationServiceSchema({
+  const graph = buildLocationPageGraph({
+    slug: page.slug,
     name: `AI consulting and implementation ${page.inMarketPhrase}`,
     description: page.intro,
-    url: `/${page.slug}`,
+    breadcrumbName: page.breadcrumbName,
     areaServed: page.areaServed,
+    faqs: page.faqs,
   });
-  const breadcrumbSchema = buildBreadcrumbSchema([
-    { name: "Home", path: "/" },
-    { name: "Serving the South", path: "/serving-the-south" },
-    { name: page.breadcrumbName, path: `/${page.slug}` },
-  ]);
 
   return (
     <main
@@ -111,21 +92,7 @@ export default function LocationLandingPageView({
       className="min-h-screen bg-[var(--background)] text-[var(--foreground)]"
     >
       <Nav />
-
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(buildFaqSchema(page)),
-        }}
-      />
+      <JsonLd graph={graph} />
 
       <section className="border-t border-white/8">
         <div className="mx-auto w-full max-w-7xl px-6 py-20 md:px-10 md:py-24">

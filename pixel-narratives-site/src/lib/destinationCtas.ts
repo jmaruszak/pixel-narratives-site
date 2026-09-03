@@ -29,7 +29,7 @@ export const DESTINATION_CTAS = {
     id: "training",
     eyebrow: "Corporate AI Workshops",
     headline: "Help your team get more done.",
-    body: "Corporate AI Workshops start at $15,000. We will start with a short conversation about your team, goals, and what would make the workshop useful.",
+    body: "Corporate AI Workshops start at $15,000. Private, customized training for leadership, departments, and employees. This is not monthly implementation coaching.",
     primaryAction: { href: "#workshop-inquiry", label: "Discuss a Workshop" },
     secondaryAction: {
       href: CALENDLY_URL,
@@ -41,7 +41,7 @@ export const DESTINATION_CTAS = {
     id: "websites",
     eyebrow: "Next Step",
     headline: "Help more of the right customers find you.",
-    body: "Start with a look at your live site, or talk through a website and visibility project.",
+    body: "Start with a look at your live site, or talk through a Website + Visibility Build or Visibility Sprint.",
     primaryAction: {
       href: WEB_INTEL_PAGE_TOOL_URL,
       label: "Check My Online Visibility",

@@ -44,32 +44,38 @@ export default function WebMcpTools() {
                       },
                       {
                         name: "Guided Implementation",
-                        price: "From $1,200/month (3-month minimum)",
+                        price: "$1,500/month (3-month minimum)",
                         description:
-                          "Done With You: hands-on implementation, monthly working sessions, and team onboarding.",
+                          "Expert guidance for an owner or designated internal lead implementing AI themselves. Two virtual working sessions per month. Not corporate team training.",
+                      },
+                      {
+                        name: "Implementation Projects",
+                        price: "Custom scoped",
+                        description:
+                          "Pixel Narratives builds the automations, integrations, workflows, or internal tools.",
                       },
                       {
                         name: "Fractional Chief AI Officer",
                         price: "From $5,000/month",
                         description:
-                          "Done For You: we own the build and keep the systems running.",
+                          "Ongoing AI strategy and implementation leadership. Not a more expensive version of Guided Implementation.",
                       },
                     ],
                   },
                   training: {
                     summary:
-                      "Corporate AI workshops starting at $15,000, built around the work teams already do.",
+                      "Corporate AI workshops starting at $15,000. Private, customized training for leadership, departments, and employees. Full-day or two-day engagements, not monthly advisory coaching.",
                     url: `${SITE_URL}/training`,
                   },
                   websites: {
                     summary:
-                      "Website improvement, SEO, local search, conversion, and a free live-site scan for online visibility.",
+                      "Website + Visibility Build starting at $7,500 (up to 10 core pages) and Visibility Sprint starting at $5,000 for existing sites. Free live-site scan available.",
                     url: `${SITE_URL}/websites`,
                     scanUrl: WEB_INTEL_URL,
                   },
                   marketing: {
                     summary:
-                      "Campaigns, ads, video, content, and lead generation. AI-assisted production is how work gets done.",
+                      "Attention Pulse at $5,000 for one campaign. Attention Retainer at $2,250/month with a 3-month minimum. Visibility is get found. Attention is get noticed.",
                     url: `${SITE_URL}/marketing`,
                   },
                   aiAutomationAssessment: {

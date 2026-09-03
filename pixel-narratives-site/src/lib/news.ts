@@ -1,13 +1,8 @@
 import {
-  buildPostalAddressSchema,
-  CONTACT_EMAIL,
-  CONTACT_PHONE,
-} from "./businessLocation";
-import {
   DEFAULT_OG_IMAGE,
-  SITE_NAME,
   SITE_URL,
 } from "./siteMetadata";
+import { ORG_ID, WEBSITE_ID } from "./schema/organization";
 
 export type NewsCoverageType = "press-release" | "media-coverage";
 
@@ -132,56 +127,30 @@ export function newsUrl(item: NewsItem): string {
   return `${SITE_URL}${newsPath(item)}`;
 }
 
-function publisherSchema() {
-  return {
-    "@type": "Organization" as const,
-    name: SITE_NAME,
-    url: SITE_URL,
-    address: buildPostalAddressSchema(),
-    email: CONTACT_EMAIL,
-    telephone: CONTACT_PHONE,
-    logo: {
-      "@type": "ImageObject" as const,
-      url: `${SITE_URL}/brand/logo-mark.png`,
-    },
-  };
-}
-
-export function buildNewsIndexSchema() {
+export function buildNewsIndexGraph() {
   const indexUrl = `${SITE_URL}${NEWS_INDEX_PATH}`;
 
   return [
     {
-      "@context": "https://schema.org",
-      "@type": "CollectionPage",
+      "@type": ["WebPage", "CollectionPage"] as const,
+      "@id": `${indexUrl}#webpage`,
       name: "News & Media",
       description:
         "Press releases and media coverage about Pixel Narratives, a Madison, Mississippi AI implementation company.",
       url: indexUrl,
-      isPartOf: {
-        "@type": "WebSite",
-        name: SITE_NAME,
-        url: SITE_URL,
-      },
-      about: {
-        "@type": "Organization",
-        name: SITE_NAME,
-        url: SITE_URL,
-        address: buildPostalAddressSchema(),
-      },
-      mainEntity: {
-        "@id": `${indexUrl}#list`,
-      },
+      isPartOf: { "@id": WEBSITE_ID },
+      about: { "@id": ORG_ID },
+      publisher: { "@id": ORG_ID },
+      mainEntity: { "@id": `${indexUrl}#list` },
     },
     {
-      "@context": "https://schema.org",
-      "@type": "ItemList",
+      "@type": "ItemList" as const,
       "@id": `${indexUrl}#list`,
       name: "Pixel Narratives news and media coverage",
       itemListOrder: "https://schema.org/ItemListOrderDescending",
       numberOfItems: NEWS_ITEMS.length,
       itemListElement: NEWS_ITEMS.map((item, index) => ({
-        "@type": "ListItem",
+        "@type": "ListItem" as const,
         position: index + 1,
         name: item.title,
         url: newsUrl(item),
@@ -190,66 +159,67 @@ export function buildNewsIndexSchema() {
   ];
 }
 
-export function buildNewsArticleSchema(item: NewsItem) {
+export function buildNewsArticleGraph(item: NewsItem) {
   const url = newsUrl(item);
   const imageUrl = `${SITE_URL}${DEFAULT_OG_IMAGE}`;
-  const organizationAuthor = {
-    "@type": "Organization" as const,
-    name: SITE_NAME,
-    url: SITE_URL,
-  };
 
   const citation =
     item.type === "press-release"
       ? {
-          "@type": "NewsArticle",
+          "@type": "NewsArticle" as const,
           headline: item.citationHeadline,
           name: item.citationHeadline,
           url: item.externalUrl,
           datePublished: item.datePublished,
-          author: organizationAuthor,
+          author: { "@id": ORG_ID },
           publisher: {
-            "@type": "Organization",
+            "@type": "Organization" as const,
             name: item.source,
           },
         }
       : {
-          "@type": "Article",
+          "@type": "Article" as const,
           headline: item.citationHeadline,
           name: item.citationHeadline,
           url: item.externalUrl,
           datePublished: item.datePublished,
           author: {
-            "@type": "Person",
+            "@type": "Person" as const,
             name: item.originalAuthor ?? item.source,
           },
           publisher: {
-            "@type": "Organization",
+            "@type": "Organization" as const,
             name: item.source,
           },
         };
 
-  return {
-    "@context": "https://schema.org",
-    "@type": item.schemaType,
-    headline: item.title,
-    description: item.metaDescription,
-    datePublished: item.datePublished,
-    dateModified: item.dateModified,
-    url,
-    image: imageUrl,
-    articleSection: item.typeLabel,
-    mainEntityOfPage: {
-      "@type": "WebPage",
-      "@id": url,
+  return [
+    {
+      "@type": item.schemaType,
+      headline: item.title,
+      description: item.metaDescription,
+      datePublished: item.datePublished,
+      dateModified: item.dateModified,
+      url,
+      image: imageUrl,
+      articleSection: item.typeLabel,
+      mainEntityOfPage: {
+        "@type": "WebPage" as const,
+        "@id": url,
+      },
+      publisher: { "@id": ORG_ID },
+      author: { "@id": ORG_ID },
+      about: { "@id": ORG_ID },
+      citation,
     },
-    publisher: publisherSchema(),
-    author: organizationAuthor,
-    about: {
-      "@type": "Organization",
-      name: SITE_NAME,
-      url: SITE_URL,
+    {
+      "@type": "WebPage" as const,
+      "@id": `${url}#webpage`,
+      url,
+      name: item.title,
+      isPartOf: { "@id": WEBSITE_ID },
+      about: { "@id": ORG_ID },
+      publisher: { "@id": ORG_ID },
     },
-    citation,
-  };
+  ];
 }

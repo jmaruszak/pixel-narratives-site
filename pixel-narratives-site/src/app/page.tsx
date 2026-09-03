@@ -2,10 +2,8 @@ import type { Metadata } from "next";
 import Footer from "../components/Footer";
 import Nav from "../components/Nav";
 import HomeMotionExperience from "../components/home/HomeMotionExperience";
-import { buildHomepageServiceSchemas } from "../lib/businessLocation";
+import { JsonLd, homepageGraph } from "../lib/schema";
 import { buildPageMetadata } from "../lib/siteMetadata";
-
-const homepageSchemas = buildHomepageServiceSchemas();
 
 export const metadata: Metadata = buildPageMetadata({
   title: "Pixel Narratives | Save Time. Win More Customers. Get More Done.",
@@ -20,15 +18,7 @@ export default function Home() {
   return (
     <main id="main-content" className="min-h-screen bg-[var(--background)] text-[var(--foreground)]">
       <Nav />
-
-      {homepageSchemas.map((schema, index) => (
-        <script
-          key={"name" in schema && schema.name ? String(schema.name) : `schema-${index}`}
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-        />
-      ))}
-
+      <JsonLd graph={homepageGraph()} />
       <HomeMotionExperience />
       <Footer />
     </main>

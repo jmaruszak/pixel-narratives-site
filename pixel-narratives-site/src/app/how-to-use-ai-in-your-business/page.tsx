@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Footer from "../../components/Footer";
 import Nav from "../../components/Nav";
+import { JsonLd, buildWebPage, buildBreadcrumbs } from "../../lib/schema";
 
 export const metadata: Metadata = {
   title: "How to Use AI in Your Business | Pixel Narratives",
@@ -13,6 +14,20 @@ export default function HowToUseAiInYourBusinessPage() {
   return (
     <main className="min-h-screen bg-[var(--background)] text-[var(--foreground)]">
       <Nav />
+      <JsonLd
+        graph={[
+          buildWebPage({
+            path: "/how-to-use-ai-in-your-business",
+            name: "How to Use AI in Your Business | Pixel Narratives",
+            description:
+              "A practical guide for business owners on using AI without wasting money, starting with outcomes, workflows, education, and measurable results.",
+          }),
+          buildBreadcrumbs([
+            { name: "Home", path: "/" },
+            { name: "How to Use AI in Your Business", path: "/how-to-use-ai-in-your-business" },
+          ]),
+        ]}
+      />
 
       <article>
         <section className="mx-auto w-full max-w-4xl px-6 py-20 md:px-10 md:py-24">

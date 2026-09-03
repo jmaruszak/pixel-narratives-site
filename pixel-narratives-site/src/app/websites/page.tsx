@@ -3,7 +3,8 @@ import Footer from "../../components/Footer";
 import Nav from "../../components/Nav";
 import PageBottomCta from "../../components/PageBottomCta";
 import { DESTINATION_CTAS } from "../../lib/destinationCtas";
-import { buildPageMetadata } from "../../lib/siteMetadata";
+import { JsonLd, buildServicePageSchema, buildWebPage, buildBreadcrumbs, ORG_ID } from "../../lib/schema";
+import { SITE_URL, buildPageMetadata } from "../../lib/siteMetadata";
 import { WEB_INTEL_PAGE_TOOL_URL } from "../../lib/webIntelligence";
 
 export const metadata = buildPageMetadata({
@@ -42,6 +43,46 @@ export default function WebsitesPage() {
   return (
     <main className="min-h-screen bg-[var(--background)] text-[var(--foreground)]">
       <Nav />
+      <JsonLd
+        graph={[
+          buildServicePageSchema({
+            path: "/websites",
+            name: "Websites + Online Visibility",
+            description:
+              "Website + Visibility Build and Visibility Sprint: a modern digital foundation to be understood and discovered, or focused optimization of an existing site. No ranking or AI-answer guarantees.",
+            serviceType: "Website Development and Online Visibility",
+          }),
+          {
+            "@type": "Service" as const,
+            "@id": `${SITE_URL}/websites#website-visibility-build`,
+            name: "Website + Visibility Build",
+            url: `${SITE_URL}/websites`,
+            description:
+              "Starting at $7,500. Up to 10 core pages. A modern website with search and AI-search visibility foundations. Larger websites and custom functionality are scoped separately.",
+            serviceType: "Website and search visibility foundation",
+            provider: { "@id": ORG_ID },
+          },
+          {
+            "@type": "Service" as const,
+            "@id": `${SITE_URL}/websites#visibility-sprint`,
+            name: "Visibility Sprint",
+            url: `${SITE_URL}/websites`,
+            description:
+              "Starting at $5,000. Improve search, local, technical, and AI-search visibility of an existing website. Not an unlimited redesign.",
+            serviceType: "Search and AI-search visibility optimization",
+            provider: { "@id": ORG_ID },
+          },
+          buildWebPage({
+            path: "/websites",
+            name: "Websites + Online Visibility | Pixel Narratives",
+            mainEntity: { "@id": "https://pixelnarratives.studio/websites#service" },
+          }),
+          buildBreadcrumbs([
+            { name: "Home", path: "/" },
+            { name: "Websites + Online Visibility", path: "/websites" },
+          ]),
+        ]}
+      />
 
       <CinematicPageHero
         contentScrim
@@ -53,8 +94,8 @@ export default function WebsitesPage() {
         <div className="hero-entrance hero-entrance-delay-1 mt-8 max-w-2xl text-lg leading-relaxed text-white/70 md:text-xl">
           <p>
             Help more of the right customers find the business and take action.
-            We improve websites, search visibility, and the pages that turn
-            interest into contact.
+            Position your business to be found wherever your customers are
+            searching, from Google to AI-powered search.
           </p>
         </div>
         <div className="hero-entrance hero-entrance-delay-2 mt-10 flex flex-wrap gap-4">
@@ -97,6 +138,99 @@ export default function WebsitesPage() {
           </div>
         </section>
       ))}
+
+      <section className="border-t border-white/8">
+        <div className="mx-auto w-full max-w-7xl px-6 pn-section md:px-10">
+          <div className="max-w-2xl">
+            <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
+              Offers
+            </p>
+            <h2 className="mt-4 text-3xl leading-none md:text-4xl">
+              Build a foundation, or improve the one you have
+            </h2>
+          </div>
+
+          <div className="mt-12 grid gap-8 lg:grid-cols-2 lg:items-start">
+            <div className="flex flex-col rounded-[24px] border border-white/12 bg-white/[0.02] p-8 lg:p-10">
+              <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
+                Get found
+              </p>
+              <h3 className="mt-4 text-2xl leading-none md:text-3xl">
+                Website + Visibility Build
+              </h3>
+              <p className="mt-4 text-sm uppercase tracking-[0.25em] text-[var(--muted)]">
+                Starting at $7,500
+              </p>
+              <p className="mt-6 text-base leading-relaxed text-[var(--muted)]">
+                A modern digital foundation so the business is clearly
+                understood online, discoverable in search, structured for
+                conversion, and easier for AI search systems to interpret.
+                Includes up to 10 core pages. Larger websites and custom
+                functionality are scoped based on project needs.
+              </p>
+              <ul className="mt-8 flex-1 space-y-2 text-sm text-[var(--foreground)] md:text-base">
+                <li>Website strategy and information architecture</li>
+                <li>Up to 10 core pages</li>
+                <li>Modern responsive design and conversion-focused structure</li>
+                <li>Technical and on-page SEO foundations</li>
+                <li>Organization structured data where appropriate</li>
+                <li>Google Business Profile alignment where applicable</li>
+                <li>Analytics and Search Console setup</li>
+                <li>Mobile, performance, and clear calls to action</li>
+              </ul>
+              <p className="mt-6 text-sm leading-relaxed text-[var(--muted)]">
+                Custom applications, portals, ecommerce, calculators, and
+                substantial integrations are scoped separately. We do not
+                guarantee rankings or appearance in AI answers.
+              </p>
+              <div className="mt-8">
+                <a
+                  href="/contact?need=websites"
+                  className="cta-pulse-outline inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm text-[var(--foreground)] transition hover:border-white/20 hover:bg-white/5"
+                >
+                  Improve My Website
+                </a>
+              </div>
+            </div>
+
+            <div className="flex flex-col rounded-[24px] border border-white/8 bg-white/[0.02] p-8 lg:p-10">
+              <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
+                Existing site
+              </p>
+              <h3 className="mt-4 text-2xl leading-none md:text-3xl">
+                Visibility Sprint
+              </h3>
+              <p className="mt-4 text-sm uppercase tracking-[0.25em] text-[var(--muted)]">
+                Starting at $5,000
+              </p>
+              <p className="mt-6 text-base leading-relaxed text-[var(--muted)]">
+                For businesses that already have a viable website and need
+                stronger search, local, technical, and AI-search visibility.
+                This is optimization of an existing digital foundation, not an
+                unlimited redesign.
+              </p>
+              <ul className="mt-8 flex-1 space-y-2 text-sm text-[var(--foreground)] md:text-base">
+                <li>Website visibility audit</li>
+                <li>Search and AI-search / entity visibility analysis</li>
+                <li>Google Business Profile optimization</li>
+                <li>Technical SEO and on-page work on priority pages</li>
+                <li>Organization structured data</li>
+                <li>Local search and conversion/CTA improvements</li>
+                <li>Analytics and Search Console review or setup</li>
+                <li>Prioritized visibility roadmap</li>
+              </ul>
+              <div className="mt-8">
+                <a
+                  href="/contact?need=websites"
+                  className="cta-pulse-outline inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm text-[var(--foreground)] transition hover:border-white/20 hover:bg-white/5"
+                >
+                  Improve My Website
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section className="border-t border-white/8">
         <div className="mx-auto w-full max-w-7xl px-6 pn-section md:px-10">

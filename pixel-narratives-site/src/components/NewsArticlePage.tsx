@@ -2,7 +2,8 @@ import type { ReactNode } from "react";
 import Footer from "./Footer";
 import Nav from "./Nav";
 import PageBottomCta from "./PageBottomCta";
-import { buildNewsArticleSchema, type NewsItem } from "../lib/news";
+import { buildNewsArticleGraph, type NewsItem } from "../lib/news";
+import { JsonLd } from "../lib/schema";
 
 export default function NewsArticlePage({
   item,
@@ -18,12 +19,7 @@ export default function NewsArticlePage({
     >
       <Nav />
 
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(buildNewsArticleSchema(item)),
-        }}
-      />
+      <JsonLd graph={buildNewsArticleGraph(item)} />
 
       <article>
         <header className="mx-auto w-full max-w-7xl px-6 py-20 md:px-10 md:py-24">

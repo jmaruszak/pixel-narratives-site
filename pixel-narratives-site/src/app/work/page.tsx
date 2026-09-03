@@ -2,6 +2,7 @@ import CinematicPageHero from "../../components/CinematicPageHero";
 import Footer from "../../components/Footer";
 import Nav from "../../components/Nav";
 import PageBottomCta from "../../components/PageBottomCta";
+import { JsonLd, buildWebPage, buildBreadcrumbs } from "../../lib/schema";
 import { WORK_PROJECTS } from "../../lib/siteContent";
 import { buildPageMetadata } from "../../lib/siteMetadata";
 
@@ -18,6 +19,20 @@ export default function WorkPage() {
   return (
     <main className="min-h-screen bg-[var(--background)] text-[var(--foreground)]">
       <Nav />
+      <JsonLd
+        graph={[
+          buildWebPage({
+            path: "/work",
+            name: "Work | Pixel Narratives",
+            description:
+              "Selected implementation work from Pixel Narratives: assessments, custom CRMs, dashboards, and internal tools built around how a business already operates.",
+          }),
+          buildBreadcrumbs([
+            { name: "Home", path: "/" },
+            { name: "Work", path: "/work" },
+          ]),
+        ]}
+      />
 
       <CinematicPageHero
         imageSrc="/images/work-hero.png"

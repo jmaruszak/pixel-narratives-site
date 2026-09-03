@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Footer from "../../components/Footer";
 import Nav from "../../components/Nav";
+import { JsonLd, buildWebPage, buildBreadcrumbs } from "../../lib/schema";
 
 export const metadata: Metadata = {
   title: "Sample Implementation Assessment | Pixel Narratives",
@@ -64,6 +65,20 @@ export default function SampleImplementationAssessmentPage() {
   return (
     <main className="min-h-screen bg-[var(--background)] text-[var(--foreground)]">
       <Nav />
+      <JsonLd
+        graph={[
+          buildWebPage({
+            path: "/sample-implementation-assessment",
+            name: "Sample Implementation Assessment | Pixel Narratives",
+            description:
+              "Sample Implementation Assessment preview: business analysis, quick wins, workflow improvements, and scoped projects. Full client reports include tools and implementation recommendations.",
+          }),
+          buildBreadcrumbs([
+            { name: "Home", path: "/" },
+            { name: "Sample Implementation Assessment", path: "/sample-implementation-assessment" },
+          ]),
+        ]}
+      />
 
       <section className="mx-auto w-full max-w-7xl px-6 py-20 md:px-10 md:py-24">
         <p className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">

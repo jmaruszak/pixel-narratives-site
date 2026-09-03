@@ -9,8 +9,8 @@ import {
   CONTACT_EMAIL,
   CONTACT_PHONE,
   CONTACT_PHONE_TEL,
-  buildLocalBusinessSchema,
 } from "../../lib/businessLocation";
+import { JsonLd, buildWebPage, buildBreadcrumbs } from "../../lib/schema";
 import { buildPageMetadata } from "../../lib/siteMetadata";
 
 export const metadata = buildPageMetadata({
@@ -59,11 +59,20 @@ export default async function ContactPage({
     <main className="min-h-screen bg-[var(--background)] text-[var(--foreground)]">
       <Nav />
 
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(buildLocalBusinessSchema()),
-        }}
+      <JsonLd
+        graph={[
+          buildWebPage({
+            path: "/contact",
+            name: "Contact Pixel Narratives",
+            description:
+              "Talk with Pixel Narratives about automation, training, websites, or marketing. Based in Madison, Mississippi.",
+            additionalType: "ContactPage",
+          }),
+          buildBreadcrumbs([
+            { name: "Home", path: "/" },
+            { name: "Contact", path: "/contact" },
+          ]),
+        ]}
       />
 
       <section className="mx-auto w-full max-w-4xl px-6 py-24 md:px-10">
