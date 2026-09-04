@@ -2,6 +2,7 @@ import CinematicPageHero from "../../components/CinematicPageHero";
 import Footer from "../../components/Footer";
 import Nav from "../../components/Nav";
 import PageBottomCta from "../../components/PageBottomCta";
+import PricingNote from "../../components/PricingNote";
 import { DESTINATION_CTAS } from "../../lib/destinationCtas";
 import { JsonLd, buildServicePageSchema, buildWebPage, buildBreadcrumbs, ORG_ID } from "../../lib/schema";
 import { SITE_URL, buildPageMetadata } from "../../lib/siteMetadata";
@@ -257,6 +258,7 @@ export default function WebsitesPage() {
         </div>
       </section>
 
+      <PricingNote />
       <PageBottomCta {...DESTINATION_CTAS.websites} />
       <Footer />
     </main>

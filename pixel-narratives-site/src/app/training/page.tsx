@@ -3,6 +3,7 @@ import { CorporateWorkshopInquiryForm } from "../../components/ContactForms";
 import Footer from "../../components/Footer";
 import Nav from "../../components/Nav";
 import PageBottomCta from "../../components/PageBottomCta";
+import PricingNote from "../../components/PricingNote";
 import { CALENDLY_URL } from "../../lib/businessLocation";
 import { DESTINATION_CTAS } from "../../lib/destinationCtas";
 import { JsonLd, buildServicePageSchema, buildWebPage, buildBreadcrumbs } from "../../lib/schema";
@@ -526,6 +527,7 @@ export default function TrainingPage() {
         </div>
       </section>
 
+      <PricingNote />
       <PageBottomCta {...DESTINATION_CTAS.training} />
       <Footer />
     </main>

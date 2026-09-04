@@ -4,6 +4,7 @@ import { AttentionPulseBriefForm } from "../../components/ContactForms";
 import Footer from "../../components/Footer";
 import Nav from "../../components/Nav";
 import PageBottomCta from "../../components/PageBottomCta";
+import PricingNote from "../../components/PricingNote";
 import { CALENDLY_URL } from "../../lib/businessLocation";
 import { DESTINATION_CTAS } from "../../lib/destinationCtas";
 import { JsonLd, buildServicePageSchema, buildWebPage, buildBreadcrumbs } from "../../lib/schema";
@@ -184,7 +185,7 @@ export default function MarketingPage() {
               Attention Pulse
             </h2>
             <p className="mt-4 text-sm uppercase tracking-[0.25em] text-[var(--muted)]">
-              $5,000
+              Starting at $5,000
             </p>
             <p className="mt-6 text-lg leading-relaxed text-[var(--muted)] md:text-xl">
               One campaign. One price. A defined finish line.
@@ -264,7 +265,7 @@ export default function MarketingPage() {
               Attention Retainer
             </h2>
             <p className="mt-4 text-sm uppercase tracking-[0.25em] text-[var(--muted)]">
-              $2,250/month · 3-month minimum
+              Starting at $2,250/month · 3-month minimum
             </p>
           </div>
 
@@ -431,6 +432,7 @@ export default function MarketingPage() {
         </div>
       </section>
 
+      <PricingNote />
       <PageBottomCta {...DESTINATION_CTAS.marketing} />
       <Footer />
     </main>

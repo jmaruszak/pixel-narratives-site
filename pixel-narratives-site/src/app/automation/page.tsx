@@ -3,6 +3,7 @@ import Footer from "../../components/Footer";
 import IntelligenceLayerProcessFlow from "../../components/IntelligenceLayerProcessFlow";
 import Nav from "../../components/Nav";
 import PageBottomCta from "../../components/PageBottomCta";
+import PricingNote from "../../components/PricingNote";
 import { DESTINATION_CTAS } from "../../lib/destinationCtas";
 import { JsonLd, buildServicePageSchema, buildWebPage, buildBreadcrumbs } from "../../lib/schema";
 import { buildPageMetadata } from "../../lib/siteMetadata";
@@ -157,7 +158,7 @@ export default function AutomationPage() {
                 Implementation Assessment
               </h3>
               <p className="mt-4 text-sm uppercase tracking-[0.25em] text-[var(--muted)]">
-                $950
+                Starting at $950
               </p>
               <p className="mt-6 text-base leading-relaxed text-[var(--muted)]">
                 A focused look at how work moves through the business:
@@ -200,7 +201,7 @@ export default function AutomationPage() {
                 Guided Implementation
               </h3>
               <p className="mt-4 text-sm uppercase tracking-[0.25em] text-[var(--muted)]">
-                $1,500/month · 3-month minimum
+                Starting at $1,500/month · 3-month minimum
               </p>
               <p className="mt-6 text-base leading-relaxed text-[var(--muted)]">
                 For business owners and internal leads who want expert
@@ -343,6 +344,7 @@ export default function AutomationPage() {
         </div>
       </section>
 
+      <PricingNote />
       <PageBottomCta {...DESTINATION_CTAS.automation} />
       <Footer />
     </main>

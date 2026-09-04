@@ -38,13 +38,13 @@ export default function WebMcpTools() {
                     tiers: [
                       {
                         name: "Implementation Assessment",
-                        price: "From $950",
+                        price: "Starting at $950",
                         description:
                           "Optional diagnostic: workflow audit, tool recommendations, quick wins, and implementation roadmap.",
                       },
                       {
                         name: "Guided Implementation",
-                        price: "$1,500/month (3-month minimum)",
+                        price: "Starting at $1,500/month (3-month minimum)",
                         description:
                           "Expert guidance for an owner or designated internal lead implementing AI themselves. Two virtual working sessions per month. Not corporate team training.",
                       },
@@ -56,7 +56,7 @@ export default function WebMcpTools() {
                       },
                       {
                         name: "Fractional Chief AI Officer",
-                        price: "From $5,000/month",
+                        price: "Starting at $5,000/month",
                         description:
                           "Ongoing AI strategy and implementation leadership. Not a more expensive version of Guided Implementation.",
                       },
@@ -75,7 +75,7 @@ export default function WebMcpTools() {
                   },
                   marketing: {
                     summary:
-                      "Attention Pulse at $5,000 for one campaign. Attention Retainer at $2,250/month with a 3-month minimum. Visibility is get found. Attention is get noticed.",
+                      "Attention Pulse starting at $5,000 for one campaign. Attention Retainer starting at $2,250/month with a 3-month minimum. Visibility is get found. Attention is get noticed.",
                     url: `${SITE_URL}/marketing`,
                   },
                   aiAutomationAssessment: {
