@@ -33,7 +33,7 @@ export const SERVICES: ServiceDefinition[] = [
     name: "Training",
     problem: "Get More Done",
     outcome: "Help your team get more done with practical AI workshops.",
-    body: "Corporate AI workshops starting at $15,000. Private training for leadership, departments, and employees around the work they already do.",
+    body: "Corporate AI workshops starting at $7,500. Private training for leadership, departments, and employees around the work they already do.",
     ctaLabel: "Discuss a Workshop",
   },
   {
@@ -43,7 +43,7 @@ export const SERVICES: ServiceDefinition[] = [
     name: "Websites + Online Visibility",
     problem: "Get Found",
     outcome: "Help more of the right customers find you and take action.",
-    body: "Website + Visibility Build starting at $7,500, or a Visibility Sprint starting at $5,000 if the site already exists.",
+    body: "Website + Visibility Build starting at $7,500, or a Visibility Sprint starting at $1,200/month with a 3-month minimum if the site already exists.",
     ctaLabel: "Improve My Website",
   },
   {

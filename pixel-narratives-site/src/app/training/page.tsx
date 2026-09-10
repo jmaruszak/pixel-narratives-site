@@ -12,7 +12,7 @@ import { buildPageMetadata } from "../../lib/siteMetadata";
 export const metadata = buildPageMetadata({
   title: "Corporate AI Workshops | Pixel Narratives",
   description:
-    "Corporate AI Workshops starting at $15,000. Private, customized training for leadership, departments, and employees from Pixel Narratives.",
+    "Corporate AI Workshops starting at $7,500. Private, customized training for leadership, departments, and employees from Pixel Narratives.",
   path: "/training",
   image: "/images/int-cinematic.jpg",
   imageAlt: "Team training cinematic visual for Pixel Narratives",
@@ -87,21 +87,6 @@ const FULL_DAY_INCLUDES = [
   "Closing discussion and next steps",
 ] as const;
 
-const TWO_DAY_ONE = [
-  "Leadership",
-  "Shared AI foundation",
-  "Company-wide context",
-  "Initial team sessions",
-] as const;
-
-const TWO_DAY_TWO = [
-  "Department-specific working sessions",
-  "Deeper workflow development",
-  "Practical exercises",
-  "Implementation opportunities",
-  "Next-step planning",
-] as const;
-
 const BEFORE_THE_ROOM = [
   "Leadership conversation",
   "Understanding the teams attending",
@@ -156,7 +141,7 @@ export default function TrainingPage() {
             path: "/training",
             name: "Corporate AI Workshops",
             description:
-              "Corporate AI workshops starting at $15,000. Private, customized training for leadership, departments, and employees. Full-day or two-day engagements, not monthly advisory coaching.",
+              "Corporate AI workshops starting at $7,500. Private, customized training for leadership, departments, and employees. Full-day engagements, not monthly advisory coaching.",
             serviceType: "Corporate AI Training and Workshops",
           }),
           buildWebPage({
@@ -302,17 +287,17 @@ export default function TrainingPage() {
               Corporate AI Workshops
             </p>
             <h2 className="mt-4 text-4xl leading-none md:text-6xl">
-              Full-day or two-day
+              Full-day
             </h2>
             <p className="mt-4 text-sm uppercase tracking-[0.25em] text-[var(--muted)]">
-              Starting at $15,000
+              Starting at $7,500
             </p>
             <p className="mt-6 text-lg leading-relaxed text-[var(--muted)] md:text-xl">
-              The primary engagement is a full-day or two-day corporate
-              workshop for leadership, departments, and employees. Custom
-              curriculum, hands-on exercises, and private delivery. Final scope
-              depends on company size, number of teams, format, customization,
-              location, and follow-up needs.
+              The primary engagement is a full-day corporate workshop for
+              leadership, departments, and employees. Custom curriculum,
+              hands-on exercises, and private delivery. Final scope depends on
+              company size, number of teams, customization, location, and
+              follow-up needs.
             </p>
           </div>
         </div>
@@ -377,8 +362,8 @@ export default function TrainingPage() {
       </section>
 
       <section className="border-t border-white/8">
-        <div className="mx-auto grid w-full max-w-7xl gap-8 px-6 pn-section md:grid-cols-2 md:px-10">
-          <div className="rounded-[24px] border border-white/8 bg-white/[0.02] p-8">
+        <div className="mx-auto w-full max-w-7xl px-6 pn-section md:px-10">
+          <div className="max-w-3xl rounded-[24px] border border-white/8 bg-white/[0.02] p-8">
             <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
               Full-day
             </p>
@@ -392,35 +377,6 @@ export default function TrainingPage() {
             </p>
             <ul className="mt-6 space-y-2 text-base text-[var(--foreground)] md:text-lg">
               {FULL_DAY_INCLUDES.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </div>
-          <div className="rounded-[24px] border border-white/8 bg-black p-8">
-            <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
-              Two-day
-            </p>
-            <h3 className="mt-4 text-3xl leading-none">
-              More room for departments
-            </h3>
-            <p className="mt-4 text-base leading-relaxed text-[var(--muted)] md:text-lg">
-              A two-day engagement creates more room for multiple departments
-              and deeper hands-on work. The structure stays flexible. A common
-              shape looks like this.
-            </p>
-            <p className="mt-6 text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
-              Day one
-            </p>
-            <ul className="mt-3 space-y-2 text-base text-[var(--foreground)] md:text-lg">
-              {TWO_DAY_ONE.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-            <p className="mt-6 text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
-              Day two
-            </p>
-            <ul className="mt-3 space-y-2 text-base text-[var(--foreground)] md:text-lg">
-              {TWO_DAY_TWO.map((item) => (
                 <li key={item}>{item}</li>
               ))}
             </ul>

@@ -135,7 +135,7 @@ export const locationLandingPages: Record<string, LocationLandingPage> = {
       {
         question: "How much does AI consulting cost?",
         answer:
-          "Work is scoped to the job. Guided implementation starts at $1,500/month with a three-month minimum. Fractional Chief AI Officer support starts at $5,000/month. We will tell you what the work involves before you commit.",
+          "Work is scoped to the job. Guided implementation starts at $1,500/month with a three-month minimum. Fractional Chief AI Officer support starts at $6,250/month. We will tell you what the work involves before you commit.",
       },
       {
         question: "Does Pixel Narratives implement the systems it recommends?",
@@ -242,7 +242,7 @@ export const locationLandingPages: Record<string, LocationLandingPage> = {
       {
         question: "How much does AI consulting cost?",
         answer:
-          "It depends on scope. Guided implementation starts at $1,500/month with a three-month minimum. Fractional Chief AI Officer support starts at $5,000/month. We scope the work before you start.",
+          "It depends on scope. Guided implementation starts at $1,500/month with a three-month minimum. Fractional Chief AI Officer support starts at $6,250/month. We scope the work before you start.",
       },
       {
         question: "Does Pixel Narratives implement the systems it recommends?",
@@ -349,7 +349,7 @@ export const locationLandingPages: Record<string, LocationLandingPage> = {
       {
         question: "How much does AI consulting cost?",
         answer:
-          "Scope drives the number. Guided implementation starts at $1,500/month with a three-month minimum. Fractional Chief AI Officer support starts at $5,000/month.",
+          "Scope drives the number. Guided implementation starts at $1,500/month with a three-month minimum. Fractional Chief AI Officer support starts at $6,250/month.",
       },
       {
         question: "Does Pixel Narratives implement the systems it recommends?",
@@ -458,7 +458,7 @@ export const locationLandingPages: Record<string, LocationLandingPage> = {
       {
         question: "How much does AI consulting cost?",
         answer:
-          "Guided implementation starts at $1,500/month with a three-month minimum. Fractional Chief AI Officer support starts at $5,000/month. Projects are scoped before work begins.",
+          "Guided implementation starts at $1,500/month with a three-month minimum. Fractional Chief AI Officer support starts at $6,250/month. Projects are scoped before work begins.",
       },
       {
         question: "Does Pixel Narratives implement the systems it recommends?",
@@ -566,7 +566,7 @@ export const locationLandingPages: Record<string, LocationLandingPage> = {
       {
         question: "How much does AI consulting cost?",
         answer:
-          "Guided implementation starts at $1,500/month with a three-month minimum. Fractional Chief AI Officer support starts at $5,000/month. We scope the engagement first.",
+          "Guided implementation starts at $1,500/month with a three-month minimum. Fractional Chief AI Officer support starts at $6,250/month. We scope the engagement first.",
       },
       {
         question: "Does Pixel Narratives implement the systems it recommends?",
@@ -598,14 +598,14 @@ export const hubMarketCards = [
     slug: "mississippi-ai-studio",
     label: "Mississippi",
     description:
-      "Pixel Narratives is based in Madison and works with businesses across Jackson, Central Mississippi, and the rest of the state. The work is AI consulting, automation, implementation, and training for owner-led companies.",
+      "Pixel Narratives is based in Madison and works with businesses across Jackson, Central Mississippi, and the rest of the state.",
     hrefLabel: "AI consulting and implementation for Mississippi businesses →",
   },
   {
     slug: "birmingham-ai-studio",
     label: "Birmingham, Alabama",
     description:
-      "We work with Birmingham and Central Alabama companies in professional services, construction, finance, agencies, and other SMBs. Engagements run remotely from Madison. There is no Birmingham office.",
+      "We work with Birmingham and Central Alabama companies in professional services, construction, finance, agencies, and other SMBs.",
     hrefLabel: "AI consulting and implementation in Birmingham →",
   },
   {
@@ -619,7 +619,7 @@ export const hubMarketCards = [
     slug: "jacksonville-ai-studio",
     label: "Jacksonville, Florida",
     description:
-      "We work with Jacksonville-area professional services, logistics, financial services, trades, and agencies that need implementation, not another software recommendation. Delivery is from Madison, Mississippi.",
+      "We work with Jacksonville-area professional services, logistics, financial services, trades, and agencies that need implementation.",
     hrefLabel: "AI consulting and implementation in Jacksonville →",
   },
   {

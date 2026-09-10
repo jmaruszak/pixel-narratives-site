@@ -43,14 +43,14 @@ export const SERVICE_PILLARS = [
     eyebrow: "Get More Done",
     headline: "Training",
     outcome: "Help your team get more done with practical AI workshops.",
-    body: "Corporate AI workshops starting at $15,000. Private training for leadership, departments, and employees around the work they already do.",
+    body: "Corporate AI workshops starting at $7,500. Private training for leadership, departments, and employees around the work they already do.",
     href: "/training",
   },
   {
     eyebrow: "Get Found",
     headline: "Websites + Online Visibility",
     outcome: "Help more of the right customers find you and take action.",
-    body: "Website + Visibility Build starting at $7,500, or a Visibility Sprint starting at $5,000 if the site already exists. Help more of the right customers find you.",
+    body: "Website + Visibility Build starting at $7,500, or a Visibility Sprint starting at $1,200/month with a 3-month minimum if the site already exists. Help more of the right customers find you.",
     href: "/websites",
   },
   {

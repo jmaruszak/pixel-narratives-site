@@ -4,14 +4,8 @@ import Link from "next/link";
 import Footer from "../../components/Footer";
 import Nav from "../../components/Nav";
 import PageBottomCta from "../../components/PageBottomCta";
-import {
-  SERVICE_PILLARS,
-  formatServiceAreaList,
-} from "../../lib/businessLocation";
-import {
-  hubMarketCards,
-  hubSecondaryMentions,
-} from "../../lib/locationLandingPages";
+import { SERVICE_PILLARS } from "../../lib/businessLocation";
+import { hubMarketCards } from "../../lib/locationLandingPages";
 import { JsonLd, buildWebPage, buildBreadcrumbs } from "../../lib/schema";
 import { SITE_URL, buildPageMetadata } from "../../lib/siteMetadata";
 import { WEB_INTEL_PAGE_TOOL_URL } from "../../lib/webIntelligence";
@@ -35,8 +29,6 @@ const marketListSchema = {
 };
 
 export default function ServingTheSouthPage() {
-  const secondaryMentionLabels = formatServiceAreaList(hubSecondaryMentions);
-
   return (
     <main
       id="main-content"
@@ -73,14 +65,6 @@ export default function ServingTheSouthPage() {
               Pixel Narratives is based in Madison, Mississippi. We work with
               small and midsize businesses across selected Southern markets on
               AI consulting, automation, implementation, and training.
-            </p>
-            <p>
-              The company focuses regionally because the work is practical
-              implementation, not a national enterprise program. Owner-led
-              businesses need someone who can look at how the week actually
-              runs, put AI into those workflows, and stay close enough to the
-              market to understand the context. Most engagements happen over
-              Zoom. We work directly with teams when that is the better fit.
             </p>
           </div>
           <div className="mt-8 flex flex-wrap gap-4">
@@ -157,11 +141,6 @@ export default function ServingTheSouthPage() {
             <h2 className="mt-4 text-4xl leading-none md:text-5xl">
               Where we work most often
             </h2>
-            <p className="mt-6 text-lg leading-relaxed text-[var(--muted)] md:text-xl">
-              Each market page is a full landing page for AI consulting and
-              implementation in that area. We do not operate offices in every
-              city. Madison, Mississippi is the home base.
-            </p>
           </div>
           <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {hubMarketCards.map((market) => (
@@ -184,10 +163,6 @@ export default function ServingTheSouthPage() {
               </article>
             ))}
           </div>
-          <p className="mt-10 max-w-3xl text-base leading-relaxed text-[var(--muted)] md:text-lg">
-            We also work with business owners in {secondaryMentionLabels} and
-            across the South when the engagement is a good fit.
-          </p>
         </div>
       </section>
 

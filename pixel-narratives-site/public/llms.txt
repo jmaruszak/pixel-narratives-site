@@ -6,13 +6,13 @@ AI is how a lot of the work gets done. Customers buy outcomes: automation, imple
 
 ## Core Offers
 
-- **Implementation Assessment** (starting at $950): Paid diagnostic of how the business runs, with quick wins and scoped next steps. Sample: https://pixelnarratives.studio/sample-implementation-assessment
+- **Implementation Assessment** (starting at $1,250): Paid diagnostic of how the business runs, with quick wins and scoped next steps. Sample: https://pixelnarratives.studio/sample-implementation-assessment
 - **Guided Implementation** (starting at $1,500/month, 3-month minimum): Expert guidance for an owner or designated internal lead implementing AI themselves. Two virtual working sessions per month. Not corporate team training. https://pixelnarratives.studio/automation
-- **Implementation Projects**: Custom-scoped builds. Pixel Narratives implements the systems. https://pixelnarratives.studio/automation
-- **Fractional Chief AI Officer** (starting at $5,000/month): Ongoing AI strategy and implementation leadership. https://pixelnarratives.studio/automation
-- **Corporate AI Training** (starting at $15,000): Full-day or two-day private workshops for leadership, departments, and employees. Not monthly advisory coaching. https://pixelnarratives.studio/training
+- **Implementation Projects** (starting at $5,000, custom scoped): Pixel Narratives implements the systems. https://pixelnarratives.studio/automation
+- **Fractional Chief AI Officer** (starting at $6,250/month): Ongoing AI strategy and implementation leadership. https://pixelnarratives.studio/automation
+- **Corporate AI Training** (starting at $7,500): Full-day private workshops for leadership, departments, and employees. Not monthly advisory coaching. https://pixelnarratives.studio/training
 - **Website + Visibility Build** (starting at $7,500): Up to 10 core pages. A modern website with search and AI-search visibility foundations. Larger sites and custom functionality are scoped separately. https://pixelnarratives.studio/websites
-- **Visibility Sprint** (starting at $5,000): Improve search, local, technical, and AI-search visibility of an existing website. Not a full rebuild. https://pixelnarratives.studio/websites
+- **Visibility Sprint** (starting at $1,200/month, 3-month minimum): Ongoing search, local, technical, and AI-search visibility work on an existing website. Not a full rebuild. https://pixelnarratives.studio/websites
 - **Attention Pulse** (starting at $5,000): One advertising campaign from concept through readout. https://pixelnarratives.studio/marketing
 - **Attention Retainer** (starting at $2,250/month, 3-month minimum): Ongoing campaign creative and distribution. https://pixelnarratives.studio/marketing
 - **AI + Automation Assessment** (optional): Free 10-question self-assessment. Not the default CTA. https://pixelnarratives.studio/ai-readiness-assessment

@@ -38,7 +38,7 @@ export default function WebMcpTools() {
                     tiers: [
                       {
                         name: "Implementation Assessment",
-                        price: "Starting at $950",
+                        price: "Starting at $1,250",
                         description:
                           "Optional diagnostic: workflow audit, tool recommendations, quick wins, and implementation roadmap.",
                       },
@@ -50,13 +50,13 @@ export default function WebMcpTools() {
                       },
                       {
                         name: "Implementation Projects",
-                        price: "Custom scoped",
+                        price: "Starting at $5,000 · Custom scoped",
                         description:
                           "Pixel Narratives builds the automations, integrations, workflows, or internal tools.",
                       },
                       {
                         name: "Fractional Chief AI Officer",
-                        price: "Starting at $5,000/month",
+                        price: "Starting at $6,250/month",
                         description:
                           "Ongoing AI strategy and implementation leadership. Not a more expensive version of Guided Implementation.",
                       },
@@ -64,12 +64,12 @@ export default function WebMcpTools() {
                   },
                   training: {
                     summary:
-                      "Corporate AI workshops starting at $15,000. Private, customized training for leadership, departments, and employees. Full-day or two-day engagements, not monthly advisory coaching.",
+                      "Corporate AI workshops starting at $7,500. Private, customized training for leadership, departments, and employees. Full-day engagements, not monthly advisory coaching.",
                     url: `${SITE_URL}/training`,
                   },
                   websites: {
                     summary:
-                      "Website + Visibility Build starting at $7,500 (up to 10 core pages) and Visibility Sprint starting at $5,000 for existing sites. Free live-site scan available.",
+                      "Website + Visibility Build starting at $7,500 (up to 10 core pages) and Visibility Sprint starting at $1,200/month with a 3-month minimum for existing sites. Free live-site scan available.",
                     url: `${SITE_URL}/websites`,
                     scanUrl: WEB_INTEL_URL,
                   },

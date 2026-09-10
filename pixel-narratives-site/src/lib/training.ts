@@ -8,7 +8,7 @@ export type CorporateWorkshopInquiry = {
   phone?: string;
   participantCount?: string;
   teamsInvolved?: string;
-  format: "full-day" | "two-days" | "unsure";
+  format: "full-day" | "unsure";
   aiGoals: string;
   preferredTiming?: string;
   notes?: string;

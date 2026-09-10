@@ -158,7 +158,7 @@ export default function AutomationPage() {
                 Implementation Assessment
               </h3>
               <p className="mt-4 text-sm uppercase tracking-[0.25em] text-[var(--muted)]">
-                Starting at $950
+                Starting at $1,250
               </p>
               <p className="mt-6 text-base leading-relaxed text-[var(--muted)]">
                 A focused look at how work moves through the business:
@@ -235,7 +235,7 @@ export default function AutomationPage() {
                 Implementation Projects
               </h3>
               <p className="mt-4 text-sm uppercase tracking-[0.25em] text-[var(--muted)]">
-                Custom scoped
+                Starting at $5,000 · Custom scoped
               </p>
               <p className="mt-6 text-base leading-relaxed text-[var(--muted)]">
                 Pixel Narratives builds the system. Automations, integrations,
@@ -267,7 +267,7 @@ export default function AutomationPage() {
                 Fractional Chief AI Officer
               </h3>
               <p className="mt-4 text-sm uppercase tracking-[0.25em] text-[var(--muted)]">
-                Starting at $5,000/month
+                Starting at $6,250/month
               </p>
               <p className="mt-6 text-base leading-relaxed text-[var(--muted)]">
                 Ongoing AI leadership for companies that need strategy,

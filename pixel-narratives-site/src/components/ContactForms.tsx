@@ -463,7 +463,6 @@ export function CorporateWorkshopInquiryForm() {
               Select one
             </option>
             <option value="Full day">Full day</option>
-            <option value="Two days">Two days</option>
             <option value="Unsure">Unsure</option>
           </select>
         </label>

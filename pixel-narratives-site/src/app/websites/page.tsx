@@ -69,7 +69,7 @@ export default function WebsitesPage() {
             name: "Visibility Sprint",
             url: `${SITE_URL}/websites`,
             description:
-              "Starting at $5,000. Improve search, local, technical, and AI-search visibility of an existing website. Not an unlimited redesign.",
+              "Starting at $1,200/month with a 3-month minimum. Ongoing search, local, technical, and AI-search visibility work on an existing website. Not an unlimited redesign.",
             serviceType: "Search and AI-search visibility optimization",
             provider: { "@id": ORG_ID },
           },
@@ -202,12 +202,12 @@ export default function WebsitesPage() {
                 Visibility Sprint
               </h3>
               <p className="mt-4 text-sm uppercase tracking-[0.25em] text-[var(--muted)]">
-                Starting at $5,000
+                Starting at $1,200/month · 3-month minimum
               </p>
               <p className="mt-6 text-base leading-relaxed text-[var(--muted)]">
                 For businesses that already have a viable website and need
                 stronger search, local, technical, and AI-search visibility.
-                This is optimization of an existing digital foundation, not an
+                Monthly work on the existing digital foundation, not an
                 unlimited redesign.
               </p>
               <ul className="mt-8 flex-1 space-y-2 text-sm text-[var(--foreground)] md:text-base">

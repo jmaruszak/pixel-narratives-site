@@ -29,7 +29,7 @@ export const DESTINATION_CTAS = {
     id: "training",
     eyebrow: "Corporate AI Workshops",
     headline: "Help your team get more done.",
-    body: "Corporate AI Workshops start at $15,000. Private, customized training for leadership, departments, and employees. This is not monthly implementation coaching.",
+    body: "Corporate AI Workshops start at $7,500. Private, customized training for leadership, departments, and employees. This is not monthly implementation coaching.",
     primaryAction: { href: "#workshop-inquiry", label: "Discuss a Workshop" },
     secondaryAction: {
       href: CALENDLY_URL,
