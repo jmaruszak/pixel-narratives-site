@@ -14,7 +14,7 @@ export const STUDIO_FOOTER_LINKS: FooterLink[] = [
 ];
 
 export const SERVICES_FOOTER_LINKS: FooterLink[] = [
-  { href: "/automation", label: "Automation + Implementation" },
+  { href: "/automation", label: "Implementation" },
   { href: "/training", label: "Training" },
   { href: "/websites", label: "Websites + Online Visibility" },
   { href: "/marketing", label: "Marketing" },
@@ -31,7 +31,7 @@ export const MORE_FOOTER_LINKS: FooterLink[] = [
 export const GUIDES_FOOTER_LINKS: FooterLink[] = [
   { href: "/visibility-in-the-age-of-ai", label: "Visibility in the Age of AI" },
   { href: "/sample-implementation-assessment", label: "Implementation Assessment Sample" },
-  { href: "/ai-readiness-assessment", label: "AI + Automation Assessment" },
+  { href: "/ai-readiness-assessment", label: "AI Readiness Assessment" },
   { href: "/how-to-use-ai-in-your-business", label: "Using AI in Business" },
   { href: "/how-to-implement-ai-in-your-business", label: "Implementation Guide" },
 ];

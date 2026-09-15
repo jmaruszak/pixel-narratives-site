@@ -4,7 +4,6 @@ import Footer from "../../components/Footer";
 import Nav from "../../components/Nav";
 import PageBottomCta from "../../components/PageBottomCta";
 import PricingNote from "../../components/PricingNote";
-import { CALENDLY_URL } from "../../lib/businessLocation";
 import { DESTINATION_CTAS } from "../../lib/destinationCtas";
 import { JsonLd, buildServicePageSchema, buildWebPage, buildBreadcrumbs } from "../../lib/schema";
 import { buildPageMetadata } from "../../lib/siteMetadata";
@@ -160,8 +159,8 @@ export default function TrainingPage() {
         contentScrim
         imageSrc="/images/training-hero.png"
         imageAlt="Team workshop with a presenter at a whiteboard"
-        title="Help Your Team Get More Done"
-        subtitle="Team Training"
+        title="Your Team Has ChatGPT. Now What?"
+        subtitle="Training"
       >
         <div className="hero-entrance hero-entrance-delay-1 mt-8 max-w-2xl space-y-4 text-lg leading-relaxed text-white/70 md:text-xl">
           <p>
@@ -177,15 +176,13 @@ export default function TrainingPage() {
             href="#workshop-inquiry"
             className="cta-pulse-filled inline-flex items-center rounded-full border border-white/10 bg-[var(--foreground)] px-5 py-2.5 text-sm font-medium text-black transition hover:opacity-90"
           >
-            Discuss a Workshop
+            Discuss Team Training
           </a>
           <a
-            href={CALENDLY_URL}
-            target="_blank"
-            rel="noreferrer"
+            href="/contact?need=training"
             className="cta-pulse-outline inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm text-white transition hover:border-white/20 hover:bg-white/5"
           >
-            Book a Call
+            Start a Conversation
           </a>
         </div>
       </CinematicPageHero>
@@ -459,6 +456,36 @@ export default function TrainingPage() {
               ))}
             </ul>
           </div>
+        </div>
+      </section>
+
+      <section className="border-t border-white/8">
+        <div className="mx-auto grid w-full max-w-7xl gap-12 px-6 pn-section md:grid-cols-2 md:px-10">
+          <div>
+            <p className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
+              From the room
+            </p>
+            <h2 className="mt-4 text-4xl leading-none md:text-6xl">
+              Practical.
+              <br />
+              Hands-on.
+            </h2>
+          </div>
+          <blockquote className="max-w-xl">
+            <p className="text-lg leading-relaxed text-[var(--foreground)] md:text-xl">
+              &ldquo;Pixel Narratives made AI practical for our team. The
+              workshop was hands-on, easy to follow, and focused on things we
+              could actually use in our work. We left with a much better
+              understanding of what these tools can do and, more importantly,
+              how to use them.&rdquo;
+            </p>
+            <footer className="mt-8">
+              <p className="text-base text-[var(--foreground)]">Jason Thomas</p>
+              <p className="mt-1 text-sm text-[var(--muted)]">
+                EVP of Sales, BadgePass
+              </p>
+            </footer>
+          </blockquote>
         </div>
       </section>
 

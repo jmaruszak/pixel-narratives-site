@@ -14,7 +14,7 @@ export type CaseStudy = {
 export const FEATURED_CAMPAIGN = {
   eyebrow: "Featured Campaign",
   title: "Attention",
-  description: "Our own campaign, running in Mississippi now.",
+  description: "Our own campaign, running now.",
   commercials: [
     {
       title: "Chad G.P.T. — Introduction",
@@ -38,17 +38,21 @@ export const FEATURED_CAMPAIGN = {
 } as const;
 
 export type WorkProject = {
+  slug: string;
   eyebrow: string;
   title: string;
   problem: string;
   solution: string;
   result: string;
+  imageSrc?: string;
+  imageAlt?: string;
   href?: string;
   hrefLabel?: string;
 };
 
 export const WORK_PROJECTS: WorkProject[] = [
   {
+    slug: "implementation-assessment",
     eyebrow: "Diagnostic",
     title: "Implementation Assessment",
     problem:
@@ -57,20 +61,13 @@ export const WORK_PROJECTS: WorkProject[] = [
       "We mapped workflows, bottlenecks, and follow-up, then wrote a scoped plan with quick wins and what to build next.",
     result:
       "A written assessment the owner can use to decide what to implement first. See a sample of the format.",
+    imageSrc: "/images/assessment-still.png",
+    imageAlt: "Sample Implementation Assessment document",
     href: "/sample-implementation-assessment",
     hrefLabel: "View the sample",
   },
   {
-    eyebrow: "Custom build",
-    title: "Custom CRM",
-    problem:
-      "Leads, follow-up, and customer notes lived in inboxes, spreadsheets, and memory.",
-    solution:
-      "We built a CRM around how the business already works, not a generic pipeline the team would ignore.",
-    result:
-      "One place to track customers, follow-up, and the next step.",
-  },
-  {
+    slug: "agency-dashboard",
     eyebrow: "Custom build",
     title: "Social Media Agency Dashboard",
     problem:
@@ -79,18 +76,29 @@ export const WORK_PROJECTS: WorkProject[] = [
       "We built a dashboard that puts client work in one view so the team can see what is moving and what is stuck.",
     result:
       "A single operating view for client work instead of hunting across reports.",
+    imageSrc: "/images/home-cinematic.jpg",
+    imageAlt: "Cinematic still representing a client dashboard",
   },
   {
-    eyebrow: "Custom build",
-    title: "Lawn Care Productivity App",
+    slug: "risky-business-podcast",
+    eyebrow: "Opening video + original music",
+    title: "Risky Business Podcast",
     problem:
-      "A lawn care business was running the day from texts, notes, and memory.",
+      "The show needed an opening that sounded and looked like the podcast.",
     solution:
-      "We built a productivity app for scheduling and day-to-day work in one tool.",
+      "We produced the opening video and original music for the Risky Business podcast.",
     result:
-      "Crews and owners can see the day's work without rebuilding the plan from scratch each morning.",
+      "A title sequence and theme the show can use every episode.",
+    imageSrc: "/images/risky-business-podcast.png",
+    imageAlt: "Risky Business podcast opening still",
   },
 ];
+
+export const IMPLEMENTATION_WORK_PROJECTS = WORK_PROJECTS.filter(
+  (project) =>
+    project.slug === "implementation-assessment" ||
+    project.slug === "agency-dashboard",
+);
 
 export const CASE_STUDIES: CaseStudy[] = [
   {

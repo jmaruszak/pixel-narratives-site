@@ -18,7 +18,7 @@ export default function SeoLandingPageView({ page }: { page: SeoLandingPage }) {
             name:
               page.offer === "ads"
                 ? "Marketing"
-                : "Automation + Implementation",
+                : "Implementation",
             description: page.intro,
             serviceType:
               page.offer === "ads"
@@ -49,7 +49,7 @@ export default function SeoLandingPageView({ page }: { page: SeoLandingPage }) {
         <div className="mx-auto w-full max-w-7xl px-6 py-20 md:px-10 md:py-24">
           <div className="max-w-4xl">
             <p className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
-              {page.offer === "ads" ? "Marketing" : "Automation"}
+              {page.offer === "ads" ? "Marketing" : "Implementation"}
             </p>
             <h1 className="mt-4 text-4xl leading-[1.05] md:text-6xl">
               {page.h1}
@@ -68,7 +68,7 @@ export default function SeoLandingPageView({ page }: { page: SeoLandingPage }) {
                 href={page.offer === "ads" ? "/marketing" : "/automation"}
                 className="inline-flex items-center rounded-full border border-white/10 px-6 py-3 text-sm text-[var(--foreground)] transition hover:bg-white/5"
               >
-                {page.offer === "ads" ? "Marketing" : "Automation + Implementation"}
+                {page.offer === "ads" ? "Marketing" : "Implementation"}
               </Link>
             </div>
           </div>

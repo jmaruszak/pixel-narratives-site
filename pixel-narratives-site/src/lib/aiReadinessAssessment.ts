@@ -525,7 +525,7 @@ export function buildAssessmentLeadNotes(
   let insight: string;
   if (lowUsage && (higherUrgency || multipleNonUnsureGoals)) {
     insight =
-      "Low AI usage and limited structure so far, but the goals and priority are clear. Strong opportunity to build a clean foundation and early wins with an AI Blueprint.";
+      "Low AI usage and limited structure so far, but the goals and priority are clear. Strong opportunity to build a clean foundation and early wins with an Implementation Assessment.";
   } else if (lowUsage) {
     insight =
       "AI usage is still early; the highest leverage is to move from ad-hoc testing to a simple plan, one or two target workflows, and light governance.";
@@ -537,7 +537,7 @@ export function buildAssessmentLeadNotes(
       "The next move is to align on outcomes, pick a focused workflow, and measure whether adoption and results improve before growing scope.";
   }
   const line4 = `Insight: ${insight}`;
-  const line5 = "Next Step: AI Blueprint";
+  const line5 = "Next Step: Implementation Assessment";
 
   const base = [line1, line2, line3, line4, line5].join("\n");
 

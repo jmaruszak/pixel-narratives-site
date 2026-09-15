@@ -29,6 +29,11 @@ const nextConfig: NextConfig = {
         destination: "/sample-implementation-assessment",
         permanent: true,
       },
+      {
+        source: "/sample/sample-intelligence-layer-blueprint.pdf",
+        destination: "/sample/sample-implementation-assessment.pdf",
+        permanent: true,
+      },
     ];
   },
   async headers() {

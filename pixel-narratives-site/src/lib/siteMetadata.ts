@@ -4,7 +4,7 @@ export const SITE_NAME = "Pixel Narratives";
 export const SITE_URL = "https://pixelnarratives.studio";
 
 export const DEFAULT_DESCRIPTION =
-  "Pixel Narratives helps businesses save time, win more customers, and get more done through automation, implementation, training, online visibility, and marketing.";
+  "Pixel Narratives helps businesses save time, win more customers, and get more done through implementation, training, online visibility, and marketing.";
 
 export const DEFAULT_OG_IMAGE = "/images/home-cinematic.jpg";
 

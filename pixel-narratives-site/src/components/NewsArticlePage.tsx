@@ -84,7 +84,7 @@ export default function NewsArticlePage({
         eyebrow="Next Step"
         headline="Ready to talk about what to improve?"
         body="Tell us how the business runs today. We will look at where automation, training, or a stronger online presence would help."
-        primaryAction={{ href: "/contact", label: "Start the Conversation" }}
+        primaryAction={{ href: "/contact", label: "Start a Conversation" }}
       />
       <Footer />
     </main>

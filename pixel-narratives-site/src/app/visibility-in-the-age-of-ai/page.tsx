@@ -489,7 +489,7 @@ export default function VisibilityInTheAgeOfAiPage() {
                   href="/automation"
                   className="text-[var(--foreground)] transition hover:opacity-80"
                 >
-                  Automation + Implementation
+                  Implementation
                 </Link>
                 , turning visibility and attention into practical systems.
               </p>

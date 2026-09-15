@@ -5,9 +5,9 @@ import Nav from "../../components/Nav";
 import { JsonLd, buildWebPage, buildBreadcrumbs } from "../../lib/schema";
 
 export const metadata: Metadata = {
-  title: "AI + Automation Assessment | Pixel Narratives",
+  title: "AI Readiness Assessment | Pixel Narratives",
   description:
-    "Optional AI + Automation Assessment from Pixel Narratives. See where repetitive work, follow-up, and disconnected tools are slowing your business down.",
+    "Optional AI Readiness Assessment from Pixel Narratives. See where repetitive work, follow-up, and disconnected tools are slowing your business down.",
   alternates: { canonical: "/ai-readiness-assessment" },
 };
 
@@ -19,13 +19,13 @@ export default function AiReadinessAssessmentPage() {
         graph={[
           buildWebPage({
             path: "/ai-readiness-assessment",
-            name: "AI + Automation Assessment | Pixel Narratives",
+            name: "AI Readiness Assessment | Pixel Narratives",
             description:
-              "Optional AI + Automation Assessment from Pixel Narratives. See where repetitive work, follow-up, and disconnected tools are slowing your business down.",
+              "Optional AI Readiness Assessment from Pixel Narratives. See where repetitive work, follow-up, and disconnected tools are slowing your business down.",
           }),
           buildBreadcrumbs([
             { name: "Home", path: "/" },
-            { name: "AI + Automation Assessment", path: "/ai-readiness-assessment" },
+            { name: "AI Readiness Assessment", path: "/ai-readiness-assessment" },
           ]),
         ]}
       />

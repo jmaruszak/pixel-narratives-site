@@ -58,13 +58,15 @@ export default function ServingTheSouthPage() {
             Serving the South
           </p>
           <h1 className="mt-4 text-5xl leading-[1.05] md:text-7xl">
-            AI Consulting &amp; Implementation Across the South
+            We build the better way across the South.
           </h1>
           <div className="mt-8 max-w-3xl space-y-5 text-lg leading-relaxed text-[var(--muted)] md:text-xl md:leading-8">
             <p>
               Pixel Narratives is based in Madison, Mississippi. We work with
               small and midsize businesses across selected Southern markets on
-              AI consulting, automation, implementation, and training.
+              automation, implementation, training, websites, and marketing. AI
+              consulting is part of that work when a company needs a clear read
+              before we build.
             </p>
           </div>
           <div className="mt-8 flex flex-wrap gap-4">
@@ -72,7 +74,7 @@ export default function ServingTheSouthPage() {
               href="/contact"
               className="inline-flex items-center rounded-full border border-white/10 bg-[var(--foreground)] px-6 py-3 text-sm font-medium text-black transition hover:opacity-90"
             >
-              Book a call
+              Start a Conversation
             </Link>
             <a
               href={WEB_INTEL_PAGE_TOOL_URL}
@@ -86,7 +88,7 @@ export default function ServingTheSouthPage() {
               href="/ai-readiness-assessment"
               className="inline-flex items-center rounded-full border border-white/10 px-6 py-3 text-sm text-[var(--foreground)] transition hover:bg-white/5"
             >
-              AI + Automation Assessment
+              AI Readiness Assessment
             </Link>
           </div>
         </div>
@@ -169,8 +171,8 @@ export default function ServingTheSouthPage() {
       <PageBottomCta
         eyebrow="Next Step"
         headline="Ready to talk about your market?"
-        body="Start with a call or a free website scan. The AI + Automation Assessment is optional if you want a clearer picture first."
-        primaryAction={{ href: "/contact", label: "Book a call" }}
+        body="Start with a call or a free website scan. The AI Readiness Assessment is optional if you want a clearer picture first."
+        primaryAction={{ href: "/contact", label: "Start a Conversation" }}
         secondaryAction={{ href: "/about", label: "About Pixel Narratives" }}
       />
       <Footer />

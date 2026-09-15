@@ -23,7 +23,7 @@ export const metadata = buildPageMetadata({
 });
 
 const NEED_OPTIONS = [
-  { id: "automation", label: "Automation" },
+  { id: "automation", label: "Implementation" },
   { id: "training", label: "Training" },
   { id: "websites", label: "Website + Online Visibility" },
   { id: "marketing", label: "Marketing" },
@@ -81,16 +81,12 @@ export default async function ContactPage({
         </p>
 
         <h1 className="mt-4 max-w-3xl text-5xl leading-[1.05] md:text-7xl">
-          Let&apos;s Build Something
+          What&apos;s slowing you down?
         </h1>
 
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-[var(--foreground)] md:text-xl">
-          Save time. Win more customers. Get more done.
-        </p>
-
-        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-[var(--muted)] md:text-xl">
-          Tell us what you are trying to improve. We will help you take the next
-          step.
+          Tell us what you&apos;re trying to improve. We&apos;ll talk about the
+          better way.
         </p>
 
         <p className="mt-4 max-w-2xl text-base leading-relaxed text-[var(--muted)] md:text-lg">

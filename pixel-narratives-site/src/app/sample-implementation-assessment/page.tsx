@@ -112,7 +112,7 @@ export default function SampleImplementationAssessmentPage() {
 
         <div className="mt-10 flex flex-wrap gap-4">
           <a
-            href="/sample/sample-intelligence-layer-blueprint.pdf"
+            href="/sample/sample-implementation-assessment.pdf"
             target="_blank"
             rel="noreferrer"
             className="cta-pulse-filled inline-flex items-center rounded-full border border-white/10 bg-[var(--foreground)] px-5 py-2.5 text-sm font-medium text-black transition hover:opacity-90"
@@ -185,7 +185,7 @@ export default function SampleImplementationAssessmentPage() {
             </h2>
             <p className="mt-6 max-w-2xl text-base leading-relaxed text-[var(--muted)] md:text-lg">
               Discuss a project if you already know where work is getting stuck.
-              The AI + Automation Assessment is optional if you want a clearer
+              The AI Readiness Assessment is optional if you want a clearer
               picture first.
             </p>
             <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center">

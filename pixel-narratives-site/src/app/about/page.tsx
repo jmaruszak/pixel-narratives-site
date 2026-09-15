@@ -5,13 +5,13 @@ import Footer from "../../components/Footer";
 import Nav from "../../components/Nav";
 import { NEWS_ITEMS, newsPath } from "../../lib/news";
 import { JsonLd, buildWebPage, buildBreadcrumbs } from "../../lib/schema";
-import { SERVICES } from "../../lib/services";
+import { SERVICE_LINE_SUMMARY, SERVICES } from "../../lib/services";
 import { MARKETING_TO_WEB_INTEL_URL } from "../../lib/webIntelligence";
 
 export const metadata: Metadata = {
   title: "About Pixel Narratives",
   description:
-    "Pixel Narratives is an execution company based in Madison, Mississippi. We help businesses save time, win more customers, and get more done through automation, training, websites, and marketing.",
+    "Pixel Narratives is a business implementation company based in Madison, Mississippi. We help businesses save time, win more customers, and get more done.",
   alternates: { canonical: "/about" },
 };
 
@@ -20,9 +20,9 @@ const founder = {
   title: "Founder, Chief AI Officer and Head of Strategy",
   image: "/images/about-jordan.jpg",
   body: [
-    "Jordan brings over 15 years of experience working alongside business owners and leadership teams to navigate complex decisions, align strategy, and drive long-term outcomes.",
-    "At Pixel Narratives, he leads AI strategy and implementation: helping companies save time, win more customers, and get more done through automation, training, websites, and marketing.",
-    "His focus is simple: every project should have a clear purpose, a practical next step, and a result the owner can measure in the business.",
+    "Jordan has spent more than 15 years working with business owners and leadership teams on decisions that affect how the company actually runs.",
+    "At Pixel Narratives he leads implementation: automation, training, websites, and marketing. The point is not more technology. It is a better week for the people doing the work.",
+    "Every project should have a clear purpose, a practical next step, and a result the owner can see in the business.",
   ],
 } as const;
 
@@ -37,7 +37,7 @@ export default function AboutPage() {
             path: "/about",
             name: "About Pixel Narratives",
             description:
-              "Pixel Narratives is an execution company based in Madison, Mississippi. We help businesses save time, win more customers, and get more done through automation, training, websites, and marketing.",
+              "Pixel Narratives is a business implementation company based in Madison, Mississippi. We help businesses save time, win more customers, and get more done.",
             additionalType: "AboutPage",
           }),
           buildBreadcrumbs([
@@ -53,7 +53,7 @@ export default function AboutPage() {
             About
           </p>
           <h1 className="mt-4 text-5xl leading-[1.05] md:text-7xl">
-            About Pixel Narratives
+            There&apos;s Probably a Better Way.
           </h1>
         </div>
       </section>
@@ -66,14 +66,20 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="space-y-6 text-lg leading-relaxed text-[var(--muted)] md:text-xl">
+            <p>Businesses grow. Things get messy.</p>
             <p>
-              Pixel Narratives is headquartered in Madison, Mississippi. We work
-              with business owners who want to save time, win more customers,
-              and get more done.
+              Work gets repeated. Software gets piled on top of software. Good
+              leads get buried in an inbox. The website gets ignored for six
+              months.
+            </p>
+            <p className="text-[var(--foreground)]">We build the better way.</p>
+            <p>
+              Pixel Narratives is a business implementation company based in
+              Madison, Mississippi. We help businesses save time, win more
+              customers, and get more done.
             </p>
             <p>
-              We are based in Madison and work with teams across Mississippi and
-              the broader South.{" "}
+              Madison is home base.{" "}
               <Link
                 href="/serving-the-south"
                 className="text-[var(--foreground)] transition hover:opacity-80"
@@ -82,33 +88,27 @@ export default function AboutPage() {
               </Link>
               .
             </p>
+            <p className="text-[var(--foreground)]">{SERVICE_LINE_SUMMARY}</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-white/8">
+        <div className="mx-auto grid w-full max-w-7xl gap-12 px-6 py-20 md:grid-cols-[0.8fr_1.2fr] md:px-10">
+          <div>
+            <p className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
+              AI Is a Tool
+            </p>
+          </div>
+          <div className="space-y-6 text-lg leading-relaxed text-[var(--muted)] md:text-xl">
             <p>
-              We started with creative work, building high-impact ads designed
-              to capture attention.
+              We use AI and automation where they make sense. Other times, the
+              answer might be a better workflow, a new internal tool, a website
+              that does a better job, or marketing people notice.
             </p>
             <p>
-              That work made something clear: a campaign only helps if the
-              business can be found, follow up, and deliver.
-            </p>
-            <p>Businesses need better systems.</p>
-            <p>They need teams who know how to use the tools they already have.</p>
-            <p>They need to be found online, and they need marketing that gets acted on.</p>
-            <p>
-              That is why everything we do is built around four services:
-            </p>
-            <p className="text-[var(--foreground)]">
-              Automation + Implementation. Training. Websites + Online
-              Visibility. Marketing.
-            </p>
-            <p>
-              Some clients start with repetitive work that is eating the week.
-              Others need website visibility, a campaign, or team training. AI
-              is how a lot of the work gets done. You are buying the outcome.
-            </p>
-            <p>
-              Whether we are improving a company&apos;s online presence,
-              creating a campaign, training a team, or building better systems,
-              the goal is the same: helping businesses grow.
+              We don&apos;t start with the technology. We start with what
+              isn&apos;t working and figure out how to make it better.
             </p>
           </div>
         </div>
@@ -118,22 +118,20 @@ export default function AboutPage() {
         <div className="mx-auto grid w-full max-w-7xl gap-12 px-6 py-20 md:grid-cols-[0.8fr_1.2fr] md:px-10">
           <div>
             <p className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
-              Why We’re Different
+              We Actually Build Things
             </p>
           </div>
           <div className="space-y-6 text-lg leading-relaxed text-[var(--muted)] md:text-xl">
             <p>
-              Our leadership brings over 15 years of experience working alongside
-              business owners and leadership teams in high-stakes environments.
+              Our leadership brings more than 15 years of experience working
+              alongside business owners and leadership teams. That matters
+              because good ideas aren&apos;t worth much if they don&apos;t work
+              in the real world.
             </p>
-            <p>That experience shapes everything we do.</p>
-            <p>We don’t chase trends or sell tools.</p>
-            <p>
-              We focus on outcomes, because we’ve spent our careers helping
-              people make decisions where the stakes are real.
-            </p>
-            <p>
-              Now we bring that same discipline to AI, creative, and growth.
+            <p>We care about what gets used and what gets results.</p>
+            <p>No giant stack of tools and a good-luck email.</p>
+            <p className="text-[var(--foreground)]">
+              Just better ways to get things done.
             </p>
           </div>
         </div>
@@ -206,6 +204,11 @@ export default function AboutPage() {
                   <h2 className="text-balance break-words text-2xl leading-snug lg:text-3xl">
                     {service.name}
                   </h2>
+                  {service.id === "automation" ? (
+                    <p className="mt-2 text-sm uppercase tracking-[0.18em] text-[var(--muted)]">
+                      AI + Automation + Business Systems
+                    </p>
+                  ) : null}
                   <p className="mt-4 text-base leading-relaxed text-[var(--muted)]">
                     {service.body}
                   </p>
@@ -319,7 +322,7 @@ export default function AboutPage() {
                 href="/contact"
                 className="inline-flex items-center rounded-full border border-white/10 bg-[var(--foreground)] px-6 py-3 text-sm font-medium text-black transition hover:opacity-90"
               >
-                Start the Conversation
+                Start a Conversation
               </a>
             </div>
           </div>

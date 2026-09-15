@@ -4,11 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useId, useRef, useState } from "react";
 import { createPortal } from "react-dom";
-import {
-  CALENDLY_URL,
-  PRIMARY_NAV_LINKS,
-  SERVICE_NAV_LINKS,
-} from "../lib/navLinks";
+import { PRIMARY_NAV_LINKS, SERVICE_NAV_LINKS } from "../lib/navLinks";
 
 function MobileNavLink({
   href,
@@ -142,15 +138,13 @@ export default function MobileNav() {
           </nav>
 
           <div className="mt-auto pt-8">
-            <a
-              href={CALENDLY_URL}
-              target="_blank"
-              rel="noreferrer"
+            <Link
+              href="/contact"
               onClick={close}
               className="inline-flex w-full items-center justify-center rounded-full border border-white/10 bg-[var(--foreground)] px-5 py-3 text-sm font-medium text-black transition hover:opacity-90"
             >
-              Book a Call
-            </a>
+              Start a Conversation
+            </Link>
           </div>
         </div>
       </div>

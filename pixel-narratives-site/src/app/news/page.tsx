@@ -96,7 +96,7 @@ export default function NewsPage() {
                 href="/contact"
                 className="inline-flex items-center rounded-full border border-white/10 bg-[var(--foreground)] px-6 py-3 text-sm font-medium text-black transition hover:opacity-90"
               >
-                Start the Conversation
+                Start a Conversation
               </a>
             </div>
           </div>

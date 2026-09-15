@@ -1,20 +1,21 @@
 import CinematicPageHero from "../../components/CinematicPageHero";
 import Footer from "../../components/Footer";
-import IntelligenceLayerProcessFlow from "../../components/IntelligenceLayerProcessFlow";
+import ImplementationProcessFlow from "../../components/ImplementationProcessFlow";
 import Nav from "../../components/Nav";
 import PageBottomCta from "../../components/PageBottomCta";
 import PricingNote from "../../components/PricingNote";
+import OutcomeStack from "../../components/editorial/OutcomeStack";
 import { DESTINATION_CTAS } from "../../lib/destinationCtas";
 import { JsonLd, buildServicePageSchema, buildWebPage, buildBreadcrumbs } from "../../lib/schema";
 import { buildPageMetadata } from "../../lib/siteMetadata";
 
 export const metadata = buildPageMetadata({
-  title: "Automation + Implementation | Pixel Narratives",
+  title: "AI Implementation & Business Automation | Pixel Narratives",
   description:
-    "Turn repetitive work into better systems. Pixel Narratives builds workflow automation, CRM, scheduling, reporting, and internal tools that save time and reduce errors.",
+    "Practical business systems using AI, automation, CRM, dashboards, and internal tools. Pixel Narratives implements a better way to work, not a promise to automate everything.",
   path: "/automation",
   image: "/images/int-cinematic.jpg",
-  imageAlt: "Automation and implementation cinematic visual for Pixel Narratives",
+  imageAlt: "Implementation cinematic visual for Pixel Narratives",
 });
 
 const PROBLEMS = [
@@ -26,24 +27,35 @@ const PROBLEMS = [
   "Poor reporting and administrative bottlenecks",
 ] as const;
 
-const OUTCOMES = [
-  "Save employee hours",
-  "Reduce manual work",
-  "Improve lead response time",
-  "Increase productivity",
-  "Improve consistency and reduce errors",
-  "Make information easier to access",
-] as const;
-
-const IMPLEMENTATION_PROJECTS = [
-  "Workflow automation",
-  "CRM implementation",
-  "Lead routing and follow-up",
-  "Scheduling systems",
-  "Dashboards and reporting",
-  "Client portals",
-  "Internal tools",
-  "Software integrations",
+const EXAMPLES = [
+  {
+    title: "Lead follow-up",
+    body: "When a lead comes in, the next step happens. No more waiting until someone remembers to send the email.",
+  },
+  {
+    title: "Dashboards",
+    body: "See what is happening in the business without hunting through spreadsheets and inboxes.",
+  },
+  {
+    title: "Client portals",
+    body: "Give clients a place to see status, files, and next steps instead of another thread that gets lost.",
+  },
+  {
+    title: "Internal tools",
+    body: "Build the small systems your team actually needs, instead of forcing the work into software that does not fit.",
+  },
+  {
+    title: "AI assistance",
+    body: "Use AI to help people do the work faster and with fewer mistakes. Not to replace judgment.",
+  },
+  {
+    title: "Workflow automation",
+    body: "When a step is repetitive and rules-based, we automate it. When it is not, we find a better way to do it.",
+  },
+  {
+    title: "CRM + integrations",
+    body: "Connect the tools you already use so information does not get stuck in one place.",
+  },
 ] as const;
 
 export default function AutomationPage() {
@@ -54,19 +66,19 @@ export default function AutomationPage() {
         graph={[
           buildServicePageSchema({
             path: "/automation",
-            name: "Automation + Implementation",
+            name: "Implementation",
             description:
-              "AI implementation and business automation: a paid assessment, Guided Implementation for owners implementing with expert coaching, custom implementation projects, and Fractional Chief AI Officer leadership.",
+              "Practical business systems using AI, automation, CRM, dashboards, internal tools, and integrations. Sometimes we automate the work. Sometimes we give the team a better way to do it.",
             serviceType: "AI Implementation and Business Automation",
           }),
           buildWebPage({
             path: "/automation",
-            name: "Automation + Implementation | Pixel Narratives",
+            name: "AI Implementation & Business Automation | Pixel Narratives",
             mainEntity: { "@id": "https://pixelnarratives.studio/automation#service" },
           }),
           buildBreadcrumbs([
             { name: "Home", path: "/" },
-            { name: "Automation + Implementation", path: "/automation" },
+            { name: "Implementation", path: "/automation" },
           ]),
         ]}
       />
@@ -74,14 +86,22 @@ export default function AutomationPage() {
       <CinematicPageHero
         contentScrim
         imageSrc="/images/int-cinematic.jpg"
-        imageAlt="Cinematic automation and implementation hero image"
-        title="Turn Repetitive Work Into Better Systems"
-        subtitle="Automation + Implementation"
+        imageAlt="Cinematic implementation hero image"
+        title="Still Doing That by Hand?"
+        subtitle="Implementation"
       >
+        <p className="hero-entrance hero-entrance-delay-1 mt-4 text-sm uppercase tracking-[0.18em] text-white/55">
+          AI + Automation + Business Systems
+        </p>
         <div className="hero-entrance hero-entrance-delay-1 mt-8 space-y-5 text-lg leading-relaxed text-white/70 md:text-xl">
           <p>
-            Pixel Narratives builds practical solutions that reduce manual work,
-            improve productivity, and help businesses run better.
+            We build better business systems using AI, automation, and modern
+            software. Sometimes that means automating the work. Sometimes it
+            means assisting the people who do it. Sometimes it means building
+            or connecting a better tool.
+          </p>
+          <p className="text-white/90">
+            The goal isn&apos;t automation. The goal is a better way to work.
           </p>
         </div>
         <div className="hero-entrance hero-entrance-delay-2 mt-10 flex flex-wrap gap-4">
@@ -89,13 +109,13 @@ export default function AutomationPage() {
             href="/contact?need=automation"
             className="cta-pulse-filled inline-flex items-center rounded-full border border-white/10 bg-[var(--foreground)] px-5 py-2.5 text-sm font-medium text-black transition hover:opacity-90"
           >
-            Talk About Automation
+            Discuss a Project
           </a>
           <a
             href="/contact"
             className="cta-pulse-outline inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm text-[var(--foreground)] transition hover:border-white/20 hover:bg-white/5"
           >
-            Discuss a Project
+            Start a Conversation
           </a>
         </div>
       </CinematicPageHero>
@@ -119,24 +139,47 @@ export default function AutomationPage() {
       </section>
 
       <section className="border-t border-white/8">
-        <div className="mx-auto grid w-full max-w-7xl gap-10 px-6 pn-section md:grid-cols-2 md:px-10">
-          <div>
-            <p className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
-              The outcome
-            </p>
-            <h2 className="mt-4 text-3xl leading-none md:text-4xl">
-              Hours back. Fewer errors. Clearer operations.
+        <div className="mx-auto w-full max-w-7xl px-6 pn-section md:px-10">
+          <div className="max-w-3xl">
+            <p className="pn-kicker">What this looks like</p>
+            <h2 className="mt-5 max-w-3xl text-3xl leading-none md:text-5xl">
+              Concrete systems. Plain English.
             </h2>
+            <p className="pn-lede mt-6">
+              Implementation is the service. Automation is one of the tools.
+              These are the kinds of better ways we build.
+            </p>
           </div>
-          <ul className="space-y-3 text-base text-[var(--foreground)] md:text-lg">
-            {OUTCOMES.map((item) => (
-              <li key={item}>{item}</li>
+          <div className="mt-14 divide-y divide-white/10 border-y border-white/10">
+            {EXAMPLES.map((example) => (
+              <article
+                key={example.title}
+                className="grid gap-3 py-8 md:grid-cols-[minmax(0,0.7fr)_minmax(0,1.3fr)] md:items-baseline md:gap-10 md:py-10"
+              >
+                <h3 className="text-2xl leading-none md:text-4xl">
+                  {example.title}
+                </h3>
+                <p className="max-w-xl text-base leading-relaxed text-[var(--muted)] md:text-lg">
+                  {example.body}
+                </p>
+              </article>
             ))}
-          </ul>
+          </div>
         </div>
       </section>
 
-      <IntelligenceLayerProcessFlow />
+      <OutcomeStack
+        items={[
+          "Save time.",
+          "Faster follow-up.",
+          "Leads not lost.",
+          "Better tools.",
+          "Organized information.",
+          "Connected systems.",
+        ]}
+      />
+
+      <ImplementationProcessFlow />
 
       <section className="border-t border-white/8">
         <div className="mx-auto w-full max-w-7xl px-6 pn-section md:px-10">
@@ -164,7 +207,7 @@ export default function AutomationPage() {
                 A focused look at how work moves through the business:
                 bottlenecks, tools, follow-up, and what should happen next.
                 From there, the right path may be Guided Implementation, a
-                custom project, or Fractional CAIO support.
+                custom project, or ongoing AI leadership.
               </p>
               <ul className="mt-8 flex-1 space-y-2 text-sm text-[var(--foreground)] md:text-base">
                 <li>Workflow and bottleneck review</li>
@@ -187,7 +230,7 @@ export default function AutomationPage() {
                     href="/ai-readiness-assessment"
                     className="text-[var(--foreground)] transition hover:opacity-80"
                   >
-                    Take the AI + Automation Assessment.
+                    Take the AI Readiness Assessment.
                   </a>
                 </p>
               </div>
@@ -222,7 +265,7 @@ export default function AutomationPage() {
                   href="/contact?need=automation"
                   className="cta-pulse-outline inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm text-[var(--foreground)] transition hover:border-white/20 hover:bg-white/5"
                 >
-                  Talk About Automation
+                  Discuss a Project
                 </a>
               </div>
             </div>
@@ -238,9 +281,10 @@ export default function AutomationPage() {
                 Starting at $5,000 · Custom scoped
               </p>
               <p className="mt-6 text-base leading-relaxed text-[var(--muted)]">
-                Pixel Narratives builds the system. Automations, integrations,
-                workflows, internal tools, and operational improvements are
-                scoped to the complexity of the work.
+                Pixel Narratives builds the better way to do the work. That can
+                mean automation, an integration, a dashboard, an internal tool,
+                or connecting systems you already have. Scope follows the
+                complexity of the work.
               </p>
               <ul className="mt-8 flex-1 space-y-2 text-sm text-[var(--foreground)] md:text-base">
                 <li>Workflow automation and CRM implementation</li>
@@ -264,8 +308,11 @@ export default function AutomationPage() {
                 We help lead it
               </p>
               <h3 className="mt-4 text-2xl leading-none md:text-3xl">
-                Fractional Chief AI Officer
+                Ongoing AI leadership
               </h3>
+              <p className="mt-2 text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
+                Fractional CAIO
+              </p>
               <p className="mt-4 text-sm uppercase tracking-[0.25em] text-[var(--muted)]">
                 Starting at $6,250/month
               </p>
@@ -296,21 +343,21 @@ export default function AutomationPage() {
 
       <section className="border-t border-white/8">
         <div className="mx-auto w-full max-w-7xl px-6 pn-section md:px-10">
-          <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
-            What we build
-          </p>
-          <h2 className="mt-4 max-w-3xl text-3xl leading-none md:text-4xl">
-            Systems around the way the business already operates
-          </h2>
-          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {IMPLEMENTATION_PROJECTS.map((project) => (
-              <div
-                key={project}
-                className="rounded-2xl border border-white/8 bg-white/[0.02] px-5 py-4 text-sm text-[var(--foreground)] md:text-base"
+          <div className="rounded-[24px] border border-white/8 bg-white/[0.02] p-8 md:p-10">
+            <h2 className="max-w-3xl text-3xl leading-none md:text-4xl">
+              Training helps the team use what we build
+            </h2>
+            <p className="mt-6 max-w-3xl text-base leading-relaxed text-[var(--muted)] md:text-lg">
+              We build better ways to work.{" "}
+              <a
+                href="/training"
+                className="text-[var(--foreground)] transition hover:opacity-80"
               >
-                {project}
-              </div>
-            ))}
+                Training
+              </a>{" "}
+              teaches the team to use them. Same problem, different part of the
+              work.
+            </p>
           </div>
         </div>
       </section>
@@ -332,12 +379,6 @@ export default function AutomationPage() {
                 className="cta-pulse-filled inline-flex items-center rounded-full border border-white/10 bg-[var(--foreground)] px-5 py-2.5 text-sm font-medium text-black transition hover:opacity-90"
               >
                 View the sample
-              </a>
-              <a
-                href="/training"
-                className="cta-pulse-outline inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm text-[var(--foreground)] transition hover:border-white/20 hover:bg-white/5"
-              >
-                Team training
               </a>
             </div>
           </div>

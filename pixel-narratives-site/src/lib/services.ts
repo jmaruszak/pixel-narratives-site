@@ -19,22 +19,22 @@ export const SERVICES: ServiceDefinition[] = [
   {
     id: "automation",
     href: "/automation",
-    navLabel: "Automation + Implementation",
-    name: "Automation + Implementation",
+    navLabel: "Implementation",
+    name: "Implementation",
     problem: "Save Time",
-    outcome: "Less manual work. Faster follow-up. Clearer operations.",
-    body: "Turn repetitive work into better systems: workflows, CRM, scheduling, reporting, and the tools your team uses every day.",
-    ctaLabel: "Talk About Automation",
+    outcome: "Save time. Reduce repetitive work. Make the business easier to run.",
+    body: "We build better business systems using AI, automation, and modern software. Sometimes that means automating the work. Sometimes it means giving your team a much better way to do it.",
+    ctaLabel: "Discuss a Project",
   },
   {
     id: "training",
     href: "/training",
     navLabel: "Training",
     name: "Training",
-    problem: "Get More Done",
+    problem: "Use AI Better",
     outcome: "Help your team get more done with practical AI workshops.",
     body: "Corporate AI workshops starting at $7,500. Private training for leadership, departments, and employees around the work they already do.",
-    ctaLabel: "Discuss a Workshop",
+    ctaLabel: "Discuss Team Training",
   },
   {
     id: "websites",
@@ -54,12 +54,12 @@ export const SERVICES: ServiceDefinition[] = [
     problem: "Reach More Customers",
     outcome: "Campaigns that get seen, remembered, and acted on.",
     body: "Campaigns, ads, video, content, and lead generation. We use AI where it helps production.",
-    ctaLabel: "Discuss a Campaign",
+    ctaLabel: "Discuss Marketing",
   },
 ];
 
 export const SERVICE_LINE_SUMMARY =
-  "Automation + Implementation. Training. Websites + Online Visibility. Marketing.";
+  "Implementation. Training. Websites + Online Visibility. Marketing.";
 
 export const POSITIONING_LINE =
   "We help businesses save time, win more customers, and get more done.";

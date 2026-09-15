@@ -35,7 +35,7 @@ export default function CinematicPageHero({
       <div className="absolute inset-0 z-[2] bg-gradient-to-t from-black/60 via-transparent to-transparent" />
 
       <div className="relative z-10 mx-auto flex w-full max-w-7xl items-center px-6 py-16 md:px-10 md:py-20">
-        <div className="relative max-w-3xl">
+        <div className="relative max-w-5xl">
           {contentScrim ? (
             <div
               className="pointer-events-none absolute -inset-x-6 -inset-y-10 bg-[radial-gradient(ellipse_at_left_center,rgba(0,0,0,0.72)_0%,rgba(0,0,0,0.45)_45%,transparent_75%)] md:-inset-x-10 md:-inset-y-14"
@@ -43,10 +43,10 @@ export default function CinematicPageHero({
             />
           ) : null}
           <div className="relative z-[1]">
-            <h1 className="hero-entrance leading-none text-white font-semibold">
-              <span className="block text-6xl md:text-8xl">{title}</span>
+            <h1 className="hero-entrance leading-none text-white">
+              <span className="block pn-display">{title}</span>
               {subtitle ? (
-                <span className="block text-3xl text-white/80 md:text-4xl">
+                <span className="mt-4 block text-2xl text-white/80 md:text-4xl">
                   {subtitle}
                 </span>
               ) : null}

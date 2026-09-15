@@ -34,13 +34,13 @@ export const SERVICE_AREA_HUB_MENTIONS: ServiceAreaPlace[] = [
 export const SERVICE_PILLARS = [
   {
     eyebrow: "Save Time",
-    headline: "Automation + Implementation",
-    outcome: "Less manual work. Faster follow-up. Clearer operations.",
-    body: "Turn repetitive work into better systems: workflows, CRM, scheduling, reporting, and the tools your team uses every day.",
+    headline: "Implementation",
+    outcome: "Save time. Reduce repetitive work. Make the business easier to run.",
+    body: "We build better business systems using AI, automation, and modern software. Sometimes that means automating the work. Sometimes it means giving your team a much better way to do it.",
     href: "/automation",
   },
   {
-    eyebrow: "Get More Done",
+    eyebrow: "Use AI Better",
     headline: "Training",
     outcome: "Help your team get more done with practical AI workshops.",
     body: "Corporate AI workshops starting at $7,500. Private training for leadership, departments, and employees around the work they already do.",

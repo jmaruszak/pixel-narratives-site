@@ -36,7 +36,7 @@ export const seoLandingPages: Record<string, SeoLandingPage> = {
     h1: "AI Commercial Production Company for Shareable Brand Ads",
     intro:
       "Pixel Narratives creates cinematic, AI-powered commercials built around strategy, story, and distribution reality. We help brands move from generic content to ads people watch.",
-    cta: "Discuss a Campaign",
+    cta: "Discuss Marketing",
     sections: [
       {
         heading: "What is an AI commercial production company?",
@@ -125,7 +125,7 @@ export const seoLandingPages: Record<string, SeoLandingPage> = {
     h1: "AI Video Ad Agency for Concept-Driven Campaigns",
     intro:
       "Pixel Narratives is an AI video ad agency for brands that want commercials with a narrative spine, not generic content. We build ads around a concept before we build the asset.",
-    cta: "Discuss a Campaign",
+    cta: "Discuss Marketing",
     sections: [
       {
         heading: "What does an AI video ad agency do?",
@@ -160,7 +160,7 @@ export const seoLandingPages: Record<string, SeoLandingPage> = {
       {
         question: "What makes Pixel Narratives different from a standard video agency?",
         answer:
-          "Pixel Narratives builds around narrative intelligence: setup, turn, payoff, and audience behavior.",
+          "Pixel Narratives builds marketing around a clear idea: setup, turn, payoff, and how the audience actually behaves.",
       },
       {
         question: "Do you use AI for every video?",
@@ -168,14 +168,14 @@ export const seoLandingPages: Record<string, SeoLandingPage> = {
           "We use AI where it improves speed, visual development, production flexibility, or iteration quality.",
       },
       {
-        question: "Can AI video ads run on paid channels?",
+        question: "Can these videos run on paid channels?",
         answer:
           "Yes. Final creative can be adapted for paid social, organic campaigns, landing pages, and launch assets.",
       },
       {
-        question: "Are AI ads cheaper than traditional ads?",
+        question: "Is AI production cheaper than traditional production?",
         answer:
-          "Often, but the real benefit is faster iteration and more creative range.",
+          "Often the production cycle is faster. The real benefit is more creative range without waiting on a huge crew for every version.",
       },
       {
         question: "What makes an ad shareable?",
@@ -289,7 +289,7 @@ export const seoLandingPages: Record<string, SeoLandingPage> = {
     h1: "How to Create Ads People Actually Watch",
     intro:
       "People watch ads when the ad earns attention before asking for action. Start with the audience problem, build a concept, create a turn, and end with a memorable payoff.",
-    cta: "Discuss a Campaign",
+    cta: "Discuss Marketing",
     sections: [
       {
         heading: "Why do most ads get ignored?",
@@ -369,7 +369,7 @@ export const seoLandingPages: Record<string, SeoLandingPage> = {
     h1: "AI Consulting for Businesses That Need Practical Value",
     intro:
       "Pixel Narratives helps businesses move from scattered AI experimentation to structured workflows, automation, and measurable operating results. We implement systems the team will use.",
-    cta: "Talk About Automation",
+    cta: "Discuss a Project",
     sections: [
       {
         heading: "What is AI consulting for businesses?",
@@ -441,7 +441,7 @@ export const seoLandingPages: Record<string, SeoLandingPage> = {
       },
     ],
     relatedLinks: [
-      { href: "/automation", label: "Automation + Implementation" },
+      { href: "/automation", label: "Implementation" },
       { href: "/how-to-use-ai-in-your-business", label: "how to use AI in your business" },
       { href: "/how-to-implement-ai-in-your-business", label: "how to implement AI in your business" },
       { href: "/ai-workflow-automation", label: "AI workflow automation" },
@@ -525,7 +525,7 @@ export const seoLandingPages: Record<string, SeoLandingPage> = {
       },
     ],
     relatedLinks: [
-      { href: "/automation", label: "Automation + Implementation" },
+      { href: "/automation", label: "Implementation" },
       { href: "/how-to-use-ai-in-your-business", label: "how to use AI in your business" },
       { href: "/ai-consulting-for-businesses", label: "AI consulting for businesses" },
       { href: "/ai-crm-automation", label: "AI CRM automation" },
@@ -609,7 +609,7 @@ export const seoLandingPages: Record<string, SeoLandingPage> = {
       },
     ],
     relatedLinks: [
-      { href: "/automation", label: "Automation + Implementation" },
+      { href: "/automation", label: "Implementation" },
       { href: "/how-to-use-ai-in-your-business", label: "how to use AI in your business" },
       { href: "/ai-consulting-for-businesses", label: "AI consulting for businesses" },
       { href: "/ai-workflow-automation", label: "AI workflow automation" },
@@ -682,7 +682,7 @@ export const seoLandingPages: Record<string, SeoLandingPage> = {
       },
     ],
     relatedLinks: [
-      { href: "/automation", label: "Automation + Implementation" },
+      { href: "/automation", label: "Implementation" },
       { href: "/how-to-use-ai-in-your-business", label: "how to use AI in your business" },
       { href: "/ai-workflow-automation", label: "AI workflow automation" },
       { href: "/ai-consulting-for-businesses", label: "AI consulting for businesses" },

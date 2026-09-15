@@ -3,6 +3,9 @@
 :root {
   --background: #0b0c0f;
   --surface: #12141a;
+  --surface-light: #f5f1e8;
+  --ink: #0b0c0f;
+  --ink-muted: #4a4742;
   --foreground: #f5f1e8;
   --muted: #a6a29a;
   --border: rgba(255, 255, 255, 0.08);
@@ -78,6 +81,62 @@ a {
   .pn-body {
     font-size: 1.125rem;
   }
+}
+
+.pn-display {
+  font-family: var(--font-bebas), sans-serif;
+  font-size: clamp(2.75rem, 8vw, 7.25rem);
+  line-height: 0.92;
+  letter-spacing: 0.03em;
+}
+
+.pn-kicker {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  letter-spacing: var(--eyebrow-tracking);
+  text-transform: uppercase;
+}
+
+.pn-lede {
+  font-size: 1.125rem;
+  line-height: var(--body-leading);
+  max-width: 40rem;
+}
+
+@media (min-width: 768px) {
+  .pn-lede {
+    font-size: 1.25rem;
+  }
+}
+
+.pn-band-light {
+  background: var(--surface-light);
+  color: var(--ink);
+}
+
+.pn-band-light h1,
+.pn-band-light h2,
+.pn-band-light h3,
+.pn-band-light h4,
+.pn-band-light .pn-kicker {
+  color: var(--ink);
+}
+
+.pn-band-light .pn-lede,
+.pn-band-light .pn-muted,
+.pn-band-light p,
+.pn-band-light li {
+  color: var(--ink-muted);
+}
+
+.pn-band-light a {
+  color: var(--ink);
+}
+
+.pn-panel {
+  border-radius: var(--card-radius);
+  border: 1px solid var(--border);
+  background: var(--surface);
 }
 
 .pn-grid-accent {

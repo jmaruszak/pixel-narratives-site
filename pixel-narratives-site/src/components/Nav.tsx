@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { CALENDLY_URL, PRIMARY_NAV_LINKS } from "../lib/navLinks";
+import { PRIMARY_NAV_LINKS } from "../lib/navLinks";
 import MobileNav from "./MobileNav";
 import NavLink from "./NavLink";
 import ServicesNavMenu from "./ServicesNavMenu";
@@ -34,13 +34,10 @@ export default function Nav() {
           </nav>
 
           <a
-            href={CALENDLY_URL}
-            target="_blank"
-            rel="noreferrer"
-            aria-label="Book a discovery call (opens Calendly in a new tab)"
+            href="/contact"
             className="hidden items-center rounded-full border border-white/10 bg-[var(--foreground)] px-4 py-2 text-xs font-medium text-black transition hover:opacity-90 sm:px-5 sm:py-2.5 sm:text-sm md:inline-flex"
           >
-            Book a Call
+            Start a Conversation
           </a>
 
           <MobileNav />

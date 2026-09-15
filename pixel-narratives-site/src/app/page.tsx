@@ -8,7 +8,7 @@ import { buildPageMetadata } from "../lib/siteMetadata";
 export const metadata: Metadata = buildPageMetadata({
   title: "Pixel Narratives | Save Time. Win More Customers. Get More Done.",
   description:
-    "Pixel Narratives helps businesses save time, win more customers, and get more done through automation, implementation, training, online visibility, and marketing.",
+    "Pixel Narratives builds better ways to work. Implementation, training, websites, and marketing that help businesses save time, win more customers, and get more done.",
   path: "/",
   image: "/images/home-cinematic.jpg",
   imageAlt: "Pixel Narratives homepage cinematic visual",

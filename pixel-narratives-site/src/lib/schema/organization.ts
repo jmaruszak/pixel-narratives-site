@@ -111,7 +111,7 @@ function offerCatalog() {
         itemOffered: {
           "@type": "Service" as const,
           "@id": `${SITE_URL}/automation#service`,
-          name: "Automation + Implementation",
+          name: "Implementation",
           serviceType: "AI Implementation and Business Automation",
           provider: { "@id": ORG_ID },
         },

@@ -42,11 +42,11 @@ export type LocationLandingPage = {
 
 const sharedRelatedLinks = [
   { href: "/serving-the-south", label: "AI consulting across the South" },
-  { href: "/automation", label: "Automation + Implementation" },
+  { href: "/automation", label: "Implementation" },
   { href: "/training", label: "AI training for teams" },
   { href: "/websites", label: "Websites + Online Visibility" },
   { href: "/work", label: "Selected implementation work" },
-  { href: "/ai-readiness-assessment", label: "AI + Automation Assessment" },
+  { href: "/ai-readiness-assessment", label: "AI Readiness Assessment" },
   { href: "/contact", label: "Talk with Pixel Narratives" },
 ];
 
@@ -56,7 +56,7 @@ export const locationLandingPages: Record<string, LocationLandingPage> = {
     title: "AI Consulting & Implementation in Mississippi | Pixel Narratives",
     description:
       "Pixel Narratives is based in Madison, Mississippi and helps small and midsize businesses with AI consulting, automation, implementation, and employee training.",
-    h1: "AI Consulting & Implementation for Mississippi Businesses",
+    h1: "AI implementation for Mississippi businesses",
     marketLabel: "Mississippi",
     inMarketPhrase: "in Mississippi",
     breadcrumbName: "Mississippi",
@@ -89,7 +89,7 @@ export const locationLandingPages: Record<string, LocationLandingPage> = {
       ],
     },
     caio: {
-      heading: "Fractional Chief AI Officer support in Mississippi",
+      heading: "Ongoing AI leadership in Mississippi",
       intro: [
         "Some Mississippi companies want someone responsible for AI adoption without creating a full-time executive seat. Fractional Chief AI Officer, or Fractional CAIO, support covers prioritization, implementation oversight, and the next round of work as the business changes.",
       ],
@@ -135,7 +135,7 @@ export const locationLandingPages: Record<string, LocationLandingPage> = {
       {
         question: "How much does AI consulting cost?",
         answer:
-          "Work is scoped to the job. Guided implementation starts at $1,500/month with a three-month minimum. Fractional Chief AI Officer support starts at $6,250/month. We will tell you what the work involves before you commit.",
+          "Work is scoped to the job. Guided implementation starts at $1,500/month with a three-month minimum. Ongoing AI leadership (Fractional CAIO) starts at $6,250/month. We will tell you what the work involves before you commit.",
       },
       {
         question: "Does Pixel Narratives implement the systems it recommends?",
@@ -155,7 +155,7 @@ export const locationLandingPages: Record<string, LocationLandingPage> = {
     ],
     ctaHeadline: "Not sure where AI fits in your Mississippi business?",
     ctaBody:
-      "Start with the AI + Automation Assessment, or talk with Pixel Narratives about the workflows, bottlenecks, and opportunities inside the company.",
+      "Start with the AI Readiness Assessment, or talk with Pixel Narratives about the workflows, bottlenecks, and opportunities inside the company.",
     relatedLinks: [
       ...sharedRelatedLinks,
       { href: "/gulf-coast-ai-studio", label: "AI consulting on the Gulf Coast" },
@@ -167,7 +167,7 @@ export const locationLandingPages: Record<string, LocationLandingPage> = {
       "AI Consulting & Implementation in Birmingham, AL | Pixel Narratives",
     description:
       "Pixel Narratives works with Birmingham and Central Alabama businesses on AI consulting, automation, implementation, and employee training. Based in Madison, Mississippi.",
-    h1: "AI Consulting & Implementation in Birmingham",
+    h1: "AI implementation in Birmingham",
     marketLabel: "Birmingham, Alabama",
     inMarketPhrase: "in Birmingham",
     breadcrumbName: "Birmingham",
@@ -196,7 +196,7 @@ export const locationLandingPages: Record<string, LocationLandingPage> = {
       ],
     },
     caio: {
-      heading: "Fractional Chief AI Officer support in Birmingham",
+      heading: "Ongoing AI leadership in Birmingham",
       intro: [
         "A Fractional Chief AI Officer, or Fractional CAIO, is a fit for Birmingham companies that want ongoing AI leadership without hiring a full-time executive. We help prioritize, implement, and keep the systems aligned as the work changes.",
       ],
@@ -242,12 +242,12 @@ export const locationLandingPages: Record<string, LocationLandingPage> = {
       {
         question: "How much does AI consulting cost?",
         answer:
-          "It depends on scope. Guided implementation starts at $1,500/month with a three-month minimum. Fractional Chief AI Officer support starts at $6,250/month. We scope the work before you start.",
+          "It depends on scope. Guided implementation starts at $1,500/month with a three-month minimum. Ongoing AI leadership (Fractional CAIO) starts at $6,250/month. We scope the work before you start.",
       },
       {
         question: "Does Pixel Narratives implement the systems it recommends?",
         answer:
-          "Yes. We do not stop at a recommendation. Automation + Implementation is the core of the work.",
+          "Yes. We do not stop at a recommendation. Implementation is the core of the work: AI, automation, and better business systems.",
       },
       {
         question: "Can you train our employees to use AI?",
@@ -262,7 +262,7 @@ export const locationLandingPages: Record<string, LocationLandingPage> = {
     ],
     ctaHeadline: "Not sure where AI fits in your Birmingham business?",
     ctaBody:
-      "Start with the AI + Automation Assessment, or talk with Pixel Narratives about the workflows and bottlenecks inside the company.",
+      "Start with the AI Readiness Assessment, or talk with Pixel Narratives about the workflows and bottlenecks inside the company.",
     relatedLinks: sharedRelatedLinks,
   },
   "gulf-coast-ai-studio": {
@@ -270,7 +270,7 @@ export const locationLandingPages: Record<string, LocationLandingPage> = {
     title: "AI Consulting & Implementation on the Gulf Coast | Pixel Narratives",
     description:
       "AI consulting, automation, and implementation for Mississippi Gulf Coast, Mobile, and Florida Panhandle businesses. Pixel Narratives is based in Madison, Mississippi.",
-    h1: "AI Consulting & Implementation on the Mississippi Gulf Coast",
+    h1: "AI implementation on the Mississippi Gulf Coast",
     marketLabel: "Gulf Coast",
     inMarketPhrase: "on the Gulf Coast",
     breadcrumbName: "Gulf Coast",
@@ -304,7 +304,7 @@ export const locationLandingPages: Record<string, LocationLandingPage> = {
       ],
     },
     caio: {
-      heading: "Fractional Chief AI Officer support on the Gulf Coast",
+      heading: "Ongoing AI leadership on the Gulf Coast",
       intro: [
         "Fractional Chief AI Officer, or Fractional CAIO, support is for coastal companies that want someone responsible for AI adoption across locations or a busy season without hiring a full-time executive.",
       ],
@@ -349,7 +349,7 @@ export const locationLandingPages: Record<string, LocationLandingPage> = {
       {
         question: "How much does AI consulting cost?",
         answer:
-          "Scope drives the number. Guided implementation starts at $1,500/month with a three-month minimum. Fractional Chief AI Officer support starts at $6,250/month.",
+          "Scope drives the number. Guided implementation starts at $1,500/month with a three-month minimum. Ongoing AI leadership (Fractional CAIO) starts at $6,250/month.",
       },
       {
         question: "Does Pixel Narratives implement the systems it recommends?",
@@ -369,7 +369,7 @@ export const locationLandingPages: Record<string, LocationLandingPage> = {
     ],
     ctaHeadline: "Not sure where AI fits on the Gulf Coast?",
     ctaBody:
-      "Start with the AI + Automation Assessment, or talk with Pixel Narratives about the bottlenecks inside the business — from missed inquiries to slow follow-up.",
+      "Start with the AI Readiness Assessment, or talk with Pixel Narratives about the bottlenecks inside the business — from missed inquiries to slow follow-up.",
     relatedLinks: [
       ...sharedRelatedLinks,
       {
@@ -384,7 +384,7 @@ export const locationLandingPages: Record<string, LocationLandingPage> = {
       "AI Consulting & Implementation in Jacksonville, FL | Pixel Narratives",
     description:
       "Pixel Narratives works with Jacksonville, Florida businesses on AI consulting, automation, implementation, and employee training. Based in Madison, Mississippi.",
-    h1: "AI Consulting & Implementation in Jacksonville, Florida",
+    h1: "AI implementation in Jacksonville, Florida",
     marketLabel: "Jacksonville, Florida",
     inMarketPhrase: "in Jacksonville",
     breadcrumbName: "Jacksonville",
@@ -413,7 +413,7 @@ export const locationLandingPages: Record<string, LocationLandingPage> = {
       ],
     },
     caio: {
-      heading: "Fractional Chief AI Officer support in Jacksonville",
+      heading: "Ongoing AI leadership in Jacksonville",
       intro: [
         "A Fractional Chief AI Officer, or Fractional CAIO, gives Jacksonville companies AI strategy and implementation leadership without a full-time executive hire. We stay with the work after the first project.",
       ],
@@ -458,12 +458,12 @@ export const locationLandingPages: Record<string, LocationLandingPage> = {
       {
         question: "How much does AI consulting cost?",
         answer:
-          "Guided implementation starts at $1,500/month with a three-month minimum. Fractional Chief AI Officer support starts at $6,250/month. Projects are scoped before work begins.",
+          "Guided implementation starts at $1,500/month with a three-month minimum. Ongoing AI leadership (Fractional CAIO) starts at $6,250/month. Projects are scoped before work begins.",
       },
       {
         question: "Does Pixel Narratives implement the systems it recommends?",
         answer:
-          "Yes. Automation + Implementation is the primary service. Consulting exists to choose the right build, not to replace it.",
+          "Yes. Implementation is the primary service. Consulting exists to choose the right build, not to replace it.",
       },
       {
         question: "Can you train our employees to use AI?",
@@ -478,7 +478,7 @@ export const locationLandingPages: Record<string, LocationLandingPage> = {
     ],
     ctaHeadline: "Not sure where AI fits in your Jacksonville business?",
     ctaBody:
-      "Start with the AI + Automation Assessment, or talk with Pixel Narratives about the workflows and bottlenecks inside the company.",
+      "Start with the AI Readiness Assessment, or talk with Pixel Narratives about the workflows and bottlenecks inside the company.",
     relatedLinks: [
       ...sharedRelatedLinks,
       {
@@ -492,7 +492,7 @@ export const locationLandingPages: Record<string, LocationLandingPage> = {
     title: "AI Consulting & Implementation in Memphis, TN | Pixel Narratives",
     description:
       "Pixel Narratives works with Memphis businesses on AI consulting, automation, implementation, and employee training. Based in Madison, Mississippi.",
-    h1: "AI Consulting & Implementation for Memphis Businesses",
+    h1: "AI implementation for Memphis businesses",
     marketLabel: "Memphis, Tennessee",
     inMarketPhrase: "in Memphis",
     breadcrumbName: "Memphis",
@@ -521,7 +521,7 @@ export const locationLandingPages: Record<string, LocationLandingPage> = {
       ],
     },
     caio: {
-      heading: "Fractional Chief AI Officer support in Memphis",
+      heading: "Ongoing AI leadership in Memphis",
       intro: [
         "Fractional Chief AI Officer, or Fractional CAIO, support is for Memphis companies that need someone to own AI priorities and implementation without creating a full-time executive role.",
       ],
@@ -566,7 +566,7 @@ export const locationLandingPages: Record<string, LocationLandingPage> = {
       {
         question: "How much does AI consulting cost?",
         answer:
-          "Guided implementation starts at $1,500/month with a three-month minimum. Fractional Chief AI Officer support starts at $6,250/month. We scope the engagement first.",
+          "Guided implementation starts at $1,500/month with a three-month minimum. Ongoing AI leadership (Fractional CAIO) starts at $6,250/month. We scope the engagement first.",
       },
       {
         question: "Does Pixel Narratives implement the systems it recommends?",
@@ -586,7 +586,7 @@ export const locationLandingPages: Record<string, LocationLandingPage> = {
     ],
     ctaHeadline: "Not sure where AI fits in your Memphis business?",
     ctaBody:
-      "Start with the AI + Automation Assessment, or talk with Pixel Narratives about the workflows, bottlenecks, and opportunities inside the company.",
+      "Start with the AI Readiness Assessment, or talk with Pixel Narratives about the workflows, bottlenecks, and opportunities inside the company.",
     relatedLinks: sharedRelatedLinks,
   },
 };

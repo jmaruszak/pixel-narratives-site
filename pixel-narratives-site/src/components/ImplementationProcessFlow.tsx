@@ -37,7 +37,7 @@ const STEPS = [
   },
 ] as const;
 
-export default function IntelligenceLayerProcessFlow() {
+export default function ImplementationProcessFlow() {
   const sectionRef = useRef<HTMLElement>(null);
   const [progress, setProgress] = useState(0);
   const reducedMotion = useSyncExternalStore(

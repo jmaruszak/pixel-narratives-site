@@ -89,30 +89,30 @@ export default function WebsitesPage() {
         contentScrim
         imageSrc="/images/web-cinematic.jpg"
         imageAlt="Analyst reviewing a website map against a city skyline at night"
-        title="Get Found Online"
+        title="If People Can't Find You, the Rest Doesn't Matter Much."
         subtitle="Websites + Online Visibility"
       >
         <div className="hero-entrance hero-entrance-delay-1 mt-8 max-w-2xl text-lg leading-relaxed text-white/70 md:text-xl">
           <p>
-            Help more of the right customers find the business and take action.
-            Position your business to be found wherever your customers are
-            searching, from Google to AI-powered search.
+            We build and improve websites, strengthen search visibility, and
+            help businesses show up where customers are looking. Google, local
+            search, and AI search included.
           </p>
         </div>
         <div className="hero-entrance hero-entrance-delay-2 mt-10 flex flex-wrap gap-4">
           <a
+            href="/contact?need=websites"
+            className="cta-pulse-filled inline-flex items-center rounded-full border border-white/10 bg-[var(--foreground)] px-5 py-2.5 text-sm font-medium text-black transition hover:opacity-90"
+          >
+            Improve My Website
+          </a>
+          <a
             href={WEB_INTEL_PAGE_TOOL_URL}
             target="_blank"
             rel="noreferrer"
-            className="cta-pulse-filled inline-flex items-center rounded-full border border-white/10 bg-[var(--foreground)] px-5 py-2.5 text-sm font-medium text-black transition hover:opacity-90"
-          >
-            Check My Online Visibility
-          </a>
-          <a
-            href="/contact?need=websites"
             className="cta-pulse-outline inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm text-[var(--foreground)] transition hover:border-white/20 hover:bg-white/5"
           >
-            Improve My Website
+            Check My Online Visibility
           </a>
         </div>
       </CinematicPageHero>

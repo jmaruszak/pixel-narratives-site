@@ -746,7 +746,7 @@ export default function AiReadinessAssessment() {
               Optional diagnostic
             </p>
             <h1 className="mt-4 text-4xl leading-[1.05] md:text-6xl">
-              AI + Automation Assessment
+              AI Readiness Assessment
             </h1>
             <div className="mt-6 space-y-4 text-base leading-relaxed text-[var(--muted)] md:text-lg">
               <p>
@@ -991,18 +991,16 @@ export default function AiReadinessAssessment() {
                 Save or print your results
               </button>
               <a
-                href="https://calendly.com/pixelnarratives"
-                target="_blank"
-                rel="noreferrer"
+                href="/contact"
                 className="inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm text-[var(--foreground)] transition hover:bg-white/5"
               >
-                Book a strategy call
+                Start a Conversation
               </a>
               <a
-                href="/automation"
+                href="/contact?need=automation"
                 className="inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm text-[var(--foreground)] transition hover:bg-white/5"
               >
-                Talk About Automation
+                Discuss a Project
               </a>
             </div>
           </div>
@@ -1352,7 +1350,7 @@ export default function AiReadinessAssessment() {
                   href="/automation"
                   className="inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm text-[var(--foreground)] transition hover:bg-white/5"
                 >
-                  Talk About Automation
+                  Implementation
                 </a>
               </div>
             </div>

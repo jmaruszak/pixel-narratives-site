@@ -5,7 +5,6 @@ import Footer from "../../components/Footer";
 import Nav from "../../components/Nav";
 import PageBottomCta from "../../components/PageBottomCta";
 import PricingNote from "../../components/PricingNote";
-import { CALENDLY_URL } from "../../lib/businessLocation";
 import { DESTINATION_CTAS } from "../../lib/destinationCtas";
 import { JsonLd, buildServicePageSchema, buildWebPage, buildBreadcrumbs } from "../../lib/schema";
 import { buildPageMetadata } from "../../lib/siteMetadata";
@@ -99,10 +98,19 @@ export default function MarketingPage() {
       <CinematicPageHero
         imageSrc="/images/hero-cinematic.jpg"
         imageAlt="Cinematic marketing campaign visual"
-        title="Reach More Customers"
+        title="Being Good Isn't the Same as Being Noticed."
         subtitle="Marketing"
       >
-        <div className="hero-entrance hero-entrance-delay-1 mt-10 flex flex-wrap gap-4">
+        <div className="hero-entrance hero-entrance-delay-1 mt-8 max-w-2xl space-y-4 text-lg leading-relaxed text-white/70 md:text-xl">
+          <p>
+            Campaigns, advertising, video, content, and creative designed to
+            reach the right people and generate opportunity.
+          </p>
+          <p className="text-base md:text-lg">
+            AI makes us faster. Taste still matters.
+          </p>
+        </div>
+        <div className="hero-entrance hero-entrance-delay-2 mt-10 flex flex-wrap gap-4">
           <a
             href="#attention-pulse-brief"
             className="cta-pulse-filled inline-flex items-center rounded-full border border-white/10 bg-[var(--foreground)] px-5 py-2.5 text-sm font-medium text-black transition hover:opacity-90"
@@ -110,12 +118,10 @@ export default function MarketingPage() {
             Start an Attention Pulse
           </a>
           <a
-            href={CALENDLY_URL}
-            target="_blank"
-            rel="noreferrer"
+            href="/contact?need=marketing"
             className="cta-pulse-outline inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm text-white transition hover:border-white/20 hover:bg-white/5"
           >
-            Book a Call
+            Start a Conversation
           </a>
         </div>
       </CinematicPageHero>
@@ -166,7 +172,7 @@ export default function MarketingPage() {
               streaming platforms, or campaign reporting.
             </p>
             <p className="mt-4 max-w-2xl text-base leading-relaxed text-[var(--muted)] md:text-lg">
-              AI-assisted production is how we make the work.
+              AI-assisted production allows us to move faster and iterate more.
             </p>
           </div>
         </div>
@@ -308,12 +314,10 @@ export default function MarketingPage() {
             </p>
             <div className="mt-8">
               <a
-                href={CALENDLY_URL}
-                target="_blank"
-                rel="noreferrer"
+                href="/contact?need=marketing"
                 className="cta-pulse-outline inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm text-[var(--foreground)] transition hover:border-white/20 hover:bg-white/5"
               >
-                Book a Call
+                Discuss Marketing
               </a>
             </div>
           </div>
@@ -342,12 +346,10 @@ export default function MarketingPage() {
                 </ul>
               </div>
               <a
-                href={CALENDLY_URL}
-                target="_blank"
-                rel="noreferrer"
+                href="/contact?need=marketing"
                 className="cta-pulse-outline inline-flex shrink-0 items-center rounded-full border border-white/10 px-5 py-2.5 text-sm text-[var(--foreground)] transition hover:border-white/20 hover:bg-white/5"
               >
-                Book a Call
+                Discuss Marketing
               </a>
             </div>
           </div>

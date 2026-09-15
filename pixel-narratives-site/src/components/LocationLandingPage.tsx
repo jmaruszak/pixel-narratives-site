@@ -8,18 +8,14 @@ import {
 } from "../lib/businessLocation";
 import { JsonLd, buildLocationPageGraph } from "../lib/schema";
 import type { LocationLandingPage } from "../lib/locationLandingPages";
-import { WORK_PROJECTS } from "../lib/siteContent";
+import { IMPLEMENTATION_WORK_PROJECTS } from "../lib/siteContent";
 import { WEB_INTEL_PAGE_TOOL_URL } from "../lib/webIntelligence";
 
 const WORK_SUMMARIES: Record<string, string> = {
   "Implementation Assessment":
     "We mapped workflows, bottlenecks, and follow-up for a business that needed a clear picture before buying more tools, then wrote a scoped plan with quick wins and what to build next.",
-  "Custom CRM":
-    "We built a CRM around how a business already works so leads, follow-up, and customer notes lived in one place instead of inboxes and spreadsheets.",
   "Social Media Agency Dashboard":
     "We helped a social media agency managing dozens of client accounts centralize client information and improve its internal workflows.",
-  "Lawn Care Productivity App":
-    "We built a productivity app for a lawn care business that had been running the day from texts, notes, and memory, so crews and owners could see the day's work in one place.",
 };
 
 const IMPLEMENTATION_EXAMPLES = [
@@ -38,12 +34,12 @@ const IMPLEMENTATION_EXAMPLES = [
 
 const CONSULTING_ITEMS = [
   "AI opportunity identification",
-  "AI + Automation Assessment / readiness",
+  "AI Readiness Assessment",
   "Workflow and process analysis",
   "Tool selection",
   "Implementation roadmaps",
   "Responsible AI guidance",
-  "Fractional Chief AI Officer support",
+  "Ongoing AI leadership",
 ] as const;
 
 function Section({
@@ -125,7 +121,7 @@ export default function LocationLandingPageView({
                 href="/contact"
                 className="inline-flex items-center rounded-full border border-white/10 bg-[var(--foreground)] px-6 py-3 text-sm font-medium text-black transition hover:opacity-90"
               >
-                Book a call
+                Start a Conversation
               </Link>
               <a
                 href={WEB_INTEL_PAGE_TOOL_URL}
@@ -139,7 +135,7 @@ export default function LocationLandingPageView({
                 href="/ai-readiness-assessment"
                 className="inline-flex items-center rounded-full border border-white/10 px-6 py-3 text-sm text-[var(--foreground)] transition hover:bg-white/5"
               >
-                AI + Automation Assessment
+                AI Readiness Assessment
               </Link>
             </div>
           </div>
@@ -161,7 +157,7 @@ export default function LocationLandingPageView({
             href="/automation"
             className="text-[var(--foreground)] transition hover:opacity-80"
           >
-            Automation + Implementation
+            Implementation
           </Link>{" "}
           is the primary work.
         </p>
@@ -193,6 +189,11 @@ export default function LocationLandingPageView({
                 <h3 className="mt-3 text-2xl leading-snug md:text-3xl">
                   {pillar.headline}
                 </h3>
+                {pillar.href === "/automation" ? (
+                  <p className="mt-2 text-sm uppercase tracking-[0.18em] text-[var(--muted)]">
+                    AI + Automation + Business Systems
+                  </p>
+                ) : null}
                 <p className="mt-3 text-sm font-medium text-[var(--foreground)]">
                   {pillar.outcome}
                 </p>
@@ -226,7 +227,7 @@ export default function LocationLandingPageView({
             href="/ai-readiness-assessment"
             className="text-[var(--foreground)] transition hover:opacity-80"
           >
-            AI + Automation Assessment
+            AI Readiness Assessment
           </Link>{" "}
           if you want a clearer picture before a call. See also{" "}
           <Link
@@ -255,7 +256,7 @@ export default function LocationLandingPageView({
             href="/automation"
             className="text-[var(--foreground)] transition hover:opacity-80"
           >
-            Automation + Implementation
+            Implementation
           </Link>{" "}
           is where most engagements live.{" "}
           <Link
@@ -297,15 +298,15 @@ export default function LocationLandingPageView({
           <p key={paragraph}>{paragraph}</p>
         ))}
         <p>
-          Fractional Chief AI Officer support includes strategy, prioritization,
-          and implementation leadership. Details live on the{" "}
+          Ongoing AI leadership includes strategy, prioritization, and
+          implementation. Details live on the{" "}
           <Link
             href="/automation"
             className="text-[var(--foreground)] transition hover:opacity-80"
           >
-            Automation + Implementation
+            Implementation
           </Link>{" "}
-          page, including Fractional CAIO engagement options.
+          page, including Fractional CAIO as a named option.
         </p>
       </Section>
 
@@ -351,7 +352,7 @@ export default function LocationLandingPageView({
             </p>
           </div>
           <div className="mt-10 grid gap-6 md:grid-cols-2">
-            {WORK_PROJECTS.map((project) => (
+            {IMPLEMENTATION_WORK_PROJECTS.map((project) => (
               <article
                 key={project.title}
                 className="rounded-[28px] border border-white/8 bg-white/[0.02] p-8"
@@ -442,10 +443,10 @@ export default function LocationLandingPageView({
         eyebrow="Next Step"
         headline={page.ctaHeadline}
         body={page.ctaBody}
-        primaryAction={{ href: "/contact", label: "Start the Conversation" }}
+        primaryAction={{ href: "/contact", label: "Start a Conversation" }}
         secondaryAction={{
           href: "/ai-readiness-assessment",
-          label: "AI + Automation Assessment",
+          label: "AI Readiness Assessment",
         }}
       />
       <Footer />

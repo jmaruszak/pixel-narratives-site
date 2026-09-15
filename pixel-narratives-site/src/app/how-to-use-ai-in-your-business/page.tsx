@@ -214,7 +214,7 @@ export default function HowToUseAiInYourBusinessPage() {
                   href="/contact?need=automation"
                   className="inline-flex items-center rounded-full border border-white/10 bg-[var(--foreground)] px-6 py-3 text-sm font-medium text-black transition hover:opacity-90"
                 >
-                  Talk About Automation
+                  Discuss a Project
                 </a>
                 <a
                   href="/training"

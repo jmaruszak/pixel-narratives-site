@@ -19,7 +19,7 @@ export default function WebMcpTools() {
     modelContext.registerTool({
       name: "getServiceInfo",
       description:
-        "Return structured information about Pixel Narratives services: automation and implementation, training, websites and online visibility, marketing, and the optional AI + Automation Assessment.",
+        "Return structured information about Pixel Narratives services: implementation (AI, automation, and business systems), training, websites and online visibility, marketing, and the optional AI Readiness Assessment.",
       inputSchema: { type: "object", properties: {} },
       execute: async () => ({
         content: [
@@ -32,8 +32,9 @@ export default function WebMcpTools() {
                 site: SITE_URL,
                 offers: {
                   automation: {
+                    name: "Implementation",
                     summary:
-                      "Turn repetitive work into better systems: workflows, CRM, scheduling, reporting, and internal tools.",
+                      "We build better business systems using AI, automation, and modern software. Sometimes that means automating the work. Sometimes it means giving the team a better way to do it.",
                     url: `${SITE_URL}/automation`,
                     tiers: [
                       {
@@ -55,10 +56,10 @@ export default function WebMcpTools() {
                           "Pixel Narratives builds the automations, integrations, workflows, or internal tools.",
                       },
                       {
-                        name: "Fractional Chief AI Officer",
+                        name: "Ongoing AI leadership",
                         price: "Starting at $6,250/month",
                         description:
-                          "Ongoing AI strategy and implementation leadership. Not a more expensive version of Guided Implementation.",
+                          "Fractional CAIO: AI strategy and implementation leadership. Not a more expensive version of Guided Implementation.",
                       },
                     ],
                   },
@@ -79,6 +80,7 @@ export default function WebMcpTools() {
                     url: `${SITE_URL}/marketing`,
                   },
                   aiAutomationAssessment: {
+                    name: "AI Readiness Assessment",
                     summary:
                       "Optional 10-question self-assessment with optional Deep Dive snapshot. Not the default next step.",
                     url: `${SITE_URL}/ai-readiness-assessment`,
@@ -96,7 +98,7 @@ export default function WebMcpTools() {
     modelContext.registerTool({
       name: "bookDiscoveryCall",
       description:
-        "Get the Calendly URL to schedule a Zoom discovery call with Pixel Narratives about automation, training, websites, or marketing.",
+        "Get the Calendly URL to schedule a Zoom discovery call with Pixel Narratives about implementation, training, websites, or marketing.",
       inputSchema: {
         type: "object",
         properties: {

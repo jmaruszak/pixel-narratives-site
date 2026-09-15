@@ -45,9 +45,9 @@ export default function Footer() {
         <div className="max-w-sm sm:col-span-2 lg:col-span-1">
           <p>© {new Date().getFullYear()} Pixel Narratives</p>
           <p className="mt-3 max-w-xs leading-relaxed">
-            Pixel Narratives helps businesses save time, win more customers, and
-            get more done through automation, implementation, training, online
-            visibility, and marketing.
+            Pixel Narratives builds better ways to work. Implementation,
+            training, websites, and marketing that help businesses save time,
+            win more customers, and get more done.
           </p>
           <p className="mt-3 max-w-xs leading-relaxed">
             Madison, Mississippi.{" "}
@@ -78,12 +78,10 @@ export default function Footer() {
           </a>
           <div className="mt-5">
             <a
-              href="https://calendly.com/pixelnarratives"
-              target="_blank"
-              rel="noreferrer"
+              href="/contact"
               className="inline-flex items-center rounded-full border border-white/10 px-4 py-2 text-xs text-[var(--foreground)] transition hover:bg-white/5"
             >
-              Book a Zoom Call
+              Start a Conversation
             </a>
           </div>
         </div>
