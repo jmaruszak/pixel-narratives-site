@@ -87,7 +87,7 @@ export default function AutomationPage() {
         contentScrim
         imageSrc="/images/int-cinematic.jpg"
         imageAlt="Cinematic implementation hero image"
-        title="Still Doing That by Hand?"
+        title="This Should Be Easier."
         subtitle="Implementation"
       >
         <p className="hero-entrance hero-entrance-delay-1 mt-4 text-sm uppercase tracking-[0.18em] text-white/55">

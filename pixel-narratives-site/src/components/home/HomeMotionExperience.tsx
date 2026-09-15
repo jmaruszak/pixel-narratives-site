@@ -74,13 +74,7 @@ export default function HomeMotionExperience() {
     <>
       <HomeHero />
       <ServiceEditorial
-        personalityHeadline={
-          <>
-            Still doing that
-            <br />
-            by hand?
-          </>
-        }
+        personalityHeadline="This Should Be Easier."
         serviceName={automation.name}
         supportLine="AI + Automation + Business Systems"
         explanation="We build better business systems using AI, automation, and modern software. Sometimes that means automating the work. Sometimes it means giving your team a much better way to do it."
