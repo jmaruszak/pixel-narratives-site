@@ -93,17 +93,6 @@ export default function AutomationPage() {
         <p className="hero-entrance hero-entrance-delay-1 mt-4 text-sm uppercase tracking-[0.18em] text-white/55">
           AI + Automation + Business Systems
         </p>
-        <div className="hero-entrance hero-entrance-delay-1 mt-8 space-y-5 text-lg leading-relaxed text-white/70 md:text-xl">
-          <p>
-            We build better business systems using AI, automation, and modern
-            software. Sometimes that means automating the work. Sometimes it
-            means assisting the people who do it. Sometimes it means building
-            or connecting a better tool.
-          </p>
-          <p className="text-white/90">
-            The goal isn&apos;t automation. The goal is a better way to work.
-          </p>
-        </div>
         <div className="hero-entrance hero-entrance-delay-2 mt-10 flex flex-wrap gap-4">
           <a
             href="/contact?need=automation"
@@ -145,10 +134,6 @@ export default function AutomationPage() {
             <h2 className="mt-5 max-w-3xl text-3xl leading-none md:text-5xl">
               Concrete systems. Plain English.
             </h2>
-            <p className="pn-lede mt-6">
-              Implementation is the service. Automation is one of the tools.
-              These are the kinds of better ways we build.
-            </p>
           </div>
           <div className="mt-14 divide-y divide-white/10 border-y border-white/10">
             {EXAMPLES.map((example) => (
@@ -355,8 +340,7 @@ export default function AutomationPage() {
               >
                 Training
               </a>{" "}
-              teaches the team to use them. Same problem, different part of the
-              work.
+              teaches the team to use them.
             </p>
           </div>
         </div>

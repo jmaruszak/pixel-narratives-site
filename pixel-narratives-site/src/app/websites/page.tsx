@@ -92,13 +92,6 @@ export default function WebsitesPage() {
         title="If People Can't Find You, the Rest Doesn't Matter Much."
         subtitle="Websites + Online Visibility"
       >
-        <div className="hero-entrance hero-entrance-delay-1 mt-8 max-w-2xl text-lg leading-relaxed text-white/70 md:text-xl">
-          <p>
-            We build and improve websites, strengthen search visibility, and
-            help businesses show up where customers are looking. Google, local
-            search, and AI search included.
-          </p>
-        </div>
         <div className="hero-entrance hero-entrance-delay-2 mt-10 flex flex-wrap gap-4">
           <a
             href="/contact?need=websites"

@@ -56,6 +56,15 @@ export default function AboutPage() {
             There&apos;s Probably a Better Way.
           </h1>
         </div>
+        <div className="mt-12 overflow-hidden rounded-[28px]">
+          <img
+            src="/images/home-hero.png"
+            alt="Silhouettes in a glass office looking out over a city, overlaid with a network of connections"
+            width={1024}
+            height={438}
+            className="aspect-[1024/438] h-auto w-full object-cover"
+          />
+        </div>
       </section>
 
       <section className="border-t border-white/8">

@@ -101,15 +101,6 @@ export default function MarketingPage() {
         title="Being Good Isn't the Same as Being Noticed."
         subtitle="Marketing"
       >
-        <div className="hero-entrance hero-entrance-delay-1 mt-8 max-w-2xl space-y-4 text-lg leading-relaxed text-white/70 md:text-xl">
-          <p>
-            Campaigns, advertising, video, content, and creative designed to
-            reach the right people and generate opportunity.
-          </p>
-          <p className="text-base md:text-lg">
-            AI makes us faster. Taste still matters.
-          </p>
-        </div>
         <div className="hero-entrance hero-entrance-delay-2 mt-10 flex flex-wrap gap-4">
           <a
             href="#attention-pulse-brief"
@@ -278,8 +269,7 @@ export default function MarketingPage() {
           <div className="mt-10 rounded-[24px] border border-white/8 bg-white/[0.02] p-8 md:p-10">
             <p className="max-w-3xl text-base leading-relaxed text-[var(--muted)] md:text-lg">
               For businesses that want Pixel Narratives to stay on as a creative
-              partner and manage marketing campaigns. Visibility work helps
-              customers find you. Attention keeps the business noticed.
+              partner and manage marketing campaigns.
             </p>
             <p className="mt-4 max-w-3xl text-base leading-relaxed text-[var(--muted)] md:text-lg">
               Media is not included. Client media spend is separate and billed

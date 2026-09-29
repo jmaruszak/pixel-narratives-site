@@ -6,13 +6,33 @@ import { SERVICE_LINE_SUMMARY, SERVICES } from "../../lib/services";
 
 function HomeHero() {
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative overflow-hidden bg-black">
       <img
-        src="/images/home-hero.png"
+        src="/images/home-hero-poster.jpg"
         alt=""
-        className="pointer-events-none absolute inset-0 h-full w-full object-cover"
+        width={1920}
+        height={824}
+        fetchPriority="high"
+        decoding="async"
+        className="pointer-events-none absolute inset-0 h-full w-full object-cover object-left"
         aria-hidden
       />
+      <video
+        className="pointer-events-none absolute inset-0 hidden h-full w-full object-cover object-left md:motion-safe:block"
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="none"
+        poster="/images/home-hero-poster.jpg"
+        aria-hidden
+      >
+        <source
+          src="/videos/pixel-video-header.mp4"
+          type="video/mp4"
+          media="(min-width: 768px) and (prefers-reduced-motion: no-preference)"
+        />
+      </video>
       <div
         className="pointer-events-none absolute inset-0 bg-gradient-to-r from-black/90 via-black/75 to-black/35"
         aria-hidden
@@ -31,19 +51,8 @@ function HomeHero() {
         <h1 className="hero-entrance hero-entrance-delay-1 pn-display mt-5 max-w-5xl">
           There&apos;s probably a better way to do this.
         </h1>
-        <p className="hero-entrance hero-entrance-delay-2 mt-8 max-w-2xl text-lg leading-relaxed text-white/80 md:text-xl">
-          Your business shouldn&apos;t be held together by repetitive work,
-          missed follow-ups, a website nobody finds, and marketing you never
-          have time to do.
-        </p>
-        <p className="hero-entrance hero-entrance-delay-2 mt-8 text-2xl leading-none md:text-4xl">
-          We build the better way.
-        </p>
-        <p className="hero-entrance hero-entrance-delay-2 mt-4 max-w-3xl text-sm uppercase tracking-[0.18em] text-[var(--foreground)] md:text-base md:tracking-[0.22em]">
+        <p className="hero-entrance hero-entrance-delay-2 mt-8 max-w-3xl text-sm uppercase tracking-[0.18em] text-[var(--foreground)] md:text-base md:tracking-[0.22em]">
           {SERVICE_LINE_SUMMARY}
-        </p>
-        <p className="hero-entrance hero-entrance-delay-2 mt-3 text-base text-[var(--muted)] md:text-lg">
-          Save time. Win more customers. Get more done.
         </p>
         <div className="hero-entrance hero-entrance-delay-2 mt-10 flex flex-wrap gap-4">
           <a
@@ -77,7 +86,7 @@ export default function HomeMotionExperience() {
         personalityHeadline="This Should Be Easier."
         serviceName={automation.name}
         supportLine="AI + Automation + Business Systems"
-        explanation="We build better business systems using AI, automation, and modern software. Sometimes that means automating the work. Sometimes it means giving your team a much better way to do it."
+        explanation="We manage the process of implementing AI into your existing business systems. We introduce new systems, technology and automations when and if value can be delivered and measured."
         examples={[
           "CRM and lead follow-up",
           "Dashboards and reporting",
@@ -108,7 +117,7 @@ export default function HomeMotionExperience() {
           </>
         }
         serviceName={training.name}
-        explanation="Practical workshops and training built around the work your team actually does. We teach people how to use AI in their jobs."
+        explanation="Practical workshops and training built around the work your team does."
         examples={[
           "Leadership, department, and role-specific sessions",
           "Hands-on work on real tasks from the business",
@@ -127,7 +136,7 @@ export default function HomeMotionExperience() {
           </>
         }
         serviceName={websites.name}
-        explanation="We build and improve websites, strengthen search visibility, and help businesses show up where customers are looking. Google, local search, and AI search included."
+        explanation="We build and improve websites, strengthen search visibility, and help businesses show up where customers are looking."
         examples={[
           "Website design, development, and landing pages",
           "SEO, local search, and Google Business Profile",
@@ -147,7 +156,7 @@ export default function HomeMotionExperience() {
           </>
         }
         serviceName={marketing.name}
-        explanation="Campaigns, advertising, video, content, and creative designed to reach the right people and generate opportunity. AI makes us faster. Taste still matters."
+        explanation="Campaigns, advertising, video, content, and creative designed to reach the right people and generate opportunity. We utilize an AI-native process to deliver faster results and more iterations."
         examples={[
           "Campaigns, paid advertising, and lead generation",
           "Video, commercials, and social content",

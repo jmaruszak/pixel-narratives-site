@@ -52,6 +52,10 @@ const TEAM_SESSIONS = [
     title: "HR + People",
     body: "Job descriptions. Interview preparation. Onboarding materials. Training documentation. Internal communication. Policy research and organization. Employee FAQs. Summarizing appropriate non-sensitive information. Repeatable administrative workflows. Employment decisions stay with people.",
   },
+  {
+    title: "Marketing",
+    body: "Campaign briefs and creative review. Audience and competitor research. Drafting ads, social posts, and content. Turning performance notes into the next version. Organizing messages and assets. Repeatable content workflows the team can keep using.",
+  },
 ] as const;
 
 const WORKSHOP_STEPS = [
@@ -162,15 +166,6 @@ export default function TrainingPage() {
         title="Your Team Has ChatGPT. Now What?"
         subtitle="Training"
       >
-        <div className="hero-entrance hero-entrance-delay-1 mt-8 max-w-2xl space-y-4 text-lg leading-relaxed text-white/70 md:text-xl">
-          <p>
-            Practical AI training built around the work your team already does.
-          </p>
-          <p className="text-base md:text-lg">
-            We learn how your teams work, identify useful places for AI, and
-            teach your team the skills relevant to their role.
-          </p>
-        </div>
         <div className="hero-entrance hero-entrance-delay-2 mt-10 flex flex-wrap gap-4">
           <a
             href="#workshop-inquiry"
@@ -248,12 +243,10 @@ export default function TrainingPage() {
               Built around your teams
             </p>
             <h2 className="mt-4 text-4xl leading-none md:text-6xl">
-              Different teams use AI differently.
+              The value of AI is Different for Each Team.
             </h2>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-[var(--muted)] md:text-xl">
-              Leadership, sales, operations, HR, and other departments have
-              different days. The workshop is shaped around the people in the
-              room.
+              We shape workshops around the needs of your team.
             </p>
           </div>
           <div className="mt-12 grid gap-6 md:grid-cols-2">
@@ -270,9 +263,8 @@ export default function TrainingPage() {
             ))}
           </div>
           <p className="mt-8 max-w-3xl text-base leading-relaxed text-[var(--muted)] md:text-lg">
-            Workshops can also be built around finance, marketing, customer
-            service, professional services, administrative teams, or project
-            management. The engagement is shaped around the company.
+            Workshops can also be built around other roles, we focus on the
+            specific needs of your organization.
           </p>
         </div>
       </section>
