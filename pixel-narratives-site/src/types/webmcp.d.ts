@@ -30,17 +30,21 @@ declare global {
 }
 
 declare module "react" {
+  // Generic parameter retained to match React's declaration-merging signature.
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   interface FormHTMLAttributes<T> {
     toolname?: string;
     tooldescription?: string;
     toolautosubmit?: boolean | "";
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   interface InputHTMLAttributes<T> {
     toolparamdescription?: string;
     toolparamtitle?: string;
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   interface TextareaHTMLAttributes<T> {
     toolparamdescription?: string;
     toolparamtitle?: string;

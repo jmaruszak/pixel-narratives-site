@@ -121,6 +121,7 @@ export function AttentionPulseBriefForm() {
             id="attention-business"
             name="businessName"
             type="text"
+            autoComplete="organization"
             required
             {...webMcpParam({ toolparamdescription: "Business or company name" })}
             className={fieldClassName}
@@ -132,6 +133,7 @@ export function AttentionPulseBriefForm() {
             id="attention-website"
             name="website"
             type="text"
+            autoComplete="url"
             inputMode="url"
             placeholder="yourwebsite.com"
             {...webMcpParam({ toolparamdescription: "Business website URL" })}
@@ -144,6 +146,7 @@ export function AttentionPulseBriefForm() {
             id="attention-name"
             name="name"
             type="text"
+            autoComplete="name"
             required
             {...webMcpParam({ toolparamdescription: "Contact name" })}
             className={fieldClassName}
@@ -155,6 +158,7 @@ export function AttentionPulseBriefForm() {
             id="attention-email"
             name="email"
             type="email"
+            autoComplete="email"
             required
             {...webMcpParam({ toolparamdescription: "Contact email" })}
             className={fieldClassName}
@@ -166,6 +170,7 @@ export function AttentionPulseBriefForm() {
             id="attention-phone"
             name="phone"
             type="tel"
+            autoComplete="tel"
             {...webMcpParam({ toolparamdescription: "Contact phone number" })}
             className={fieldClassName}
           />
@@ -373,6 +378,7 @@ export function CorporateWorkshopInquiryForm() {
             id="workshop-company"
             name="company"
             type="text"
+            autoComplete="organization"
             required
             {...webMcpParam({ toolparamdescription: "Company name" })}
             className={fieldClassName}
@@ -384,6 +390,7 @@ export function CorporateWorkshopInquiryForm() {
             id="workshop-website"
             name="website"
             type="text"
+            autoComplete="url"
             inputMode="url"
             placeholder="yourwebsite.com"
             {...webMcpParam({ toolparamdescription: "Company website URL" })}
@@ -396,6 +403,7 @@ export function CorporateWorkshopInquiryForm() {
             id="workshop-name"
             name="name"
             type="text"
+            autoComplete="name"
             required
             {...webMcpParam({ toolparamdescription: "Contact name" })}
             className={fieldClassName}
@@ -418,6 +426,7 @@ export function CorporateWorkshopInquiryForm() {
             id="workshop-email"
             name="email"
             type="email"
+            autoComplete="email"
             required
             {...webMcpParam({ toolparamdescription: "Contact email" })}
             className={fieldClassName}
@@ -429,6 +438,7 @@ export function CorporateWorkshopInquiryForm() {
             id="workshop-phone"
             name="phone"
             type="tel"
+            autoComplete="tel"
             {...webMcpParam({ toolparamdescription: "Contact phone number" })}
             className={fieldClassName}
           />

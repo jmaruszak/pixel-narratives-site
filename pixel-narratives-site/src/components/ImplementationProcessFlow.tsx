@@ -83,7 +83,7 @@ export default function ImplementationProcessFlow() {
       ref={sectionRef}
       className={[
         "il-process border-t border-white/8",
-        !reducedMotion && "min-h-[190vh]",
+        !reducedMotion && "min-h-[190vh] max-md:min-h-0",
       ]
         .filter(Boolean)
         .join(" ")}
@@ -91,8 +91,8 @@ export default function ImplementationProcessFlow() {
     >
       <div
         className={[
-          "il-process-sticky flex min-h-screen items-center",
-          !reducedMotion && "sticky top-0",
+          "il-process-sticky flex min-h-screen items-center max-md:min-h-0",
+          !reducedMotion && "sticky top-0 max-md:static",
         ]
           .filter(Boolean)
           .join(" ")}

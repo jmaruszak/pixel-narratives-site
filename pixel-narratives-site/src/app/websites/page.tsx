@@ -1,3 +1,4 @@
+import CarePricing from "../../components/CarePricing";
 import CinematicPageHero from "../../components/CinematicPageHero";
 import Footer from "../../components/Footer";
 import Nav from "../../components/Nav";
@@ -50,7 +51,7 @@ export default function WebsitesPage() {
             path: "/websites",
             name: "Websites + Online Visibility",
             description:
-              "Website + Visibility Build and Visibility Sprint: a modern digital foundation to be understood and discovered, or focused optimization of an existing site. No ranking or AI-answer guarantees.",
+              "Website Starter at $2,500, Website + Visibility Build starting at $7,500, Premium Build from $15,000, Visibility Sprint starting at $1,200/month, and Premium Visibility at $2,500/month. No ranking guarantees.",
             serviceType: "Website Development and Online Visibility",
           }),
           {
@@ -142,6 +143,16 @@ export default function WebsitesPage() {
             <h2 className="mt-4 text-3xl leading-none md:text-4xl">
               Build a foundation, or improve the one you have
             </h2>
+            <p className="mt-4 text-base leading-relaxed text-[var(--muted)]">
+              A five-page{" "}
+              <a
+                href="/starting-small"
+                className="text-[var(--foreground)] transition hover:opacity-80"
+              >
+                Website Starter is $2,500
+              </a>
+              . The offers below are for a larger site or ongoing visibility.
+            </p>
           </div>
 
           <div className="mt-12 grid gap-8 lg:grid-cols-2 lg:items-start">
@@ -174,9 +185,38 @@ export default function WebsitesPage() {
               </ul>
               <p className="mt-6 text-sm leading-relaxed text-[var(--muted)]">
                 Custom applications, portals, ecommerce, calculators, and
-                substantial integrations are scoped separately. We do not
+                substantial integrations are a Premium Build. We do not
                 guarantee rankings or appearance in AI answers.
               </p>
+              <div className="mt-8">
+                <a
+                  href="/contact?need=websites"
+                  className="cta-pulse-outline inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm text-[var(--foreground)] transition hover:border-white/20 hover:bg-white/5"
+                >
+                  Improve My Website
+                </a>
+              </div>
+            </div>
+
+            <div className="flex flex-col rounded-[24px] border border-white/8 bg-white/[0.02] p-8 lg:p-10">
+              <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
+                More site
+              </p>
+              <h3 className="mt-4 text-2xl leading-none md:text-3xl">
+                Premium Build
+              </h3>
+              <p className="mt-4 text-sm uppercase tracking-[0.25em] text-[var(--muted)]">
+                $15,000 to $20,000
+              </p>
+              <p className="mt-6 text-base leading-relaxed text-[var(--muted)]">
+                For a site that needs more than a standard build.
+              </p>
+              <ul className="mt-8 flex-1 space-y-2 text-sm text-[var(--foreground)] md:text-base">
+                <li>Typically 20 or more pages</li>
+                <li>Custom functionality, portals, or ecommerce</li>
+                <li>Substantial integrations</li>
+                <li>A more complex content structure</li>
+              </ul>
               <div className="mt-8">
                 <a
                   href="/contact?need=websites"
@@ -222,9 +262,42 @@ export default function WebsitesPage() {
                 </a>
               </div>
             </div>
+
+            <div className="flex flex-col rounded-[24px] border border-white/8 bg-white/[0.02] p-8 lg:p-10">
+              <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
+                Larger monthly scope
+              </p>
+              <h3 className="mt-4 text-2xl leading-none md:text-3xl">
+                Premium Visibility
+              </h3>
+              <p className="mt-4 text-sm uppercase tracking-[0.25em] text-[var(--muted)]">
+                $2,500/month
+              </p>
+              <p className="mt-6 text-base leading-relaxed text-[var(--muted)]">
+                Ongoing visibility work with more room each month than a
+                Visibility Sprint.
+              </p>
+              <ul className="mt-8 flex-1 space-y-2 text-sm text-[var(--foreground)] md:text-base">
+                <li>Visibility Sprint work</li>
+                <li>Monthly content</li>
+                <li>Link-building work</li>
+                <li>AI-search optimization</li>
+                <li>Quarterly strategy review</li>
+              </ul>
+              <div className="mt-8">
+                <a
+                  href="/contact?need=websites"
+                  className="cta-pulse-outline inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm text-[var(--foreground)] transition hover:border-white/20 hover:bg-white/5"
+                >
+                  Improve My Website
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
+
+      <CarePricing level="custom" />
 
       <section className="border-t border-white/8">
         <div className="mx-auto w-full max-w-7xl px-6 pn-section md:px-10">

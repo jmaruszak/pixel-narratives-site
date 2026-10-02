@@ -1,3 +1,4 @@
+import CarePricing from "../../components/CarePricing";
 import CinematicPageHero from "../../components/CinematicPageHero";
 import Footer from "../../components/Footer";
 import ImplementationProcessFlow from "../../components/ImplementationProcessFlow";
@@ -175,6 +176,17 @@ export default function AutomationPage() {
             <h2 className="mt-4 text-3xl leading-none md:text-4xl">
               A clear path from assessment to implementation
             </h2>
+            <p className="mt-4 text-base leading-relaxed text-[var(--muted)]">
+              One workflow can start at{" "}
+              <a
+                href="/starting-small"
+                className="text-[var(--foreground)] transition hover:opacity-80"
+              >
+                $2,500
+              </a>
+              . The offers below are for a wider look, a build, or ongoing
+              leadership.
+            </p>
           </div>
 
           <div className="mt-12 grid gap-8 md:grid-cols-2 lg:items-start">
@@ -183,31 +195,30 @@ export default function AutomationPage() {
                 Optional first step
               </p>
               <h3 className="mt-4 text-2xl leading-none md:text-3xl">
-                Implementation Assessment
+                AI & Automation Assessment
               </h3>
               <p className="mt-4 text-sm uppercase tracking-[0.25em] text-[var(--muted)]">
                 Starting at $1,250
               </p>
               <p className="mt-6 text-base leading-relaxed text-[var(--muted)]">
-                A focused look at how work moves through the business:
-                bottlenecks, tools, follow-up, and what should happen next.
-                From there, the right path may be Guided Implementation, a
-                custom project, or ongoing AI leadership.
+                Find where AI and automation will actually help before you
+                spend money building. From there, the next step may be a quick
+                win, Guided Implementation, a custom project, or ongoing
+                leadership.
               </p>
               <ul className="mt-8 flex-1 space-y-2 text-sm text-[var(--foreground)] md:text-base">
-                <li>Workflow and bottleneck review</li>
-                <li>Automation opportunity mapping</li>
+                <li>Workflow review</li>
+                <li>Bottleneck map</li>
                 <li>Tool recommendations</li>
-                <li>Quick-win list</li>
-                <li>Scoped implementation roadmap</li>
-                <li>30 to 60 day priority plan</li>
+                <li>Quick-win opportunities</li>
+                <li>30 to 60 day implementation plan</li>
               </ul>
               <div className="mt-8">
                 <a
                   href="/contact?need=automation"
                   className="cta-pulse-outline inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm text-[var(--foreground)] transition hover:border-white/20 hover:bg-white/5"
                 >
-                  Discuss a Project
+                  Start With an Assessment
                 </a>
                 <p className="mt-4 text-sm leading-relaxed text-[var(--muted)]">
                   Prefer a self-serve starting point?{" "}
@@ -232,11 +243,9 @@ export default function AutomationPage() {
                 Starting at $1,500/month · 3-month minimum
               </p>
               <p className="mt-6 text-base leading-relaxed text-[var(--muted)]">
-                For business owners and internal leads who want expert
-                guidance while implementing AI themselves. Two working sessions
-                each month help you prioritize opportunities, choose tools,
-                build workflows, troubleshoot implementation and keep progress
-                moving.
+                You build. We guide. Two working sessions a month for
+                prioritization, tool choice, architecture, and troubleshooting.
+                Built for a team that wants to do the work internally.
               </p>
               <ul className="mt-8 flex-1 space-y-2 text-sm text-[var(--foreground)] md:text-base">
                 <li>Two virtual working sessions per month</li>
@@ -266,10 +275,16 @@ export default function AutomationPage() {
                 Starting at $5,000 · Custom scoped
               </p>
               <p className="mt-6 text-base leading-relaxed text-[var(--muted)]">
-                Pixel Narratives builds the better way to do the work. That can
-                mean automation, an integration, a dashboard, an internal tool,
-                or connecting systems you already have. Scope follows the
-                complexity of the work.
+                We build it. Automations, integrations, dashboards, internal
+                tools, and AI workflows. Scope and price follow the work. One
+                finished workflow is an{" "}
+                <a
+                  href="/starting-small"
+                  className="text-[var(--foreground)] transition hover:opacity-80"
+                >
+                  Implementation Quick Win at $2,500
+                </a>
+                .
               </p>
               <ul className="mt-8 flex-1 space-y-2 text-sm text-[var(--foreground)] md:text-base">
                 <li>Workflow automation and CRM implementation</li>
@@ -288,31 +303,44 @@ export default function AutomationPage() {
               </div>
             </div>
 
-            <div className="flex flex-col rounded-[24px] border border-white/8 bg-white/[0.02] p-8 lg:p-10">
+            <div
+              id="fractional-caio"
+              className="flex scroll-mt-24 flex-col rounded-[24px] border border-white/8 bg-white/[0.02] p-8 lg:p-10 md:col-span-2"
+            >
               <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
                 We help lead it
               </p>
               <h3 className="mt-4 text-2xl leading-none md:text-3xl">
-                Ongoing AI leadership
-              </h3>
-              <p className="mt-2 text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
                 Fractional CAIO
-              </p>
+              </h3>
               <p className="mt-4 text-sm uppercase tracking-[0.25em] text-[var(--muted)]">
-                Starting at $6,250/month
+                Pricing based on the size and needs of your organization
               </p>
-              <p className="mt-6 text-base leading-relaxed text-[var(--muted)]">
-                Ongoing AI leadership for companies that need strategy,
-                prioritization, and implementation oversight without a
-                full-time executive hire.
+              <p className="mt-6 max-w-3xl text-base font-medium leading-relaxed text-[var(--foreground)] md:text-lg">
+                AI is becoming part of the business. Someone needs to own where
+                it goes next.
+              </p>
+              <p className="mt-4 max-w-3xl text-base leading-relaxed text-[var(--muted)] md:text-lg">
+                We become part of your team, working alongside leadership and
+                employees to identify where AI can create meaningful value,
+                decide what&apos;s worth pursuing, and help put those ideas to
+                work.
               </p>
               <ul className="mt-8 flex-1 space-y-2 text-sm text-[var(--foreground)] md:text-base">
-                <li>AI strategy and roadmap leadership</li>
-                <li>Prioritization and opportunity identification</li>
-                <li>Implementation oversight</li>
-                <li>Vendor and tool decisions</li>
-                <li>Executive guidance on organizational adoption</li>
+                <li>Identify and prioritize opportunities across the business</li>
+                <li>Build and maintain your AI roadmap</li>
+                <li>Work directly with teams to implement solutions</li>
+                <li>Evaluate tools, vendors, and emerging technology</li>
+                <li>Prototype and test new ideas</li>
+                <li>Guide responsible adoption across the organization</li>
+                <li>Keep initiatives moving from idea to working solution</li>
               </ul>
+              <p className="mt-8 max-w-3xl text-base leading-relaxed text-[var(--muted)] md:text-lg">
+                The engagement depends on the size of your organization, the
+                number of teams involved, and the implementation support
+                required. Most engagements range from $5,000 to $15,000 per
+                month.
+              </p>
               <div className="mt-8">
                 <a
                   href="/contact?need=automation"
@@ -369,7 +397,8 @@ export default function AutomationPage() {
         </div>
       </section>
 
-      <PricingNote />
+      <CarePricing level="custom" context="implementation" />
+      <PricingNote variant="implementation" />
       <PageBottomCta {...DESTINATION_CTAS.automation} />
       <Footer />
     </main>

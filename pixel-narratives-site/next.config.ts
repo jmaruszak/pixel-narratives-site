@@ -34,6 +34,31 @@ const nextConfig: NextConfig = {
         destination: "/sample/sample-implementation-assessment.pdf",
         permanent: true,
       },
+      {
+        source: "/mississippi-ai-studio",
+        destination: "/serving-the-south",
+        permanent: true,
+      },
+      {
+        source: "/birmingham-ai-studio",
+        destination: "/serving-the-south",
+        permanent: true,
+      },
+      {
+        source: "/gulf-coast-ai-studio",
+        destination: "/serving-the-south",
+        permanent: true,
+      },
+      {
+        source: "/jacksonville-ai-studio",
+        destination: "/serving-the-south",
+        permanent: true,
+      },
+      {
+        source: "/memphis-ai-studio",
+        destination: "/serving-the-south",
+        permanent: true,
+      },
     ];
   },
   async headers() {

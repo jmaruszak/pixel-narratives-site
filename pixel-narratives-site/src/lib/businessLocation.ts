@@ -2,6 +2,8 @@ export const CONTACT_EMAIL = "hello@pixelnarratives.studio";
 export const CONTACT_PHONE = "904-524-7269";
 export const CONTACT_PHONE_TEL = "+19045247269";
 export const CALENDLY_URL = "https://calendly.com/pixelnarratives";
+export const GOOGLE_BUSINESS_PROFILE_URL =
+  "https://share.google/EpsqOBZsnrLCxNiTb";
 
 export const HEADQUARTERS = {
   locality: "Madison",
@@ -17,18 +19,18 @@ export type ServiceAreaPlace = {
 
 export const SERVICE_AREA_PRIMARY: ServiceAreaPlace[] = [
   { type: "State", name: "Mississippi" },
-  { type: "City", name: "Birmingham", region: "AL" },
-  { type: "City", name: "Mobile", region: "AL" },
-  { type: "AdministrativeArea", name: "Florida Panhandle", region: "FL" },
-  { type: "City", name: "Jacksonville", region: "FL" },
-  { type: "City", name: "Memphis", region: "TN" },
+  { type: "City", name: "Atlanta", region: "GA" },
 ];
 
 export const SERVICE_AREA_HUB_MENTIONS: ServiceAreaPlace[] = [
-  { type: "City", name: "Oxford", region: "MS" },
-  { type: "City", name: "Gulfport", region: "MS" },
-  { type: "City", name: "Nashville", region: "TN" },
-  { type: "City", name: "New Orleans", region: "LA" },
+  { type: "City", name: "Madison", region: "MS" },
+  { type: "City", name: "Ridgeland", region: "MS" },
+  { type: "City", name: "Jackson", region: "MS" },
+  { type: "City", name: "Flowood", region: "MS" },
+  { type: "City", name: "Brandon", region: "MS" },
+  { type: "City", name: "Gluckstadt", region: "MS" },
+  { type: "AdministrativeArea", name: "Jackson Metro", region: "MS" },
+  { type: "City", name: "Atlanta", region: "GA" },
 ];
 
 export const SERVICE_PILLARS = [
@@ -43,14 +45,14 @@ export const SERVICE_PILLARS = [
     eyebrow: "Use AI Better",
     headline: "Training",
     outcome: "Help your team get more done with practical AI workshops.",
-    body: "Corporate AI workshops starting at $7,500. Private training for leadership, departments, and employees around the work they already do.",
+    body: "One department is $7,500. Larger teams run $15,000 to $20,000. Multi-day engagements start at $25,000.",
     href: "/training",
   },
   {
     eyebrow: "Get Found",
     headline: "Websites + Online Visibility",
     outcome: "Help more of the right customers find you and take action.",
-    body: "Website + Visibility Build starting at $7,500, or a Visibility Sprint starting at $1,200/month with a 3-month minimum if the site already exists. Help more of the right customers find you.",
+    body: "Website Starter at $2,500. Website + Visibility Build starting at $7,500. Visibility Sprint starting at $1,200/month with a 3-month minimum.",
     href: "/websites",
   },
   {

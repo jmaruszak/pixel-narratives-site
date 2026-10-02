@@ -1,15 +1,15 @@
-import type { Metadata } from "next";
 import AiReadinessAssessment from "../../components/AiReadinessAssessment";
 import Footer from "../../components/Footer";
 import Nav from "../../components/Nav";
 import { JsonLd, buildWebPage, buildBreadcrumbs } from "../../lib/schema";
+import { buildPageMetadata } from "../../lib/siteMetadata";
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
   title: "AI Readiness Assessment | Pixel Narratives",
   description:
     "Optional AI Readiness Assessment from Pixel Narratives. See where repetitive work, follow-up, and disconnected tools are slowing your business down.",
-  alternates: { canonical: "/ai-readiness-assessment" },
-};
+  path: "/ai-readiness-assessment",
+});
 
 export default function AiReadinessAssessmentPage() {
   return (

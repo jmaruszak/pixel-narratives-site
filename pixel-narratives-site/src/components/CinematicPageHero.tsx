@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { ReactNode } from "react";
 
 type CinematicPageHeroProps = {
@@ -19,13 +20,13 @@ export default function CinematicPageHero({
 }: CinematicPageHeroProps) {
   return (
     <section className="relative overflow-hidden">
-      <img
+      <Image
         src={imageSrc}
         alt={imageAlt}
-        width={1920}
-        height={1080}
-        fetchPriority="high"
-        className="absolute inset-0 h-full w-full object-cover"
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover"
       />
       <div
         className="hero-ambient-gradient pointer-events-none absolute inset-0 z-[1]"

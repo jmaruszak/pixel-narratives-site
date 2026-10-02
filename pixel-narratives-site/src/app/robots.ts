@@ -4,32 +4,17 @@ export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
       {
-        userAgent: "*",
+        userAgent: [
+          "*",
+          "OAI-SearchBot",
+          "GPTBot",
+          "ChatGPT-User",
+          "PerplexityBot",
+          "Google-Extended",
+          "ClaudeBot",
+        ],
         allow: "/",
-      },
-      {
-        userAgent: "OAI-SearchBot",
-        allow: "/",
-      },
-      {
-        userAgent: "GPTBot",
-        allow: "/",
-      },
-      {
-        userAgent: "ChatGPT-User",
-        allow: "/",
-      },
-      {
-        userAgent: "PerplexityBot",
-        allow: "/",
-      },
-      {
-        userAgent: "Google-Extended",
-        allow: "/",
-      },
-      {
-        userAgent: "ClaudeBot",
-        allow: "/",
+        disallow: "/api/",
       },
     ],
     sitemap: "https://pixelnarratives.studio/sitemap.xml",

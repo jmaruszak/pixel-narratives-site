@@ -1,6 +1,7 @@
 "use client";
 
 import { m, type MotionValue } from "framer-motion";
+import Image from "next/image";
 
 type HomeCinematicBackdropProps = {
   introBackdropOpacity: MotionValue<number>;
@@ -51,12 +52,13 @@ export default function HomeCinematicBackdrop({
   return (
     <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden" aria-hidden>
       <m.div className="absolute inset-0" style={{ opacity: introBackdropOpacity }}>
-        <img
+        <Image
           src={INTRO_LAYER.src}
           alt=""
-          fetchPriority="high"
-          decoding="async"
-          className="h-full w-full object-cover"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
         />
         <CinematicScrim />
       </m.div>
@@ -67,12 +69,12 @@ export default function HomeCinematicBackdrop({
           className="absolute inset-0"
           style={{ opacity: chapterOpacities[index] }}
         >
-          <img
+          <Image
             src={layer.src}
             alt=""
-            loading="lazy"
-            decoding="async"
-            className="h-full w-full scale-[1.02] object-cover blur-[2px]"
+            fill
+            sizes="100vw"
+            className="scale-[1.02] object-cover blur-[2px]"
           />
           <CinematicScrim chapter />
         </m.div>

@@ -16,7 +16,7 @@ export const metadata: Metadata = buildPageMetadata({
 
 export default function Home() {
   return (
-    <main id="main-content" className="min-h-screen bg-[var(--background)] text-[var(--foreground)]">
+    <main className="min-h-screen bg-[var(--background)] text-[var(--foreground)]">
       <Nav />
       <JsonLd graph={homepageGraph()} />
       <HomeMotionExperience />

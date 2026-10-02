@@ -14,10 +14,7 @@ export const metadata = buildPageMetadata({
 
 export default function NewsPage() {
   return (
-    <main
-      id="main-content"
-      className="min-h-screen bg-[var(--background)] text-[var(--foreground)]"
-    >
+    <main className="min-h-screen bg-[var(--background)] text-[var(--foreground)]">
       <Nav />
       <JsonLd graph={buildNewsIndexGraph()} />
 

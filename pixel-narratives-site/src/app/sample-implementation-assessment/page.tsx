@@ -1,12 +1,17 @@
-import type { Metadata } from "next";
 import Footer from "../../components/Footer";
 import Nav from "../../components/Nav";
 import { JsonLd, buildWebPage, buildBreadcrumbs } from "../../lib/schema";
+import { buildPageMetadata } from "../../lib/siteMetadata";
 
-export const metadata: Metadata = {
+export const metadata = {
+  ...buildPageMetadata({
   title: "Sample Implementation Assessment | Pixel Narratives",
   description:
     "Sample Implementation Assessment preview: business analysis, quick wins, workflow improvements, and scoped projects. Full client reports include tools and implementation recommendations.",
+    path: "/sample-implementation-assessment",
+    image: "/images/int-cinematic.jpg",
+    imageAlt: "Cinematic visual for Pixel Narratives Implementation Assessment",
+  }),
   keywords: [
     "Implementation Assessment",
     "sample assessment",
@@ -15,31 +20,6 @@ export const metadata: Metadata = {
     "scoped projects",
     "automation",
   ],
-  alternates: { canonical: "/sample-implementation-assessment" },
-  openGraph: {
-    title: "Sample Implementation Assessment | Pixel Narratives",
-    description:
-      "Sample Implementation Assessment preview: business analysis, quick wins, workflow improvements, and scoped projects. Full client reports include tools and implementation recommendations.",
-    url: "/sample-implementation-assessment",
-    siteName: "Pixel Narratives",
-    locale: "en_US",
-    type: "website",
-    images: [
-      {
-        url: "/images/int-cinematic.jpg",
-        width: 2867,
-        height: 1600,
-        alt: "Cinematic visual for Pixel Narratives Implementation Assessment.",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Sample Implementation Assessment | Pixel Narratives",
-    description:
-      "Sample Implementation Assessment preview: business analysis, quick wins, workflow improvements, and scoped projects. Full client reports include tools and implementation recommendations.",
-    images: ["/images/int-cinematic.jpg"],
-  },
 };
 
 const sampleCards = [

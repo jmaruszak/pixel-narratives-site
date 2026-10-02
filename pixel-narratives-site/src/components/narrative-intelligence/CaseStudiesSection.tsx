@@ -32,14 +32,9 @@ export default function CaseStudiesSection() {
                   preload="metadata"
                   poster={study.posterSrc}
                   src={study.videoSrc}
+                  aria-label={`${study.title} campaign video`}
                 >
-                  <img
-                    src={study.posterSrc}
-                    alt={study.posterAlt}
-                    width={1920}
-                    height={1080}
-                    className="block h-full w-full object-cover"
-                  />
+                  Your browser does not support embedded video.
                 </video>
               </div>
 
@@ -128,7 +123,9 @@ export function FeaturedCampaignSection() {
                   controls
                   playsInline
                   preload="metadata"
+                  poster="/images/hero-cinematic.jpg"
                   src={commercial.videoSrc}
+                  aria-label={`${commercial.title} commercial`}
                 />
               </div>
               <h3 className="mt-4 text-2xl leading-none md:text-3xl">

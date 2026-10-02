@@ -6,6 +6,7 @@ export type FooterLink = {
 export const STUDIO_FOOTER_LINKS: FooterLink[] = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
+  { href: "/insights", label: "Insights" },
   { href: "/news", label: "News" },
   { href: "/work", label: "Work" },
   { href: "/serving-the-south", label: "Serving the South" },
@@ -14,16 +15,18 @@ export const STUDIO_FOOTER_LINKS: FooterLink[] = [
 ];
 
 export const SERVICES_FOOTER_LINKS: FooterLink[] = [
-  { href: "/automation", label: "Implementation" },
+  { href: "/services", label: "All Services" },
+  { href: "/starting-small", label: "Starting Small" },
+  { href: "/automation", label: "AI & Automation" },
   { href: "/training", label: "Training" },
-  { href: "/websites", label: "Websites + Online Visibility" },
+  { href: "/websites", label: "Websites & Visibility" },
   { href: "/marketing", label: "Marketing" },
 ];
 
 export const MORE_FOOTER_LINKS: FooterLink[] = [
   { href: "/ai-workflow-automation", label: "Workflow Automation" },
   { href: "/ai-crm-automation", label: "CRM Automation" },
-  { href: "/ai-consulting-for-businesses", label: "Business Automation" },
+  { href: "/ai-consulting-for-businesses", label: "AI Implementation" },
   { href: "/ai-commercial-production-company", label: "Campaign Production" },
   { href: "/ai-video-ad-agency", label: "Video Advertising" },
 ];

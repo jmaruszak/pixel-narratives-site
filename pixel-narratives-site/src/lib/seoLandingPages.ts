@@ -1,8 +1,11 @@
+import type { Metadata } from "next";
+import { buildPageMetadata } from "./siteMetadata";
+
 export type SeoLandingPage = {
   slug: string;
   title: string;
   description: string;
-  offer: "ads" | "intelligence";
+  offer: "ads" | "implementation";
   h1: string;
   intro: string;
   cta: string;
@@ -207,7 +210,7 @@ export const seoLandingPages: Record<string, SeoLandingPage> = {
     h1: "Cost of AI Video Production",
     intro:
       "AI video production can reduce cost and increase creative flexibility, but pricing depends on concept complexity, runtime, revisions, sound, editing, and deliverables.",
-    cta: "Request a production estimate",
+    cta: "Discuss Marketing",
     sections: [
       {
         heading: "How much does AI video production cost?",
@@ -365,7 +368,7 @@ export const seoLandingPages: Record<string, SeoLandingPage> = {
     title: "AI Consulting for Businesses | Pixel Narratives",
     description:
       "AI consulting for businesses that need practical workflows, automation, governance, and measurable operating value.",
-    offer: "intelligence",
+    offer: "implementation",
     h1: "AI Consulting for Businesses That Need Practical Value",
     intro:
       "Pixel Narratives helps businesses move from scattered AI experimentation to structured workflows, automation, and measurable operating results. We implement systems the team will use.",
@@ -453,11 +456,11 @@ export const seoLandingPages: Record<string, SeoLandingPage> = {
     title: "AI Workflow Automation for Businesses",
     description:
       "AI workflow automation that reduces manual work, connects tools, and turns scattered processes into measurable systems.",
-    offer: "intelligence",
+    offer: "implementation",
     h1: "AI Workflow Automation for Business Operations",
     intro:
       "AI workflow automation connects repetitive tasks, tools, data, and decision points so teams can move faster with less manual effort.",
-    cta: "Book a workflow audit",
+    cta: "Discuss a Project",
     sections: [
       {
         heading: "What is AI workflow automation?",
@@ -537,11 +540,11 @@ export const seoLandingPages: Record<string, SeoLandingPage> = {
     title: "How to Implement AI in Your Business",
     description:
       "A practical guide to implementing AI in your business with workflows, governance, tools, and measurable outcomes.",
-    offer: "intelligence",
+    offer: "implementation",
     h1: "How to Implement AI in Your Business",
     intro:
       "Implement AI by defining outcomes, auditing workflows, choosing tools, building policies, piloting high-value use cases, training the team, and measuring results.",
-    cta: "Book an AI implementation audit",
+    cta: "Discuss a Project",
     sections: [
       {
         heading: "The practical AI implementation roadmap",
@@ -621,11 +624,11 @@ export const seoLandingPages: Record<string, SeoLandingPage> = {
     title: "AI CRM Automation for Sales Teams",
     description:
       "AI CRM automation for cleaner data, faster follow-up, lead routing, sales summaries, and measurable workflow improvements.",
-    offer: "intelligence",
+    offer: "implementation",
     h1: "AI CRM Automation for Cleaner Sales Workflows",
     intro:
       "AI CRM automation helps teams reduce manual updates, improve lead follow-up, summarize activity, and keep sales data useful.",
-    cta: "Book a CRM workflow audit",
+    cta: "Discuss a Project",
     sections: [
       {
         heading: "What is AI CRM automation?",
@@ -692,3 +695,11 @@ export const seoLandingPages: Record<string, SeoLandingPage> = {
 };
 
 export const landingPageSlugs = Object.keys(seoLandingPages);
+
+export function buildSeoLandingMetadata(page: SeoLandingPage): Metadata {
+  return buildPageMetadata({
+    title: page.title,
+    description: page.description,
+    path: `/${page.slug}`,
+  });
+}

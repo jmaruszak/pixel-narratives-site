@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import Link from "next/link";
 import Footer from "./Footer";
 import Nav from "./Nav";
 import PageBottomCta from "./PageBottomCta";
@@ -13,10 +14,7 @@ export default function NewsArticlePage({
   children: ReactNode;
 }) {
   return (
-    <main
-      id="main-content"
-      className="min-h-screen bg-[var(--background)] text-[var(--foreground)]"
-    >
+    <main className="min-h-screen bg-[var(--background)] text-[var(--foreground)]">
       <Nav />
 
       <JsonLd graph={buildNewsArticleGraph(item)} />
@@ -24,6 +22,13 @@ export default function NewsArticlePage({
       <article>
         <header className="mx-auto w-full max-w-7xl px-6 py-20 md:px-10 md:py-24">
           <div className="max-w-3xl">
+            <nav aria-label="Breadcrumb" className="mb-8 text-sm text-[var(--muted)]">
+              <Link href="/news" className="transition hover:text-[var(--foreground)]">
+                News &amp; Media
+              </Link>
+              <span aria-hidden className="mx-2">/</span>
+              <span aria-current="page">{item.typeLabel}</span>
+            </nav>
             <p className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
               {item.kicker}
             </p>
@@ -79,6 +84,29 @@ export default function NewsArticlePage({
           </div>
         </section>
       </article>
+
+      <section className="border-t border-white/8">
+        <div className="mx-auto flex w-full max-w-7xl flex-wrap gap-3 px-6 py-10 md:px-10">
+          <Link
+            href="/news"
+            className="inline-flex min-h-11 items-center rounded-full border border-white/10 px-5 py-2.5 text-sm transition hover:bg-white/5"
+          >
+            More News
+          </Link>
+          <Link
+            href="/insights"
+            className="inline-flex min-h-11 items-center rounded-full border border-white/10 px-5 py-2.5 text-sm transition hover:bg-white/5"
+          >
+            Explore Insights
+          </Link>
+          <Link
+            href="/serving-the-south"
+            className="inline-flex min-h-11 items-center rounded-full border border-white/10 px-5 py-2.5 text-sm transition hover:bg-white/5"
+          >
+            Where We Work
+          </Link>
+        </div>
+      </section>
 
       <PageBottomCta
         eyebrow="Next Step"

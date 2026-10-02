@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { ReactNode } from "react";
 import type { CtaAction } from "../../lib/destinationCtas";
 import EditorialCta from "./EditorialCta";
@@ -61,10 +62,12 @@ export default function ServiceEditorial({
         </div>
         {media ? (
           <div className="relative min-h-[18rem] overflow-hidden rounded-[28px] lg:min-h-[28rem]">
-            <img
+            <Image
               src={media}
               alt={mediaAlt ?? ""}
-              className="h-full w-full object-cover"
+              fill
+              sizes="(max-width: 1023px) 100vw, 50vw"
+              className="object-cover"
             />
           </div>
         ) : null}

@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Footer from "../../components/Footer";
@@ -6,14 +5,17 @@ import Nav from "../../components/Nav";
 import { NEWS_ITEMS, newsPath } from "../../lib/news";
 import { JsonLd, buildWebPage, buildBreadcrumbs } from "../../lib/schema";
 import { SERVICE_LINE_SUMMARY, SERVICES } from "../../lib/services";
+import { buildPageMetadata } from "../../lib/siteMetadata";
 import { MARKETING_TO_WEB_INTEL_URL } from "../../lib/webIntelligence";
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
   title: "About Pixel Narratives",
   description:
-    "Pixel Narratives is a business implementation company based in Madison, Mississippi. We help businesses save time, win more customers, and get more done.",
-  alternates: { canonical: "/about" },
-};
+    "Pixel Narratives is an AI implementation and automation company based in Madison, Mississippi. We help businesses save time, win more customers, and get more done.",
+  path: "/about",
+  image: "/images/about-jordan.jpg",
+  imageAlt: "Jordan Maruszak, founder of Pixel Narratives",
+});
 
 const founder = {
   name: "Jordan Maruszak",
@@ -37,7 +39,7 @@ export default function AboutPage() {
             path: "/about",
             name: "About Pixel Narratives",
             description:
-              "Pixel Narratives is a business implementation company based in Madison, Mississippi. We help businesses save time, win more customers, and get more done.",
+              "Pixel Narratives is an AI implementation and automation company based in Madison, Mississippi. We help businesses save time, win more customers, and get more done.",
             additionalType: "AboutPage",
           }),
           buildBreadcrumbs([
@@ -57,11 +59,12 @@ export default function AboutPage() {
           </h1>
         </div>
         <div className="mt-12 overflow-hidden rounded-[28px]">
-          <img
+          <Image
             src="/images/home-hero.png"
             alt="Silhouettes in a glass office looking out over a city, overlaid with a network of connections"
             width={1024}
             height={438}
+            sizes="(max-width: 1280px) 100vw, 1280px"
             className="aspect-[1024/438] h-auto w-full object-cover"
           />
         </div>
@@ -70,9 +73,9 @@ export default function AboutPage() {
       <section className="border-t border-white/8">
         <div className="mx-auto grid w-full max-w-7xl gap-12 px-6 py-20 md:grid-cols-[0.8fr_1.2fr] md:px-10">
           <div>
-            <p className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
+            <h2 className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
               About Pixel Narratives
-            </p>
+            </h2>
           </div>
           <div className="space-y-6 text-lg leading-relaxed text-[var(--muted)] md:text-xl">
             <p>Businesses grow. Things get messy.</p>
@@ -83,9 +86,9 @@ export default function AboutPage() {
             </p>
             <p className="text-[var(--foreground)]">We build the better way.</p>
             <p>
-              Pixel Narratives is a business implementation company based in
-              Madison, Mississippi. We help businesses save time, win more
-              customers, and get more done.
+              Pixel Narratives is an AI implementation and automation company
+              based in Madison, Mississippi. We help businesses save time, win
+              more customers, and get more done.
             </p>
             <p>
               Madison is home base.{" "}
@@ -105,9 +108,9 @@ export default function AboutPage() {
       <section className="border-t border-white/8">
         <div className="mx-auto grid w-full max-w-7xl gap-12 px-6 py-20 md:grid-cols-[0.8fr_1.2fr] md:px-10">
           <div>
-            <p className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
+            <h2 className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
               AI Is a Tool
-            </p>
+            </h2>
           </div>
           <div className="space-y-6 text-lg leading-relaxed text-[var(--muted)] md:text-xl">
             <p>
@@ -126,9 +129,9 @@ export default function AboutPage() {
       <section className="border-t border-white/8">
         <div className="mx-auto grid w-full max-w-7xl gap-12 px-6 py-20 md:grid-cols-[0.8fr_1.2fr] md:px-10">
           <div>
-            <p className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
+            <h2 className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
               We Actually Build Things
-            </p>
+            </h2>
           </div>
           <div className="space-y-6 text-lg leading-relaxed text-[var(--muted)] md:text-xl">
             <p>
@@ -148,9 +151,9 @@ export default function AboutPage() {
 
       <section className="border-t border-white/8">
         <div className="mx-auto w-full max-w-7xl px-6 py-20 md:px-10">
-          <p className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
+          <h2 className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
             Founder
-          </p>
+          </h2>
           <article className="mt-10 max-w-4xl rounded-[28px] border border-white/8 bg-white/[0.02] p-6 md:p-8">
             <div className="grid gap-8 md:grid-cols-[0.42fr_0.58fr] md:items-start">
               <div className="overflow-hidden rounded-[20px] border border-white/8 bg-black">
@@ -163,9 +166,9 @@ export default function AboutPage() {
                 />
               </div>
               <div>
-                <h2 className="text-3xl leading-none md:text-4xl">
+                <h3 className="text-3xl leading-none md:text-4xl">
                   {founder.name}
-                </h2>
+                </h3>
                 <p className="mt-3 text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
                   {founder.title}
                 </p>
@@ -179,14 +182,14 @@ export default function AboutPage() {
           </article>
           <div className="mt-10 max-w-3xl rounded-[24px] border border-white/8 bg-white/[0.02] p-6 md:p-8">
             <p className="text-base leading-relaxed text-[var(--muted)] md:text-lg">
-              Pixel Narratives was co-founded by a multidisciplinary team
-              spanning storytelling, creative production, operations, and business
+              Pixel Narratives brings together practical experience in
+              operations, technology, creative production, and business
               strategy.
             </p>
             <p className="mt-4 text-base leading-relaxed text-[var(--muted)] md:text-lg">
-              Our team combines creative thinking, technical execution, and
-              practical business experience to help brands tell stories people
-              want to watch.
+              That mix helps us turn a clear business problem into something
+              useful: a better workflow, a working system, a stronger website,
+              or marketing built around a specific objective.
             </p>
           </div>
         </div>
@@ -195,9 +198,9 @@ export default function AboutPage() {
       <section className="border-t border-white/8">
         <div className="mx-auto grid w-full max-w-7xl gap-12 px-6 py-20 md:grid-cols-[0.8fr_1.2fr] md:px-10">
           <div>
-            <p className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
+            <h2 className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
               What We Do
-            </p>
+            </h2>
           </div>
           <div className="min-w-0">
             <p className="text-lg leading-relaxed text-[var(--muted)] md:text-xl">
@@ -210,9 +213,9 @@ export default function AboutPage() {
                   key={service.id}
                   className="flex min-w-0 flex-col overflow-hidden rounded-[24px] border border-white/8 bg-white/[0.02] p-6"
                 >
-                  <h2 className="text-balance break-words text-2xl leading-snug lg:text-3xl">
+                  <h3 className="text-balance break-words text-2xl leading-snug lg:text-3xl">
                     {service.name}
-                  </h2>
+                  </h3>
                   {service.id === "automation" ? (
                     <p className="mt-2 text-sm uppercase tracking-[0.18em] text-[var(--muted)]">
                       AI + Automation + Business Systems
@@ -252,9 +255,9 @@ export default function AboutPage() {
       <section className="border-t border-white/8">
         <div className="mx-auto grid w-full max-w-7xl gap-12 px-6 py-20 md:grid-cols-[0.8fr_1.2fr] md:px-10">
           <div>
-            <p className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
+            <h2 className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
               In the News
-            </p>
+            </h2>
           </div>
           <div>
             <p className="text-lg leading-relaxed text-[var(--muted)] md:text-xl">
@@ -271,14 +274,14 @@ export default function AboutPage() {
                   <p className="mt-2 text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
                     {item.typeLabel}
                   </p>
-                  <h2 className="mt-2 text-2xl leading-snug md:text-3xl">
+                  <h3 className="mt-2 text-2xl leading-snug md:text-3xl">
                     <Link
                       href={newsPath(item)}
                       className="transition hover:opacity-80"
                     >
                       {item.title}
                     </Link>
-                  </h2>
+                  </h3>
                   <time
                     dateTime={item.datePublished}
                     className="mt-2 block text-sm text-[var(--muted)]"
@@ -303,9 +306,9 @@ export default function AboutPage() {
       <section className="border-t border-white/8">
         <div className="mx-auto grid w-full max-w-7xl gap-12 px-6 py-20 md:grid-cols-[0.8fr_1.2fr] md:px-10">
           <div>
-            <p className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
+            <h2 className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
               The Bottom Line
-            </p>
+            </h2>
           </div>
           <div className="space-y-6 text-lg leading-relaxed text-[var(--muted)] md:text-xl">
             <p>We’re not here to impress you with AI.</p>

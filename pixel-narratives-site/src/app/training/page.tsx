@@ -3,7 +3,6 @@ import { CorporateWorkshopInquiryForm } from "../../components/ContactForms";
 import Footer from "../../components/Footer";
 import Nav from "../../components/Nav";
 import PageBottomCta from "../../components/PageBottomCta";
-import PricingNote from "../../components/PricingNote";
 import { DESTINATION_CTAS } from "../../lib/destinationCtas";
 import { JsonLd, buildServicePageSchema, buildWebPage, buildBreadcrumbs } from "../../lib/schema";
 import { buildPageMetadata } from "../../lib/siteMetadata";
@@ -11,29 +10,11 @@ import { buildPageMetadata } from "../../lib/siteMetadata";
 export const metadata = buildPageMetadata({
   title: "Corporate AI Workshops | Pixel Narratives",
   description:
-    "Corporate AI Workshops starting at $7,500. Private, customized training for leadership, departments, and employees from Pixel Narratives.",
+    "Corporate AI workshops from $7,500 for one department. Larger teams and multi-day engagements are scoped from there. Private training built around the work people already do.",
   path: "/training",
   image: "/images/int-cinematic.jpg",
   imageAlt: "Team training cinematic visual for Pixel Narratives",
 });
-
-const WORK_EXAMPLES = [
-  "Research",
-  "Writing",
-  "Analysis",
-  "Meeting preparation",
-  "Follow-up",
-  "Internal communication",
-  "Sales preparation",
-  "Proposal development",
-  "Customer communication",
-  "Process documentation",
-  "Data review",
-  "Recruiting workflows",
-  "Management reporting",
-  "Brainstorming",
-  "Knowledge retrieval",
-] as const;
 
 const TEAM_SESSIONS = [
   {
@@ -58,82 +39,6 @@ const TEAM_SESSIONS = [
   },
 ] as const;
 
-const WORKSHOP_STEPS = [
-  {
-    title: "Foundation",
-    body: "A working understanding of modern AI tools, what they can do, where they fall short, and how to use them responsibly.",
-  },
-  {
-    title: "Team sessions",
-    body: "Examples built for the departments in the room: leadership, sales, operations, HR, or other participating teams.",
-  },
-  {
-    title: "Working sessions",
-    body: "People use AI on realistic tasks and start building ways of working they can repeat after the workshop.",
-  },
-  {
-    title: "Workflow development",
-    body: "We identify the strongest use cases that should continue once everyone is back at their desk.",
-  },
-  {
-    title: "Next steps",
-    body: "Useful workflows, open questions, and areas that may deserve deeper implementation later.",
-  },
-] as const;
-
-const FULL_DAY_INCLUDES = [
-  "Leadership alignment",
-  "AI foundation",
-  "Team-specific demonstrations",
-  "Hands-on working sessions",
-  "Workflow identification",
-  "Closing discussion and next steps",
-] as const;
-
-const BEFORE_THE_ROOM = [
-  "Leadership conversation",
-  "Understanding the teams attending",
-  "Identifying current tools",
-  "Identifying repetitive work",
-  "Gathering useful examples",
-  "Understanding AI policies or restrictions already in place",
-  "Selecting the workflows that will make the workshop useful",
-] as const;
-
-const LEAVES_WITH = [
-  "A customized workshop",
-  "Team-specific examples",
-  "Repeatable AI workflows identified during the engagement",
-  "Workshop materials",
-  "Practical prompt and workflow examples",
-  "A workshop summary and working guide",
-  "Recommended next steps",
-  "A follow-up leadership session",
-] as const;
-
-const RESPONSIBLE_USE = [
-  "Sensitive company information",
-  "Customer information",
-  "Choosing appropriate tools",
-  "Human review",
-  "Accuracy",
-  "Internal policies",
-  "Useful boundaries",
-] as const;
-
-const AUDIENCES = [
-  "Leadership teams",
-  "Management teams",
-  "Sales organizations",
-  "Operations teams",
-  "HR teams",
-  "Professional services firms",
-  "Banks and financial organizations",
-  "Regional companies",
-  "Multi-location businesses",
-  "Organizations with multiple departments",
-] as const;
-
 export default function TrainingPage() {
   return (
     <main className="min-h-screen bg-[var(--background)] text-[var(--foreground)]">
@@ -144,7 +49,7 @@ export default function TrainingPage() {
             path: "/training",
             name: "Corporate AI Workshops",
             description:
-              "Corporate AI workshops starting at $7,500. Private, customized training for leadership, departments, and employees. Full-day engagements, not monthly advisory coaching.",
+              "Corporate AI workshops from $7,500 for one department. Full-team and multi-day engagements are scoped for larger groups. Private training built around the work people already do.",
             serviceType: "Corporate AI Training and Workshops",
           }),
           buildWebPage({
@@ -214,32 +119,6 @@ export default function TrainingPage() {
         <div className="mx-auto w-full max-w-7xl px-6 pn-section md:px-10">
           <div className="max-w-3xl">
             <p className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
-              The work
-            </p>
-            <h2 className="mt-4 text-4xl leading-none md:text-6xl">
-              Where work repeats, AI can help.
-            </h2>
-            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-[var(--muted)] md:text-xl">
-              We learn enough about the organization to make the training
-              relevant. The workshop connects AI to actual business activities.
-            </p>
-            <p className="mt-4 max-w-2xl text-base leading-relaxed text-[var(--muted)] md:text-lg">
-              Every company is different. These are the kinds of work we often
-              train around.
-            </p>
-          </div>
-          <ul className="mt-12 grid gap-2 text-sm text-[var(--foreground)] sm:grid-cols-2 md:grid-cols-3 md:text-base">
-            {WORK_EXAMPLES.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
-      <section className="border-t border-white/8">
-        <div className="mx-auto w-full max-w-7xl px-6 pn-section md:px-10">
-          <div className="max-w-3xl">
-            <p className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
               Built around your teams
             </p>
             <h2 className="mt-4 text-4xl leading-none md:text-6xl">
@@ -276,151 +155,83 @@ export default function TrainingPage() {
               Corporate AI Workshops
             </p>
             <h2 className="mt-4 text-4xl leading-none md:text-6xl">
-              Full-day
-            </h2>
-            <p className="mt-4 text-sm uppercase tracking-[0.25em] text-[var(--muted)]">
-              Starting at $7,500
-            </p>
-            <p className="mt-6 text-lg leading-relaxed text-[var(--muted)] md:text-xl">
-              The primary engagement is a full-day corporate workshop for
-              leadership, departments, and employees. Custom curriculum,
-              hands-on exercises, and private delivery. Final scope depends on
-              company size, number of teams, customization, location, and
-              follow-up needs.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="border-t border-white/8">
-        <div className="mx-auto grid w-full max-w-7xl gap-12 px-6 pn-section md:grid-cols-2 md:px-10">
-          <div>
-            <p className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
-              Preparation
-            </p>
-            <h2 className="mt-4 text-4xl leading-none md:text-6xl">
-              Before we walk
-              <br />
-              into the room
-            </h2>
-          </div>
-          <div className="max-w-xl">
-            <p className="text-lg leading-relaxed text-[var(--muted)] md:text-xl">
-              The work starts before the training day. We talk with leadership,
-              learn who will be in the room, and choose the workflows that will
-              make the session useful. We gather enough to make the workshop
-              specific. A deeper review can be scoped separately if you need it.
-            </p>
-            <ul className="mt-8 space-y-2 text-base text-[var(--foreground)] md:text-lg">
-              {BEFORE_THE_ROOM.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section className="border-t border-white/8">
-        <div className="mx-auto w-full max-w-7xl px-6 pn-section md:px-10">
-          <div className="max-w-3xl">
-            <p className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
-              During the workshop
-            </p>
-            <h2 className="mt-4 text-4xl leading-none md:text-6xl">
-              Teach, show, then do the work.
+              One team, or the whole company.
             </h2>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-[var(--muted)] md:text-xl">
-              The day mixes practical teaching, demonstrations, discussion, and
-              hands-on work.
+              Practical training built around the work the team already does.
+              People should leave with something they can use the next morning.
             </p>
           </div>
-          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-5">
-            {WORKSHOP_STEPS.map((item) => (
-              <article
-                key={item.title}
-                className="rounded-[24px] border border-white/8 bg-white/[0.02] p-6 md:p-8"
-              >
-                <h3 className="text-xl leading-none md:text-2xl">{item.title}</h3>
-                <p className="mt-4 text-sm leading-relaxed text-[var(--muted)] md:text-base">
-                  {item.body}
-                </p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="border-t border-white/8">
-        <div className="mx-auto w-full max-w-7xl px-6 pn-section md:px-10">
-          <div className="max-w-3xl rounded-[24px] border border-white/8 bg-white/[0.02] p-8">
-            <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
-              Full-day
-            </p>
-            <h3 className="mt-4 text-3xl leading-none">
-              A focused company or team session
-            </h3>
-            <p className="mt-4 text-base leading-relaxed text-[var(--muted)] md:text-lg">
-              A full-day engagement works well when the organization wants one
-              concentrated session. The actual agenda is customized. A typical
-              day can include:
-            </p>
-            <ul className="mt-6 space-y-2 text-base text-[var(--foreground)] md:text-lg">
-              {FULL_DAY_INCLUDES.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section className="border-t border-white/8">
-        <div className="mx-auto grid w-full max-w-7xl gap-12 px-6 pn-section md:grid-cols-2 md:px-10">
-          <div>
-            <p className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
-              After the session
-            </p>
-            <h2 className="mt-4 text-4xl leading-none md:text-6xl">
-              What the company
-              <br />
-              leaves with
-            </h2>
-          </div>
-          <div className="max-w-xl">
-            <p className="text-lg leading-relaxed text-[var(--muted)] md:text-xl">
-              Depending on scope, the engagement can include:
-            </p>
-            <ul className="mt-8 space-y-2 text-base text-[var(--foreground)] md:text-lg">
-              {LEAVES_WITH.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section className="border-t border-white/8">
-        <div className="mx-auto grid w-full max-w-7xl gap-12 px-6 pn-section md:grid-cols-2 md:px-10">
-          <div>
-            <p className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
-              Responsible use
-            </p>
-            <h2 className="mt-4 text-4xl leading-none md:text-6xl">
-              Practical judgment
-              <br />
-              in the room
-            </h2>
-          </div>
-          <div className="max-w-xl">
-            <p className="text-lg leading-relaxed text-[var(--muted)] md:text-xl">
-              We treat sensitive information, customer data, and internal
-              policies as part of the training. People stay responsible for
-              what they send, what they share, and what they accept as true.
-            </p>
-            <ul className="mt-8 space-y-2 text-base text-[var(--foreground)] md:text-lg">
-              {RESPONSIBLE_USE.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
+          <div className="mt-12 grid gap-8 lg:grid-cols-3 lg:items-start">
+            <article className="flex flex-col rounded-[24px] border border-white/8 bg-white/[0.02] p-8">
+              <h3 className="text-2xl leading-none">Single Department</h3>
+              <p className="mt-4 text-sm uppercase tracking-[0.25em] text-[var(--muted)]">
+                $7,500
+              </p>
+              <p className="mt-6 text-base leading-relaxed text-[var(--muted)]">
+                One full day. One team.
+              </p>
+              <ul className="mt-8 flex-1 space-y-2 text-sm text-[var(--foreground)] md:text-base">
+                <li>Preparation with leadership before the day</li>
+                <li>Examples built from the team&apos;s actual work</li>
+                <li>A day of practical AI use cases</li>
+                <li>Workflows people can use the next morning</li>
+              </ul>
+              <div className="mt-8">
+                <a
+                  href="#workshop-inquiry"
+                  className="cta-pulse-outline inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm text-[var(--foreground)] transition hover:border-white/20 hover:bg-white/5"
+                >
+                  Discuss Team Training
+                </a>
+              </div>
+            </article>
+            <article className="flex flex-col rounded-[24px] border border-white/8 bg-white/[0.02] p-8">
+              <h3 className="text-2xl leading-none">Full Team</h3>
+              <p className="mt-4 text-sm uppercase tracking-[0.25em] text-[var(--muted)]">
+                $15,000 to $20,000
+              </p>
+              <p className="mt-6 text-base leading-relaxed text-[var(--muted)]">
+                About 20 people, across more than one department.
+              </p>
+              <ul className="mt-8 flex-1 space-y-2 text-sm text-[var(--foreground)] md:text-base">
+                <li>Deeper preparation</li>
+                <li>Department-specific examples and sessions</li>
+                <li>A follow-up call with leadership</li>
+                <li>Price follows headcount, preparation, and customization</li>
+              </ul>
+              <div className="mt-8">
+                <a
+                  href="#workshop-inquiry"
+                  className="cta-pulse-outline inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm text-[var(--foreground)] transition hover:border-white/20 hover:bg-white/5"
+                >
+                  Discuss Team Training
+                </a>
+              </div>
+            </article>
+            <article className="flex flex-col rounded-[24px] border border-white/8 bg-white/[0.02] p-8">
+              <h3 className="text-2xl leading-none">Multi-Day Engagement</h3>
+              <p className="mt-4 text-sm uppercase tracking-[0.25em] text-[var(--muted)]">
+                Starting at $25,000
+              </p>
+              <p className="mt-6 text-base leading-relaxed text-[var(--muted)]">
+                Two or three days for a larger team, several departments, or
+                more than one location.
+              </p>
+              <ul className="mt-8 flex-1 space-y-2 text-sm text-[var(--foreground)] md:text-base">
+                <li>Hands-on training across the days</li>
+                <li>Executive follow-up</li>
+                <li>Recommendations for what to implement next</li>
+              </ul>
+              <div className="mt-8">
+                <a
+                  href="#workshop-inquiry"
+                  className="cta-pulse-outline inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm text-[var(--foreground)] transition hover:border-white/20 hover:bg-white/5"
+                >
+                  Discuss Team Training
+                </a>
+              </div>
+            </article>
           </div>
         </div>
       </section>
@@ -429,33 +240,7 @@ export default function TrainingPage() {
         <div className="mx-auto grid w-full max-w-7xl gap-12 px-6 pn-section md:grid-cols-2 md:px-10">
           <div>
             <p className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
-              Fit
-            </p>
-            <h2 className="mt-4 text-4xl leading-none md:text-6xl">
-              Who this
-              <br />
-              is for
-            </h2>
-          </div>
-          <div className="max-w-xl space-y-6 text-lg leading-relaxed text-[var(--muted)] md:text-xl">
-            <p>
-              Corporate AI Workshops help teams become more capable with AI in
-              their work.
-            </p>
-            <ul className="space-y-2 text-base text-[var(--foreground)] md:text-lg">
-              {AUDIENCES.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section className="border-t border-white/8">
-        <div className="mx-auto grid w-full max-w-7xl gap-12 px-6 pn-section md:grid-cols-2 md:px-10">
-          <div>
-            <p className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
-              From the room
+              Testimonial
             </p>
             <h2 className="mt-4 text-4xl leading-none md:text-6xl">
               Practical.
@@ -481,6 +266,93 @@ export default function TrainingPage() {
         </div>
       </section>
 
+      <section className="border-t border-white/8">
+        <div className="mx-auto w-full max-w-5xl px-6 pn-section md:px-10">
+          <div className="space-y-12">
+            <div className="max-w-3xl">
+              <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
+                Before We Walk Into the Room
+              </p>
+              <h2 className="mt-4 text-3xl leading-none md:text-4xl">
+                Your workshop starts before training day.
+              </h2>
+              <p className="mt-6 text-base leading-relaxed text-[var(--muted)] md:text-lg">
+                We talk with leadership, learn who&apos;s attending, understand
+                the tools and workflows your team uses, and identify where AI
+                could be genuinely useful.
+              </p>
+              <p className="mt-4 text-base leading-relaxed text-[var(--muted)] md:text-lg">
+                That preparation lets us build the session around{" "}
+                <strong className="font-medium text-[var(--foreground)]">
+                  your team and your work
+                </strong>
+                , not a generic presentation about AI.
+              </p>
+            </div>
+
+            <div className="border-t border-white/8 pt-12">
+              <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
+                During the Workshop
+              </p>
+              <h2 className="mt-4 text-3xl leading-none md:text-4xl">
+                Teach it. Show it. Use it.
+              </h2>
+              <p className="mt-6 max-w-3xl text-base leading-relaxed text-[var(--muted)] md:text-lg">
+                We combine practical teaching with demonstrations, discussion,
+                and hands-on work using situations your team recognizes.
+              </p>
+              <div className="mt-8 grid gap-6 md:grid-cols-3">
+                <div>
+                  <h3 className="text-xl leading-none">Build the foundation</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-[var(--muted)] md:text-base">
+                    Understand what today&apos;s AI tools can do, where they
+                    fall short, and how to use them responsibly.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-xl leading-none">Make it relevant</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-[var(--muted)] md:text-base">
+                    Explore examples and opportunities specific to the teams in
+                    the room.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-xl leading-none">Put it to work</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-[var(--muted)] md:text-base">
+                    Use AI on realistic tasks and begin developing workflows
+                    people can repeat when they&apos;re back at their desks.
+                  </p>
+                </div>
+              </div>
+              <p className="mt-8 max-w-3xl text-base leading-relaxed text-[var(--muted)] md:text-lg">
+                We also cover the judgment that comes with using AI at work,
+                including sensitive information, accuracy, human review, and
+                your organization&apos;s existing policies.
+              </p>
+            </div>
+
+            <div className="border-t border-white/8 pt-12">
+              <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
+                What You Leave With
+              </p>
+              <h2 className="mt-4 text-3xl leading-none md:text-4xl">
+                The workshop should keep paying off after we leave.
+              </h2>
+              <p className="mt-6 max-w-3xl text-base leading-relaxed text-[var(--muted)] md:text-lg">
+                Your team leaves with a stronger understanding of AI, practical
+                ways to use it in their work, workshop materials they can
+                reference later, and clear next steps for opportunities worth
+                pursuing.
+              </p>
+              <p className="mt-4 max-w-3xl text-base leading-relaxed text-[var(--muted)] md:text-lg">
+                Depending on the engagement, we can also provide a workshop
+                summary, working guide, and follow-up session with leadership.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section
         id="workshop-inquiry"
         className="scroll-mt-24 border-t border-white/8"
@@ -502,7 +374,6 @@ export default function TrainingPage() {
         </div>
       </section>
 
-      <PricingNote />
       <PageBottomCta {...DESTINATION_CTAS.training} />
       <Footer />
     </main>

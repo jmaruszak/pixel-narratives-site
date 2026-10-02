@@ -740,6 +740,9 @@ export default function AiReadinessAssessment() {
           isTransitioning ? "translate-y-2 opacity-0" : "translate-y-0 opacity-100",
         ].join(" ")}
       >
+        {step !== "intro" ? (
+          <h1 className="sr-only">AI Readiness Assessment</h1>
+        ) : null}
         {step === "intro" ? (
           <div className="max-w-3xl">
             <p className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
@@ -794,7 +797,7 @@ export default function AiReadinessAssessment() {
 
             <div
               className="mt-8 grid gap-3"
-              role="group"
+              role={currentQuestion.type === "multi" ? "group" : "radiogroup"}
               aria-labelledby={`question-${currentQuestion.id}`}
             >
               {currentQuestion.type === "single"
@@ -804,7 +807,8 @@ export default function AiReadinessAssessment() {
                       <button
                         type="button"
                         key={option.value}
-                        aria-pressed={active}
+                        role="radio"
+                        aria-checked={active}
                         onClick={() => updateAnswer(currentQuestion, option.value)}
                         className={[
                           "rounded-[20px] border p-5 text-left text-base leading-relaxed transition",
@@ -846,18 +850,19 @@ export default function AiReadinessAssessment() {
                 : null}
 
               {currentQuestion.type === "scale" ? (
-                <div className="grid grid-cols-5 gap-3 md:grid-cols-10">
+                <div className="grid grid-cols-5 gap-2 sm:gap-3 md:grid-cols-10">
                   {Array.from({ length: 10 }, (_, index) => index + 1).map((value) => {
                     const active = answers[currentQuestion.id] === value;
                     return (
                       <button
                         type="button"
                         key={value}
-                        aria-pressed={active}
+                        role="radio"
+                        aria-checked={active}
                         aria-label={`${value} of 10`}
                         onClick={() => updateAnswer(currentQuestion, value)}
                         className={[
-                          "aspect-square rounded-full border text-sm transition md:text-base",
+                          "aspect-square min-h-11 min-w-0 rounded-full border text-sm transition md:text-base",
                           active
                             ? "border-white/30 bg-[var(--foreground)] text-black"
                             : "border-white/10 text-[var(--muted)] hover:bg-white/[0.04] hover:text-[var(--foreground)]",
@@ -1027,7 +1032,7 @@ export default function AiReadinessAssessment() {
 
             <div
               className="mt-8 grid gap-3"
-              role="group"
+              role={currentDeepQuestion.type === "multi" ? "group" : "radiogroup"}
               aria-labelledby={`deep-dive-${currentDeepQuestion.id}`}
             >
               {currentDeepQuestion.type === "single"
@@ -1037,7 +1042,8 @@ export default function AiReadinessAssessment() {
                       <button
                         type="button"
                         key={option.value}
-                        aria-pressed={active}
+                        role="radio"
+                        aria-checked={active}
                         onClick={() => updateDeepDiveAnswer(currentDeepQuestion, option.value)}
                         className={[
                           "rounded-[20px] border p-5 text-left text-base leading-relaxed transition",
@@ -1135,6 +1141,7 @@ export default function AiReadinessAssessment() {
                 <input
                   id="lead-name"
                   name="name"
+                  autoComplete="name"
                   required
                   value={leadForm.name}
                   onChange={(event) =>
@@ -1152,6 +1159,7 @@ export default function AiReadinessAssessment() {
                 <input
                   id="lead-email"
                   name="email"
+                  autoComplete="email"
                   required
                   type="email"
                   value={leadForm.email}
@@ -1170,6 +1178,7 @@ export default function AiReadinessAssessment() {
                 <input
                   id="lead-company"
                   name="company"
+                  autoComplete="organization"
                   required
                   value={leadForm.company}
                   onChange={(event) =>
@@ -1189,6 +1198,7 @@ export default function AiReadinessAssessment() {
                 <input
                   id="lead-phone"
                   name="phone"
+                  autoComplete="tel"
                   type="tel"
                   value={leadForm.phone}
                   onChange={(event) =>

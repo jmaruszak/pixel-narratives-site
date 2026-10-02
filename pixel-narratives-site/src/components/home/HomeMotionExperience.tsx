@@ -1,3 +1,4 @@
+import Image from "next/image";
 import OutcomeStack from "../editorial/OutcomeStack";
 import PathChooser from "../editorial/PathChooser";
 import ServiceEditorial from "../editorial/ServiceEditorial";
@@ -7,14 +8,13 @@ import { SERVICE_LINE_SUMMARY, SERVICES } from "../../lib/services";
 function HomeHero() {
   return (
     <section className="relative overflow-hidden bg-black">
-      <img
+      <Image
         src="/images/home-hero-poster.jpg"
         alt=""
-        width={1920}
-        height={824}
-        fetchPriority="high"
-        decoding="async"
-        className="pointer-events-none absolute inset-0 h-full w-full object-cover object-left"
+        fill
+        priority
+        sizes="100vw"
+        className="pointer-events-none object-cover object-left"
         aria-hidden
       />
       <video

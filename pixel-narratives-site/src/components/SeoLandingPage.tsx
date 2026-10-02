@@ -3,7 +3,12 @@ import Link from "next/link";
 import Footer from "./Footer";
 import Nav from "./Nav";
 import type { SeoLandingPage } from "../lib/seoLandingPages";
-import { JsonLd, buildServicePageSchema, buildWebPage } from "../lib/schema";
+import {
+  JsonLd,
+  buildBreadcrumbs,
+  buildServicePageSchema,
+  buildWebPage,
+} from "../lib/schema";
 import { SITE_URL } from "../lib/siteMetadata";
 
 export default function SeoLandingPageView({ page }: { page: SeoLandingPage }) {
@@ -31,6 +36,11 @@ export default function SeoLandingPageView({ page }: { page: SeoLandingPage }) {
             description: page.description,
             mainEntity: { "@id": `${SITE_URL}/${page.slug}#service` },
           }),
+          buildBreadcrumbs([
+            { name: "Home", path: "/" },
+            { name: "Insights", path: "/insights" },
+            { name: page.h1, path: `/${page.slug}` },
+          ]),
           {
             "@type": "FAQPage" as const,
             mainEntity: page.faqs.map((faq) => ({
@@ -107,8 +117,8 @@ export default function SeoLandingPageView({ page }: { page: SeoLandingPage }) {
                   </ul>
                 ) : null}
                 {section.table ? (
-                  <div className="mt-6 overflow-hidden rounded-[18px] border border-white/8">
-                    <table className="w-full border-collapse text-left text-sm md:text-base">
+                  <div className="mt-6 overflow-x-auto rounded-[18px] border border-white/8">
+                    <table className="w-full min-w-[34rem] border-collapse text-left text-sm md:text-base">
                       <thead className="bg-white/[0.04] text-[var(--foreground)]">
                         <tr>
                           {section.table.headers.map((header) => (
@@ -186,6 +196,12 @@ export default function SeoLandingPageView({ page }: { page: SeoLandingPage }) {
                   {link.label}
                 </a>
               ))}
+              <a
+                href="/insights"
+                className="inline-flex min-h-11 items-center rounded-full border border-white/10 px-5 py-2.5 text-sm text-[var(--foreground)] transition hover:border-white/20 hover:bg-white/5"
+              >
+                All Insights
+              </a>
               <a
                 href={page.offer === "ads" ? "/contact?need=marketing" : "/contact?need=automation"}
                 className="inline-flex items-center rounded-full border border-white/10 bg-[var(--foreground)] px-5 py-2.5 text-sm font-medium text-black transition hover:opacity-90"

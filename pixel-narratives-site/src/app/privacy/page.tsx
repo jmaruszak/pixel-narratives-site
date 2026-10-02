@@ -1,13 +1,13 @@
-import type { Metadata } from "next";
 import Footer from "../../components/Footer";
 import Nav from "../../components/Nav";
+import { buildPageMetadata } from "../../lib/siteMetadata";
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
   title: "Privacy Policy | Pixel Narratives",
   description:
     "Privacy Policy for Pixel Narratives, including website inquiries, AI Readiness Assessment submissions, cookies, advertising measurement, CRM follow-up, and data rights requests.",
-  alternates: { canonical: "/privacy" },
-};
+  path: "/privacy",
+});
 
 const sections = [
   {

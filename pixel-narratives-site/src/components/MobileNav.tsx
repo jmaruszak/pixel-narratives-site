@@ -10,10 +10,12 @@ function MobileNavLink({
   href,
   label,
   onNavigate,
+  className = "",
 }: {
   href: string;
   label: string;
   onNavigate: () => void;
+  className?: string;
 }) {
   const pathname = usePathname();
   const isActive =
@@ -27,7 +29,7 @@ function MobileNavLink({
         isActive
           ? "text-[var(--foreground)]"
           : "text-[var(--muted)] hover:text-[var(--foreground)]"
-      }`}
+      } ${className}`}
     >
       {label}
     </Link>
@@ -36,27 +38,44 @@ function MobileNavLink({
 
 export default function MobileNav() {
   const [open, setOpen] = useState(false);
-  const [mounted, setMounted] = useState(false);
   const panelId = useId();
   const buttonRef = useRef<HTMLButtonElement>(null);
   const panelRef = useRef<HTMLDivElement>(null);
 
-  const close = () => setOpen(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+  const close = () => {
+    setOpen(false);
+    window.requestAnimationFrame(() => buttonRef.current?.focus());
+  };
 
   useEffect(() => {
     if (!open) return;
 
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
+    const focusableSelector =
+      'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])';
+    const focusable = Array.from(
+      panelRef.current?.querySelectorAll<HTMLElement>(focusableSelector) ?? [],
+    );
+    window.requestAnimationFrame(() => focusable[0]?.focus());
 
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
         setOpen(false);
         buttonRef.current?.focus();
+        return;
+      }
+
+      if (event.key === "Tab" && focusable.length > 0) {
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        if (event.shiftKey && document.activeElement === first) {
+          event.preventDefault();
+          last.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+          event.preventDefault();
+          first.focus();
+        }
       }
     };
 
@@ -69,11 +88,12 @@ export default function MobileNav() {
   }, [open]);
 
   const menuOverlay =
-    open && mounted ? (
+    open ? (
       <div className="fixed inset-0 z-[110] isolation-isolate">
         <button
           type="button"
           aria-label="Close menu overlay"
+          tabIndex={-1}
           className="absolute inset-0 bg-[#0b0c0f]"
           onClick={close}
         />
@@ -123,6 +143,11 @@ export default function MobileNav() {
                     href={service.href}
                     label={service.label}
                     onNavigate={close}
+                    className={
+                      service.href === "/starting-small"
+                        ? "mb-1 border-b border-white/8"
+                        : ""
+                    }
                   />
                 ))}
               </div>
@@ -178,7 +203,7 @@ export default function MobileNav() {
         </svg>
       </button>
 
-      {menuOverlay && mounted
+      {menuOverlay && typeof document !== "undefined"
         ? createPortal(menuOverlay, document.body)
         : null}
     </div>

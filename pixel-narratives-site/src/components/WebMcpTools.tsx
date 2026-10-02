@@ -19,7 +19,7 @@ export default function WebMcpTools() {
     modelContext.registerTool({
       name: "getServiceInfo",
       description:
-        "Return structured information about Pixel Narratives services: implementation (AI, automation, and business systems), training, websites and online visibility, marketing, and the optional AI Readiness Assessment.",
+        "Return structured information about Pixel Narratives services: Starting Small, AI and automation implementation, training, websites and visibility, marketing, Fractional AI Leadership, and the optional AI Readiness Assessment.",
       inputSchema: { type: "object", properties: {} },
       execute: async () => ({
         content: [
@@ -29,54 +29,62 @@ export default function WebMcpTools() {
               {
                 studio: "Pixel Narratives",
                 headquarters: `${HEADQUARTERS.locality}, ${HEADQUARTERS.region}`,
+                serviceArea:
+                  "Mississippi is the primary market. Pixel Narratives serves businesses throughout the South, with Atlanta as an actively served expansion market and no Atlanta office.",
                 site: SITE_URL,
                 offers: {
+                  startingSmall: {
+                    summary:
+                      "Contained first projects: Implementation Quick Win ($2,500), Website Starter ($2,500), and Creative Quick Win ($1,500).",
+                    url: `${SITE_URL}/starting-small`,
+                  },
                   automation: {
                     name: "Implementation",
                     summary:
-                      "We build better business systems using AI, automation, and modern software. Sometimes that means automating the work. Sometimes it means giving the team a better way to do it.",
+                      "We manage the process of implementing AI into existing business systems, and build new systems when the value can be measured.",
                     url: `${SITE_URL}/automation`,
                     tiers: [
                       {
-                        name: "Implementation Assessment",
+                        name: "AI & Automation Assessment",
                         price: "Starting at $1,250",
                         description:
-                          "Optional diagnostic: workflow audit, tool recommendations, quick wins, and implementation roadmap.",
+                          "Workflow review, bottleneck map, tool recommendations, quick wins, and a 30 to 60 day implementation plan.",
                       },
                       {
                         name: "Guided Implementation",
                         price: "Starting at $1,500/month (3-month minimum)",
                         description:
-                          "Expert guidance for an owner or designated internal lead implementing AI themselves. Two virtual working sessions per month. Not corporate team training.",
+                          "You build. We guide. Two working sessions a month for prioritization, tools, architecture, and troubleshooting.",
                       },
                       {
                         name: "Implementation Projects",
-                        price: "Starting at $5,000 · Custom scoped",
+                        price: "Starting at $5,000",
                         description:
-                          "Pixel Narratives builds the automations, integrations, workflows, or internal tools.",
+                          "Pixel Narratives builds the automations, integrations, dashboards, internal tools, or AI workflows.",
                       },
                       {
-                        name: "Ongoing AI leadership",
-                        price: "Starting at $6,250/month",
+                        name: "Fractional CAIO",
+                        price:
+                          "Generally $5,000 to $15,000/month, based on organizational needs",
                         description:
-                          "Fractional CAIO: AI strategy and implementation leadership. Not a more expensive version of Guided Implementation.",
+                          "Ongoing AI leadership, roadmap ownership, vendor decisions, responsible adoption, and hands-on implementation support.",
                       },
                     ],
                   },
                   training: {
                     summary:
-                      "Corporate AI workshops starting at $7,500. Private, customized training for leadership, departments, and employees. Full-day engagements, not monthly advisory coaching.",
+                      "One department is $7,500. Full team is $15,000 to $20,000. Multi-day engagements start at $25,000. Practical workshops built around the work the team already does.",
                     url: `${SITE_URL}/training`,
                   },
                   websites: {
                     summary:
-                      "Website + Visibility Build starting at $7,500 (up to 10 core pages) and Visibility Sprint starting at $1,200/month with a 3-month minimum for existing sites. Free live-site scan available.",
+                      "Website Starter is $2,500. Website + Visibility Build starts at $7,500. Premium Build is $15,000 to $20,000. Visibility Sprint starts at $1,200/month with a 3-month minimum. Premium Visibility is $2,500/month.",
                     url: `${SITE_URL}/websites`,
                     scanUrl: WEB_INTEL_URL,
                   },
                   marketing: {
                     summary:
-                      "Attention Pulse starting at $5,000 for one campaign. Attention Retainer starting at $2,250/month with a 3-month minimum. Visibility is get found. Attention is get noticed.",
+                      "Attention Pulse starting at $5,000 for one focused campaign. Attention Retainer starting at $2,250/month with a 3-month minimum for ongoing creative and advertising support. Full Brand Campaign starting at $15,000 for objectives that need multiple pieces working together.",
                     url: `${SITE_URL}/marketing`,
                   },
                   aiAutomationAssessment: {

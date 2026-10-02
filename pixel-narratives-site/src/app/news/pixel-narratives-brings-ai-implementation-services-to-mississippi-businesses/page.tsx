@@ -37,10 +37,10 @@ export default function PixelNarrativesPressReleasePage() {
         organizations that want ongoing leadership without adding a full-time
         executive role.{" "}
         <Link href="/about">About Pixel Narratives</Link> has more on how the
-        company is organized around those four services.
+        company works.
       </p>
 
-      <h2>Automation + Implementation</h2>
+      <h2>AI &amp; Automation Implementation</h2>
       <p>
         Most businesses already have a working way of doing things. What slows
         them down is usually not a lack of software. It is repetitive work,
@@ -52,7 +52,7 @@ export default function PixelNarrativesPressReleasePage() {
         That includes how leads arrive, how information moves between tools,
         where work stalls, and which tasks consume time without adding much
         value. From there, the company identifies where{" "}
-        <Link href="/automation">Automation + Implementation</Link> can create
+        <Link href="/automation">AI &amp; Automation Implementation</Link> can create
         measurable improvements: fewer manual steps, faster response times,
         clearer handoffs, and systems that match the way the business already
         works.
@@ -133,10 +133,10 @@ export default function PixelNarrativesPressReleasePage() {
       <p>
         Businesses that want a clearer picture before they begin can use Pixel
         Narratives&apos;{" "}
-        <Link href="/ai-readiness-assessment">AI + Automation Assessment</Link>.
-        The assessment looks at current AI use, operational gaps, and goals. It
-        is a starting point for a conversation about what to implement, not a
-        score that replaces the owner&apos;s judgment.
+        <Link href="/automation">AI &amp; Automation Assessment</Link>. The
+        assessment looks at current AI use, operational gaps, and goals. It is a
+        starting point for a conversation about what to implement, not a score
+        that replaces the owner&apos;s judgment.
       </p>
       <p>
         Pixel Narratives is based in Madison and works with small and midsize

@@ -1,6 +1,7 @@
 "use client";
 
 import { m, useTransform, type MotionValue } from "framer-motion";
+import Image from "next/image";
 import ParallaxLayer from "../motion/primitives/ParallaxLayer";
 import { CHAPTER_BANDS, segmentProgress } from "../motion/motionTokens";
 
@@ -35,10 +36,12 @@ export default function AttentionChapter({
       >
         <m.div style={{ y: plateY, scale: frameScale, opacity: frameOpacity }}>
           <div className="relative aspect-video overflow-hidden rounded-[32px] border border-white/12 bg-black/55 shadow-[0_24px_80px_rgba(0,0,0,0.5)] backdrop-blur-xl">
-            <img
+            <Image
               src="/images/studio-launch-still.jpg"
               alt=""
-              className="absolute inset-0 h-full w-full object-cover"
+              fill
+              sizes="(max-width: 1024px) 100vw, 64rem"
+              className="object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-br from-black/30 via-transparent to-black/20" />
             <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent p-6 md:p-8">

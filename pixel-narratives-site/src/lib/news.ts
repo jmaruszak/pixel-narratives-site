@@ -3,6 +3,7 @@ import {
   SITE_URL,
 } from "./siteMetadata";
 import { ORG_ID, WEBSITE_ID } from "./schema/organization";
+import { buildBreadcrumbs } from "./schema/pages";
 
 export type NewsCoverageType = "press-release" | "media-coverage";
 
@@ -221,5 +222,10 @@ export function buildNewsArticleGraph(item: NewsItem) {
       about: { "@id": ORG_ID },
       publisher: { "@id": ORG_ID },
     },
+    buildBreadcrumbs([
+      { name: "Home", path: "/" },
+      { name: "News", path: "/news" },
+      { name: item.title, path: newsPath(item) },
+    ]),
   ];
 }

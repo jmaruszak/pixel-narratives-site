@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { ReactNode } from "react";
 import type { CtaAction } from "../../lib/destinationCtas";
 import EditorialCta from "./EditorialCta";
@@ -44,7 +45,13 @@ export default function SplitMedia({
           ) : null}
         </div>
         <div className={`relative min-h-[16rem] overflow-hidden rounded-[28px] md:min-h-[24rem] ${mediaFirst ? "md:order-1" : ""}`}>
-          <img src={media} alt={mediaAlt} className="h-full w-full object-cover" />
+          <Image
+            src={media}
+            alt={mediaAlt}
+            fill
+            sizes="(max-width: 767px) 100vw, 55vw"
+            className="object-cover"
+          />
         </div>
       </div>
     </section>

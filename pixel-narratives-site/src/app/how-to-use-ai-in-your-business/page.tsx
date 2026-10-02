@@ -1,14 +1,14 @@
-import type { Metadata } from "next";
 import Footer from "../../components/Footer";
 import Nav from "../../components/Nav";
 import { JsonLd, buildWebPage, buildBreadcrumbs } from "../../lib/schema";
+import { buildPageMetadata } from "../../lib/siteMetadata";
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
   title: "How to Use AI in Your Business | Pixel Narratives",
   description:
     "A practical guide for business owners on using AI without wasting money, starting with outcomes, workflows, education, and measurable results.",
-  alternates: { canonical: "/how-to-use-ai-in-your-business" },
-};
+  path: "/how-to-use-ai-in-your-business",
+});
 
 export default function HowToUseAiInYourBusinessPage() {
   return (
@@ -197,6 +197,40 @@ export default function HowToUseAiInYourBusinessPage() {
                 <br />
                 Clear outcomes, built into how your business operates.
               </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="border-t border-white/8">
+          <div className="mx-auto w-full max-w-7xl px-6 py-14 md:px-10">
+            <p className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
+              Keep Exploring
+            </p>
+            <div className="mt-6 flex flex-wrap gap-3">
+              <a
+                href="/automation"
+                className="inline-flex min-h-11 items-center rounded-full border border-white/10 px-5 py-2.5 text-sm transition hover:bg-white/5"
+              >
+                AI &amp; Automation
+              </a>
+              <a
+                href="/how-to-implement-ai-in-your-business"
+                className="inline-flex min-h-11 items-center rounded-full border border-white/10 px-5 py-2.5 text-sm transition hover:bg-white/5"
+              >
+                Implementation Guide
+              </a>
+              <a
+                href="/sample-implementation-assessment"
+                className="inline-flex min-h-11 items-center rounded-full border border-white/10 px-5 py-2.5 text-sm transition hover:bg-white/5"
+              >
+                Sample Assessment
+              </a>
+              <a
+                href="/insights"
+                className="inline-flex min-h-11 items-center rounded-full border border-white/10 px-5 py-2.5 text-sm transition hover:bg-white/5"
+              >
+                All Insights
+              </a>
             </div>
           </div>
         </section>

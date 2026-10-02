@@ -2,7 +2,6 @@
 
 import { m, useTransform, type MotionValue } from "framer-motion";
 import GlowNode from "../motion/primitives/GlowNode";
-import WorkflowEdge from "../motion/primitives/WorkflowEdge";
 import ParallaxLayer from "../motion/primitives/ParallaxLayer";
 import { CHAPTER_BANDS, segmentProgress } from "../motion/motionTokens";
 

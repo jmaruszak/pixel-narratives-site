@@ -55,7 +55,7 @@ export default function PixelNarrativesBusinessNewsInfoPage() {
       <p>
         The Spotlight does not treat AI as a single product. It describes Pixel
         Narratives across several connected areas of work:{" "}
-        <Link href="/automation">Automation + Implementation</Link>,{" "}
+        <Link href="/automation">AI &amp; Automation Implementation</Link>,{" "}
         <Link href="/training">employee AI training</Link>,{" "}
         <Link href="/websites">Websites + Online Visibility</Link>,{" "}
         <Link href="/marketing">marketing workflows</Link>, and ongoing AI
@@ -89,8 +89,7 @@ export default function PixelNarrativesBusinessNewsInfoPage() {
         in-house. Pixel Narratives is based in Madison, Mississippi, and the
         Spotlight covers its work with businesses in Mississippi and across the
         Southeast. <Link href="/about">About Pixel Narratives</Link> has more
-        on that base of operations and the four services the company is built
-        around.
+        on that base of operations and how the company works.
       </p>
 
       <h2>Fractional AI Leadership</h2>
@@ -122,10 +121,9 @@ export default function PixelNarrativesBusinessNewsInfoPage() {
         save time, win more customers, and get more done. The Spotlight
         presents those as the test of whether implementation was worth doing.
         The coverage also notes Pixel Narratives&apos;{" "}
-        <Link href="/ai-readiness-assessment">AI + Automation Assessment</Link>{" "}
-        as a way for owners to look at current usage and gaps before deciding
-        what to implement. Businesses that want to talk through a specific
-        operation can{" "}
+        <Link href="/automation">AI &amp; Automation Assessment</Link> as a way
+        for owners to look at current usage and gaps before deciding what to
+        implement. Businesses that want to talk through a specific operation can{" "}
         <Link href="/contact">contact Pixel Narratives</Link> directly.
       </p>
     </NewsArticlePage>

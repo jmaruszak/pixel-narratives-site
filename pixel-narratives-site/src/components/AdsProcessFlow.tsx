@@ -88,7 +88,7 @@ export default function AdsProcessFlow() {
       ref={sectionRef}
       className={[
         "ads-process border-t border-white/8",
-        !reducedMotion && "min-h-[200vh]",
+        !reducedMotion && "min-h-[200vh] max-md:min-h-0",
       ]
         .filter(Boolean)
         .join(" ")}
@@ -96,8 +96,8 @@ export default function AdsProcessFlow() {
     >
       <div
         className={[
-          "ads-process-sticky flex min-h-screen items-center",
-          !reducedMotion && "sticky top-0",
+          "ads-process-sticky flex min-h-screen items-center max-md:min-h-0",
+          !reducedMotion && "sticky top-0 max-md:static",
         ]
           .filter(Boolean)
           .join(" ")}

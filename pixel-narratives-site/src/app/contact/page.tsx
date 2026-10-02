@@ -47,8 +47,9 @@ export default async function ContactPage({
   const params: ContactSearchParams = await (
     searchParams ?? Promise.resolve({} as ContactSearchParams)
   );
+  const source = firstStringParam(params["utm_source"]);
   const fromWebsiteScan =
-    firstStringParam(params["utm_source"]) === "web-intelligence";
+    source === "visibility-scan" || source === "web-intelligence";
   const need = firstStringParam(params["need"]);
   const selectedNeed = NEED_OPTIONS.some((option) => option.id === need)
     ? need

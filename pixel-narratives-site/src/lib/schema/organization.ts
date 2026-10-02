@@ -1,6 +1,7 @@
 import {
   CONTACT_EMAIL,
   CONTACT_PHONE,
+  GOOGLE_BUSINESS_PROFILE_URL,
   HEADQUARTERS,
   SERVICE_AREA_PRIMARY,
   type ServiceAreaPlace,
@@ -35,14 +36,17 @@ export function buildAreaServed(places: ServiceAreaPlace[] = SERVICE_AREA_PRIMAR
       return { "@type": "State" as const, name: place.name };
     }
     if (place.type === "AdministrativeArea") {
-      return {
+      const area: Record<string, unknown> = {
         "@type": "AdministrativeArea" as const,
         name: place.name,
-        containedInPlace: {
-          "@type": "State" as const,
-          name: place.region ?? "FL",
-        },
       };
+      if (place.region) {
+        area.containedInPlace = {
+          "@type": "State" as const,
+          name: place.region,
+        };
+      }
+      return area;
     }
     return {
       "@type": "City" as const,
@@ -66,19 +70,20 @@ export function organizationEntity() {
     name: SITE_NAME,
     url: SITE_URL,
     description:
-      "Pixel Narratives is an AI implementation and business automation company based in Madison, Mississippi, helping businesses implement artificial intelligence, automate workflows, train teams, improve operations, and build practical AI systems.",
+      "Pixel Narratives is an AI-native implementation and automation company based in Madison, Mississippi, helping businesses implement artificial intelligence, automate workflows, train teams, improve online visibility, and run effective marketing.",
     logo: `${SITE_URL}/brand/logo-mark.png`,
     image: `${SITE_URL}/images/home-cinematic.jpg`,
     telephone: CONTACT_PHONE,
     email: CONTACT_EMAIL,
     founder: { "@id": FOUNDER_ID },
     address: postalAddress(),
+    hasMap: GOOGLE_BUSINESS_PROFILE_URL,
     areaServed: buildAreaServed(),
     sameAs: [
-      "https://www.linkedin.com/company/pixel-narratives/",
+      GOOGLE_BUSINESS_PROFILE_URL,
       "https://www.instagram.com/pixelnarratives.studio/",
-      "https://www.youtube.com/@PixelNarrativesStudio",
-      "https://www.google.com/maps/place/Pixel+Narratives/data=!4m2!3m1!1s0x61f17593c5b577fd:0xb098720a335c24ca",
+      "https://www.facebook.com/profile.php?id=61589823687666",
+      "https://youtube.com/@pixelnarrativesstudio",
     ],
     knowsAbout: [
       "Artificial Intelligence for Business",
@@ -106,6 +111,16 @@ function offerCatalog() {
     "@type": "OfferCatalog" as const,
     name: "Pixel Narratives Services",
     itemListElement: [
+      {
+        "@type": "Offer" as const,
+        itemOffered: {
+          "@type": "Service" as const,
+          "@id": `${SITE_URL}/starting-small#service`,
+          name: "Starting Small",
+          serviceType: "Small-scope implementation and website projects",
+          provider: { "@id": ORG_ID },
+        },
+      },
       {
         "@type": "Offer" as const,
         itemOffered: {
@@ -228,10 +243,9 @@ export function homepageWebPageEntity() {
 // ---------------------------------------------------------------------------
 
 export function homepageGraph() {
-  return [
-    organizationEntity(),
-    founderEntity(),
-    websiteEntity(),
-    homepageWebPageEntity(),
-  ];
+  return [homepageWebPageEntity()];
+}
+
+export function sitewideGraph() {
+  return [organizationEntity(), founderEntity(), websiteEntity()];
 }

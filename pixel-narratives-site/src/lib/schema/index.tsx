@@ -43,6 +43,7 @@ export {
   websiteEntity,
   homepageWebPageEntity,
   homepageGraph,
+  sitewideGraph,
   buildAreaServed,
   ORG_ID,
   FOUNDER_ID,
@@ -52,4 +53,3 @@ export {
 
 export { buildWebPage, buildBreadcrumbs } from "./pages";
 export { buildServicePageSchema } from "./services";
-export { buildLocationPageGraph } from "./locations";

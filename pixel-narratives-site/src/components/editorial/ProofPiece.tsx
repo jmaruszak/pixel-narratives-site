@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function ProofPiece({
   eyebrow,
   title,
@@ -24,10 +26,12 @@ export default function ProofPiece({
       <div>
         {imageSrc ? (
           <div className="relative mb-8 min-h-[14rem] overflow-hidden rounded-[24px] md:min-h-[22rem]">
-            <img
+            <Image
               src={imageSrc}
               alt={imageAlt ?? ""}
-              className="h-full w-full object-cover"
+              fill
+              sizes="(max-width: 1023px) 100vw, 58vw"
+              className="object-cover"
             />
           </div>
         ) : (

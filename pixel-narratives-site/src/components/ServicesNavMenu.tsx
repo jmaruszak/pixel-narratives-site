@@ -44,7 +44,7 @@ export default function ServicesNavMenu() {
         aria-controls={menuId}
         aria-haspopup="true"
         onClick={() => setOpen((current) => !current)}
-        className={`inline-flex items-center gap-1.5 text-sm transition hover:text-[var(--foreground)] ${
+        className={`inline-flex min-h-11 items-center gap-1.5 text-sm transition hover:text-[var(--foreground)] ${
           isServiceActive
             ? "text-[var(--foreground)]"
             : "text-[var(--muted)]"
@@ -64,18 +64,19 @@ export default function ServicesNavMenu() {
       </button>
 
       {open ? (
-        <div
+        <nav
           id={menuId}
-          role="menu"
+          aria-label="Services"
           className="absolute left-0 top-[calc(100%+0.75rem)] z-50 min-w-[14rem] rounded-2xl border border-white/10 bg-[#0b0c0f] p-2 shadow-2xl"
         >
           {SERVICE_NAV_LINKS.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              role="menuitem"
               onClick={() => setOpen(false)}
-              className={`block rounded-xl px-4 py-2.5 text-sm transition hover:bg-white/5 ${
+              className={`flex min-h-11 items-center rounded-xl px-4 py-2.5 text-sm transition hover:bg-white/5 ${
+                link.href === "/starting-small" ? "mb-1 border-b border-white/8 pb-3" : ""
+              } ${
                 pathname === link.href
                   ? "text-[var(--foreground)]"
                   : "text-[var(--muted)] hover:text-[var(--foreground)]"
@@ -84,7 +85,7 @@ export default function ServicesNavMenu() {
               {link.label}
             </a>
           ))}
-        </div>
+        </nav>
       ) : null}
     </div>
   );

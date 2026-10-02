@@ -2,6 +2,7 @@ import {
   CONTACT_EMAIL,
   CONTACT_PHONE,
   CONTACT_PHONE_TEL,
+  GOOGLE_BUSINESS_PROFILE_URL,
 } from "../lib/businessLocation";
 import {
   GUIDES_FOOTER_LINKS,
@@ -10,6 +11,7 @@ import {
   STUDIO_FOOTER_LINKS,
   type FooterLink,
 } from "../lib/footerLinks";
+import FooterMap from "./FooterMap";
 
 type FooterNavColumnProps = {
   ariaLabel: string;
@@ -20,9 +22,9 @@ type FooterNavColumnProps = {
 function FooterNavColumn({ ariaLabel, heading, links }: FooterNavColumnProps) {
   return (
     <nav aria-label={ariaLabel} className="max-w-[11rem]">
-      <p className="text-xs uppercase tracking-[0.25em] text-[var(--foreground)]">
+      <h2 className="text-xs uppercase tracking-[0.25em] text-[var(--foreground)]">
         {heading}
-      </p>
+      </h2>
       <div className="mt-4 flex flex-col gap-y-2.5">
         {links.map((link) => (
           <a
@@ -70,12 +72,6 @@ export default function Footer() {
           >
             {CONTACT_PHONE}
           </a>
-          <a
-            href="/privacy"
-            className="mt-3 inline-block transition hover:text-[var(--foreground)]"
-          >
-            Privacy Policy
-          </a>
           <div className="mt-5">
             <a
               href="/contact"
@@ -106,6 +102,23 @@ export default function Footer() {
           heading="Guides"
           links={GUIDES_FOOTER_LINKS}
         />
+      </div>
+      <div className="mx-auto grid w-full max-w-7xl gap-6 border-t border-white/8 px-6 py-8 text-sm text-[var(--muted)] lg:grid-cols-[minmax(0,0.7fr)_minmax(0,1.3fr)] lg:items-center md:px-10">
+        <div>
+          <p className="text-xs uppercase tracking-[0.25em] text-[var(--foreground)]">
+            Pixel Narratives
+          </p>
+          <p className="mt-2">Madison, Mississippi</p>
+          <a
+            href={GOOGLE_BUSINESS_PROFILE_URL}
+            target="_blank"
+            rel="noreferrer"
+            className="mt-4 inline-flex items-center text-[var(--foreground)] transition hover:opacity-80"
+          >
+            View on Google
+          </a>
+        </div>
+        <FooterMap />
       </div>
     </footer>
   );

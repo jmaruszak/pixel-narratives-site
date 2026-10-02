@@ -4,45 +4,58 @@ import Link from "next/link";
 import Footer from "../../components/Footer";
 import Nav from "../../components/Nav";
 import PageBottomCta from "../../components/PageBottomCta";
-import { SERVICE_PILLARS } from "../../lib/businessLocation";
-import { hubMarketCards } from "../../lib/locationLandingPages";
+import {
+  SERVICE_AREA_HUB_MENTIONS,
+  SERVICE_PILLARS,
+} from "../../lib/businessLocation";
 import { JsonLd, buildWebPage, buildBreadcrumbs } from "../../lib/schema";
-import { SITE_URL, buildPageMetadata } from "../../lib/siteMetadata";
+import { buildPageMetadata } from "../../lib/siteMetadata";
 import { WEB_INTEL_PAGE_TOOL_URL } from "../../lib/webIntelligence";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "AI Consulting & Implementation Across the South | Pixel Narratives",
+  title: "AI Implementation Across Mississippi and the South | Pixel Narratives",
   description:
-    "Pixel Narratives is based in Madison, Mississippi and works with small and midsize businesses across selected Southern markets on AI consulting, automation, implementation, and training.",
+    "Pixel Narratives is based in Madison, Mississippi and serves businesses across Mississippi and the South with AI implementation, automation, training, websites, and marketing.",
   path: "/serving-the-south",
 });
 
+const marketGroups = [
+  {
+    title: "Mississippi Is Home",
+    body: "Pixel Narratives is based in Madison. We work throughout the Jackson Metro and across Mississippi, including Madison, Ridgeland, Jackson, Flowood, Brandon, and Gluckstadt.",
+  },
+  {
+    title: "Serving the South",
+    body: "We work with businesses throughout the South when the problem, working relationship, and project are a good fit. Most implementation work can happen without creating a local office.",
+  },
+  {
+    title: "Atlanta",
+    body: "Atlanta is our first deliberate expansion market outside Mississippi. We serve Atlanta businesses from our Madison home base. Pixel Narratives does not have an Atlanta office.",
+  },
+] as const;
+
 const marketListSchema = {
   "@type": "ItemList" as const,
-  name: "Pixel Narratives Southern markets",
-  itemListElement: hubMarketCards.map((market, index) => ({
+  name: "Pixel Narratives service areas",
+  itemListElement: SERVICE_AREA_HUB_MENTIONS.map((market, index) => ({
     "@type": "ListItem" as const,
     position: index + 1,
-    name: market.label,
-    url: `${SITE_URL}/${market.slug}`,
+    name: market.region ? `${market.name}, ${market.region}` : market.name,
   })),
 };
 
 export default function ServingTheSouthPage() {
   return (
-    <main
-      id="main-content"
-      className="min-h-screen bg-[var(--background)] text-[var(--foreground)]"
-    >
+    <main className="min-h-screen bg-[var(--background)] text-[var(--foreground)]">
       <Nav />
 
       <JsonLd
         graph={[
           buildWebPage({
             path: "/serving-the-south",
-            name: "AI Consulting & Implementation Across the South",
+            name: "AI Implementation Across Mississippi and the South",
             description:
-              "Regional hub for Pixel Narratives AI consulting and implementation across Mississippi and selected Southern markets.",
+              "Pixel Narratives is based in Madison, serves businesses across Mississippi and the South, and actively works with Atlanta as an expansion market.",
           }),
           buildBreadcrumbs([
             { name: "Home", path: "/" },
@@ -62,11 +75,15 @@ export default function ServingTheSouthPage() {
           </h1>
           <div className="mt-8 max-w-3xl space-y-5 text-lg leading-relaxed text-[var(--muted)] md:text-xl md:leading-8">
             <p>
-              Pixel Narratives is based in Madison, Mississippi. We work with
-              small and midsize businesses across selected Southern markets on
-              automation, implementation, training, websites, and marketing. AI
-              consulting is part of that work when a company needs a clear read
-              before we build.
+              Mississippi is home. Pixel Narratives is based in Madison and
+              works with businesses throughout the Jackson Metro, across the
+              state, and across the South. Atlanta is the first market we are
+              deliberately expanding into outside Mississippi.
+            </p>
+            <p>
+              We help with AI and automation implementation, training,
+              websites and visibility, and marketing. We serve Atlanta from
+              Madison and do not represent it as a physical office.
             </p>
           </div>
           <div className="mt-8 flex flex-wrap gap-4">
@@ -82,7 +99,7 @@ export default function ServingTheSouthPage() {
               rel="noreferrer"
               className="inline-flex items-center rounded-full border border-white/10 px-6 py-3 text-sm text-[var(--foreground)] transition hover:bg-white/5"
             >
-              Run a free website scan
+              Check My Online Visibility
             </a>
             <Link
               href="/ai-readiness-assessment"
@@ -138,28 +155,28 @@ export default function ServingTheSouthPage() {
         <div className="mx-auto w-full max-w-7xl px-6 py-16 md:px-10 md:py-20">
           <div className="max-w-3xl">
             <p className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
-              Markets we know well
+              Where We Work
             </p>
             <h2 className="mt-4 text-4xl leading-none md:text-5xl">
-              Where we work most often
+              Mississippi first. The South beyond it.
             </h2>
           </div>
           <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {hubMarketCards.map((market) => (
+            {marketGroups.map((market) => (
               <article
-                key={market.slug}
+                key={market.title}
                 className="flex flex-col rounded-[28px] border border-white/8 bg-white/[0.02] p-8"
               >
-                <h3 className="text-2xl leading-snug">{market.label}</h3>
+                <h3 className="text-2xl leading-snug">{market.title}</h3>
                 <p className="mt-4 flex-1 text-base leading-relaxed text-[var(--muted)]">
-                  {market.description}
+                  {market.body}
                 </p>
                 <p className="mt-6">
                   <Link
-                    href={`/${market.slug}`}
+                    href="/contact"
                     className="text-sm text-[var(--foreground)] transition hover:opacity-80"
                   >
-                    {market.hrefLabel}
+                    Discuss a Project
                   </Link>
                 </p>
               </article>

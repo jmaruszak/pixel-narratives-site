@@ -437,7 +437,7 @@ export default function VisibilityInTheAgeOfAiPage() {
               rel="noreferrer"
               className="text-[var(--foreground)] transition hover:opacity-80"
             >
-              Run a free scan
+              Check My Online Visibility
             </a>{" "}
             on your live site to see search visibility, AI visibility, and
             authority signals.
@@ -506,7 +506,7 @@ export default function VisibilityInTheAgeOfAiPage() {
                 Want to know how visible your business is?
               </h2>
               <p className="pn-body mt-6">
-                Run a free website scan to see how your website
+                Check your online visibility to see how your website
                 performs across search visibility, AI visibility, authority
                 signals, and conversion opportunities.
               </p>
