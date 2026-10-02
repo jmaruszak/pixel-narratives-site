@@ -11,7 +11,9 @@ import {
   STUDIO_FOOTER_LINKS,
   type FooterLink,
 } from "../lib/footerLinks";
+import { ORGANIZATION_SOCIAL_PROFILES } from "../lib/socialProfiles";
 import FooterMap from "./FooterMap";
+import SocialProfileLink from "./SocialProfileLink";
 
 type FooterNavColumnProps = {
   ariaLabel: string;
@@ -72,6 +74,14 @@ export default function Footer() {
           >
             {CONTACT_PHONE}
           </a>
+          <nav
+            aria-label="Pixel Narratives social profiles"
+            className="mt-4 flex flex-wrap gap-2"
+          >
+            {ORGANIZATION_SOCIAL_PROFILES.map((profile) => (
+              <SocialProfileLink key={profile.href} profile={profile} />
+            ))}
+          </nav>
           <div className="mt-5">
             <a
               href="/contact"

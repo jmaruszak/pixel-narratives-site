@@ -2,10 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 import Footer from "../../components/Footer";
 import Nav from "../../components/Nav";
+import SocialProfileLink from "../../components/SocialProfileLink";
 import { NEWS_ITEMS, newsPath } from "../../lib/news";
 import { JsonLd, buildWebPage, buildBreadcrumbs } from "../../lib/schema";
 import { SERVICE_LINE_SUMMARY, SERVICES } from "../../lib/services";
 import { buildPageMetadata } from "../../lib/siteMetadata";
+import { FOUNDER_LINKEDIN_PROFILE } from "../../lib/socialProfiles";
 import { MARKETING_TO_WEB_INTEL_URL } from "../../lib/webIntelligence";
 
 export const metadata = buildPageMetadata({
@@ -172,6 +174,12 @@ export default function AboutPage() {
                 <p className="mt-3 text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
                   {founder.title}
                 </p>
+                <div className="mt-5">
+                  <SocialProfileLink
+                    profile={FOUNDER_LINKEDIN_PROFILE}
+                    showLabel
+                  />
+                </div>
                 <div className="mt-5 space-y-4 text-sm leading-relaxed text-[var(--muted)] md:text-base">
                   {founder.body.map((paragraph) => (
                     <p key={paragraph}>{paragraph}</p>

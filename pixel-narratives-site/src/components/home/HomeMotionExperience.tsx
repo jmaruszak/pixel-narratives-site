@@ -7,23 +7,23 @@ import { SERVICE_LINE_SUMMARY, SERVICES } from "../../lib/services";
 
 function HomeHero() {
   return (
-    <section className="relative overflow-hidden bg-black">
+    <section className="relative overflow-hidden bg-black md:aspect-[21/9] md:min-h-[34rem] md:max-h-[88vh]">
       <Image
         src="/images/home-hero-poster.jpg"
         alt=""
         fill
         priority
         sizes="100vw"
-        className="pointer-events-none object-cover object-left"
+        className="pointer-events-none object-cover object-left md:object-contain md:object-center"
         aria-hidden
       />
       <video
-        className="pointer-events-none absolute inset-0 hidden h-full w-full object-cover object-left md:motion-safe:block"
+        className="pointer-events-none absolute inset-0 hidden h-full w-full object-contain object-center md:motion-safe:block"
         autoPlay
         muted
         loop
         playsInline
-        preload="none"
+        preload="auto"
         poster="/images/home-hero-poster.jpg"
         aria-hidden
       >
@@ -44,7 +44,7 @@ function HomeHero() {
       <div className="hero-ambient-gradient pointer-events-none absolute inset-0" aria-hidden />
       <div className="home-stage-grain pointer-events-none absolute inset-0" aria-hidden />
 
-      <div className="relative mx-auto flex min-h-[88vh] w-full max-w-7xl flex-col justify-end px-6 py-20 md:px-10 md:py-24">
+      <div className="relative mx-auto flex min-h-[88vh] w-full max-w-7xl flex-col justify-end px-6 py-20 md:h-full md:min-h-[34rem] md:px-10 md:py-24">
         <p className="hero-entrance pn-kicker text-[var(--muted)]">
           Pixel Narratives
         </p>

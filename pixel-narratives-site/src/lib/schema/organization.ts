@@ -7,6 +7,10 @@ import {
   type ServiceAreaPlace,
 } from "../businessLocation";
 import { SITE_NAME, SITE_URL } from "../siteMetadata";
+import {
+  FOUNDER_LINKEDIN_PROFILE,
+  ORGANIZATION_SOCIAL_PROFILES,
+} from "../socialProfiles";
 
 // ---------------------------------------------------------------------------
 // Canonical IDs
@@ -81,9 +85,7 @@ export function organizationEntity() {
     areaServed: buildAreaServed(),
     sameAs: [
       GOOGLE_BUSINESS_PROFILE_URL,
-      "https://www.instagram.com/pixelnarratives.studio/",
-      "https://www.facebook.com/profile.php?id=61589823687666",
-      "https://youtube.com/@pixelnarrativesstudio",
+      ...ORGANIZATION_SOCIAL_PROFILES.map((profile) => profile.href),
     ],
     knowsAbout: [
       "Artificial Intelligence for Business",
@@ -198,7 +200,7 @@ export function founderEntity() {
     worksFor: { "@id": ORG_ID },
     url: `${SITE_URL}/about`,
     image: `${SITE_URL}/images/about-jordan.jpg`,
-    sameAs: ["https://www.linkedin.com/in/jordanmaruszak/"],
+    sameAs: [FOUNDER_LINKEDIN_PROFILE.href],
     knowsAbout: [
       "AI Implementation",
       "AI Strategy",
