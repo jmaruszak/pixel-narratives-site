@@ -65,7 +65,7 @@ export const NEWS_ITEMS: NewsItem[] = [
       "Pixel Narratives, based in Madison, Mississippi, announced AI implementation services for small and midsize businesses, covering automation, training, websites, marketing, and Fractional Chief AI Officer support.",
     kicker: "Press Release · August 24, 2026",
     sourceLine: "Distributed via EIN Presswire",
-    dateline: "MADISON, Mississippi — August 24, 2026",
+    dateline: "MADISON, Mississippi | August 24, 2026",
     closingNote:
       "This release was distributed August 24, 2026 via EIN Presswire.",
     schemaType: "NewsArticle",

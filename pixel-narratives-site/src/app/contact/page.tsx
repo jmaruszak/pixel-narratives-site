@@ -16,7 +16,7 @@ import { buildPageMetadata } from "../../lib/siteMetadata";
 export const metadata = buildPageMetadata({
   title: "Contact | Pixel Narratives",
   description:
-    "Talk with Pixel Narratives about automation, training, websites, or marketing. Based in Madison, Mississippi.",
+    "Talk with Pixel Narratives about implementation, training, websites, or marketing. Based in Madison, Mississippi.",
   path: "/contact",
   image: "/images/home-cinematic.jpg",
   imageAlt: "Contact Pixel Narratives",
@@ -66,7 +66,7 @@ export default async function ContactPage({
             path: "/contact",
             name: "Contact Pixel Narratives",
             description:
-              "Talk with Pixel Narratives about automation, training, websites, or marketing. Based in Madison, Mississippi.",
+              "Talk with Pixel Narratives about implementation, training, websites, or marketing. Based in Madison, Mississippi.",
             additionalType: "ContactPage",
           }),
           buildBreadcrumbs([

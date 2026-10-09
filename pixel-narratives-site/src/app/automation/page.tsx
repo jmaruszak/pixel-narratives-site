@@ -11,9 +11,9 @@ import { JsonLd, buildServicePageSchema, buildWebPage, buildBreadcrumbs } from "
 import { buildPageMetadata } from "../../lib/siteMetadata";
 
 export const metadata = buildPageMetadata({
-  title: "AI Implementation & Business Automation | Pixel Narratives",
+  title: "AI Implementation for Businesses | Pixel Narratives",
   description:
-    "Practical business systems using AI, automation, CRM, dashboards, and internal tools. Pixel Narratives implements a better way to work, not a promise to automate everything.",
+    "Identify where AI can create value, choose the right tools and opportunities, guide adoption, improve workflows, and build custom solutions when they make sense.",
   path: "/automation",
   image: "/images/int-cinematic.jpg",
   imageAlt: "Implementation cinematic visual for Pixel Narratives",
@@ -43,7 +43,7 @@ const EXAMPLES = [
   },
   {
     title: "Internal tools",
-    body: "Build the small systems your team actually needs, instead of forcing the work into software that does not fit.",
+    body: "Build the small systems your team needs instead of forcing the work into software that does not fit.",
   },
   {
     title: "AI assistance",
@@ -69,12 +69,12 @@ export default function AutomationPage() {
             path: "/automation",
             name: "Implementation",
             description:
-              "Practical business systems using AI, automation, CRM, dashboards, internal tools, and integrations. Sometimes we automate the work. Sometimes we give the team a better way to do it.",
-            serviceType: "AI Implementation and Business Automation",
+              "Practical AI implementation, adoption guidance, workflow improvement, tool selection, and custom solutions when they make sense for the business.",
+            serviceType: "AI Implementation and Adoption",
           }),
           buildWebPage({
             path: "/automation",
-            name: "AI Implementation & Business Automation | Pixel Narratives",
+            name: "AI Implementation for Businesses | Pixel Narratives",
             mainEntity: { "@id": "https://pixelnarratives.studio/automation#service" },
           }),
           buildBreadcrumbs([
@@ -92,7 +92,12 @@ export default function AutomationPage() {
         subtitle="Implementation"
       >
         <p className="hero-entrance hero-entrance-delay-1 mt-4 text-sm uppercase tracking-[0.18em] text-white/55">
-          AI + Automation + Business Systems
+          AI Adoption + Practical Implementation
+        </p>
+        <p className="hero-entrance hero-entrance-delay-2 mt-6 max-w-2xl text-lg leading-relaxed text-white/75 md:text-xl">
+          We help you identify where AI makes sense, decide what is worth
+          pursuing, and put it to work. That can include existing tools, a
+          better process, something custom, or ongoing guidance.
         </p>
         <div className="hero-entrance hero-entrance-delay-2 mt-10 flex flex-wrap gap-4">
           <a
@@ -195,13 +200,13 @@ export default function AutomationPage() {
                 Optional first step
               </p>
               <h3 className="mt-4 text-2xl leading-none md:text-3xl">
-                AI & Automation Assessment
+                Implementation Assessment
               </h3>
               <p className="mt-4 text-sm uppercase tracking-[0.25em] text-[var(--muted)]">
                 Starting at $1,250
               </p>
               <p className="mt-6 text-base leading-relaxed text-[var(--muted)]">
-                Find where AI and automation will actually help before you
+                Find where AI and automation will help before you
                 spend money building. From there, the next step may be a quick
                 win, Guided Implementation, a custom project, or ongoing
                 leadership.
@@ -358,17 +363,19 @@ export default function AutomationPage() {
         <div className="mx-auto w-full max-w-7xl px-6 pn-section md:px-10">
           <div className="rounded-[24px] border border-white/8 bg-white/[0.02] p-8 md:p-10">
             <h2 className="max-w-3xl text-3xl leading-none md:text-4xl">
-              Training helps the team use what we build
+              Training is available on its own
             </h2>
             <p className="mt-6 max-w-3xl text-base leading-relaxed text-[var(--muted)] md:text-lg">
-              We build better ways to work.{" "}
+              Your team can learn to use ChatGPT, Claude, Microsoft Copilot,
+              AI video, research, creative tools, and other useful products
+              without a custom implementation project.{" "}
               <a
                 href="/training"
                 className="text-[var(--foreground)] transition hover:opacity-80"
               >
-                Training
+                Explore standalone team training
               </a>{" "}
-              teaches the team to use them.
+              built around the work your people already do.
             </p>
           </div>
         </div>

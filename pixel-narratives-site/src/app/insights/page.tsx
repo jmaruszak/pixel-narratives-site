@@ -19,7 +19,7 @@ type InsightGroup = {
 
 const insightGroups: InsightGroup[] = [
   {
-    title: "AI & Automation",
+    title: "AI Implementation",
     description: "Practical ways to choose, implement, and improve AI-supported work.",
     items: [
       {
@@ -45,7 +45,12 @@ const insightGroups: InsightGroup[] = [
       {
         href: "/ai-consulting-for-businesses",
         title: "AI Implementation for Businesses",
-        body: "What practical AI support should include when the goal is working systems rather than recommendations alone.",
+        body: "What practical AI support includes when the goal is useful adoption, better work, and follow-through.",
+      },
+      {
+        href: "/training",
+        title: "AI Team Training",
+        body: "Standalone workshops for teams using ChatGPT, Claude, Microsoft Copilot, AI video, research, and creative tools.",
       },
     ],
   },
@@ -181,6 +186,27 @@ export default function InsightsPage() {
           </div>
         </section>
       ))}
+
+      <section className="border-t border-white/8">
+        <div className="mx-auto flex w-full max-w-7xl flex-col gap-5 px-6 py-16 md:flex-row md:items-center md:justify-between md:px-10">
+          <div className="max-w-3xl">
+            <h2 className="text-3xl leading-none md:text-4xl">
+              Serving businesses across the South
+            </h2>
+            <p className="mt-4 leading-relaxed text-[var(--muted)]">
+              Pixel Narratives is based in Madison and actively serves
+              Mississippi, Birmingham, Memphis, and Mobile plus Alabama&apos;s
+              Eastern Shore.
+            </p>
+          </div>
+          <Link
+            href="/serving-the-south"
+            className="inline-flex min-h-11 items-center self-start rounded-full border border-white/10 px-5 py-2.5 text-sm transition hover:bg-white/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/50 md:self-auto"
+          >
+            Explore Locations
+          </Link>
+        </div>
+      </section>
 
       <section className="border-t border-white/8">
         <div className="mx-auto flex w-full max-w-7xl flex-col gap-5 px-6 py-16 md:flex-row md:items-center md:justify-between md:px-10">

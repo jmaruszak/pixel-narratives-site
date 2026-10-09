@@ -102,7 +102,7 @@ export default function StartingSmallPage() {
                   href="/automation"
                   className="text-[var(--foreground)] transition hover:opacity-80"
                 >
-                  AI & Automation Assessment starts at $1,250
+                  Implementation Assessment starts at $1,250
                 </a>
                 . We map the work, identify the best opportunities, and decide
                 what&apos;s worth building first.

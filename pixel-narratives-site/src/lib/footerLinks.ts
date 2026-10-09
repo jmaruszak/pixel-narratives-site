@@ -6,10 +6,11 @@ export type FooterLink = {
 export const STUDIO_FOOTER_LINKS: FooterLink[] = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
+  { href: "/ai-info", label: "Official Information" },
   { href: "/insights", label: "Insights" },
   { href: "/news", label: "News" },
   { href: "/work", label: "Work" },
-  { href: "/serving-the-south", label: "Serving the South" },
+  { href: "/serving-the-south", label: "Locations" },
   { href: "/contact", label: "Contact" },
   { href: "/privacy", label: "Privacy Policy" },
 ];
@@ -17,7 +18,7 @@ export const STUDIO_FOOTER_LINKS: FooterLink[] = [
 export const SERVICES_FOOTER_LINKS: FooterLink[] = [
   { href: "/services", label: "All Services" },
   { href: "/starting-small", label: "Starting Small" },
-  { href: "/automation", label: "AI & Automation" },
+  { href: "/automation", label: "Implementation" },
   { href: "/training", label: "Training" },
   { href: "/websites", label: "Websites & Visibility" },
   { href: "/marketing", label: "Marketing" },

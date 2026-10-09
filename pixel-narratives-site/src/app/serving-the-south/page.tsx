@@ -3,34 +3,73 @@ import Link from "next/link";
 
 import Footer from "../../components/Footer";
 import Nav from "../../components/Nav";
-import PageBottomCta from "../../components/PageBottomCta";
-import {
-  SERVICE_AREA_HUB_MENTIONS,
-  SERVICE_PILLARS,
-} from "../../lib/businessLocation";
+import { SERVICE_AREA_HUB_MENTIONS } from "../../lib/businessLocation";
 import { JsonLd, buildWebPage, buildBreadcrumbs } from "../../lib/schema";
 import { buildPageMetadata } from "../../lib/siteMetadata";
 import { WEB_INTEL_PAGE_TOOL_URL } from "../../lib/webIntelligence";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "AI Implementation Across Mississippi and the South | Pixel Narratives",
+  title: "Locations | Pixel Narratives",
   description:
-    "Pixel Narratives is based in Madison, Mississippi and serves businesses across Mississippi and the South with AI implementation, automation, training, websites, and marketing.",
+    "Pixel Narratives is based in Madison and serves businesses throughout Mississippi, Birmingham, Memphis, Mobile, and Alabama's Eastern Shore.",
   path: "/serving-the-south",
 });
 
+const helpGroups = [
+  {
+    title: "Implementation",
+    outcome: "Save time. Reduce repetitive work. Make the business easier to run.",
+    body: "We help businesses figure out where AI makes sense and how to put it to work. From a specific project to an ongoing partnership, we bring the expertise to help you make good decisions and get things done.",
+    href: "/automation",
+    cta: "Explore Implementation",
+  },
+  {
+    title: "Training",
+    outcome: "Get your team up to speed on AI.",
+    body: "Practical workshops built around your people and the work they do. ChatGPT, Claude, Microsoft Copilot, AI video, research, creative tools, and more.",
+    href: "/training",
+    cta: "Explore Training",
+  },
+  {
+    title: "Websites + Online Visibility",
+    outcome: "Help more of the right customers find you.",
+    body: "We build websites that look good, work well, and give people a reason to take the next step. We also help businesses improve how they show up in search.",
+    href: "/websites",
+    cta: "Explore Websites + Online Visibility",
+  },
+  {
+    title: "Marketing",
+    outcome: "Get attention. Make an impression. Bring in business.",
+    body: "We create advertising, video, and campaigns designed to get noticed. AI helps us produce creative work in new ways, but the idea still has to be good.",
+    href: "/marketing",
+    cta: "Explore Marketing",
+  },
+] as const;
+
 const marketGroups = [
   {
-    title: "Mississippi Is Home",
-    body: "Pixel Narratives is based in Madison. We work throughout the Jackson Metro and across Mississippi, including Madison, Ridgeland, Jackson, Flowood, Brandon, and Gluckstadt.",
+    title: "Mississippi",
+    body: "Madison is home. We work with businesses throughout the Jackson metro and across Mississippi, helping owners and teams find better ways to get things done.",
+    href: "/locations/mississippi",
+    cta: "Explore Mississippi",
   },
   {
-    title: "Serving the South",
-    body: "We work with businesses throughout the South when the problem, working relationship, and project are a good fit. Most implementation work can happen without creating a local office.",
+    title: "Birmingham, Alabama",
+    body: "We help Birmingham businesses put AI to work, train their teams, improve their online presence, and reach more customers.",
+    href: "/locations/birmingham",
+    cta: "Explore Birmingham",
   },
   {
-    title: "Atlanta",
-    body: "Atlanta is our first deliberate expansion market outside Mississippi. We serve Atlanta businesses from our Madison home base. Pixel Narratives does not have an Atlanta office.",
+    title: "Memphis, Tennessee",
+    body: "From getting started with AI to making better use of the tools you already have, we help Memphis businesses find practical ways to move forward.",
+    href: "/locations/memphis",
+    cta: "Explore Memphis",
+  },
+  {
+    title: "Mobile + Eastern Shore, Alabama",
+    body: "We work with businesses in Mobile, Daphne, Fairhope, and surrounding communities, helping them use AI, improve how they work, and grow.",
+    href: "/locations/mobile-eastern-shore",
+    cta: "Explore Mobile + Eastern Shore",
   },
 ] as const;
 
@@ -53,13 +92,13 @@ export default function ServingTheSouthPage() {
         graph={[
           buildWebPage({
             path: "/serving-the-south",
-            name: "AI Implementation Across Mississippi and the South",
+            name: "Locations | Pixel Narratives",
             description:
-              "Pixel Narratives is based in Madison, serves businesses across Mississippi and the South, and actively works with Atlanta as an expansion market.",
+              "Pixel Narratives is based in Madison and serves businesses throughout Mississippi, Birmingham, Memphis, Mobile, and Alabama's Eastern Shore.",
           }),
           buildBreadcrumbs([
             { name: "Home", path: "/" },
-            { name: "Serving the South", path: "/serving-the-south" },
+            { name: "Locations", path: "/serving-the-south" },
           ]),
           marketListSchema,
         ]}
@@ -68,22 +107,21 @@ export default function ServingTheSouthPage() {
       <section className="mx-auto w-full max-w-7xl px-6 py-20 md:px-10 md:py-24">
         <div className="max-w-4xl">
           <p className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
-            Serving the South
+            Locations
           </p>
           <h1 className="mt-4 text-5xl leading-[1.05] md:text-7xl">
-            We build the better way across the South.
+            Based in Mississippi. Serving businesses across the South.
           </h1>
           <div className="mt-8 max-w-3xl space-y-5 text-lg leading-relaxed text-[var(--muted)] md:text-xl md:leading-8">
             <p>
-              Mississippi is home. Pixel Narratives is based in Madison and
-              works with businesses throughout the Jackson Metro, across the
-              state, and across the South. Atlanta is the first market we are
-              deliberately expanding into outside Mississippi.
+              Pixel Narratives is based in Madison, Mississippi. We work with
+              businesses throughout Mississippi, Birmingham, Memphis, and
+              Mobile and Alabama&apos;s Eastern Shore.
             </p>
             <p>
-              We help with AI and automation implementation, training,
-              websites and visibility, and marketing. We serve Atlanta from
-              Madison and do not represent it as a physical office.
+              Whether you&apos;re looking for help putting AI to work, getting
+              your team up to speed, building a better website, or reaching
+              more customers, we&apos;re here to help.
             </p>
           </div>
           <div className="mt-8 flex flex-wrap gap-4">
@@ -122,28 +160,25 @@ export default function ServingTheSouthPage() {
             </h2>
           </div>
           <div className="mt-10 grid gap-6 lg:grid-cols-2">
-            {SERVICE_PILLARS.map((pillar) => (
+            {helpGroups.map((group) => (
               <article
-                key={pillar.headline}
+                key={group.title}
                 className="rounded-[28px] border border-white/8 bg-white/[0.02] p-8"
               >
-                <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
-                  {pillar.eyebrow}
-                </p>
-                <h3 className="mt-3 text-2xl leading-snug md:text-3xl">
-                  {pillar.headline}
+                <h3 className="text-2xl leading-snug md:text-3xl">
+                  {group.title}
                 </h3>
                 <p className="mt-3 text-sm font-medium text-[var(--foreground)]">
-                  {pillar.outcome}
+                  {group.outcome}
                 </p>
                 <p className="mt-4 text-base leading-relaxed text-[var(--muted)]">
-                  {pillar.body}
+                  {group.body}
                 </p>
                 <Link
-                  href={pillar.href}
-                  className="mt-5 inline-block text-sm text-[var(--foreground)] transition hover:opacity-80"
+                  href={group.href}
+                  className="mt-5 inline-flex min-h-11 items-center text-sm text-[var(--foreground)] transition hover:opacity-80"
                 >
-                  Explore {pillar.headline}
+                  {group.cta}
                 </Link>
               </article>
             ))}
@@ -154,14 +189,11 @@ export default function ServingTheSouthPage() {
       <section className="border-t border-white/8">
         <div className="mx-auto w-full max-w-7xl px-6 py-16 md:px-10 md:py-20">
           <div className="max-w-3xl">
-            <p className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
+            <h2 className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
               Where We Work
-            </p>
-            <h2 className="mt-4 text-4xl leading-none md:text-5xl">
-              Mississippi first. The South beyond it.
             </h2>
           </div>
-          <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-10 grid gap-6 md:grid-cols-2">
             {marketGroups.map((market) => (
               <article
                 key={market.title}
@@ -173,10 +205,10 @@ export default function ServingTheSouthPage() {
                 </p>
                 <p className="mt-6">
                   <Link
-                    href="/contact"
-                    className="text-sm text-[var(--foreground)] transition hover:opacity-80"
+                    href={market.href}
+                    className="inline-flex min-h-11 items-center text-sm text-[var(--foreground)] transition hover:opacity-80"
                   >
-                    Discuss a Project
+                    {market.cta}
                   </Link>
                 </p>
               </article>
@@ -184,14 +216,6 @@ export default function ServingTheSouthPage() {
           </div>
         </div>
       </section>
-
-      <PageBottomCta
-        eyebrow="Next Step"
-        headline="Ready to talk about your market?"
-        body="Start with a call or a free website scan. The AI Readiness Assessment is optional if you want a clearer picture first."
-        primaryAction={{ href: "/contact", label: "Start a Conversation" }}
-        secondaryAction={{ href: "/about", label: "About Pixel Narratives" }}
-      />
       <Footer />
     </main>
   );

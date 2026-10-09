@@ -44,14 +44,16 @@ export default function CinematicPageHero({
             />
           ) : null}
           <div className="relative z-[1]">
-            <h1 className="hero-entrance leading-none text-white">
-              <span className="block pn-display">{title}</span>
+            <div className="hero-entrance">
+              <h1 className="leading-none text-white">
+                <span className="block pn-display">{title}</span>
+              </h1>
               {subtitle ? (
-                <span className="mt-4 block text-2xl text-white/80 md:text-4xl">
+                <p className="mt-4 text-2xl text-white/80 md:text-4xl">
                   {subtitle}
-                </span>
+                </p>
               ) : null}
-            </h1>
+            </div>
             {children}
           </div>
         </div>

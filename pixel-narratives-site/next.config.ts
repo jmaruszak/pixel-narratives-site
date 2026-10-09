@@ -36,28 +36,23 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/mississippi-ai-studio",
-        destination: "/serving-the-south",
-        permanent: true,
+        destination: "/locations/mississippi",
+        statusCode: 301,
       },
       {
         source: "/birmingham-ai-studio",
-        destination: "/serving-the-south",
-        permanent: true,
-      },
-      {
-        source: "/gulf-coast-ai-studio",
-        destination: "/serving-the-south",
-        permanent: true,
-      },
-      {
-        source: "/jacksonville-ai-studio",
-        destination: "/serving-the-south",
-        permanent: true,
+        destination: "/locations/birmingham",
+        statusCode: 301,
       },
       {
         source: "/memphis-ai-studio",
+        destination: "/locations/memphis",
+        statusCode: 301,
+      },
+      {
+        source: "/locations",
         destination: "/serving-the-south",
-        permanent: true,
+        statusCode: 301,
       },
     ];
   },

@@ -53,3 +53,4 @@ export {
 
 export { buildWebPage, buildBreadcrumbs } from "./pages";
 export { buildServicePageSchema } from "./services";
+export { buildLocationPageGraph } from "./locations";

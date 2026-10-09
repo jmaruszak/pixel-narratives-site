@@ -30,8 +30,9 @@ export default function WebMcpTools() {
                 studio: "Pixel Narratives",
                 headquarters: `${HEADQUARTERS.locality}, ${HEADQUARTERS.region}`,
                 serviceArea:
-                  "Mississippi is the primary market. Pixel Narratives serves businesses throughout the South, with Atlanta as an actively served expansion market and no Atlanta office.",
+                  "Pixel Narratives is based in Madison, Mississippi. Active markets are Mississippi, Birmingham, Memphis, and Mobile plus Alabama's Eastern Shore. Atlanta is a secondary opportunity.",
                 site: SITE_URL,
+                officialInformation: `${SITE_URL}/ai-info`,
                 offers: {
                   startingSmall: {
                     summary:
@@ -41,11 +42,11 @@ export default function WebMcpTools() {
                   automation: {
                     name: "Implementation",
                     summary:
-                      "We manage the process of implementing AI into existing business systems, and build new systems when the value can be measured.",
+                      "We help businesses identify where AI makes sense, prioritize opportunities, adopt existing tools, improve workflows, implement practical changes, and build custom solutions when appropriate.",
                     url: `${SITE_URL}/automation`,
                     tiers: [
                       {
-                        name: "AI & Automation Assessment",
+                        name: "Implementation Assessment",
                         price: "Starting at $1,250",
                         description:
                           "Workflow review, bottleneck map, tool recommendations, quick wins, and a 30 to 60 day implementation plan.",
@@ -73,7 +74,7 @@ export default function WebMcpTools() {
                   },
                   training: {
                     summary:
-                      "One department is $7,500. Full team is $15,000 to $20,000. Multi-day engagements start at $25,000. Practical workshops built around the work the team already does.",
+                      "Standalone training for ChatGPT, Claude, Microsoft Copilot, AI video, creative work, research, analysis, and productivity. One department is $7,500. Full team is $15,000 to $20,000. Multi-day engagements start at $25,000.",
                     url: `${SITE_URL}/training`,
                   },
                   websites: {
@@ -151,7 +152,7 @@ export default function WebMcpTools() {
                 phone: CONTACT_PHONE,
                 contactPage: `${SITE_URL}/contact`,
                 bookCall: CALENDLY_URL,
-                responseTime: "1–2 business days for email",
+                responseTime: "1 to 2 business days for email",
               },
               null,
               2,

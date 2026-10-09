@@ -13,7 +13,7 @@ export function BookDiscoveryCallForm({ need }: { need?: string }) {
     webMcpForm({
       toolname: "book_discovery_call",
       tooldescription:
-        "Schedule a Zoom discovery call with Pixel Narratives about automation, training, websites, or marketing",
+        "Schedule a Zoom discovery call with Pixel Narratives about implementation, training, websites, or marketing",
     }),
   );
 

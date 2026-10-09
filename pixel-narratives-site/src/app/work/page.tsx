@@ -38,7 +38,7 @@ export default function WorkPage() {
       <CinematicPageHero
         imageSrc="/images/work-hero.png"
         imageAlt="Hand selecting a glowing digital checkmark"
-        title="We actually make things."
+        title="We put ideas to work."
       >
         <div className="hero-entrance hero-entrance-delay-1 mt-8 max-w-2xl space-y-5 text-lg text-white/70 md:text-xl">
           <p>

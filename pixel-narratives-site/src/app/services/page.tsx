@@ -8,7 +8,7 @@ import { buildPageMetadata } from "../../lib/siteMetadata";
 export const metadata = buildPageMetadata({
   title: "Services | Pixel Narratives",
   description:
-    "Explore AI and automation implementation, team training, websites and visibility, marketing, Fractional AI Leadership, and contained first projects from Pixel Narratives.",
+    "Explore AI implementation, standalone team training, websites and online visibility, marketing, Fractional AI Leadership, and contained first projects.",
   path: "/services",
 });
 
@@ -39,7 +39,7 @@ export default function ServicesPage() {
             path: "/services",
             name: "Pixel Narratives Services",
             description:
-              "AI and automation implementation, AI training, websites and visibility, marketing, Fractional AI Leadership, and contained first projects.",
+              "AI implementation, standalone AI training, websites and online visibility, marketing, Fractional AI Leadership, and contained first projects.",
           }),
           buildBreadcrumbs([
             { name: "Home", path: "/" },
@@ -57,9 +57,10 @@ export default function ServicesPage() {
             What are you trying to improve?
           </h1>
           <p className="mt-8 max-w-3xl text-lg leading-relaxed text-[var(--muted)] md:text-xl">
-            Pixel Narratives helps businesses save time, use AI better, get
-            found, and reach more customers. Start with the problem in front of
-            you.
+            Hire us for a specific project or bring us in as an ongoing
+            partner. Implementation, Training, Websites + Online Visibility,
+            and Marketing are available independently, so you can start with
+            the problem in front of you.
           </p>
         </div>
       </section>

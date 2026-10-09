@@ -8,9 +8,9 @@ import { JsonLd, buildServicePageSchema, buildWebPage, buildBreadcrumbs } from "
 import { buildPageMetadata } from "../../lib/siteMetadata";
 
 export const metadata = buildPageMetadata({
-  title: "Corporate AI Workshops | Pixel Narratives",
+  title: "AI Team Training and Workshops | Pixel Narratives",
   description:
-    "Corporate AI workshops from $7,500 for one department. Larger teams and multi-day engagements are scoped from there. Private training built around the work people already do.",
+    "Standalone AI training for ChatGPT, Claude, Microsoft Copilot, AI video, research, creative work, and productivity. Private workshops start at $7,500.",
   path: "/training",
   image: "/images/int-cinematic.jpg",
   imageAlt: "Team training cinematic visual for Pixel Narratives",
@@ -35,7 +35,7 @@ const TEAM_SESSIONS = [
   },
   {
     title: "Marketing",
-    body: "Campaign briefs and creative review. Audience and competitor research. Drafting ads, social posts, and content. Turning performance notes into the next version. Organizing messages and assets. Repeatable content workflows the team can keep using.",
+    body: "Campaign briefs and creative review. Audience and competitor research. AI video and creative production. Drafting ads, social posts, and content. Turning performance notes into the next version. Organizing messages and assets. Repeatable content workflows the team can keep using.",
   },
 ] as const;
 
@@ -47,14 +47,14 @@ export default function TrainingPage() {
         graph={[
           buildServicePageSchema({
             path: "/training",
-            name: "Corporate AI Workshops",
+            name: "AI Team Training and Workshops",
             description:
-              "Corporate AI workshops from $7,500 for one department. Full-team and multi-day engagements are scoped for larger groups. Private training built around the work people already do.",
-            serviceType: "Corporate AI Training and Workshops",
+              "Standalone, tailored training for ChatGPT, Claude, Microsoft Copilot, AI video, creative work, research, analysis, and everyday productivity.",
+            serviceType: "AI Team Training and Workshops",
           }),
           buildWebPage({
             path: "/training",
-            name: "Corporate AI Workshops | Pixel Narratives",
+            name: "AI Team Training and Workshops | Pixel Narratives",
             mainEntity: { "@id": "https://pixelnarratives.studio/training#service" },
           }),
           buildBreadcrumbs([
@@ -68,9 +68,14 @@ export default function TrainingPage() {
         contentScrim
         imageSrc="/images/training-hero.png"
         imageAlt="Team workshop with a presenter at a whiteboard"
-        title="Your Team Has ChatGPT. Now What?"
+        title="Get Your Team Up to Speed on AI."
         subtitle="Training"
       >
+        <p className="hero-entrance hero-entrance-delay-1 mt-6 max-w-2xl text-lg leading-relaxed text-white/75 md:text-xl">
+          Give your people the skills and confidence to use AI in their
+          everyday work. No custom software or prior implementation project is
+          required.
+        </p>
         <div className="hero-entrance hero-entrance-delay-2 mt-10 flex flex-wrap gap-4">
           <a
             href="#workshop-inquiry"
@@ -86,6 +91,34 @@ export default function TrainingPage() {
           </a>
         </div>
       </CinematicPageHero>
+
+      <section className="border-t border-white/8">
+        <div className="mx-auto grid w-full max-w-7xl gap-12 px-6 pn-section md:grid-cols-2 md:px-10">
+          <div>
+            <p className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
+              Standalone Training
+            </p>
+            <h2 className="mt-4 text-4xl leading-none md:text-6xl">
+              Built for your team and the work in front of them.
+            </h2>
+          </div>
+          <div className="space-y-6 text-lg leading-relaxed text-[var(--muted)] md:text-xl">
+            <p>
+              We build training around your organization, the people in the
+              room, and what they need to accomplish.
+            </p>
+            <p>
+              Workshops can cover ChatGPT, Claude, Microsoft Copilot, AI
+              video, creative tools, research, analysis, and everyday
+              productivity.
+            </p>
+            <p className="text-[var(--foreground)]">
+              Training is its own service. Your team does not need custom
+              software or an implementation engagement to work with us.
+            </p>
+          </div>
+        </div>
+      </section>
 
       <section className="border-t border-white/8">
         <div className="mx-auto grid w-full max-w-7xl gap-12 px-6 pn-section md:grid-cols-2 md:px-10">
@@ -142,7 +175,7 @@ export default function TrainingPage() {
             ))}
           </div>
           <p className="mt-8 max-w-3xl text-base leading-relaxed text-[var(--muted)] md:text-lg">
-            Workshops can also be built around other roles, we focus on the
+            Workshops can also be built around other roles. We focus on the
             specific needs of your organization.
           </p>
         </div>

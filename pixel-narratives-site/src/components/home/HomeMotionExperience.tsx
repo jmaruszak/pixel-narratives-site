@@ -49,8 +49,12 @@ function HomeHero() {
           Pixel Narratives
         </p>
         <h1 className="hero-entrance hero-entrance-delay-1 pn-display mt-5 max-w-5xl">
-          There&apos;s probably a better way to do this.
+          Put AI to work in your business.
         </h1>
+        <p className="hero-entrance hero-entrance-delay-2 mt-7 max-w-3xl text-lg leading-relaxed text-white/75 md:text-xl">
+          We help you figure out where AI makes sense, decide what is worth
+          pursuing, and put those ideas into practice.
+        </p>
         <p className="hero-entrance hero-entrance-delay-2 mt-8 max-w-3xl text-sm uppercase tracking-[0.18em] text-[var(--foreground)] md:text-base md:tracking-[0.22em]">
           {SERVICE_LINE_SUMMARY}
         </p>
@@ -85,14 +89,14 @@ export default function HomeMotionExperience() {
       <ServiceEditorial
         personalityHeadline="This Should Be Easier."
         serviceName={automation.name}
-        supportLine="AI + Automation + Business Systems"
-        explanation="We manage the process of implementing AI into your existing business systems. We introduce new systems, technology and automations when and if value can be delivered and measured."
+        supportLine="AI Adoption + Practical Implementation"
+        explanation="Bring us a specific problem or an ongoing need. We help identify where AI can create value, improve how your team uses existing tools, guide adoption, and build custom solutions when the work calls for them."
         examples={[
-          "CRM and lead follow-up",
-          "Dashboards and reporting",
-          "Client portals and internal tools",
-          "Integrations between the software you already have",
-          "AI workflows where they actually help",
+          "Identify and prioritize useful AI opportunities",
+          "Get more from tools your team already has",
+          "Improve workflows and guide adoption",
+          "Build custom solutions when they are the right fit",
+          "Provide ongoing AI leadership",
         ]}
         media="/images/int-cinematic.jpg"
         mediaAlt="Cinematic still for implementation work"
@@ -117,11 +121,12 @@ export default function HomeMotionExperience() {
           </>
         }
         serviceName={training.name}
-        explanation="Practical workshops and training built around the work your team does."
+        explanation="Standalone training built around your team, the tools they use, and what they need to accomplish. No custom software or implementation project is required."
         examples={[
-          "Leadership, department, and role-specific sessions",
+          "ChatGPT, Claude, Microsoft Copilot, and other useful tools",
+          "AI video, creative production, research, and analysis",
           "Hands-on work on real tasks from the business",
-          "Repeatable workflows people can keep using",
+          "Leadership, department, and role-specific sessions",
         ]}
         media="/images/training-hero.png"
         mediaAlt="Team workshop with a presenter at a whiteboard"
@@ -156,7 +161,7 @@ export default function HomeMotionExperience() {
           </>
         }
         serviceName={marketing.name}
-        explanation="Campaigns, advertising, video, content, and creative designed to reach the right people and generate opportunity. We utilize an AI-native process to deliver faster results and more iterations."
+        explanation="Campaigns, advertising, video, content, and creative designed to reach the right people and generate opportunity. AI helps us produce and test creative efficiently, but the idea still has to be good."
         examples={[
           "Campaigns, paid advertising, and lead generation",
           "Video, commercials, and social content",

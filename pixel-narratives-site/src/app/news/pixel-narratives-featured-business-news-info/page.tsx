@@ -36,8 +36,8 @@ export default function PixelNarrativesBusinessNewsInfoPage() {
       <p>
         Hartley&apos;s feature emphasizes a business-first method. Pixel
         Narratives, as described in the coverage, begins by looking at how a
-        company currently operates — how the team works, where time is spent,
-        how customers are acquired, and where work gets stuck — before deciding
+        company currently operates, including how the team works, where time is
+        spent, how customers are acquired, and where work gets stuck, before deciding
         where AI should be introduced.
       </p>
       <p>
@@ -55,7 +55,7 @@ export default function PixelNarrativesBusinessNewsInfoPage() {
       <p>
         The Spotlight does not treat AI as a single product. It describes Pixel
         Narratives across several connected areas of work:{" "}
-        <Link href="/automation">AI &amp; Automation Implementation</Link>,{" "}
+        <Link href="/automation">Implementation</Link>,{" "}
         <Link href="/training">employee AI training</Link>,{" "}
         <Link href="/websites">Websites + Online Visibility</Link>,{" "}
         <Link href="/marketing">marketing workflows</Link>, and ongoing AI
@@ -69,7 +69,11 @@ export default function PixelNarrativesBusinessNewsInfoPage() {
         Marketing that produces more inquiries does not help if nobody is set
         up to respond. The article treats those intersections as the point:
         automation, training, visibility, and marketing only work if they are
-        connected to how the business actually runs.
+        connected to how the business runs.
+      </p>
+      <p>
+        Training is also available as a standalone service for teams that want
+        practical help with the AI tools they already use.
       </p>
 
       <h2>Built for Small and Midsize Businesses</h2>

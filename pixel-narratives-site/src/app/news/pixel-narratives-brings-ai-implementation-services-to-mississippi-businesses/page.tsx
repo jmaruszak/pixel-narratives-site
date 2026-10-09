@@ -18,17 +18,17 @@ export default function PixelNarrativesPressReleasePage() {
     <NewsArticlePage item={item}>
       <p>
         Pixel Narratives is based in Madison, Mississippi, and helps small and
-        midsize businesses put artificial intelligence to practical use. Founder
-        Jordan Maruszak built the company around implementation rather than tool
-        recommendations: look at how the business already operates, then put AI
-        in place where it can improve how work gets done.
+        midsize businesses put artificial intelligence to practical use.
+        Founder Jordan Maruszak built the company around understanding how a
+        business operates, identifying worthwhile opportunities, and helping
+        put AI to work.
       </p>
       <p>
         The company works with owners and operators in the Jackson area, across
         Mississippi, and throughout the Southeast. Some clients are just
         beginning to use AI. Others already have tools in place and need those
         tools connected to real workflows. In both cases, the starting point is
-        the business itself — not a catalog of software.
+        the business itself, not a catalog of software.
       </p>
       <p>
         Pixel Narratives is an execution company. The work covers automation
@@ -61,22 +61,23 @@ export default function PixelNarrativesPressReleasePage() {
         The implementation may involve AI workflows, CRM updates, scheduling,
         reporting, or internal tools built around a specific operation. The
         point is not to add another application. It is to change how work
-        actually moves.
+        moves through the business.
       </p>
 
       <h2>Training</h2>
       <p>
-        A system that the team does not know how to use does not help. Pixel
-        Narratives treats practical employee AI training as part of
-        implementation, not a separate seminar after the work is finished.
+        Pixel Narratives offers practical employee AI training as a standalone
+        service. A business can book a workshop without purchasing custom
+        software or beginning an implementation project.
       </p>
       <p>
         <Link href="/training">Training</Link> is tied to the jobs people
         already do: answering customers, preparing proposals, updating records,
-        producing content, or running operations. Owners, managers, and staff
-        need to understand where AI helps in their actual work, and where it
-        does not. The goal is a team that can use the tools it will keep, rather
-        than a list of apps that get abandoned after a few weeks.
+        producing content, or running operations. Workshops can cover ChatGPT,
+        Claude, Microsoft Copilot, AI video, research, creative tools, and
+        everyday productivity. The goal is a team that can use the tools it
+        will keep rather than a list of apps that get abandoned after a few
+        weeks.
       </p>
 
       <h2>Websites + Online Visibility</h2>
@@ -140,7 +141,7 @@ export default function PixelNarrativesPressReleasePage() {
       </p>
       <p>
         Pixel Narratives is based in Madison and works with small and midsize
-        businesses that need implementation help — a clearer operating picture,
+        businesses that need implementation help, a clearer operating picture,
         a trained team, a stronger online presence, or a marketing system that
         connects to follow-up.{" "}
         <Link href="/contact">Start the conversation</Link> if that is the work

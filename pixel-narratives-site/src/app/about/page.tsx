@@ -5,15 +5,13 @@ import Nav from "../../components/Nav";
 import SocialProfileLink from "../../components/SocialProfileLink";
 import { NEWS_ITEMS, newsPath } from "../../lib/news";
 import { JsonLd, buildWebPage, buildBreadcrumbs } from "../../lib/schema";
-import { SERVICE_LINE_SUMMARY, SERVICES } from "../../lib/services";
 import { buildPageMetadata } from "../../lib/siteMetadata";
 import { FOUNDER_LINKEDIN_PROFILE } from "../../lib/socialProfiles";
-import { MARKETING_TO_WEB_INTEL_URL } from "../../lib/webIntelligence";
 
 export const metadata = buildPageMetadata({
   title: "About Pixel Narratives",
   description:
-    "Pixel Narratives is an AI implementation and automation company based in Madison, Mississippi. We help businesses save time, win more customers, and get more done.",
+    "Pixel Narratives is an AI implementation company based in Madison, Mississippi, serving businesses across Mississippi, Alabama, and the Memphis area.",
   path: "/about",
   image: "/images/about-jordan.jpg",
   imageAlt: "Jordan Maruszak, founder of Pixel Narratives",
@@ -24,11 +22,49 @@ const founder = {
   title: "Founder, Chief AI Officer and Head of Strategy",
   image: "/images/about-jordan.jpg",
   body: [
-    "Jordan has spent more than 15 years working with business owners and leadership teams on decisions that affect how the company actually runs.",
-    "At Pixel Narratives he leads implementation: automation, training, websites, and marketing. The point is not more technology. It is a better week for the people doing the work.",
-    "Every project should have a clear purpose, a practical next step, and a result the owner can see in the business.",
+    "Pixel Narratives started with a camera. Sort of.",
+    "In 2025, I started experimenting with AI video, creating cinematic commercials, ridiculous characters, and ads that probably would have required a Hollywood budget a few years earlier.",
+    "People started asking how I was making them.",
+    "Then the questions changed.",
+    "Could AI help with research? What tools should our team be using? Could we train our employees? Where should we implement AI? When does it make sense to build something custom?",
+    "Those conversations became the foundation for Pixel Narratives.",
+    "Before starting the company, I spent more than 15 years in financial services, working closely with business owners and leadership teams. That experience taught me something I’ve carried into this business.",
+    "People are usually pretty good at the thing they do every day. Asking them to learn an entirely new technology on top of everything else isn’t always realistic.",
+    "It also taught me the value of listening, understanding what someone wants to accomplish, and helping them work through the decisions that get them there.",
+    "That’s how I approach AI.",
+    "I’ve spent a lot of time experimenting with what these tools can do, from building software and business systems to creating videos, music, and marketing campaigns. I even wrote a book about the opportunities AI creates when people are willing to try something new, Try the D*mn Door.",
+    "But the point of all that experimenting isn’t to collect more tools.",
+    "It’s to figure out what’s possible, what works, and how to put it to use for somebody else.",
+    "That’s what we’re building at Pixel Narratives.",
   ],
 } as const;
+
+const aboutServices = [
+  {
+    name: "Implementation",
+    body: "Bring us in to help figure out where AI fits in your business and how to put it to work. We can help with a specific project, guide your team through adoption, build custom solutions, or serve as an ongoing AI partner.",
+    href: "/automation",
+    label: "Explore Implementation",
+  },
+  {
+    name: "Training",
+    body: "Get your team up to speed on the AI tools that matter to their work. From ChatGPT, Claude, and Microsoft Copilot to AI video, research, and creative production. Training is built around your people and what they need to accomplish.",
+    href: "/training",
+    label: "Explore Training",
+  },
+  {
+    name: "Websites + Online Visibility",
+    body: "We build websites that look good, work well, and help customers find you. We also help businesses improve their visibility in traditional and AI powered search.",
+    href: "/websites",
+    label: "Explore Websites + Visibility",
+  },
+  {
+    name: "Marketing",
+    body: "We create advertising, video, and campaigns designed to get attention and bring in business. AI gives us new ways to produce creative work, but the idea still has to be good.",
+    href: "/marketing",
+    label: "Explore Marketing",
+  },
+] as const;
 
 export default function AboutPage() {
   return (
@@ -41,7 +77,7 @@ export default function AboutPage() {
             path: "/about",
             name: "About Pixel Narratives",
             description:
-              "Pixel Narratives is an AI implementation and automation company based in Madison, Mississippi. We help businesses save time, win more customers, and get more done.",
+              "Pixel Narratives is an AI implementation company based in Madison, Mississippi, serving businesses across Mississippi, Alabama, and the Memphis area.",
             additionalType: "AboutPage",
           }),
           buildBreadcrumbs([
@@ -57,7 +93,7 @@ export default function AboutPage() {
             About
           </p>
           <h1 className="mt-4 text-5xl leading-[1.05] md:text-7xl">
-            There&apos;s Probably a Better Way.
+            About Pixel Narratives
           </h1>
         </div>
         <div className="mt-12 overflow-hidden rounded-[28px]">
@@ -75,9 +111,9 @@ export default function AboutPage() {
       <section className="border-t border-white/8">
         <div className="mx-auto grid w-full max-w-7xl gap-12 px-6 py-20 md:grid-cols-[0.8fr_1.2fr] md:px-10">
           <div>
-            <h2 className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
+            <p className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
               About Pixel Narratives
-            </h2>
+            </p>
           </div>
           <div className="space-y-6 text-lg leading-relaxed text-[var(--muted)] md:text-xl">
             <p>Businesses grow. Things get messy.</p>
@@ -86,23 +122,39 @@ export default function AboutPage() {
               leads get buried in an inbox. The website gets ignored for six
               months.
             </p>
-            <p className="text-[var(--foreground)]">We build the better way.</p>
+            <p className="text-[var(--foreground)]">We build a better way.</p>
             <p>
-              Pixel Narratives is an AI implementation and automation company
-              based in Madison, Mississippi. We help businesses save time, win
-              more customers, and get more done.
+              Pixel Narratives is an AI implementation company based in
+              Madison, Mississippi. We help businesses figure out where AI
+              makes sense, how to put it to work, and how to get value from it.
             </p>
             <p>
-              Madison is home base.{" "}
+              Pixel Narratives is based in Madison, Mississippi. We work with
+              businesses across Mississippi, Alabama, and the Memphis area,
+              helping them put AI to work in ways that make sense for their
+              people and their business.{" "}
               <Link
                 href="/serving-the-south"
                 className="text-[var(--foreground)] transition hover:opacity-80"
               >
-                See where we work most often
+                See where we work
               </Link>
               .
             </p>
-            <p className="text-[var(--foreground)]">{SERVICE_LINE_SUMMARY}</p>
+            <p className="text-[var(--foreground)]">
+              Implementation. Training. Websites + Online Visibility.
+              Marketing.
+            </p>
+            <p>
+              For official company facts, services, and service areas, see{" "}
+              <Link
+                href="/ai-info"
+                className="text-[var(--foreground)] transition hover:opacity-80"
+              >
+                Official Information About Pixel Narratives
+              </Link>
+              .
+            </p>
           </div>
         </div>
       </section>
@@ -116,13 +168,21 @@ export default function AboutPage() {
           </div>
           <div className="space-y-6 text-lg leading-relaxed text-[var(--muted)] md:text-xl">
             <p>
-              We use AI and automation where they make sense. Other times, the
-              answer might be a better workflow, a new internal tool, a website
-              that does a better job, or marketing people notice.
+              There&apos;s a lot of attention on what AI can do. We think the
+              more important question is what it can do for your business.
             </p>
             <p>
-              We don&apos;t start with the technology. We start with what
-              isn&apos;t working and figure out how to make it better.
+              That starts with understanding your people, how work gets done,
+              what your customers need, and what you&apos;re trying to
+              accomplish.
+            </p>
+            <p>
+              Sometimes the answer is an AI tool your team already has.
+              Sometimes it&apos;s training, a better process, or something
+              custom that needs to be built.
+            </p>
+            <p className="text-[var(--foreground)]">
+              The technology is only useful if it helps you get somewhere.
             </p>
           </div>
         </div>
@@ -132,20 +192,30 @@ export default function AboutPage() {
         <div className="mx-auto grid w-full max-w-7xl gap-12 px-6 py-20 md:grid-cols-[0.8fr_1.2fr] md:px-10">
           <div>
             <h2 className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
-              We Actually Build Things
+              How We Work
             </h2>
           </div>
           <div className="space-y-6 text-lg leading-relaxed text-[var(--muted)] md:text-xl">
             <p>
-              Our leadership brings more than 15 years of experience working
-              alongside business owners and leadership teams. That matters
-              because good ideas aren&apos;t worth much if they don&apos;t work
-              in the real world.
+              Most business owners and their teams are already good at what
+              they do. They don&apos;t necessarily have the time to keep up
+              with every new AI tool, figure out which ones matter, and learn
+              how to use them well.
             </p>
-            <p>We care about what gets used and what gets results.</p>
-            <p>No giant stack of tools and a good-luck email.</p>
+            <p>That&apos;s where we come in.</p>
+            <p>
+              We listen. We learn how your business works. We help you identify
+              opportunities worth pursuing and figure out how to put them into
+              practice.
+            </p>
+            <p>
+              That might be a single project with a defined finish line or an
+              ongoing relationship where we help you navigate AI as your
+              business grows.
+            </p>
             <p className="text-[var(--foreground)]">
-              Just better ways to get things done.
+              Either way, the goal is the same. Save time, find more customers,
+              and make the business work better.
             </p>
           </div>
         </div>
@@ -182,24 +252,26 @@ export default function AboutPage() {
                 </div>
                 <div className="mt-5 space-y-4 text-sm leading-relaxed text-[var(--muted)] md:text-base">
                   {founder.body.map((paragraph) => (
-                    <p key={paragraph}>{paragraph}</p>
+                    <p key={paragraph}>
+                      {paragraph ===
+                      "I’ve spent a lot of time experimenting with what these tools can do, from building software and business systems to creating videos, music, and marketing campaigns. I even wrote a book about the opportunities AI creates when people are willing to try something new, Try the D*mn Door." ? (
+                        <>
+                          I&apos;ve spent a lot of time experimenting with what
+                          these tools can do, from building software and
+                          business systems to creating videos, music, and
+                          marketing campaigns. I even wrote a book about the
+                          opportunities AI creates when people are willing to
+                          try something new, <em>Try the D*mn Door</em>.
+                        </>
+                      ) : (
+                        paragraph
+                      )}
+                    </p>
                   ))}
                 </div>
               </div>
             </div>
           </article>
-          <div className="mt-10 max-w-3xl rounded-[24px] border border-white/8 bg-white/[0.02] p-6 md:p-8">
-            <p className="text-base leading-relaxed text-[var(--muted)] md:text-lg">
-              Pixel Narratives brings together practical experience in
-              operations, technology, creative production, and business
-              strategy.
-            </p>
-            <p className="mt-4 text-base leading-relaxed text-[var(--muted)] md:text-lg">
-              That mix helps us turn a clear business problem into something
-              useful: a better workflow, a working system, a stronger website,
-              or marketing built around a specific objective.
-            </p>
-          </div>
         </div>
       </section>
 
@@ -211,48 +283,26 @@ export default function AboutPage() {
             </h2>
           </div>
           <div className="min-w-0">
-            <p className="text-lg leading-relaxed text-[var(--muted)] md:text-xl">
-              We help clients save time, use AI better, get found, and reach
-              more customers.
-            </p>
             <div className="mt-8 grid min-w-0 grid-cols-1 gap-6 lg:grid-cols-2">
-              {SERVICES.map((service) => (
+              {aboutServices.map((service) => (
                 <div
-                  key={service.id}
+                  key={service.name}
                   className="flex min-w-0 flex-col overflow-hidden rounded-[24px] border border-white/8 bg-white/[0.02] p-6"
                 >
                   <h3 className="text-balance break-words text-2xl leading-snug lg:text-3xl">
                     {service.name}
                   </h3>
-                  {service.id === "automation" ? (
-                    <p className="mt-2 text-sm uppercase tracking-[0.18em] text-[var(--muted)]">
-                      AI + Automation + Business Systems
-                    </p>
-                  ) : null}
                   <p className="mt-4 text-base leading-relaxed text-[var(--muted)]">
                     {service.body}
                   </p>
-                  {service.id === "websites" ? (
-                    <p className="mt-5 text-base">
-                      <a
-                        href={MARKETING_TO_WEB_INTEL_URL}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="text-[var(--foreground)] transition hover:opacity-80"
-                      >
-                        Check My Online Visibility
-                      </a>
-                    </p>
-                  ) : (
-                    <p className="mt-5 text-base">
-                      <Link
-                        href={service.href}
-                        className="text-[var(--foreground)] transition hover:opacity-80"
-                      >
-                        {service.ctaLabel}
-                      </Link>
-                    </p>
-                  )}
+                  <p className="mt-5 text-base">
+                    <Link
+                      href={service.href}
+                      className="text-[var(--foreground)] transition hover:opacity-80"
+                    >
+                      {service.label}
+                    </Link>
+                  </p>
                 </div>
               ))}
             </div>

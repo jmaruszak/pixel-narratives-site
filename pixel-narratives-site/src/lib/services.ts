@@ -19,11 +19,11 @@ export const SERVICES: ServiceDefinition[] = [
   {
     id: "automation",
     href: "/automation",
-    navLabel: "AI & Automation",
+    navLabel: "Implementation",
     name: "Implementation",
     problem: "Save Time",
     outcome: "Save time. Reduce repetitive work. Make the business easier to run.",
-    body: "We build better business systems using AI, automation, and modern software. Sometimes that means automating the work. Sometimes it means giving your team a much better way to do it.",
+    body: "We help you identify where AI makes sense, choose what is worth pursuing, and put it to work. That may mean improving how your team uses existing tools, changing a process, or building something custom.",
     ctaLabel: "Discuss a Project",
   },
   {
@@ -33,7 +33,7 @@ export const SERVICES: ServiceDefinition[] = [
     name: "Training",
     problem: "Use AI Better",
     outcome: "Help your team get more done with practical AI workshops.",
-    body: "One department is $7,500. Larger teams run $15,000 to $20,000. Multi-day engagements start at $25,000. Built around the work people already do.",
+    body: "Standalone workshops for ChatGPT, Claude, Microsoft Copilot, AI video, research, creative work, and productivity. One department is $7,500. Larger teams run $15,000 to $20,000. Multi-day engagements start at $25,000.",
     ctaLabel: "Discuss Team Training",
   },
   {

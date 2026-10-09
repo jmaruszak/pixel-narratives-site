@@ -19,7 +19,14 @@ export type ServiceAreaPlace = {
 
 export const SERVICE_AREA_PRIMARY: ServiceAreaPlace[] = [
   { type: "State", name: "Mississippi" },
-  { type: "City", name: "Atlanta", region: "GA" },
+  { type: "City", name: "Birmingham", region: "AL" },
+  { type: "City", name: "Memphis", region: "TN" },
+  { type: "City", name: "Mobile", region: "AL" },
+  {
+    type: "AdministrativeArea",
+    name: "Alabama Eastern Shore",
+    region: "AL",
+  },
 ];
 
 export const SERVICE_AREA_HUB_MENTIONS: ServiceAreaPlace[] = [
@@ -30,7 +37,11 @@ export const SERVICE_AREA_HUB_MENTIONS: ServiceAreaPlace[] = [
   { type: "City", name: "Brandon", region: "MS" },
   { type: "City", name: "Gluckstadt", region: "MS" },
   { type: "AdministrativeArea", name: "Jackson Metro", region: "MS" },
-  { type: "City", name: "Atlanta", region: "GA" },
+  { type: "City", name: "Birmingham", region: "AL" },
+  { type: "City", name: "Memphis", region: "TN" },
+  { type: "City", name: "Mobile", region: "AL" },
+  { type: "City", name: "Daphne", region: "AL" },
+  { type: "City", name: "Fairhope", region: "AL" },
 ];
 
 export const SERVICE_PILLARS = [
@@ -38,14 +49,14 @@ export const SERVICE_PILLARS = [
     eyebrow: "Save Time",
     headline: "Implementation",
     outcome: "Save time. Reduce repetitive work. Make the business easier to run.",
-    body: "We build better business systems using AI, automation, and modern software. Sometimes that means automating the work. Sometimes it means giving your team a much better way to do it.",
+    body: "We help identify where AI makes sense, choose what is worth pursuing, guide adoption, improve workflows, and build custom solutions when they are the right fit.",
     href: "/automation",
   },
   {
     eyebrow: "Use AI Better",
     headline: "Training",
     outcome: "Help your team get more done with practical AI workshops.",
-    body: "One department is $7,500. Larger teams run $15,000 to $20,000. Multi-day engagements start at $25,000.",
+    body: "Standalone workshops for ChatGPT, Claude, Microsoft Copilot, AI video, research, creative work, and productivity. No implementation project is required.",
     href: "/training",
   },
   {

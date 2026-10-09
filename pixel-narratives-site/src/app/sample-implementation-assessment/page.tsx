@@ -185,7 +185,7 @@ export default function SampleImplementationAssessmentPage() {
                 href="/automation"
                 className="text-sm text-[var(--foreground)] transition hover:opacity-80 sm:px-2"
               >
-                Back to Automation
+                Back to Implementation
               </a>
             </div>
           </div>

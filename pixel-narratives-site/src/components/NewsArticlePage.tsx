@@ -63,7 +63,7 @@ export default function NewsArticlePage({
                   &ldquo;{item.quote.text}&rdquo;
                 </p>
                 <footer className="mt-4 text-sm text-[var(--muted)]">
-                  — {item.quote.attribution}
+                  {item.quote.attribution}
                 </footer>
               </blockquote>
             ) : null}

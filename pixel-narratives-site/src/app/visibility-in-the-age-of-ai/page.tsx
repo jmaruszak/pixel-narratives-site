@@ -210,7 +210,7 @@ export default function VisibilityInTheAgeOfAiPage() {
               &ldquo;What marketing agency specializes in AI?&rdquo;
             </p>
             <p className="text-[var(--foreground)]">
-              &ldquo;What restaurant should I try in Jacksonville?&rdquo;
+              &ldquo;What restaurant should I try in Mobile?&rdquo;
             </p>
             <p>
               Instead of browsing ten websites, they often receive a curated

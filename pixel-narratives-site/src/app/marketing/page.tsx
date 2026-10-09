@@ -190,7 +190,7 @@ export default function MarketingPage() {
               </ul>
               <p className="mt-4 max-w-2xl text-sm leading-relaxed text-[var(--muted)]">
                 Platforms report different numbers. We share what the campaign
-                actually produced.
+                produced.
               </p>
             </div>
             <p className="mt-8 max-w-3xl text-base leading-relaxed text-[var(--muted)] md:text-lg">

@@ -4,7 +4,7 @@ export const SITE_NAME = "Pixel Narratives";
 export const SITE_URL = "https://pixelnarratives.studio";
 
 export const DEFAULT_DESCRIPTION =
-  "Pixel Narratives is an AI implementation and automation company in Madison, Mississippi, helping businesses save time, win more customers, and get more done.";
+  "Pixel Narratives is an AI implementation company in Madison, Mississippi, helping businesses put AI to work through implementation, training, websites, visibility, and marketing.";
 
 export const DEFAULT_OG_IMAGE = "/images/home-cinematic.jpg";
 
@@ -57,7 +57,7 @@ export function buildPageMetadata({
 export const rootMetadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Pixel Narratives | Save Time. Win More Customers. Get More Done.",
+    default: "AI Implementation Partner | Pixel Narratives",
     template: "%s",
   },
   description: DEFAULT_DESCRIPTION,
@@ -66,7 +66,7 @@ export const rootMetadata: Metadata = {
     apple: "/brand/logo-mark.png",
   },
   openGraph: {
-    title: "Pixel Narratives | Save Time. Win More Customers. Get More Done.",
+    title: "AI Implementation Partner | Pixel Narratives",
     description: DEFAULT_DESCRIPTION,
     url: SITE_URL,
     siteName: SITE_NAME,
@@ -83,7 +83,7 @@ export const rootMetadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Pixel Narratives | Save Time. Win More Customers. Get More Done.",
+    title: "AI Implementation Partner | Pixel Narratives",
     description: DEFAULT_DESCRIPTION,
     images: [DEFAULT_OG_IMAGE],
   },

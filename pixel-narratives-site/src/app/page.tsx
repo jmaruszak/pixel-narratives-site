@@ -6,9 +6,9 @@ import { JsonLd, homepageGraph } from "../lib/schema";
 import { buildPageMetadata } from "../lib/siteMetadata";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Pixel Narratives | Save Time. Win More Customers. Get More Done.",
+  title: "AI Implementation Partner | Pixel Narratives",
   description:
-    "Pixel Narratives builds better ways to work. Implementation, training, websites, and marketing that help businesses save time, win more customers, and get more done.",
+    "Put AI to work in your business with practical implementation, standalone team training, websites and online visibility, and marketing from Pixel Narratives.",
   path: "/",
   image: "/images/home-cinematic.jpg",
   imageAlt: "Pixel Narratives homepage cinematic visual",

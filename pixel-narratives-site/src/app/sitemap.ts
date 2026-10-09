@@ -5,10 +5,10 @@ import { landingPageSlugs } from "../lib/seoLandingPages";
 const baseUrl = "https://pixelnarratives.studio";
 
 /** Stable “recent update” timestamps for crawl hints (build-time homepage uses current date separately). */
-const LASTMOD_MAIN_BUSINESS = new Date("2026-10-02T00:00:00.000Z");
-const LASTMOD_SEO = new Date("2026-10-02T00:00:00.000Z");
-const LASTMOD_ABOUT_CONTACT = new Date("2026-10-02T00:00:00.000Z");
-const LASTMOD_LOCATION = new Date("2026-10-02T00:00:00.000Z");
+const LASTMOD_MAIN_BUSINESS = new Date("2026-10-08T00:00:00.000Z");
+const LASTMOD_SEO = new Date("2026-10-08T00:00:00.000Z");
+const LASTMOD_ABOUT_CONTACT = new Date("2026-10-08T00:00:00.000Z");
+const LASTMOD_LOCATION = new Date("2026-10-08T00:00:00.000Z");
 const LASTMOD_NEWS = new Date("2026-08-24T00:00:00.000Z");
 const LASTMOD_OLD_STATIC = new Date("2025-06-02T00:00:00.000Z");
 
@@ -28,6 +28,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [
     "",
     "about",
+    "ai-info",
     "services",
     "insights",
     "automation",
@@ -43,6 +44,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "visibility-in-the-age-of-ai",
     "ai-readiness-assessment",
     "serving-the-south",
+    "locations/mississippi",
+    "locations/birmingham",
+    "locations/memphis",
+    "locations/mobile-eastern-shore",
     ...newsRoutes,
   ];
   const routes = [...staticRoutes, ...landingPageSlugs];
@@ -73,11 +78,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified = LASTMOD_MAIN_BUSINESS;
       changeFrequency = "monthly";
       priority = 0.9;
-    } else if (route === "serving-the-south") {
+    } else if (
+      route === "serving-the-south" ||
+      route.startsWith("locations/")
+    ) {
       lastModified = LASTMOD_LOCATION;
       changeFrequency = "monthly";
-      priority = 0.75;
-    } else if (route === "about") {
+      priority = route === "serving-the-south" ? 0.75 : 0.7;
+    } else if (route === "about" || route === "ai-info") {
       lastModified = LASTMOD_ABOUT_CONTACT;
       changeFrequency = "monthly";
       priority = 0.5;

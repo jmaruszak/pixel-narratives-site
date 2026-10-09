@@ -115,7 +115,7 @@ export const seoLandingPages: Record<string, SeoLandingPage> = {
       { href: "/cost-of-ai-video-production", label: "cost of AI video production" },
       {
         href: "/how-to-create-ads-people-actually-watch",
-        label: "how to create ads people actually watch",
+        label: "how to create ads people watch",
       },
     ],
   },
@@ -163,7 +163,7 @@ export const seoLandingPages: Record<string, SeoLandingPage> = {
       {
         question: "What makes Pixel Narratives different from a standard video agency?",
         answer:
-          "Pixel Narratives builds marketing around a clear idea: setup, turn, payoff, and how the audience actually behaves.",
+          "Pixel Narratives builds marketing around a clear idea: setup, turn, payoff, and how the audience behaves.",
       },
       {
         question: "Do you use AI for every video?",
@@ -196,7 +196,7 @@ export const seoLandingPages: Record<string, SeoLandingPage> = {
       { href: "/ai-commercial-production-company", label: "AI commercial production company" },
       {
         href: "/how-to-create-ads-people-actually-watch",
-        label: "create ads people actually watch",
+        label: "create ads people watch",
       },
       { href: "/cost-of-ai-video-production", label: "AI video production cost guide" },
     ],
@@ -279,17 +279,17 @@ export const seoLandingPages: Record<string, SeoLandingPage> = {
       { href: "/ai-video-ad-agency", label: "AI video ad agency" },
       {
         href: "/how-to-create-ads-people-actually-watch",
-        label: "make ads people actually watch",
+        label: "make ads people watch",
       },
     ],
   },
   "how-to-create-ads-people-actually-watch": {
     slug: "how-to-create-ads-people-actually-watch",
-    title: "How to Create Ads People Actually Watch",
+    title: "How to Create Ads People Watch",
     description:
       "Learn how to create ads people watch, remember, and share using narrative strategy and AI-powered production.",
     offer: "ads",
-    h1: "How to Create Ads People Actually Watch",
+    h1: "How to Create Ads People Watch",
     intro:
       "People watch ads when the ad earns attention before asking for action. Start with the audience problem, build a concept, create a turn, and end with a memorable payoff.",
     cta: "Discuss Marketing",
@@ -365,24 +365,24 @@ export const seoLandingPages: Record<string, SeoLandingPage> = {
   },
   "ai-consulting-for-businesses": {
     slug: "ai-consulting-for-businesses",
-    title: "AI Consulting for Businesses | Pixel Narratives",
+    title: "AI Implementation Support for Businesses | Pixel Narratives",
     description:
-      "AI consulting for businesses that need practical workflows, automation, governance, and measurable operating value.",
+      "Practical AI implementation for businesses that need help identifying opportunities, choosing tools, guiding adoption, improving workflows, and delivering useful results.",
     offer: "implementation",
-    h1: "AI Consulting for Businesses That Need Practical Value",
+    h1: "Practical AI Implementation Support for Businesses",
     intro:
-      "Pixel Narratives helps businesses move from scattered AI experimentation to structured workflows, automation, and measurable operating results. We implement systems the team will use.",
+      "Pixel Narratives helps businesses identify where AI makes sense, decide what is worth pursuing, and put it to work. That may involve existing tools, adoption support, a better process, something custom, or ongoing guidance.",
     cta: "Discuss a Project",
     sections: [
       {
-        heading: "What is AI consulting for businesses?",
+        heading: "What does AI implementation support include?",
         answer:
-          "AI work helps a business identify where automation can save time, improve workflows, reduce friction, or create new capacity. In practice that means mapping the work, choosing tools, implementing them, and staying with the team until the process sticks.",
+          "AI implementation support helps a business identify useful opportunities, choose appropriate tools, prepare teams for adoption, improve workflows, and carry the work through to practical use.",
       },
       {
-        heading: "Why AI consulting matters now",
+        heading: "Why AI implementation matters now",
         answer:
-          "McKinsey reports that 88% of organizations use AI in at least one function, but many have not scaled it into measurable value. The gap is not access to tools; it is workflow design.",
+          "McKinsey reports that 88% of organizations use AI in at least one function, but many have not scaled it into measurable value. Workflow design is often the missing piece.",
       },
       {
         heading: "What automation and implementation help with",
@@ -408,9 +408,9 @@ export const seoLandingPages: Record<string, SeoLandingPage> = {
     ],
     faqs: [
       {
-        question: "What does an AI consultant do?",
+        question: "What does an AI implementation partner do?",
         answer:
-          "We identify practical opportunities, recommend tools, design workflows, and help teams implement systems. Ongoing implementation support is available when you want a partner after the first build.",
+          "We identify practical opportunities, recommend tools, guide adoption, improve workflows, and help teams put solutions into practice. Custom development is one option, not a requirement.",
       },
       {
         question: "What does ongoing implementation support look like?",
@@ -418,9 +418,9 @@ export const seoLandingPages: Record<string, SeoLandingPage> = {
           "It is a part-time operating partner who helps a business choose the right use cases, implement workflows, guide adoption, and measure results. You are buying follow-through, not an executive title.",
       },
       {
-        question: "Who needs AI consulting?",
+        question: "Who needs AI implementation support?",
         answer:
-          "Businesses using AI informally but lacking process, governance, automation, or measurable outcomes need AI consulting.",
+          "Businesses that want to use AI but need help choosing priorities, preparing teams, improving processes, or carrying a useful idea through to implementation can benefit.",
       },
       {
         question: "What is the first step?",
