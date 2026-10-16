@@ -110,8 +110,8 @@ export default function NewsArticlePage({
 
       <PageBottomCta
         eyebrow="Next Step"
-        headline="Ready to talk about what to improve?"
-        body="Tell us how the business runs today. We will look at where automation, training, or a stronger online presence would help."
+        headline="Let's put AI to work for your business."
+        body="Whether you have a specific project in mind or you're exploring what's possible, we'd love to hear from you."
         primaryAction={{ href: "/contact", label: "Start a Conversation" }}
       />
       <Footer />

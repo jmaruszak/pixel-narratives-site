@@ -2,6 +2,7 @@ export const CONTACT_EMAIL = "hello@pixelnarratives.studio";
 export const CONTACT_PHONE = "904-524-7269";
 export const CONTACT_PHONE_TEL = "+19045247269";
 export const CALENDLY_URL = "https://calendly.com/pixelnarratives";
+export const CALENDLY_EVENT_URL = "https://calendly.com/pixelnarratives/30min";
 export const GOOGLE_BUSINESS_PROFILE_URL =
   "https://share.google/EpsqOBZsnrLCxNiTb";
 
@@ -27,6 +28,7 @@ export const SERVICE_AREA_PRIMARY: ServiceAreaPlace[] = [
     name: "Alabama Eastern Shore",
     region: "AL",
   },
+  { type: "City", name: "Atlanta", region: "GA" },
 ];
 
 export const SERVICE_AREA_HUB_MENTIONS: ServiceAreaPlace[] = [
@@ -42,28 +44,29 @@ export const SERVICE_AREA_HUB_MENTIONS: ServiceAreaPlace[] = [
   { type: "City", name: "Mobile", region: "AL" },
   { type: "City", name: "Daphne", region: "AL" },
   { type: "City", name: "Fairhope", region: "AL" },
+  { type: "City", name: "Atlanta", region: "GA" },
 ];
 
 export const SERVICE_PILLARS = [
   {
     eyebrow: "Save Time",
     headline: "Implementation",
-    outcome: "Save time. Reduce repetitive work. Make the business easier to run.",
+    outcome: "Save time. Reduce repetitive work. Make your business easier to run.",
     body: "We help identify where AI makes sense, choose what is worth pursuing, guide adoption, improve workflows, and build custom solutions when they are the right fit.",
-    href: "/automation",
+    href: "/implementation",
   },
   {
     eyebrow: "Use AI Better",
     headline: "Training",
-    outcome: "Help your team get more done with practical AI workshops.",
+    outcome: "Get your team up to speed with practical AI workshops.",
     body: "Standalone workshops for ChatGPT, Claude, Microsoft Copilot, AI video, research, creative work, and productivity. No implementation project is required.",
     href: "/training",
   },
   {
     eyebrow: "Get Found",
-    headline: "Websites + Online Visibility",
-    outcome: "Help more of the right customers find you and take action.",
-    body: "Website Starter at $2,500. Website + Visibility Build starting at $7,500. Visibility Sprint starting at $1,200/month with a 3-month minimum.",
+    headline: "Visibility",
+    outcome: "Helping customers find you.",
+    body: "Websites, SEO, and AI search. We help you build a stronger online presence and get found by more of your customers.",
     href: "/websites",
   },
   {

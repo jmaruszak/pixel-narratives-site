@@ -13,7 +13,24 @@ type WebPageOptions = {
   additionalType?: string;
   /** Override mainEntity @id if the page has one. */
   mainEntity?: { "@id": string };
+  dateModified?: string;
 };
+
+const DESIGN_PASS_DATE = "2026-10-16";
+const DESIGN_PASS_PATHS = new Set([
+  "/about",
+  "/ai-info",
+  "/book",
+  "/contact",
+  "/implementation",
+  "/marketing",
+  "/sample-implementation-assessment",
+  "/services",
+  "/training",
+  "/websites",
+  "/work",
+  "/work-with-us",
+]);
 
 export function buildWebPage(options: WebPageOptions) {
   const url = options.path === "/" ? SITE_URL : `${SITE_URL}${options.path}`;
@@ -25,6 +42,7 @@ export function buildWebPage(options: WebPageOptions) {
     "@id": `${url}#webpage`,
     url,
     name: options.name,
+    inLanguage: "en-US",
     isPartOf: { "@id": WEBSITE_ID },
     about: { "@id": ORG_ID },
     publisher: { "@id": ORG_ID },
@@ -35,6 +53,13 @@ export function buildWebPage(options: WebPageOptions) {
   }
   if (options.mainEntity) {
     entity.mainEntity = options.mainEntity;
+  }
+
+  const dateModified =
+    options.dateModified ??
+    (DESIGN_PASS_PATHS.has(options.path) ? DESIGN_PASS_DATE : undefined);
+  if (dateModified) {
+    entity.dateModified = dateModified;
   }
 
   return entity;

@@ -6,7 +6,7 @@ import { SITE_URL, buildPageMetadata } from "../../lib/siteMetadata";
 import { FOUNDER_LINKEDIN_PROFILE } from "../../lib/socialProfiles";
 
 const DESCRIPTION =
-  "Official information about Pixel Narratives: an AI implementation company based in Madison, Mississippi, serving Mississippi, Memphis, Birmingham, and Mobile plus Alabama's Eastern Shore.";
+  "Official information about Pixel Narratives: an AI implementation company based in Madison, Mississippi, serving Mississippi, Memphis, Birmingham, Mobile plus Alabama's Eastern Shore, and Atlanta.";
 
 export const metadata = buildPageMetadata({
   title: "Official Information About Pixel Narratives",
@@ -38,12 +38,12 @@ const faqs = [
   {
     question: "Does Pixel Narratives offer ongoing AI advisory services?",
     answer:
-      "Yes. Our Fractional Chief AI Officer and Guided Implementation engagements provide options for businesses seeking ongoing AI expertise and support.",
+      "Yes. Partner and Enterprise Partner engagements provide ongoing AI expertise and support.",
   },
   {
     question: "Does Pixel Narratives only work with companies in Mississippi?",
     answer:
-      "No. Pixel Narratives is headquartered in Madison, Mississippi, and serves businesses across Mississippi, Memphis, Birmingham, and Mobile and Alabama's Eastern Shore. Atlanta is a secondary opportunity.",
+      "No. Pixel Narratives is headquartered in Madison, Mississippi, and serves businesses across Mississippi, Memphis, Birmingham, Mobile and Alabama's Eastern Shore, and Atlanta.",
   },
   {
     question: "Does Pixel Narratives only provide AI services?",
@@ -53,15 +53,17 @@ const faqs = [
   {
     question: "Is Pixel Narratives a financial advisory firm?",
     answer:
-      "No. Pixel Narratives is an independent business providing AI implementation, training, websites, and marketing services. Its founder has a professional background in financial services, but Pixel Narratives does not provide financial advisory services.",
+      "No. Pixel Narratives is an independent business providing AI implementation, training, visibility, and marketing services. Its founder has a professional background in financial services, but Pixel Narratives does not provide financial advisory services.",
   },
 ] as const;
 
 const officialResources = [
   { href: "/", label: "Website" },
   { href: "/about", label: "About" },
-  { href: "/services", label: "Services" },
-  { href: "/serving-the-south", label: "Locations" },
+  { href: "/services", label: "What We Do" },
+  { href: "/work-with-us", label: "Work With Us" },
+  { href: "/book", label: "Book" },
+  { href: "/serving-the-south", label: "Who We Work With" },
   { href: "/news", label: "News" },
   { href: "/contact", label: "Contact" },
 ] as const;
@@ -172,9 +174,9 @@ export default function AiInfoPage() {
                   Service Areas
                 </dt>
                 <dd className="mt-1 text-[var(--foreground)]">
-                  Mississippi, Memphis, Tennessee, Birmingham, Alabama, and
-                  Mobile and Alabama&apos;s Eastern Shore, including Daphne
-                  and Fairhope.
+                  Mississippi, Memphis, Tennessee, Birmingham, Alabama, Mobile
+                  and Alabama&apos;s Eastern Shore, including Daphne and
+                  Fairhope, and Atlanta, Georgia.
                 </dd>
               </div>
             </dl>
@@ -191,8 +193,8 @@ export default function AiInfoPage() {
               an ongoing partner.
             </p>
             <p>
-              Our work includes AI implementation, team training, websites and
-              online visibility, and marketing.
+              Our work includes implementation, training, visibility, and
+              marketing.
             </p>
             <p>
               We focus on helping businesses save time, reach more customers,
@@ -240,13 +242,13 @@ export default function AiInfoPage() {
                 Common engagement options include:
               </p>
               <ul className="mt-3 space-y-2 text-[var(--foreground)]">
-                <li>Implementation Quick Win</li>
-                <li>Implementation Assessment</li>
-                <li>Guided Implementation</li>
-                <li>Fractional Chief AI Officer</li>
+                <li>Explore</li>
+                <li>Build</li>
+                <li>Equip</li>
+                <li>Partner</li>
               </ul>
               <Link
-                href="/automation"
+                href="/implementation"
                 className="mt-7 inline-flex min-h-11 items-center text-sm transition hover:opacity-80"
               >
                 Explore AI Implementation
@@ -299,12 +301,12 @@ export default function AiInfoPage() {
 
             <article className="rounded-[28px] border border-white/8 bg-white/[0.02] p-7 md:p-8">
               <h3 className="text-2xl leading-none md:text-3xl">
-                Websites + Online Visibility
+                Visibility
               </h3>
               <p className="mt-5 leading-relaxed text-[var(--muted)]">
-                Pixel Narratives designs and builds websites for businesses
-                that want to improve their online presence and reach more
-                customers.
+                Visibility is about helping customers find you. Websites, SEO,
+                and AI search. We help you build a stronger online
+                presence and get found by more of your customers.
               </p>
               <p className="mt-4 leading-relaxed text-[var(--muted)]">
                 Services include website development, search visibility
@@ -319,7 +321,7 @@ export default function AiInfoPage() {
                 href="/websites"
                 className="mt-7 inline-flex min-h-11 items-center text-sm transition hover:opacity-80"
               >
-                Explore Websites + Online Visibility
+                Explore Visibility
               </Link>
             </article>
 
@@ -418,7 +420,7 @@ export default function AiInfoPage() {
             <p>
               Pixel Narratives is headquartered in Madison, Mississippi.
             </p>
-            <p>Our primary service areas include:</p>
+            <p>We work with businesses in:</p>
             <p>
               <strong className="font-medium text-[var(--foreground)]">
                 Mississippi:
@@ -445,15 +447,17 @@ export default function AiInfoPage() {
               Mobile, Daphne, Fairhope, and surrounding communities.
             </p>
             <p>
-              Atlanta is a secondary opportunity. We are open to the right
-              work there, but it is not one of our current priority markets.
+              <strong className="font-medium text-[var(--foreground)]">
+                Atlanta, Georgia:
+              </strong>{" "}
+              Atlanta and the surrounding metropolitan area.
             </p>
             <p>
               <Link
                 href="/serving-the-south"
                 className="text-[var(--foreground)] transition hover:opacity-80"
               >
-                View Our Locations
+                Who We Work With
               </Link>
             </p>
           </div>
@@ -472,7 +476,7 @@ export default function AiInfoPage() {
               Jordan Maruszak
             </h3>
             <p className="text-xs uppercase tracking-[0.25em]">
-              Founder, Chief AI Officer and Head of Strategy
+              Founder, Pixel Narratives
             </p>
             <p>
               Jordan Maruszak founded Pixel Narratives in 2026 after his work
@@ -490,7 +494,12 @@ export default function AiInfoPage() {
             </p>
             <p>
               Jordan is also the author of{" "}
-              <em>Try the D*mn Door: AI, Ideas and the New Cost of Trying</em>
+              <Link
+                href="/book"
+                className="text-[var(--foreground)] transition hover:opacity-80"
+              >
+                <em>Insert Door Metaphor: AI, Ideas and The New Cost of Trying</em>
+              </Link>
               , a book about experimentation, creativity, and the
               opportunities AI creates.
             </p>

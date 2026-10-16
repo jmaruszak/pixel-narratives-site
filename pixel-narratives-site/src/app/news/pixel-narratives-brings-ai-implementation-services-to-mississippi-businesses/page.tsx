@@ -52,7 +52,7 @@ export default function PixelNarrativesPressReleasePage() {
         That includes how leads arrive, how information moves between tools,
         where work stalls, and which tasks consume time without adding much
         value. From there, the company identifies where{" "}
-        <Link href="/automation">AI &amp; Automation Implementation</Link> can create
+        <Link href="/implementation">AI &amp; Automation Implementation</Link> can create
         measurable improvements: fewer manual steps, faster response times,
         clearer handoffs, and systems that match the way the business already
         works.
@@ -123,7 +123,7 @@ export default function PixelNarrativesPressReleasePage() {
       </p>
       <p>
         Pixel Narratives offers{" "}
-        <Link href="/automation">Fractional Chief AI Officer</Link> support for
+        <Link href="/implementation">Fractional Chief AI Officer</Link> support for
         that situation. The work includes deciding what to implement next,
         overseeing the build, and keeping systems aligned as the business
         changes. It is ongoing leadership for AI and automation, not a one-time
@@ -134,7 +134,7 @@ export default function PixelNarrativesPressReleasePage() {
       <p>
         Businesses that want a clearer picture before they begin can use Pixel
         Narratives&apos;{" "}
-        <Link href="/automation">AI &amp; Automation Assessment</Link>. The
+        <Link href="/implementation">AI &amp; Automation Assessment</Link>. The
         assessment looks at current AI use, operational gaps, and goals. It is a
         starting point for a conversation about what to implement, not a score
         that replaces the owner&apos;s judgment.

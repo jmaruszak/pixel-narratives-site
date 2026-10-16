@@ -1357,7 +1357,7 @@ export default function AiReadinessAssessment() {
                   Discuss a Project
                 </a>
                 <a
-                  href="/automation"
+                  href="/implementation"
                   className="inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm text-[var(--foreground)] transition hover:bg-white/5"
                 >
                   Implementation

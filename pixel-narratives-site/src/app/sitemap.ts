@@ -5,9 +5,9 @@ import { landingPageSlugs } from "../lib/seoLandingPages";
 const baseUrl = "https://pixelnarratives.studio";
 
 /** Stable “recent update” timestamps for crawl hints (build-time homepage uses current date separately). */
-const LASTMOD_MAIN_BUSINESS = new Date("2026-10-08T00:00:00.000Z");
+const LASTMOD_MAIN_BUSINESS = new Date("2026-10-16T00:00:00.000Z");
 const LASTMOD_SEO = new Date("2026-10-08T00:00:00.000Z");
-const LASTMOD_ABOUT_CONTACT = new Date("2026-10-08T00:00:00.000Z");
+const LASTMOD_ABOUT_CONTACT = new Date("2026-10-16T00:00:00.000Z");
 const LASTMOD_LOCATION = new Date("2026-10-08T00:00:00.000Z");
 const LASTMOD_NEWS = new Date("2026-08-24T00:00:00.000Z");
 const LASTMOD_OLD_STATIC = new Date("2025-06-02T00:00:00.000Z");
@@ -30,12 +30,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "about",
     "ai-info",
     "services",
+    "work-with-us",
+    "book",
     "insights",
-    "automation",
+    "implementation",
     "training",
     "websites",
     "marketing",
-    "starting-small",
     "work",
     "sample-implementation-assessment",
     "contact",
@@ -66,12 +67,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency = "yearly";
       priority = 0.3;
     } else if (
-      route === "automation" ||
+      route === "implementation" ||
       route === "services" ||
+      route === "work-with-us" ||
       route === "training" ||
       route === "websites" ||
       route === "marketing" ||
-      route === "starting-small" ||
       route === "work" ||
       route === "sample-implementation-assessment"
     ) {
@@ -85,6 +86,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified = LASTMOD_LOCATION;
       changeFrequency = "monthly";
       priority = route === "serving-the-south" ? 0.75 : 0.7;
+    } else if (route === "book") {
+      lastModified = LASTMOD_ABOUT_CONTACT;
+      changeFrequency = "monthly";
+      priority = 0.55;
     } else if (route === "about" || route === "ai-info") {
       lastModified = LASTMOD_ABOUT_CONTACT;
       changeFrequency = "monthly";

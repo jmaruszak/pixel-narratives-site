@@ -2,11 +2,26 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   trailingSlash: false,
+  allowedDevOrigins: ["127.0.0.1"],
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "i.ytimg.com",
+        pathname: "/vi/**",
+      },
+    ],
+  },
   async redirects() {
     return [
       {
         source: "/intelligence-layer",
-        destination: "/automation",
+        destination: "/implementation",
+        permanent: true,
+      },
+      {
+        source: "/automation",
+        destination: "/implementation",
         permanent: true,
       },
       {
@@ -53,6 +68,11 @@ const nextConfig: NextConfig = {
         source: "/locations",
         destination: "/serving-the-south",
         statusCode: 301,
+      },
+      {
+        source: "/starting-small",
+        destination: "/work-with-us",
+        permanent: true,
       },
     ];
   },

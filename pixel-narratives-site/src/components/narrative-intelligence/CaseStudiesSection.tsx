@@ -82,10 +82,10 @@ export default function CaseStudiesSection() {
                   </div>
                   <div>
                     <a
-                      href="#attention-pulse-brief"
+                      href="/contact?need=marketing"
                       className="inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm text-[var(--foreground)] transition hover:bg-white/5"
                     >
-                      Start an Attention Pulse
+                      Start a Conversation
                     </a>
                   </div>
                 </div>
@@ -173,10 +173,10 @@ export function FeaturedCampaignSection() {
           </div>
           <div className="mt-10">
             <a
-              href="#attention-pulse-brief"
+              href="/contact?need=marketing"
               className="inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm text-[var(--foreground)] transition hover:bg-white/5"
             >
-              Start an Attention Pulse
+              Start a Conversation
             </a>
           </div>
         </div>

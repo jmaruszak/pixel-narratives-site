@@ -37,7 +37,7 @@ const STEPS = [
   },
   {
     title: "Report",
-    body: "When the campaign is complete, we send the readout and recommendations. You can stop there, run another campaign, or continue with Attention Retainer.",
+    body: "When the work is complete, we share what happened and what we'd do next.",
   },
 ] as const;
 
@@ -111,9 +111,9 @@ export default function AdsProcessFlow() {
               id="ads-process-heading"
               className="mt-4 text-4xl leading-[1.05] md:text-5xl"
             >
-              How an Attention
+              How a marketing
               <br />
-              campaign works
+              project can work
             </h2>
           </div>
 

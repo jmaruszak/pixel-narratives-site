@@ -9,18 +9,18 @@ import { buildPageMetadata } from "../../lib/siteMetadata";
 import { WEB_INTEL_PAGE_TOOL_URL } from "../../lib/webIntelligence";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Locations | Pixel Narratives",
+  title: "Who We Work With | Pixel Narratives",
   description:
-    "Pixel Narratives is based in Madison and serves businesses throughout Mississippi, Birmingham, Memphis, Mobile, and Alabama's Eastern Shore.",
+    "We work with business owners, leadership teams, and departments that want practical help using AI, from Madison across Mississippi, Birmingham, Memphis, Mobile plus Alabama's Eastern Shore, and Atlanta.",
   path: "/serving-the-south",
 });
 
 const helpGroups = [
   {
     title: "Implementation",
-    outcome: "Save time. Reduce repetitive work. Make the business easier to run.",
-    body: "We help businesses figure out where AI makes sense and how to put it to work. From a specific project to an ongoing partnership, we bring the expertise to help you make good decisions and get things done.",
-    href: "/automation",
+    outcome: "Save time. Reduce repetitive work. Make your business easier to run.",
+    body: "We help you figure out where AI makes sense and how to put it to work. From a specific project to an ongoing partnership, we bring the expertise to help you make good decisions and get things done.",
+    href: "/implementation",
     cta: "Explore Implementation",
   },
   {
@@ -31,16 +31,16 @@ const helpGroups = [
     cta: "Explore Training",
   },
   {
-    title: "Websites + Online Visibility",
-    outcome: "Help more of the right customers find you.",
-    body: "We build websites that look good, work well, and give people a reason to take the next step. We also help businesses improve how they show up in search.",
+    title: "Visibility",
+    outcome: "Helping customers find you.",
+    body: "Websites, SEO, and AI search. We help you build a stronger online presence and get found by more of your customers.",
     href: "/websites",
-    cta: "Explore Websites + Online Visibility",
+    cta: "Explore Visibility",
   },
   {
     title: "Marketing",
     outcome: "Get attention. Make an impression. Bring in business.",
-    body: "We create advertising, video, and campaigns designed to get noticed. AI helps us produce creative work in new ways, but the idea still has to be good.",
+    body: "We help businesses reach more customers through creative strategy, social media, advertising, and original content.",
     href: "/marketing",
     cta: "Explore Marketing",
   },
@@ -49,7 +49,7 @@ const helpGroups = [
 const marketGroups = [
   {
     title: "Mississippi",
-    body: "Madison is home. We work with businesses throughout the Jackson metro and across Mississippi, helping owners and teams find better ways to get things done.",
+    body: "Madison is home. We work with businesses throughout the Jackson metro and across Mississippi, helping owners and teams put AI to work.",
     href: "/locations/mississippi",
     cta: "Explore Mississippi",
   },
@@ -70,6 +70,10 @@ const marketGroups = [
     body: "We work with businesses in Mobile, Daphne, Fairhope, and surrounding communities, helping them use AI, improve how they work, and grow.",
     href: "/locations/mobile-eastern-shore",
     cta: "Explore Mobile + Eastern Shore",
+  },
+  {
+    title: "Atlanta, Georgia",
+    body: "AI implementation, training, websites, and marketing for businesses in the Atlanta area.",
   },
 ] as const;
 
@@ -92,13 +96,13 @@ export default function ServingTheSouthPage() {
         graph={[
           buildWebPage({
             path: "/serving-the-south",
-            name: "Locations | Pixel Narratives",
+            name: "Who We Work With | Pixel Narratives",
             description:
-              "Pixel Narratives is based in Madison and serves businesses throughout Mississippi, Birmingham, Memphis, Mobile, and Alabama's Eastern Shore.",
+              "We work with business owners, leadership teams, and departments that want practical help using AI. Pixel Narratives is based in Madison, Mississippi.",
           }),
           buildBreadcrumbs([
             { name: "Home", path: "/" },
-            { name: "Locations", path: "/serving-the-south" },
+            { name: "Who We Work With", path: "/serving-the-south" },
           ]),
           marketListSchema,
         ]}
@@ -107,21 +111,20 @@ export default function ServingTheSouthPage() {
       <section className="mx-auto w-full max-w-7xl px-6 py-20 md:px-10 md:py-24">
         <div className="max-w-4xl">
           <p className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
-            Locations
+            Who We Work With
           </p>
           <h1 className="mt-4 text-5xl leading-[1.05] md:text-7xl">
-            Based in Mississippi. Serving businesses across the South.
+            Practical help for people who want to put AI to work.
           </h1>
           <div className="mt-8 max-w-3xl space-y-5 text-lg leading-relaxed text-[var(--muted)] md:text-xl md:leading-8">
             <p>
-              Pixel Narratives is based in Madison, Mississippi. We work with
-              businesses throughout Mississippi, Birmingham, Memphis, and
-              Mobile and Alabama&apos;s Eastern Shore.
+              We work with business owners, leadership teams, and departments
+              that want practical help using AI.
             </p>
             <p>
-              Whether you&apos;re looking for help putting AI to work, getting
-              your team up to speed, building a better website, or reaching
-              more customers, we&apos;re here to help.
+              Pixel Narratives is based in Madison, Mississippi. We work with
+              businesses across Mississippi, Birmingham, Memphis, Mobile plus
+              Alabama&apos;s Eastern Shore, and Atlanta.
             </p>
           </div>
           <div className="mt-8 flex flex-wrap gap-4">
@@ -140,10 +143,10 @@ export default function ServingTheSouthPage() {
               Check My Online Visibility
             </a>
             <Link
-              href="/ai-readiness-assessment"
+              href="/work-with-us"
               className="inline-flex items-center rounded-full border border-white/10 px-6 py-3 text-sm text-[var(--foreground)] transition hover:bg-white/5"
             >
-              AI Readiness Assessment
+              Work With Us
             </Link>
           </div>
         </div>
@@ -189,9 +192,7 @@ export default function ServingTheSouthPage() {
       <section className="border-t border-white/8">
         <div className="mx-auto w-full max-w-7xl px-6 py-16 md:px-10 md:py-20">
           <div className="max-w-3xl">
-            <h2 className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
-              Where We Work
-            </h2>
+            <h2 className="text-4xl leading-none md:text-5xl">Where we work</h2>
           </div>
           <div className="mt-10 grid gap-6 md:grid-cols-2">
             {marketGroups.map((market) => (
@@ -203,14 +204,16 @@ export default function ServingTheSouthPage() {
                 <p className="mt-4 flex-1 text-base leading-relaxed text-[var(--muted)]">
                   {market.body}
                 </p>
-                <p className="mt-6">
-                  <Link
-                    href={market.href}
-                    className="inline-flex min-h-11 items-center text-sm text-[var(--foreground)] transition hover:opacity-80"
-                  >
-                    {market.cta}
-                  </Link>
-                </p>
+                {"href" in market && market.href ? (
+                  <p className="mt-6">
+                    <Link
+                      href={market.href}
+                      className="inline-flex min-h-11 items-center text-sm text-[var(--foreground)] transition hover:opacity-80"
+                    >
+                      {market.cta}
+                    </Link>
+                  </p>
+                ) : null}
               </article>
             ))}
           </div>

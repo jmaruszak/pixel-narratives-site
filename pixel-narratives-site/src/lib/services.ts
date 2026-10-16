@@ -18,11 +18,11 @@ export type ServiceDefinition = {
 export const SERVICES: ServiceDefinition[] = [
   {
     id: "automation",
-    href: "/automation",
+    href: "/implementation",
     navLabel: "Implementation",
     name: "Implementation",
     problem: "Save Time",
-    outcome: "Save time. Reduce repetitive work. Make the business easier to run.",
+    outcome: "Putting AI into practice.",
     body: "We help you identify where AI makes sense, choose what is worth pursuing, and put it to work. That may mean improving how your team uses existing tools, changing a process, or building something custom.",
     ctaLabel: "Discuss a Project",
   },
@@ -32,18 +32,18 @@ export const SERVICES: ServiceDefinition[] = [
     navLabel: "Training",
     name: "Training",
     problem: "Use AI Better",
-    outcome: "Help your team get more done with practical AI workshops.",
-    body: "Standalone workshops for ChatGPT, Claude, Microsoft Copilot, AI video, research, creative work, and productivity. One department is $7,500. Larger teams run $15,000 to $20,000. Multi-day engagements start at $25,000.",
+    outcome: "Developing your team's capabilities.",
+    body: "Practical AI training tailored to your team, their work, and the tools they use.",
     ctaLabel: "Discuss Team Training",
   },
   {
     id: "websites",
     href: "/websites",
-    navLabel: "Websites & Visibility",
-    name: "Websites + Online Visibility",
+    navLabel: "Visibility",
+    name: "Visibility",
     problem: "Get Found",
-    outcome: "Help more of the right customers find you and take action.",
-    body: "Website Starter at $2,500. Website + Visibility Build starting at $7,500. Visibility Sprint starting at $1,200/month with a 3-month minimum.",
+    outcome: "Helping customers find you.",
+    body: "Websites, SEO, and AI search. We help you build a stronger online presence and get found by more of your customers.",
     ctaLabel: "Improve My Website",
   },
   {
@@ -52,14 +52,14 @@ export const SERVICES: ServiceDefinition[] = [
     navLabel: "Marketing",
     name: "Marketing",
     problem: "Reach More Customers",
-    outcome: "Campaigns that get seen, remembered, and acted on.",
-    body: "Campaigns, ads, video, content, and lead generation. We use AI where it helps production.",
+    outcome: "Getting their attention and generating demand.",
+    body: "We help businesses reach more customers through creative strategy, social media, advertising, and original content.",
     ctaLabel: "Discuss Marketing",
   },
 ];
 
 export const SERVICE_LINE_SUMMARY =
-  "Implementation. Training. Websites + Online Visibility. Marketing.";
+  "Implementation. Training. Visibility. Marketing.";
 
 export const POSITIONING_LINE =
   "We help businesses save time, win more customers, and get more done.";

@@ -4,7 +4,7 @@ export const SITE_NAME = "Pixel Narratives";
 export const SITE_URL = "https://pixelnarratives.studio";
 
 export const DEFAULT_DESCRIPTION =
-  "Pixel Narratives is an AI implementation company in Madison, Mississippi, helping businesses put AI to work through implementation, training, websites, visibility, and marketing.";
+  "Pixel Narratives is an AI implementation company in Madison, Mississippi, helping businesses put AI to work through implementation, training, visibility, and marketing.";
 
 export const DEFAULT_OG_IMAGE = "/images/home-cinematic.jpg";
 
@@ -61,6 +61,11 @@ export const rootMetadata: Metadata = {
     template: "%s",
   },
   description: DEFAULT_DESCRIPTION,
+  alternates: {
+    types: {
+      "text/plain": `${SITE_URL}/llms.txt`,
+    },
+  },
   icons: {
     icon: "/brand/logo-mark.png",
     apple: "/brand/logo-mark.png",

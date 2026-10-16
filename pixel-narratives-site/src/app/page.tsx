@@ -8,7 +8,7 @@ import { buildPageMetadata } from "../lib/siteMetadata";
 export const metadata: Metadata = buildPageMetadata({
   title: "AI Implementation Partner | Pixel Narratives",
   description:
-    "Put AI to work in your business with practical implementation, standalone team training, websites and online visibility, and marketing from Pixel Narratives.",
+    "Put AI to work in your business with practical implementation, team training, visibility, and marketing from Pixel Narratives.",
   path: "/",
   image: "/images/home-cinematic.jpg",
   imageAlt: "Pixel Narratives homepage cinematic visual",

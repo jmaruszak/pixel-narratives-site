@@ -30,7 +30,7 @@ export const locationLandingPages: Record<string, LocationLandingPage> = {
     slug: "locations/mississippi",
     title: "AI Implementation and Training in Mississippi | Pixel Narratives",
     description:
-      "Madison-based Pixel Narratives helps Mississippi businesses with AI implementation, standalone team training, websites and online visibility, and marketing.",
+      "Madison-based Pixel Narratives helps Mississippi businesses with AI implementation, standalone team training, visibility, and marketing.",
     h1: "Put AI to work in your Mississippi business.",
     marketLabel: "Mississippi",
     breadcrumbName: "Mississippi",
@@ -44,7 +44,7 @@ export const locationLandingPages: Record<string, LocationLandingPage> = {
     marketHeading: "Built in Mississippi for the way local businesses work",
     marketBody: [
       "Owners and leadership teams do not need another pile of software. They need a clear view of where time is being lost, which opportunities matter, and what their people can use.",
-      "We work with businesses in Madison, Ridgeland, Jackson, Flowood, Brandon, Gluckstadt, and communities throughout Mississippi. A project can begin with one contained problem or grow into ongoing AI leadership.",
+      "We work with businesses in Madison, Ridgeland, Jackson, Flowood, Brandon, Gluckstadt, and communities throughout Mississippi. A project can begin with one contained problem or grow into an ongoing Partner relationship.",
       "The work is shaped around the business. Existing commercial tools may be enough. Other situations call for a better process, hands-on implementation, or a custom solution.",
     ],
     serviceNotes: {
@@ -79,15 +79,15 @@ export const locationLandingPages: Record<string, LocationLandingPage> = {
           "No. Training is a standalone service built around your team, its work, and useful tools such as ChatGPT, Claude, and Microsoft Copilot.",
       },
     ],
-    ctaHeadline: "What could work better in your business?",
+    ctaHeadline: "Let's put AI to work for your business.",
     ctaBody:
-      "Tell us what is taking too much time, creating friction, or keeping a useful idea from moving forward.",
+      "Whether you have a specific project in mind or you're exploring what's possible, we'd love to hear from you.",
   },
   memphis: {
     slug: "locations/memphis",
     title: "AI Implementation and Training in Memphis | Pixel Narratives",
     description:
-      "Pixel Narratives helps Memphis businesses put AI to work through practical implementation, standalone team training, websites, visibility, and marketing.",
+      "Pixel Narratives helps Memphis businesses put AI to work through practical implementation, team training, visibility, and marketing.",
     h1: "Practical AI help for Memphis businesses.",
     marketLabel: "Memphis, Tennessee",
     breadcrumbName: "Memphis",
@@ -113,13 +113,13 @@ export const locationLandingPages: Record<string, LocationLandingPage> = {
     engagementHeading: "A project or an ongoing relationship",
     engagementBody: [
       "Bring us a specific workflow, a team that needs training, a website that is underperforming, or a campaign that needs a stronger idea.",
-      "If the need crosses departments or will change over time, Fractional AI Leadership provides ongoing help with priorities, adoption, and implementation.",
+      "If the need crosses departments or will change over time, Partner and Enterprise Partner engagements provide ongoing help with implementation, training, and AI decisions.",
     ],
     faqs: [
       {
         question: "What AI services are available to Memphis businesses?",
         answer:
-          "Pixel Narratives offers AI implementation, standalone team training, websites and online visibility, marketing, and ongoing Fractional AI Leadership.",
+          "Pixel Narratives offers AI implementation, standalone team training, visibility, marketing, and ongoing Partner support.",
       },
       {
         question: "Can you train our team on the tools we already use?",
@@ -134,24 +134,24 @@ export const locationLandingPages: Record<string, LocationLandingPage> = {
     ],
     ctaHeadline: "Ready to put AI to work in Memphis?",
     ctaBody:
-      "Tell us what you are trying to improve, and we will help you find a practical next step.",
+      "Whether you have a specific project in mind or you're exploring what's possible, we'd love to hear from you.",
   },
   birmingham: {
     slug: "locations/birmingham",
     title: "AI Implementation and Training in Birmingham | Pixel Narratives",
     description:
-      "Pixel Narratives helps Birmingham businesses with AI implementation, standalone team training, websites and online visibility, marketing, and ongoing AI leadership.",
+      "Pixel Narratives helps Birmingham businesses with AI implementation, standalone team training, visibility, and marketing.",
     h1: "Put practical AI to work in Birmingham.",
     marketLabel: "Birmingham, Alabama",
     breadcrumbName: "Birmingham",
     intro:
-      "Birmingham is a strategic growth market for Pixel Narratives. We work with business owners and leadership teams that want a clear way to evaluate AI opportunities and turn the right ones into useful work.",
+      "We work with Birmingham business owners and leadership teams that want a clear way to evaluate AI opportunities and turn the right ones into useful work.",
     areaServed: [{ type: "City", name: "Birmingham", region: "AL" }],
     marketHeading: "Move from interest to useful implementation",
     marketBody: [
       "A leadership team may know AI matters without knowing which opportunities deserve attention first. Employees may already be experimenting with tools while the business still lacks a shared approach.",
       "We help bring order to that work. The engagement can focus on priorities, adoption, training, a business process, or a defined solution with a finish line.",
-      "For organizations that need continued support, Fractional AI Leadership provides an experienced partner for decisions and implementation as the business grows.",
+      "For organizations that need continued support, Partner and Enterprise Partner engagements provide ongoing help with decisions and implementation.",
     ],
     serviceNotes: {
       automation:
@@ -180,21 +180,21 @@ export const locationLandingPages: Record<string, LocationLandingPage> = {
           "Yes. We begin with the tools and processes already in the business and recommend change only when it supports a clear result.",
       },
       {
-        question: "Is ongoing AI leadership available?",
+        question: "Can we work with you on an ongoing basis?",
         answer:
-          "Yes. Fractional AI Leadership is available for organizations that need continued help with priorities, decisions, adoption, and implementation.",
+          "Yes. Partner and Enterprise Partner engagements are available when you need continued help with implementation, training, and AI decisions.",
       },
     ],
-    ctaHeadline: "What AI opportunity is worth pursuing next?",
+    ctaHeadline: "Let's put AI to work in Birmingham.",
     ctaBody:
-      "Bring us the question, process, or business goal. We will help you work through a practical path forward.",
+      "Whether you have a specific project in mind or you're exploring what's possible, we'd love to hear from you.",
   },
   "mobile-eastern-shore": {
     slug: "locations/mobile-eastern-shore",
     title:
       "AI Implementation in Mobile and the Eastern Shore | Pixel Narratives",
     description:
-      "Pixel Narratives serves businesses in Mobile, Daphne, Fairhope, and Alabama's Eastern Shore with AI implementation, team training, websites, visibility, and marketing.",
+      "Pixel Narratives serves businesses in Mobile, Daphne, Fairhope, and Alabama's Eastern Shore with AI implementation, team training, visibility, and marketing.",
     h1: "AI implementation for Mobile and the Eastern Shore.",
     marketLabel: "Mobile + Alabama’s Eastern Shore",
     breadcrumbName: "Mobile + Eastern Shore",
@@ -210,10 +210,9 @@ export const locationLandingPages: Record<string, LocationLandingPage> = {
       { type: "City", name: "Daphne", region: "AL" },
       { type: "City", name: "Fairhope", region: "AL" },
     ],
-    marketHeading: "A market built on real connections",
+    marketHeading: "Practical help for Mobile and the Eastern Shore",
     marketBody: [
-      "Founder Jordan Maruszak lived in the Mobile area for about three years and maintains connections across the region. That familiarity makes Mobile and the Eastern Shore a natural market for Pixel Narratives to serve.",
-      "Businesses in Mobile, Daphne, Fairhope, and nearby communities can engage Pixel Narratives for the same services available throughout the region, from a contained first project to ongoing AI leadership.",
+      "Businesses in Mobile, Daphne, Fairhope, and nearby communities can engage Pixel Narratives for the same services available throughout the region, from a contained first project to an ongoing Partner relationship.",
       "The starting point is a practical business need. We learn how the work gets done, identify options worth considering, and help carry the right one into practice.",
     ],
     serviceNotes: {
@@ -240,17 +239,17 @@ export const locationLandingPages: Record<string, LocationLandingPage> = {
       {
         question: "What services are available in Mobile and the Eastern Shore?",
         answer:
-          "AI implementation, standalone team training, websites and online visibility, marketing, and Fractional AI Leadership are available.",
+          "AI implementation, standalone team training, visibility, marketing, and ongoing Partner support are available.",
       },
       {
         question: "Can we begin with a contained project?",
         answer:
-          "Yes. Starting Small options are designed for businesses that want one useful outcome and a defined finish line.",
+          "Yes. Build engagements can start as a contained project with one useful outcome and a defined finish line.",
       },
     ],
-    ctaHeadline: "Let’s talk about what could work better.",
+    ctaHeadline: "Let's put AI to work for your business.",
     ctaBody:
-      "Tell us what you are trying to fix, improve, or put into practice in your Mobile or Eastern Shore business.",
+      "Whether you have a specific project in mind or you're exploring what's possible, we'd love to hear from you.",
   },
 };
 

@@ -428,7 +428,7 @@ export default function VisibilityInTheAgeOfAiPage() {
               href="/websites"
               className="text-[var(--foreground)] transition hover:opacity-80"
             >
-              Websites + Online Visibility
+              Visibility
             </Link>{" "}
             work includes a live-site scan.{" "}
             <a
@@ -486,7 +486,7 @@ export default function VisibilityInTheAgeOfAiPage() {
               <p>
                 The next step is often{" "}
                 <Link
-                  href="/automation"
+                  href="/implementation"
                   className="text-[var(--foreground)] transition hover:opacity-80"
                 >
                   Implementation

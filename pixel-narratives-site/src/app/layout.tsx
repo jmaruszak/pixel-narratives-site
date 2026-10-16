@@ -1,8 +1,9 @@
 import { Inter, Bebas_Neue } from "next/font/google";
+import type { Viewport } from "next";
 import VibePixel from "../components/VibePixel";
 import WebMcpTools from "../components/WebMcpTools";
 import { JsonLd, sitewideGraph } from "../lib/schema";
-import { rootMetadata } from "../lib/siteMetadata";
+import { SITE_URL, rootMetadata } from "../lib/siteMetadata";
 import "./globals.css";
 
 const inter = Inter({
@@ -18,13 +19,28 @@ const bebas = Bebas_Neue({
 
 export const metadata = rootMetadata;
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#0b0c0f",
+  viewportFit: "cover",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" data-scroll-behavior="smooth">
+      <head>
+        <link
+          rel="alternate"
+          type="text/plain"
+          href={`${SITE_URL}/llms.txt`}
+          title="llms.txt"
+        />
+      </head>
       <body className={`site-texture ${inter.variable} ${bebas.variable} antialiased`}>
         <a
           href="#main-content"

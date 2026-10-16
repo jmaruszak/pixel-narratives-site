@@ -19,17 +19,17 @@ export const DESTINATION_CTAS = {
   automation: {
     id: "automation",
     eyebrow: "Next Step",
-    headline: "Tell us what is slowing you down.",
-    body: "We will look at the repetitive work, the disconnected tools, and the follow-up that falls through. Sometimes the answer is automation. Sometimes it is a better system for the team.",
+    headline: "Let's put AI to work for your business.",
+    body: "Whether you have a specific project in mind or you're exploring what's possible, we'd love to hear from you.",
     primaryAction: { href: "/contact?need=automation", label: "Discuss a Project" },
     secondaryAction: { href: "/contact", label: "Start a Conversation" },
   },
   training: {
     id: "training",
-    eyebrow: "Corporate AI Workshops",
-    headline: "Help your team get more done.",
-    body: "Corporate AI Workshops from $7,500 for one department. Larger teams and multi-day workshops are scoped from there.",
-    primaryAction: { href: "#workshop-inquiry", label: "Discuss Team Training" },
+    eyebrow: "Next Step",
+    headline: "Ready to get your team up to speed?",
+    body: "Tell us about your team and what you want them to be able to do. We'll talk through the right workshop.",
+    primaryAction: { href: "/contact?need=training", label: "Discuss Team Training" },
     secondaryAction: {
       href: "/contact?need=training",
       label: "Start a Conversation",
@@ -38,8 +38,8 @@ export const DESTINATION_CTAS = {
   websites: {
     id: "websites",
     eyebrow: "Next Step",
-    headline: "Help more of the right customers find you.",
-    body: "Start with a look at your live site, or talk through a Website + Visibility Build or Visibility Sprint.",
+    headline: "Ready to get found by more of the right customers?",
+    body: "Tell us about your website or online presence. We'll talk through what would help.",
     primaryAction: { href: "/contact?need=websites", label: "Improve My Website" },
     secondaryAction: {
       href: WEB_INTEL_PAGE_TOOL_URL,
@@ -49,11 +49,10 @@ export const DESTINATION_CTAS = {
   },
   marketing: {
     id: "marketing",
-    eyebrow: "Attention",
-    headline: "Start an Attention Pulse.",
-    body: "One campaign. One price. A defined finish line. We confirm fit on a short call before production starts.",
-    primaryAction: { href: "#attention-pulse-brief", label: "Start an Attention Pulse" },
-    secondaryAction: {
+    eyebrow: "Let's Talk",
+    headline: "What are you looking to accomplish?",
+    body: "Whether you're planning a campaign, building your social presence, or exploring new ways to reach customers, we'd love to hear about it.",
+    primaryAction: {
       href: "/contact?need=marketing",
       label: "Start a Conversation",
     },

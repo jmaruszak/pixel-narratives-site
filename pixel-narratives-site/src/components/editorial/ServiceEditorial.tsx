@@ -67,7 +67,7 @@ export default function ServiceEditorial({
               alt={mediaAlt ?? ""}
               fill
               sizes="(max-width: 1023px) 100vw, 50vw"
-              className="object-cover"
+              className="object-cover object-center"
             />
           </div>
         ) : null}

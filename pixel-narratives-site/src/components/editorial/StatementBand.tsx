@@ -21,11 +21,13 @@ export default function StatementBand({
 
   return (
     <section
-      className={`border-t ${light ? "pn-band-light border-black/8" : "border-white/8"}`}
+      className={light ? "pn-band-light" : undefined}
     >
       <div className="mx-auto w-full max-w-7xl px-6 pn-section md:px-10">
         {kicker ? <p className="pn-kicker pn-muted">{kicker}</p> : null}
-        <h2 className={`pn-display max-w-5xl ${kicker ? "mt-6" : ""}`}>
+        <h2
+          className={`home-scene-enter pn-display max-w-5xl ${kicker ? "mt-6" : ""}`}
+        >
           {headline}
         </h2>
         {lede ? <p className="pn-lede mt-8">{lede}</p> : null}

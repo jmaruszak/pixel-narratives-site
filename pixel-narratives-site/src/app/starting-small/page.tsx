@@ -18,7 +18,7 @@ export const metadata = buildPageMetadata({
 
 const NEXT_SERVICES = [
   { href: "/services", label: "All Services" },
-  { href: "/automation", label: "AI & Automation" },
+  { href: "/implementation", label: "AI & Automation" },
   { href: "/training", label: "Training" },
   { href: "/websites", label: "Websites & Visibility" },
   { href: "/marketing", label: "Marketing" },
@@ -99,7 +99,7 @@ export default function StartingSmallPage() {
               <p className="mt-4 text-base leading-relaxed text-[var(--muted)]">
                 If the problem is bigger than one quick win, the{" "}
                 <a
-                  href="/automation"
+                  href="/implementation"
                   className="text-[var(--foreground)] transition hover:opacity-80"
                 >
                   Implementation Assessment starts at $1,250
@@ -200,7 +200,7 @@ export default function StartingSmallPage() {
                   href="/marketing"
                   className="font-medium text-[var(--foreground)] transition hover:opacity-80"
                 >
-                  Attention Pulse starts at $5,000.
+                  See Marketing.
                 </a>
               </p>
               <div className="mt-8">

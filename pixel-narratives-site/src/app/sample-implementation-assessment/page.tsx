@@ -1,13 +1,16 @@
+import Link from "next/link";
 import Footer from "../../components/Footer";
 import Nav from "../../components/Nav";
 import { JsonLd, buildWebPage, buildBreadcrumbs } from "../../lib/schema";
 import { buildPageMetadata } from "../../lib/siteMetadata";
 
+const PAGE_DESCRIPTION =
+  "See what an AI assessment looks like. This sample shows the recommendations, priorities, and implementation planning you can expect from an Implementation Assessment.";
+
 export const metadata = {
   ...buildPageMetadata({
-  title: "Sample Implementation Assessment | Pixel Narratives",
-  description:
-    "Sample Implementation Assessment preview: business analysis, quick wins, workflow improvements, and scoped projects. Full client reports include tools and implementation recommendations.",
+    title: "Sample Implementation Assessment | Pixel Narratives",
+    description: PAGE_DESCRIPTION,
     path: "/sample-implementation-assessment",
     image: "/images/int-cinematic.jpg",
     imageAlt: "Cinematic visual for Pixel Narratives Implementation Assessment",
@@ -15,29 +18,27 @@ export const metadata = {
   keywords: [
     "Implementation Assessment",
     "sample assessment",
-    "business analysis",
-    "workflow improvements",
-    "scoped projects",
-    "automation",
+    "quick wins",
+    "implementation planning",
   ],
 };
 
-const sampleCards = [
+const INSIDE = [
   {
-    title: "Business Snapshot",
-    body: "A plain-English view of what is happening inside the business before recommending tools or projects.",
+    title: "Your Business Today",
+    body: "We review your existing processes, tools, and goals to understand how your business operates and where opportunities exist.",
   },
   {
     title: "Quick Wins",
-    body: "In client assessments, Quick Wins include tools, services, process changes, and simple improvements that can usually be completed in under two hours.",
+    body: "Practical improvements you can make without committing to a larger implementation project.",
   },
   {
-    title: "Scoped Project Examples",
-    body: "Larger implementation opportunities that may involve automation, workflow design, dashboards, client portals, intake systems, or internal operating tools.",
+    title: "Implementation Opportunities",
+    body: "Recommendations for tools, systems, workflows, and custom solutions that could benefit your business.",
   },
   {
-    title: "Next Steps",
-    body: "A practical path from discovery to assessment, quick wins, scoped projects, implementation, and ongoing improvement.",
+    title: "A Plan for Moving Forward",
+    body: "Prioritized next steps that help you decide what to pursue now, what can wait, and where additional investment makes sense.",
   },
 ] as const;
 
@@ -50,145 +51,88 @@ export default function SampleImplementationAssessmentPage() {
           buildWebPage({
             path: "/sample-implementation-assessment",
             name: "Sample Implementation Assessment | Pixel Narratives",
-            description:
-              "Sample Implementation Assessment preview: business analysis, quick wins, workflow improvements, and scoped projects. Full client reports include tools and implementation recommendations.",
+            description: PAGE_DESCRIPTION,
           }),
           buildBreadcrumbs([
             { name: "Home", path: "/" },
-            { name: "Sample Implementation Assessment", path: "/sample-implementation-assessment" },
+            {
+              name: "Sample Implementation Assessment",
+              path: "/sample-implementation-assessment",
+            },
           ]),
         ]}
       />
 
-      <section className="mx-auto w-full max-w-7xl px-6 py-20 md:px-10 md:py-24">
-        <p className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
-          Optional diagnostic
-        </p>
-        <h1 className="mt-4 max-w-4xl text-3xl leading-none sm:text-4xl md:text-5xl">
-          Sample Implementation Assessment
-        </h1>
-        <div className="mt-8 max-w-3xl space-y-6 text-lg leading-relaxed text-[var(--muted)] md:text-xl">
-          <p>
-            Before we recommend tools, automations, or scoped builds, we look at
-            how the business runs.
-          </p>
-          <p>
-            This sample shows the structure and style of thinking behind our
-            Implementation Assessment: where revenue may be leaking, where
-            follow-up is inconsistent, where workflows are scattered, and where
-            better systems could create capacity.
-          </p>
-          <p>
-            This sample does not include the full tool-specific detail of a
-            client assessment. Actual client reports include tools, services,
-            process changes, automation ideas, and scoped implementation
-            recommendations specific to your business.
-          </p>
-          <p className="text-[var(--foreground)]">
-            This sample shows how we think. A real assessment shows what we
-            would do for your specific business.
-          </p>
+      <section className="mx-auto w-full max-w-7xl px-6 py-20 md:px-10 md:py-28">
+        <div className="max-w-3xl">
+          <h1 className="pn-page-title">Sample Implementation Assessment</h1>
+          <h2 className="mt-6 max-w-2xl text-2xl leading-snug md:text-3xl">
+            See what an AI assessment looks like.
+          </h2>
+          <div className="mt-8 max-w-2xl space-y-6 text-lg leading-relaxed text-[var(--muted)] md:text-xl">
+            <p>
+              Every business is different. Our Implementation Assessment helps
+              you understand where AI could create value in your business,
+              which opportunities are worth pursuing, and how to move forward.
+            </p>
+            <p>
+              This sample provides a look at the recommendations, priorities,
+              and implementation planning you can expect from an assessment.
+            </p>
+          </div>
         </div>
 
-        <div className="mt-10 flex flex-wrap gap-4">
-          <a
-            href="/sample/sample-implementation-assessment.pdf"
-            target="_blank"
-            rel="noreferrer"
-            className="cta-pulse-filled inline-flex items-center rounded-full border border-white/10 bg-[var(--foreground)] px-5 py-2.5 text-sm font-medium text-black transition hover:opacity-90"
-          >
-            View the Sample Assessment
-          </a>
-          <a
-            href="/contact?need=automation"
-            className="cta-pulse-outline inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm text-[var(--foreground)] transition hover:border-white/20 hover:bg-white/5"
-          >
-            Discuss a Project
-          </a>
+        <div className="mt-16 w-full max-w-[960px]">
+          <p className="text-sm font-medium text-[var(--foreground)]">
+            View Sample Assessment
+          </p>
+          <iframe
+            src="https://gamma.app/embed/1l93c1jf76mhrw3"
+            className="pn-gamma-embed mt-4 h-[640px] w-full border-0"
+            allow="fullscreen"
+            title="Sample Implementation Assessment"
+          />
         </div>
       </section>
 
       <section className="border-t border-white/8">
-        <div className="mx-auto w-full max-w-7xl px-6 py-16 md:px-10 md:py-20">
-          <h2 className="max-w-3xl text-3xl leading-none md:text-4xl">
-            What the Sample Shows
+        <div className="mx-auto w-full max-w-7xl px-6 py-20 md:px-10 md:py-28">
+          <p className="pn-kicker text-[var(--muted)]">What&apos;s Inside</p>
+          <h2 className="pn-display mt-6 max-w-4xl text-[clamp(2.5rem,6vw,5rem)]">
+            From opportunities to a plan.
           </h2>
-          <div className="mt-10 grid gap-6 md:grid-cols-2">
-            {sampleCards.map((card) => (
-              <div
-                key={card.title}
-                className="rounded-[24px] border border-white/8 bg-white/[0.02] p-8"
-              >
-                <h3 className="text-lg font-medium text-[var(--foreground)]">
-                  {card.title}
-                </h3>
-                <p className="mt-3 text-base leading-relaxed text-[var(--muted)]">
-                  {card.body}
+          <ul className="mt-16 grid max-w-5xl gap-12 md:grid-cols-2">
+            {INSIDE.map((item) => (
+              <li key={item.title}>
+                <h3 className="text-3xl leading-none md:text-4xl">{item.title}</h3>
+                <p className="mt-4 max-w-md text-base leading-relaxed text-[var(--muted)] md:text-lg">
+                  {item.body}
                 </p>
-              </div>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </section>
 
       <section className="border-t border-white/8">
-        <div className="mx-auto w-full max-w-7xl px-6 py-16 md:px-10 md:py-20">
-          <h2 className="max-w-3xl text-3xl leading-none md:text-4xl">
-            Why the First Step Is Often Data Cleanup
+        <div className="mx-auto w-full max-w-7xl px-6 py-20 md:px-10 md:py-28">
+          <p className="pn-kicker text-[var(--muted)]">Next Step</p>
+          <h2 className="pn-display mt-6 max-w-4xl text-[clamp(2.5rem,6vw,5rem)]">
+            Let&apos;s see what&apos;s possible for your business.
           </h2>
-          <div className="mt-8 max-w-3xl space-y-6 text-base leading-relaxed text-[var(--muted)] md:text-lg">
-            <p>
-              A lot of businesses want to jump straight into AI. But if the
-              business information is scattered across inboxes, spreadsheets,
-              text threads, forms, notes, and memory, new tools usually make the
-              mess louder instead of making the business better.
-            </p>
-            <p>
-              That is why we often start with data organization and
-              centralization. Clean intake, clearer workflows, better handoffs,
-              and one place to track the important details create the foundation
-              for systems that are useful.
-            </p>
-            <p>
-              Automation works better when the business has a cleaner operating
-              layer underneath it.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="border-t border-white/8">
-        <div className="mx-auto w-full max-w-7xl px-6 py-16 md:px-10 md:py-20">
-          <div className="rounded-[24px] border border-white/8 bg-white/[0.02] p-8 md:p-10">
-            <h2 className="max-w-3xl text-3xl leading-none md:text-4xl">
-              Want one built around your business?
-            </h2>
-            <p className="mt-6 max-w-2xl text-base leading-relaxed text-[var(--muted)] md:text-lg">
-              Discuss a project if you already know where work is getting stuck.
-              The AI Readiness Assessment is optional if you want a clearer
-              picture first.
-            </p>
-            <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center">
-              <a
-                href="/contact?need=automation"
-                className="cta-pulse-filled inline-flex items-center justify-center rounded-full border border-white/10 bg-[var(--foreground)] px-5 py-2.5 text-sm font-medium text-black transition hover:opacity-90"
-              >
-                Discuss a Project
-              </a>
-              <a
-                href="/ai-readiness-assessment"
-                className="cta-pulse-outline inline-flex items-center justify-center rounded-full border border-white/10 px-5 py-2.5 text-sm text-[var(--foreground)] transition hover:border-white/20 hover:bg-white/5"
-              >
-                Take the assessment
-              </a>
-              <a
-                href="/automation"
-                className="text-sm text-[var(--foreground)] transition hover:opacity-80 sm:px-2"
-              >
-                Back to Implementation
-              </a>
-            </div>
-          </div>
+          <p className="mt-8 max-w-2xl text-lg leading-relaxed text-[var(--muted)] md:text-xl">
+            An Implementation Assessment is a practical starting point for
+            identifying opportunities and deciding where to invest your time
+            and resources.
+          </p>
+          <p className="mt-10">
+            <Link
+              href="/contact"
+              className="inline-flex min-h-11 items-center rounded-full border border-white/10 bg-[var(--foreground)] px-6 py-3 text-sm font-medium text-black transition hover:opacity-90"
+            >
+              Book a Call
+            </Link>
+          </p>
         </div>
       </section>
 

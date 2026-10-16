@@ -1,8 +1,7 @@
 import Link from "next/link";
-import {
-  BookDiscoveryCallForm,
-  RequestCreativeConceptForm,
-} from "../../components/ContactForms";
+import Script from "next/script";
+import CalendlyEmbed from "../../components/CalendlyEmbed";
+import { ContactEmailForm } from "../../components/ContactForms";
 import Footer from "../../components/Footer";
 import Nav from "../../components/Nav";
 import {
@@ -10,13 +9,14 @@ import {
   CONTACT_PHONE,
   CONTACT_PHONE_TEL,
 } from "../../lib/businessLocation";
+import { buildCalendlyEmbedUrl } from "../../lib/calendly";
 import { JsonLd, buildWebPage, buildBreadcrumbs } from "../../lib/schema";
 import { buildPageMetadata } from "../../lib/siteMetadata";
 
 export const metadata = buildPageMetadata({
   title: "Contact | Pixel Narratives",
   description:
-    "Talk with Pixel Narratives about implementation, training, websites, or marketing. Based in Madison, Mississippi.",
+    "Talk with Pixel Narratives about implementation, training, visibility, or marketing. Based in Madison, Mississippi.",
   path: "/contact",
   image: "/images/home-cinematic.jpg",
   imageAlt: "Contact Pixel Narratives",
@@ -25,7 +25,7 @@ export const metadata = buildPageMetadata({
 const NEED_OPTIONS = [
   { id: "automation", label: "Implementation" },
   { id: "training", label: "Training" },
-  { id: "websites", label: "Website + Online Visibility" },
+  { id: "websites", label: "Visibility" },
   { id: "marketing", label: "Marketing" },
   { id: "not-sure", label: "Not Sure" },
 ] as const;
@@ -54,8 +54,6 @@ export default async function ContactPage({
   const selectedNeed = NEED_OPTIONS.some((option) => option.id === need)
     ? need
     : undefined;
-  const showCampaignBrief = selectedNeed === "marketing";
-
   return (
     <main className="min-h-screen bg-[var(--background)] text-[var(--foreground)]">
       <Nav />
@@ -66,7 +64,7 @@ export default async function ContactPage({
             path: "/contact",
             name: "Contact Pixel Narratives",
             description:
-              "Talk with Pixel Narratives about implementation, training, websites, or marketing. Based in Madison, Mississippi.",
+              "Talk with Pixel Narratives about implementation, training, visibility, or marketing. Based in Madison, Mississippi.",
             additionalType: "ContactPage",
           }),
           buildBreadcrumbs([
@@ -76,18 +74,16 @@ export default async function ContactPage({
         ]}
       />
 
-      <section className="mx-auto w-full max-w-4xl px-6 py-24 md:px-10">
-        <p className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
-          Contact
-        </p>
+      <section className="mx-auto w-full max-w-4xl px-6 py-20 md:px-10 md:py-28">
+        <p className="pn-kicker text-[var(--muted)]">Contact</p>
 
-        <h1 className="mt-4 max-w-3xl text-5xl leading-[1.05] md:text-7xl">
-          What&apos;s slowing you down?
+        <h1 className="pn-page-title mt-5">
+          Let&apos;s put AI to work for your business.
         </h1>
 
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-[var(--foreground)] md:text-xl">
-          Tell us what you&apos;re trying to improve. We&apos;ll talk about the
-          better way.
+          Whether you have a specific project in mind or you&apos;re exploring
+          what&apos;s possible, we&apos;d love to hear from you.
         </p>
 
         <p className="mt-4 max-w-2xl text-base leading-relaxed text-[var(--muted)] md:text-lg">
@@ -143,28 +139,15 @@ export default async function ContactPage({
               today, and what the right next step looks like.
             </p>
 
-            <BookDiscoveryCallForm key={selectedNeed ?? "none"} need={selectedNeed} />
+            <Script
+              src="https://assets.calendly.com/assets/external/widget.js"
+              strategy="afterInteractive"
+            />
+            <CalendlyEmbed
+              key={selectedNeed ?? "none"}
+              url={buildCalendlyEmbedUrl(selectedNeed)}
+            />
           </div>
-
-          {showCampaignBrief ? (
-            <div className="rounded-[32px] border border-white/8 bg-white/[0.02] p-8 md:p-10">
-              <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
-                Marketing
-              </p>
-
-              <h2 className="mt-4 text-2xl leading-none md:text-3xl">
-                Discuss a campaign
-              </h2>
-
-              <p className="mt-4 max-w-xl text-base leading-relaxed text-[var(--muted)]">
-                If you already have a campaign in mind, tell us what you are
-                promoting, who it is for, where it will run, and what you want
-                people to do next.
-              </p>
-
-              <RequestCreativeConceptForm />
-            </div>
-          ) : null}
 
           <div className="rounded-[32px] border border-white/8 bg-white/[0.02] p-8 md:p-10">
             <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
@@ -178,6 +161,8 @@ export default async function ContactPage({
             >
               {CONTACT_EMAIL}
             </a>
+
+            <ContactEmailForm key={selectedNeed ?? "none"} need={selectedNeed} />
 
             <p className="mt-4 text-sm text-[var(--muted)]">
               We reply within 1-2 business days.
@@ -198,8 +183,8 @@ export default async function ContactPage({
             </a>
 
             <p className="mt-4 text-sm text-[var(--muted)]">
-              For direct questions about automation, a website, a campaign, or
-              the next step.
+              For direct questions about a project, training, a website, a
+              campaign, or the next step.
             </p>
           </div>
         </div>

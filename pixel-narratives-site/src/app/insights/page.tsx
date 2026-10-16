@@ -55,7 +55,7 @@ const insightGroups: InsightGroup[] = [
     ],
   },
   {
-    title: "Websites & Visibility",
+    title: "Visibility",
     description: "How customers and answer engines find, understand, and trust a business.",
     items: [
       {
@@ -194,16 +194,16 @@ export default function InsightsPage() {
               Serving businesses across the South
             </h2>
             <p className="mt-4 leading-relaxed text-[var(--muted)]">
-              Pixel Narratives is based in Madison and actively serves
-              Mississippi, Birmingham, Memphis, and Mobile plus Alabama&apos;s
-              Eastern Shore.
+              Pixel Narratives is based in Madison. We work with businesses
+              in Mississippi, Birmingham, Memphis, Mobile plus Alabama&apos;s
+              Eastern Shore, and Atlanta.
             </p>
           </div>
           <Link
             href="/serving-the-south"
             className="inline-flex min-h-11 items-center self-start rounded-full border border-white/10 px-5 py-2.5 text-sm transition hover:bg-white/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/50 md:self-auto"
           >
-            Explore Locations
+            Who We Work With
           </Link>
         </div>
       </section>

@@ -32,8 +32,8 @@ export default function CinematicPageHero({
         className="hero-ambient-gradient pointer-events-none absolute inset-0 z-[1]"
         aria-hidden
       />
-      <div className="absolute inset-0 z-[2] bg-gradient-to-r from-black/85 via-black/45 to-black/10" />
-      <div className="absolute inset-0 z-[2] bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+      <div className="absolute inset-0 z-[2] bg-gradient-to-r from-black/70 via-black/30 to-transparent" />
+      <div className="absolute inset-0 z-[2] bg-gradient-to-t from-black/45 via-transparent to-transparent" />
 
       <div className="relative z-10 mx-auto flex w-full max-w-7xl items-center px-6 py-16 md:px-10 md:py-20">
         <div className="relative max-w-5xl">

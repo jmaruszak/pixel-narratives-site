@@ -444,7 +444,7 @@ export const seoLandingPages: Record<string, SeoLandingPage> = {
       },
     ],
     relatedLinks: [
-      { href: "/automation", label: "Implementation" },
+      { href: "/implementation", label: "Implementation" },
       { href: "/how-to-use-ai-in-your-business", label: "how to use AI in your business" },
       { href: "/how-to-implement-ai-in-your-business", label: "how to implement AI in your business" },
       { href: "/ai-workflow-automation", label: "AI workflow automation" },
@@ -528,7 +528,7 @@ export const seoLandingPages: Record<string, SeoLandingPage> = {
       },
     ],
     relatedLinks: [
-      { href: "/automation", label: "Implementation" },
+      { href: "/implementation", label: "Implementation" },
       { href: "/how-to-use-ai-in-your-business", label: "how to use AI in your business" },
       { href: "/ai-consulting-for-businesses", label: "AI consulting for businesses" },
       { href: "/ai-crm-automation", label: "AI CRM automation" },
@@ -612,7 +612,7 @@ export const seoLandingPages: Record<string, SeoLandingPage> = {
       },
     ],
     relatedLinks: [
-      { href: "/automation", label: "Implementation" },
+      { href: "/implementation", label: "Implementation" },
       { href: "/how-to-use-ai-in-your-business", label: "how to use AI in your business" },
       { href: "/ai-consulting-for-businesses", label: "AI consulting for businesses" },
       { href: "/ai-workflow-automation", label: "AI workflow automation" },
@@ -685,7 +685,7 @@ export const seoLandingPages: Record<string, SeoLandingPage> = {
       },
     ],
     relatedLinks: [
-      { href: "/automation", label: "Implementation" },
+      { href: "/implementation", label: "Implementation" },
       { href: "/how-to-use-ai-in-your-business", label: "how to use AI in your business" },
       { href: "/ai-workflow-automation", label: "AI workflow automation" },
       { href: "/ai-consulting-for-businesses", label: "AI consulting for businesses" },

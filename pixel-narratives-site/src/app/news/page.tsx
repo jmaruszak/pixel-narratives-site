@@ -86,7 +86,7 @@ export default function NewsPage() {
         <div className="next-step-content mx-auto w-full max-w-7xl px-6 py-20 md:px-10">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="text-4xl leading-none md:text-6xl">
-              Ready to talk about what to improve?
+              Let&apos;s put AI to work for your business.
             </h2>
             <div className="mt-8">
               <a

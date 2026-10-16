@@ -26,9 +26,9 @@ export function buildLocationPageGraph(input: LocationPageInput) {
     serviceType: [
       "AI Implementation",
       "AI Team Training",
-      "Websites and Online Visibility",
+      "Visibility",
       "Marketing",
-      "Fractional AI Leadership",
+      "Partner",
     ],
     provider: { "@id": ORG_ID },
     areaServed: buildAreaServed(input.areaServed),
@@ -43,7 +43,7 @@ export function buildLocationPageGraph(input: LocationPageInput) {
 
   const breadcrumbs = buildBreadcrumbs([
     { name: "Home", path: "/" },
-    { name: "Locations", path: "/serving-the-south" },
+    { name: "Who We Work With", path: "/serving-the-south" },
     { name: input.breadcrumbName, path },
   ]);
 

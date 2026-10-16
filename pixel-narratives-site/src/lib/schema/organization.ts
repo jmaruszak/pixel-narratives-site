@@ -6,6 +6,7 @@ import {
   SERVICE_AREA_PRIMARY,
   type ServiceAreaPlace,
 } from "../businessLocation";
+import { SERVICES } from "../services";
 import { SITE_NAME, SITE_URL } from "../siteMetadata";
 import {
   FOUNDER_LINKEDIN_PROFILE,
@@ -95,7 +96,7 @@ export function organizationEntity() {
       "Workflow Automation",
       "AI Training for Businesses",
       "Corporate AI Workshops",
-      "Fractional Chief AI Officer Services",
+      "Ongoing AI Partnership",
       "Business Process Automation",
       "AI Strategy",
       "AI Adoption",
@@ -117,9 +118,9 @@ function offerCatalog() {
         "@type": "Offer" as const,
         itemOffered: {
           "@type": "Service" as const,
-          "@id": `${SITE_URL}/starting-small#service`,
-          name: "Starting Small",
-          serviceType: "Small-scope implementation and website projects",
+          "@id": `${SITE_URL}/work-with-us#explore`,
+          name: "Explore",
+          serviceType: "Implementation Assessment",
           provider: { "@id": ORG_ID },
         },
       },
@@ -127,7 +128,47 @@ function offerCatalog() {
         "@type": "Offer" as const,
         itemOffered: {
           "@type": "Service" as const,
-          "@id": `${SITE_URL}/automation#service`,
+          "@id": `${SITE_URL}/work-with-us#build`,
+          name: "Build",
+          serviceType: "Scoped project",
+          provider: { "@id": ORG_ID },
+        },
+      },
+      {
+        "@type": "Offer" as const,
+        itemOffered: {
+          "@type": "Service" as const,
+          "@id": `${SITE_URL}/work-with-us#equip`,
+          name: "Equip",
+          serviceType: "Team workshop",
+          provider: { "@id": ORG_ID },
+        },
+      },
+      {
+        "@type": "Offer" as const,
+        itemOffered: {
+          "@type": "Service" as const,
+          "@id": `${SITE_URL}/work-with-us#partner`,
+          name: "Partner",
+          serviceType: "Ongoing AI expertise and implementation",
+          provider: { "@id": ORG_ID },
+        },
+      },
+      {
+        "@type": "Offer" as const,
+        itemOffered: {
+          "@type": "Service" as const,
+          "@id": `${SITE_URL}/work-with-us#enterprise-partner`,
+          name: "Enterprise Partner",
+          serviceType: "Strategic AI partnership",
+          provider: { "@id": ORG_ID },
+        },
+      },
+      {
+        "@type": "Offer" as const,
+        itemOffered: {
+          "@type": "Service" as const,
+          "@id": `${SITE_URL}/implementation#service`,
           name: "Implementation",
           serviceType: "AI Implementation and Adoption",
           provider: { "@id": ORG_ID },
@@ -148,28 +189,8 @@ function offerCatalog() {
         itemOffered: {
           "@type": "Service" as const,
           "@id": `${SITE_URL}/websites#service`,
-          name: "Websites + Online Visibility",
-          serviceType: "Website Development and Online Visibility",
-          provider: { "@id": ORG_ID },
-        },
-      },
-      {
-        "@type": "Offer" as const,
-        itemOffered: {
-          "@type": "Service" as const,
-          "@id": `${SITE_URL}/websites#website-visibility-build`,
-          name: "Website + Visibility Build",
-          serviceType: "Website and search visibility foundation",
-          provider: { "@id": ORG_ID },
-        },
-      },
-      {
-        "@type": "Offer" as const,
-        itemOffered: {
-          "@type": "Service" as const,
-          "@id": `${SITE_URL}/websites#visibility-sprint`,
-          name: "Visibility Sprint",
-          serviceType: "Search and AI-search visibility optimization",
+          name: "Visibility",
+          serviceType: "Websites, SEO, and AI Search Visibility",
           provider: { "@id": ORG_ID },
         },
       },
@@ -196,11 +217,11 @@ export function founderEntity() {
     "@type": "Person" as const,
     "@id": FOUNDER_ID,
     name: "Jordan Maruszak",
-    jobTitle: "Founder, Chief AI Officer and Head of Strategy",
+    jobTitle: "Founder, Pixel Narratives",
     worksFor: { "@id": ORG_ID },
     url: `${SITE_URL}/about`,
     image: `${SITE_URL}/images/about-jordan.jpg`,
-    sameAs: [FOUNDER_LINKEDIN_PROFILE.href],
+    sameAs: [FOUNDER_LINKEDIN_PROFILE.href, `${SITE_URL}/book`],
     knowsAbout: [
       "AI Implementation",
       "AI Strategy",
@@ -220,6 +241,7 @@ export function websiteEntity() {
     "@id": WEBSITE_ID,
     url: SITE_URL,
     name: SITE_NAME,
+    inLanguage: "en-US",
     publisher: { "@id": ORG_ID },
   };
 }
@@ -234,9 +256,43 @@ export function homepageWebPageEntity() {
     "@id": HOMEPAGE_ID,
     url: SITE_URL,
     name: "AI Implementation Partner | Pixel Narratives",
+    description:
+      "Put AI to work in your business with practical implementation, team training, visibility, and marketing from Pixel Narratives.",
+    inLanguage: "en-US",
+    dateModified: "2026-10-16",
     isPartOf: { "@id": WEBSITE_ID },
     about: { "@id": ORG_ID },
     publisher: { "@id": ORG_ID },
+    primaryImageOfPage: {
+      "@type": "ImageObject" as const,
+      url: `${SITE_URL}/images/pixel-video-header-poster.jpg`,
+    },
+    significantLink: [
+      `${SITE_URL}/services`,
+      `${SITE_URL}/implementation`,
+      `${SITE_URL}/training`,
+      `${SITE_URL}/websites`,
+      `${SITE_URL}/marketing`,
+      `${SITE_URL}/work`,
+      `${SITE_URL}/work-with-us`,
+      `${SITE_URL}/contact`,
+    ],
+    mainEntity: { "@id": `${SITE_URL}/#what-we-do` },
+  };
+}
+
+function homepageServiceList() {
+  return {
+    "@type": "ItemList" as const,
+    "@id": `${SITE_URL}/#what-we-do`,
+    name: "What We Do",
+    itemListElement: SERVICES.map((service, index) => ({
+      "@type": "ListItem" as const,
+      position: index + 1,
+      name: service.name,
+      description: service.outcome,
+      url: `${SITE_URL}${service.href}`,
+    })),
   };
 }
 
@@ -245,7 +301,7 @@ export function homepageWebPageEntity() {
 // ---------------------------------------------------------------------------
 
 export function homepageGraph() {
-  return [homepageWebPageEntity()];
+  return [homepageWebPageEntity(), homepageServiceList()];
 }
 
 export function sitewideGraph() {

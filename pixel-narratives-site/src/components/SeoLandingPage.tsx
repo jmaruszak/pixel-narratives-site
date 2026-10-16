@@ -75,7 +75,7 @@ export default function SeoLandingPageView({ page }: { page: SeoLandingPage }) {
                 {page.cta}
               </a>
               <Link
-                href={page.offer === "ads" ? "/marketing" : "/automation"}
+                href={page.offer === "ads" ? "/marketing" : "/implementation"}
                 className="inline-flex items-center rounded-full border border-white/10 px-6 py-3 text-sm text-[var(--foreground)] transition hover:bg-white/5"
               >
                 {page.offer === "ads" ? "Marketing" : "Implementation"}

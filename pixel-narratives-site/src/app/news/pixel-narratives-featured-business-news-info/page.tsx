@@ -55,7 +55,7 @@ export default function PixelNarrativesBusinessNewsInfoPage() {
       <p>
         The Spotlight does not treat AI as a single product. It describes Pixel
         Narratives across several connected areas of work:{" "}
-        <Link href="/automation">Implementation</Link>,{" "}
+        <Link href="/implementation">Implementation</Link>,{" "}
         <Link href="/training">employee AI training</Link>,{" "}
         <Link href="/websites">Websites + Online Visibility</Link>,{" "}
         <Link href="/marketing">marketing workflows</Link>, and ongoing AI
@@ -99,7 +99,7 @@ export default function PixelNarrativesBusinessNewsInfoPage() {
       <h2>Fractional AI Leadership</h2>
       <p>
         Hartley also covers Pixel Narratives&apos;{" "}
-        <Link href="/automation">Fractional Chief AI Officer</Link> offering.
+        <Link href="/implementation">Fractional Chief AI Officer</Link> offering.
         The article describes this as ongoing AI strategy, prioritization, and
         implementation leadership for organizations that want that function
         without creating a full-time executive role.
@@ -125,7 +125,7 @@ export default function PixelNarrativesBusinessNewsInfoPage() {
         save time, win more customers, and get more done. The Spotlight
         presents those as the test of whether implementation was worth doing.
         The coverage also notes Pixel Narratives&apos;{" "}
-        <Link href="/automation">AI &amp; Automation Assessment</Link> as a way
+        <Link href="/implementation">AI &amp; Automation Assessment</Link> as a way
         for owners to look at current usage and gaps before deciding what to
         implement. Businesses that want to talk through a specific operation can{" "}
         <Link href="/contact">contact Pixel Narratives</Link> directly.

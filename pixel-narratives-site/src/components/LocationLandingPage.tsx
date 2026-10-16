@@ -30,7 +30,7 @@ export default function LocationLandingPageView({
         <div className="max-w-4xl">
           <p className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
             <Link href="/serving-the-south" className="transition hover:opacity-80">
-              Locations
+              Who We Work With
             </Link>
             {" / "}
             {page.marketLabel}
@@ -47,10 +47,10 @@ export default function LocationLandingPageView({
               Book a Conversation
             </Link>
             <Link
-              href="/starting-small"
+              href="/work-with-us"
               className="inline-flex min-h-11 items-center rounded-full border border-white/10 px-6 py-3 text-sm transition hover:bg-white/5"
             >
-              Find Your Quick Win
+              Work With Us
             </Link>
           </div>
         </div>
@@ -129,17 +129,17 @@ export default function LocationLandingPageView({
             ))}
             <p>
               <Link
-                href="/starting-small"
+                href="/work-with-us#build"
                 className="text-[var(--foreground)] transition hover:opacity-80"
               >
-                Starting Small
+                Build
               </Link>{" "}
-              offers contained first projects.{" "}
+              covers contained first projects.{" "}
               <Link
-                href="/automation#fractional-caio"
+                href="/work-with-us#partner"
                 className="text-[var(--foreground)] transition hover:opacity-80"
               >
-                Fractional AI Leadership
+                Partner
               </Link>{" "}
               is available when the business needs ongoing support.
             </p>
@@ -185,7 +185,7 @@ export default function LocationLandingPageView({
             href="/serving-the-south"
             className="inline-flex min-h-11 items-center self-start rounded-full border border-white/10 px-5 py-2.5 text-sm transition hover:bg-white/5 md:self-auto"
           >
-            View All Locations
+            Who We Work With
           </Link>
         </div>
       </section>

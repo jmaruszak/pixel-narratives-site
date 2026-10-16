@@ -3,11 +3,12 @@
 import { useEffect } from "react";
 
 import {
-  CALENDLY_URL,
+  CALENDLY_EVENT_URL,
   CONTACT_EMAIL,
   CONTACT_PHONE,
   HEADQUARTERS,
 } from "../lib/businessLocation";
+import { ENGAGEMENTS } from "../lib/engagements";
 import { SITE_URL } from "../lib/siteMetadata";
 const WEB_INTEL_URL = "https://intel.pixelnarratives.studio/";
 
@@ -19,7 +20,7 @@ export default function WebMcpTools() {
     modelContext.registerTool({
       name: "getServiceInfo",
       description:
-        "Return structured information about Pixel Narratives services: Starting Small, AI and automation implementation, training, websites and visibility, marketing, Fractional AI Leadership, and the optional AI Readiness Assessment.",
+        "Return structured information about Pixel Narratives: What We Do, Work With Us (Explore, Build, Equip, Partner, Enterprise Partner), implementation, training, visibility, marketing, and the optional AI Readiness Assessment.",
       inputSchema: { type: "object", properties: {} },
       execute: async () => ({
         content: [
@@ -30,62 +31,54 @@ export default function WebMcpTools() {
                 studio: "Pixel Narratives",
                 headquarters: `${HEADQUARTERS.locality}, ${HEADQUARTERS.region}`,
                 serviceArea:
-                  "Pixel Narratives is based in Madison, Mississippi. Active markets are Mississippi, Birmingham, Memphis, and Mobile plus Alabama's Eastern Shore. Atlanta is a secondary opportunity.",
+                  "Pixel Narratives is based in Madison, Mississippi. We work with businesses in Mississippi, Birmingham, Memphis, Mobile plus Alabama's Eastern Shore, and Atlanta.",
                 site: SITE_URL,
+                homepage: {
+                  url: SITE_URL,
+                  headline: "Put AI to work in your business.",
+                  summary:
+                    "You know your business. We know AI. The Opportunity: there's probably a better way to do this. Implementation. Training. Visibility. Marketing. Selected work lives on the homepage. Work With Us there is project-based or an ongoing partnership, without prices. Pricing lives on the Work With Us page.",
+                },
                 officialInformation: `${SITE_URL}/ai-info`,
+                llmsTxt: `${SITE_URL}/llms.txt`,
+                whatWeDo: `${SITE_URL}/services`,
+                workWithUs: `${SITE_URL}/work-with-us`,
+                book: `${SITE_URL}/book`,
+                whoWeWorkWith: `${SITE_URL}/serving-the-south`,
+                engagements: ENGAGEMENTS.map((engagement) => ({
+                  name: engagement.name,
+                  price: engagement.price,
+                  summary: [
+                    "lede" in engagement ? engagement.lede : undefined,
+                    engagement.body,
+                  ]
+                    .filter(Boolean)
+                    .join(" "),
+                  note: "note" in engagement ? engagement.note : undefined,
+                  url: `${SITE_URL}/work-with-us#${engagement.id}`,
+                })),
                 offers: {
-                  startingSmall: {
-                    summary:
-                      "Contained first projects: Implementation Quick Win ($2,500), Website Starter ($2,500), and Creative Quick Win ($1,500).",
-                    url: `${SITE_URL}/starting-small`,
-                  },
                   automation: {
                     name: "Implementation",
                     summary:
                       "We help businesses identify where AI makes sense, prioritize opportunities, adopt existing tools, improve workflows, implement practical changes, and build custom solutions when appropriate.",
-                    url: `${SITE_URL}/automation`,
-                    tiers: [
-                      {
-                        name: "Implementation Assessment",
-                        price: "Starting at $1,250",
-                        description:
-                          "Workflow review, bottleneck map, tool recommendations, quick wins, and a 30 to 60 day implementation plan.",
-                      },
-                      {
-                        name: "Guided Implementation",
-                        price: "Starting at $1,500/month (3-month minimum)",
-                        description:
-                          "You build. We guide. Two working sessions a month for prioritization, tools, architecture, and troubleshooting.",
-                      },
-                      {
-                        name: "Implementation Projects",
-                        price: "Starting at $5,000",
-                        description:
-                          "Pixel Narratives builds the automations, integrations, dashboards, internal tools, or AI workflows.",
-                      },
-                      {
-                        name: "Fractional CAIO",
-                        price:
-                          "Generally $5,000 to $15,000/month, based on organizational needs",
-                        description:
-                          "Ongoing AI leadership, roadmap ownership, vendor decisions, responsible adoption, and hands-on implementation support.",
-                      },
-                    ],
+                    url: `${SITE_URL}/implementation`,
                   },
                   training: {
                     summary:
-                      "Standalone training for ChatGPT, Claude, Microsoft Copilot, AI video, creative work, research, analysis, and productivity. One department is $7,500. Full team is $15,000 to $20,000. Multi-day engagements start at $25,000.",
+                      "Practical AI training tailored to your team, their work, and the tools they use.",
                     url: `${SITE_URL}/training`,
                   },
                   websites: {
+                    name: "Visibility",
                     summary:
-                      "Website Starter is $2,500. Website + Visibility Build starts at $7,500. Premium Build is $15,000 to $20,000. Visibility Sprint starts at $1,200/month with a 3-month minimum. Premium Visibility is $2,500/month.",
+                      "Websites, SEO, and AI search. We help you build a stronger online presence and get found by more of your customers.",
                     url: `${SITE_URL}/websites`,
                     scanUrl: WEB_INTEL_URL,
                   },
                   marketing: {
                     summary:
-                      "Attention Pulse starting at $5,000 for one focused campaign. Attention Retainer starting at $2,250/month with a 3-month minimum for ongoing creative and advertising support. Full Brand Campaign starting at $15,000 for objectives that need multiple pieces working together.",
+                      "We help businesses reach more customers through creative strategy, social media, advertising, and original content. From everyday marketing to ambitious campaigns, we bring the ideas and production capabilities to make it happen.",
                     url: `${SITE_URL}/marketing`,
                   },
                   aiAutomationAssessment: {
@@ -107,7 +100,7 @@ export default function WebMcpTools() {
     modelContext.registerTool({
       name: "bookDiscoveryCall",
       description:
-        "Get the Calendly URL to schedule a Zoom discovery call with Pixel Narratives about implementation, training, websites, or marketing.",
+        "Get the Calendly URL to schedule a Zoom discovery call with Pixel Narratives about implementation, training, visibility, or marketing.",
       inputSchema: {
         type: "object",
         properties: {
@@ -124,7 +117,7 @@ export default function WebMcpTools() {
             text: JSON.stringify(
               {
                 action: "open_calendly",
-                url: CALENDLY_URL,
+                url: CALENDLY_EVENT_URL,
                 instructions:
                   "Open this URL in the user's browser to schedule a discovery call. The user should confirm before booking.",
                 context: typeof input.context === "string" ? input.context : undefined,
@@ -151,7 +144,7 @@ export default function WebMcpTools() {
                 email: CONTACT_EMAIL,
                 phone: CONTACT_PHONE,
                 contactPage: `${SITE_URL}/contact`,
-                bookCall: CALENDLY_URL,
+                bookCall: CALENDLY_EVENT_URL,
                 responseTime: "1 to 2 business days for email",
               },
               null,

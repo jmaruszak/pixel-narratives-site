@@ -17,7 +17,7 @@ export const FEATURED_CAMPAIGN = {
   description: "Our own campaign, running now.",
   commercials: [
     {
-      title: "Chad G.P.T.: Introduction",
+      title: "Chad GPT: Introduction",
       videoSrc: "/videos/pixel-narratives-chadgpt-ad.mp4",
     },
     {

@@ -208,7 +208,7 @@ export default function HowToUseAiInYourBusinessPage() {
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <a
-                href="/automation"
+                href="/implementation"
                 className="inline-flex min-h-11 items-center rounded-full border border-white/10 px-5 py-2.5 text-sm transition hover:bg-white/5"
               >
                 AI &amp; Automation

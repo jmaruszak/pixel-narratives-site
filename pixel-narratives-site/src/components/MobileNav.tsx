@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useId, useRef, useState } from "react";
 import { createPortal } from "react-dom";
-import { PRIMARY_NAV_LINKS, SERVICE_NAV_LINKS } from "../lib/navLinks";
+import { PRIMARY_NAV_LINKS } from "../lib/navLinks";
 
 function MobileNavLink({
   href,
@@ -132,26 +132,6 @@ export default function MobileNav() {
             className="mt-6 flex flex-col gap-1"
             aria-label="Mobile primary navigation"
           >
-            <div className="mb-1 px-3">
-              <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
-                Services
-              </p>
-              <div className="mt-2 flex flex-col gap-1">
-                {SERVICE_NAV_LINKS.map((service) => (
-                  <MobileNavLink
-                    key={service.href}
-                    href={service.href}
-                    label={service.label}
-                    onNavigate={close}
-                    className={
-                      service.href === "/starting-small"
-                        ? "mb-1 border-b border-white/8"
-                        : ""
-                    }
-                  />
-                ))}
-              </div>
-            </div>
             {PRIMARY_NAV_LINKS.map((link) => (
               <MobileNavLink
                 key={link.href}
@@ -176,7 +156,7 @@ export default function MobileNav() {
     ) : null;
 
   return (
-    <div className="md:hidden">
+    <div className="lg:hidden">
       <button
         ref={buttonRef}
         type="button"

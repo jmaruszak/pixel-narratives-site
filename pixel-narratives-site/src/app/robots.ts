@@ -12,11 +12,15 @@ export default function robots(): MetadataRoute.Robots {
           "PerplexityBot",
           "Google-Extended",
           "ClaudeBot",
+          "anthropic-ai",
+          "Applebot-Extended",
+          "Bytespider",
         ],
-        allow: "/",
+        allow: ["/", "/llms.txt"],
         disallow: "/api/",
       },
     ],
     sitemap: "https://pixelnarratives.studio/sitemap.xml",
+    host: "https://pixelnarratives.studio",
   };
 }

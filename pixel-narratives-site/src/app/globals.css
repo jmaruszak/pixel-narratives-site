@@ -19,6 +19,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 body {
@@ -95,9 +96,24 @@ button {
 
 .pn-display {
   font-family: var(--font-bebas), sans-serif;
+  font-size: clamp(2.5rem, 7vw, 6rem);
+  line-height: 0.92;
+  letter-spacing: 0.03em;
+}
+
+.pn-display-hero {
+  font-family: var(--font-bebas), sans-serif;
   font-size: clamp(2.75rem, 8vw, 7.25rem);
   line-height: 0.92;
   letter-spacing: 0.03em;
+}
+
+.pn-page-title {
+  font-family: var(--font-bebas), sans-serif;
+  font-size: clamp(2.5rem, 6.5vw, 5.5rem);
+  line-height: 0.98;
+  letter-spacing: 0.03em;
+  max-width: 18ch;
 }
 
 .pn-kicker {
@@ -139,8 +155,12 @@ button {
   color: var(--ink-muted);
 }
 
-.pn-band-light a {
+.pn-band-light a:not(.pn-cta-filled) {
   color: var(--ink);
+}
+
+.pn-band-light a.pn-cta-filled {
+  color: var(--surface-light);
 }
 
 .pn-panel {
@@ -169,7 +189,7 @@ button {
 /* Hero: entrance + ambient gradient (respects reduced motion) */
 @keyframes hero-fade-up {
   from {
-    opacity: 1;
+    opacity: 0;
     transform: translate3d(0, 0.9rem, 0);
   }
   to {
@@ -191,7 +211,7 @@ button {
 }
 
 .hero-entrance {
-  opacity: 1;
+  opacity: 0;
   animation: hero-fade-up 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
@@ -203,14 +223,46 @@ button {
   animation-delay: 0.42s;
 }
 
+@supports (animation-timeline: view()) {
+  .home-scene-enter {
+    animation: hero-fade-up 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 40%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .home-bleed-right {
+    margin-right: calc(-1 * max(2.5rem, (100vw - 80rem) / 2 + 2.5rem));
+  }
+}
+
+@supports (animation-timeline: scroll()) {
+  .home-hero-scale {
+    transform-origin: 72% center;
+    animation: home-hero-scale linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0% 22%;
+  }
+}
+
+@keyframes home-hero-scale {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.04);
+  }
+}
+
 .hero-ambient-gradient {
   background: linear-gradient(
     120deg,
-    rgba(60, 90, 180, 0.2) 0%,
-    rgba(110, 70, 160, 0.12) 22%,
-    rgba(30, 140, 150, 0.14) 45%,
-    rgba(90, 60, 120, 0.1) 68%,
-    rgba(40, 100, 200, 0.18) 100%
+    rgba(60, 90, 180, 0.1) 0%,
+    rgba(110, 70, 160, 0.06) 22%,
+    rgba(30, 140, 150, 0.07) 45%,
+    rgba(90, 60, 120, 0.05) 68%,
+    rgba(40, 100, 200, 0.09) 100%
   );
   background-size: 280% 280%;
   animation: hero-gradient-drift 24s ease-in-out infinite;
@@ -222,7 +274,9 @@ button {
     scroll-behavior: auto;
   }
 
-  .hero-entrance {
+  .hero-entrance,
+  .home-scene-enter,
+  .home-hero-scale {
     animation: none;
     opacity: 1;
     transform: none;
@@ -231,6 +285,10 @@ button {
   .hero-ambient-gradient {
     animation: none;
     background-position: 50% 50%;
+  }
+
+  .home-hero-video {
+    display: none;
   }
 
   .service-card:hover {
@@ -582,9 +640,18 @@ button {
     display: none;
   }
 
+  .home-hero-video {
+    display: none;
+  }
+
   .pn-grid-accent::before {
     display: none;
   }
+}
+
+.pn-gamma-embed {
+  color-scheme: normal;
+  background: #161616;
 }
 
 .site-texture::before {
@@ -596,5 +663,11 @@ button {
   opacity: 0.035;
   background-image: radial-gradient(rgba(255,255,255,0.08) 0.5px, transparent 0.5px);
   background-size: 4px 4px;
-  mix-blend-mode: overlay;
+}
+
+@media (max-width: 767px) {
+  .site-texture::before,
+  .home-stage-grain {
+    display: none;
+  }
 }
