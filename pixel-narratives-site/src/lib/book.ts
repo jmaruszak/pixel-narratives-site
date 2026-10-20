@@ -2,10 +2,14 @@ export const BOOK_TITLE = "Insert Door Metaphor";
 export const BOOK_SUBTITLE = "AI, Ideas and The New Cost of Trying";
 export const BOOK_FULL_TITLE = `${BOOK_TITLE}: ${BOOK_SUBTITLE}`;
 export const BOOK_ISBN = "9798160711751";
+export const BOOK_HARDBACK_ISBN = "9798178293195";
 export const BOOK_PATH = "/book";
 export const BOOK_COVER_SRC = "/images/book-cover.jpg";
 export const BOOK_DESK_SRC = "/images/book-desk.jpg";
 export const BOOK_DATE_LINE = "Coming October 27, 2026.";
+export const BOOK_AMAZON_URL = "https://www.amazon.com/dp/B0HN99KZW8";
+export const BOOK_APPLE_URL =
+  "https://books.apple.com/us/book/insert-door-metaphor/id6824207588?ls=1";
 
 export const BOOK_DESCRIPTION_PARAS = [
   "For most of our lives, good ideas have come with a price tag.",

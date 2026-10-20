@@ -3,6 +3,8 @@ import Link from "next/link";
 import Footer from "../../components/Footer";
 import Nav from "../../components/Nav";
 import {
+  BOOK_AMAZON_URL,
+  BOOK_APPLE_URL,
   BOOK_AUTHOR_PARAS,
   BOOK_COVER_SRC,
   BOOK_DATE_LINE,
@@ -10,6 +12,7 @@ import {
   BOOK_DESCRIPTION_PARAS,
   BOOK_DESK_SRC,
   BOOK_FULL_TITLE,
+  BOOK_HARDBACK_ISBN,
   BOOK_ISBN,
   BOOK_SUBTITLE,
   BOOK_TITLE,
@@ -18,6 +21,31 @@ import { JsonLd, buildBreadcrumbs, buildWebPage } from "../../lib/schema";
 import { bookEntity } from "../../lib/schema/book";
 import { buildPageMetadata } from "../../lib/siteMetadata";
 import { FOUNDER_LINKEDIN_PROFILE } from "../../lib/socialProfiles";
+
+const STORE_LINKS = [
+  { href: BOOK_AMAZON_URL, label: "View on Amazon" },
+  { href: BOOK_APPLE_URL, label: "View on Apple Books" },
+] as const;
+
+function BookStoreLinks() {
+  return (
+    <p>
+      {STORE_LINKS.map((store, index) => (
+        <span key={store.href}>
+          {index > 0 ? " · " : null}
+          <a
+            href={store.href}
+            target="_blank"
+            rel="noreferrer"
+            className="text-[var(--foreground)] transition hover:opacity-80"
+          >
+            {store.label}
+          </a>
+        </span>
+      ))}
+    </p>
+  );
+}
 
 export const metadata = buildPageMetadata({
   title: `${BOOK_FULL_TITLE} | Pixel Narratives`,
@@ -78,6 +106,9 @@ export default function BookPage() {
             <p className="mt-8 text-sm uppercase tracking-[0.22em] text-[var(--muted)]">
               {BOOK_DATE_LINE}
             </p>
+            <div className="mt-6 text-base">
+              <BookStoreLinks />
+            </div>
           </div>
         </div>
       </section>
@@ -184,7 +215,7 @@ export default function BookPage() {
               Publication details
             </p>
             <h2 className="mt-4 text-4xl leading-none md:text-5xl">
-              Paperback
+              Paperback and hardback.
             </h2>
             <dl className="mt-8 space-y-4 text-base leading-relaxed text-[var(--muted)] md:text-lg">
               <div>
@@ -200,8 +231,14 @@ export default function BookPage() {
                 </dd>
               </div>
               <div>
-                <dt className="text-xs uppercase tracking-[0.25em]">ISBN-13</dt>
+                <dt className="text-xs uppercase tracking-[0.25em]">Paperback</dt>
                 <dd className="mt-2 text-[var(--foreground)]">{BOOK_ISBN}</dd>
+              </div>
+              <div>
+                <dt className="text-xs uppercase tracking-[0.25em]">Hardback</dt>
+                <dd className="mt-2 text-[var(--foreground)]">
+                  {BOOK_HARDBACK_ISBN}
+                </dd>
               </div>
               <div>
                 <dt className="text-xs uppercase tracking-[0.25em]">
@@ -212,9 +249,12 @@ export default function BookPage() {
                 </dd>
               </div>
             </dl>
-            <p className="mt-8 max-w-2xl text-base leading-relaxed text-[var(--muted)] md:text-lg">
-              A purchase link will appear here when the book is available.
+            <p className="mt-8 text-base leading-relaxed text-[var(--muted)] md:text-lg">
+              Digital editions via Kindle and Apple Books.
             </p>
+            <div className="mt-6 text-base md:text-lg">
+              <BookStoreLinks />
+            </div>
           </div>
         </div>
       </section>
