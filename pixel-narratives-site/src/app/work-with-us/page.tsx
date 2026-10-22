@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Footer from "../../components/Footer";
+import ImplementationProcessFlow from "../../components/ImplementationProcessFlow";
 import Nav from "../../components/Nav";
 import { ENGAGEMENTS, WORK_WITH_US_INTRO } from "../../lib/engagements";
 import { JsonLd, buildBreadcrumbs, buildWebPage } from "../../lib/schema";
@@ -105,6 +106,8 @@ export default function WorkWithUsPage() {
           </div>
         </div>
       </section>
+
+      <ImplementationProcessFlow />
 
       <section className="next-step-section border-t border-white/8">
         <div className="next-step-bg" aria-hidden />

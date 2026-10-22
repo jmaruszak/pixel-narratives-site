@@ -456,8 +456,8 @@ button {
 
 .il-process-h-track {
   position: absolute;
-  left: 12.5%;
-  right: 12.5%;
+  left: 10%;
+  right: 10%;
   top: 0;
   height: 1px;
   background: rgba(255, 255, 255, 0.09);
@@ -466,9 +466,9 @@ button {
 
 .il-process-h-fill-wrap {
   position: absolute;
-  left: 12.5%;
+  left: 10%;
   top: 0;
-  width: 75%;
+  width: 80%;
   height: 1px;
 }
 
