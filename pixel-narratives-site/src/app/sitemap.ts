@@ -10,6 +10,7 @@ const LASTMOD_SEO = new Date("2026-10-08T00:00:00.000Z");
 const LASTMOD_ABOUT_CONTACT = new Date("2026-10-16T00:00:00.000Z");
 const LASTMOD_LOCATION = new Date("2026-10-08T00:00:00.000Z");
 const LASTMOD_NEWS = new Date("2026-08-24T00:00:00.000Z");
+const LASTMOD_NEWS_BOOK = new Date("2026-10-27T00:00:00.000Z");
 const LASTMOD_OLD_STATIC = new Date("2025-06-02T00:00:00.000Z");
 
 const newsRoutes = ["news", ...NEWS_ITEMS.map((item) => newsPath(item).slice(1))];
@@ -98,7 +99,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       route === "news" ||
       route.startsWith("news/")
     ) {
-      lastModified = LASTMOD_NEWS;
+      lastModified =
+        route === "news" ||
+        route === "news/from-unexpected-setback-to-ai-entrepreneur"
+          ? LASTMOD_NEWS_BOOK
+          : LASTMOD_NEWS;
       changeFrequency = "monthly";
       priority = route === "news" ? 0.55 : 0.5;
     } else if (route === "insights") {

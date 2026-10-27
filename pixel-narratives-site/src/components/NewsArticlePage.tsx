@@ -70,16 +70,18 @@ export default function NewsArticlePage({
 
             <div className="mt-12 max-w-3xl space-y-6 text-lg leading-relaxed text-[var(--muted)] md:text-xl">
               <p>{item.closingNote}</p>
-              <p>
-                <a
-                  href={item.externalUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-[var(--foreground)] transition hover:opacity-80"
-                >
-                  {item.externalLinkLabel}
-                </a>
-              </p>
+              {item.externalUrl && item.externalLinkLabel ? (
+                <p>
+                  <a
+                    href={item.externalUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-[var(--foreground)] transition hover:opacity-80"
+                  >
+                    {item.externalLinkLabel}
+                  </a>
+                </p>
+              ) : null}
             </div>
           </div>
         </section>

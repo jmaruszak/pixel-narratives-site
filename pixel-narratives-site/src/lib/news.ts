@@ -21,8 +21,8 @@ export type NewsItem = {
   dateModified: string;
   dateLabel: string;
   source: string;
-  externalUrl: string;
-  externalLinkLabel: string;
+  externalUrl?: string;
+  externalLinkLabel?: string;
   indexSummary: string;
   indexCtaLabel: string;
   metaTitle: string;
@@ -43,6 +43,32 @@ const NEWS_DATE_MODIFIED = "2026-08-27";
 const NEWS_DATE_LABEL = "August 24, 2026";
 
 export const NEWS_ITEMS: NewsItem[] = [
+  {
+    slug: "from-unexpected-setback-to-ai-entrepreneur",
+    type: "press-release",
+    typeLabel: "Press Release",
+    title:
+      "From Unexpected Setback to AI Entrepreneur: Madison Business Owner Publishes First Book",
+    datePublished: "2026-10-27",
+    dateModified: "2026-10-27",
+    dateLabel: "October 27, 2026",
+    source: "Pixel Narratives",
+    indexSummary:
+      "Pixel Narratives founder Jordan Maruszak shares how an unexpected journey into AI inspired a new business and a book about what's possible.",
+    indexCtaLabel: "Read the announcement →",
+    metaTitle:
+      "From Unexpected Setback to AI Entrepreneur: Madison Business Owner Publishes First Book",
+    metaDescription:
+      "Pixel Narratives founder Jordan Maruszak shares how an unexpected journey into AI inspired a new business and a book about what's possible.",
+    kicker: "Press Release · October 27, 2026",
+    sourceLine: "Pixel Narratives",
+    deck: "Pixel Narratives founder Jordan Maruszak shares how an unexpected journey into AI inspired a new business and a book about what's possible.",
+    dateline: "MADISON, Miss., October 27, 2026",
+    closingNote: "Published by Pixel Narratives on October 27, 2026.",
+    schemaType: "NewsArticle",
+    citationHeadline:
+      "From Unexpected Setback to AI Entrepreneur: Madison Business Owner Publishes First Book",
+  },
   {
     slug: "pixel-narratives-brings-ai-implementation-services-to-mississippi-businesses",
     type: "press-release",
@@ -164,8 +190,8 @@ export function buildNewsArticleGraph(item: NewsItem) {
   const url = newsUrl(item);
   const imageUrl = `${SITE_URL}${DEFAULT_OG_IMAGE}`;
 
-  const citation =
-    item.type === "press-release"
+  const citation = item.externalUrl
+    ? item.type === "press-release"
       ? {
           "@type": "NewsArticle" as const,
           headline: item.citationHeadline,
@@ -192,7 +218,8 @@ export function buildNewsArticleGraph(item: NewsItem) {
             "@type": "Organization" as const,
             name: item.source,
           },
-        };
+        }
+    : undefined;
 
   return [
     {
@@ -211,7 +238,7 @@ export function buildNewsArticleGraph(item: NewsItem) {
       publisher: { "@id": ORG_ID },
       author: { "@id": ORG_ID },
       about: { "@id": ORG_ID },
-      citation,
+      ...(citation ? { citation } : {}),
     },
     {
       "@type": "WebPage" as const,
