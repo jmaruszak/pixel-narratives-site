@@ -52,7 +52,10 @@ export const NEWS_ITEMS: NewsItem[] = [
     datePublished: "2026-10-27",
     dateModified: "2026-10-27",
     dateLabel: "October 27, 2026",
-    source: "Pixel Narratives",
+    source: "EIN News",
+    externalUrl:
+      "https://www.einnews.com/pr_news/952514020/from-unexpected-setback-to-ai-entrepreneur-madison-business-owner-publishes-first-book",
+    externalLinkLabel: "View the release on EIN News →",
     indexSummary:
       "Pixel Narratives founder Jordan Maruszak shares how an unexpected journey into AI inspired a new business and a book about what's possible.",
     indexCtaLabel: "Read the announcement →",
@@ -61,10 +64,10 @@ export const NEWS_ITEMS: NewsItem[] = [
     metaDescription:
       "Pixel Narratives founder Jordan Maruszak shares how an unexpected journey into AI inspired a new business and a book about what's possible.",
     kicker: "Press Release · October 27, 2026",
-    sourceLine: "Pixel Narratives",
+    sourceLine: "Distributed via EIN News",
     deck: "Pixel Narratives founder Jordan Maruszak shares how an unexpected journey into AI inspired a new business and a book about what's possible.",
     dateline: "MADISON, Miss., October 27, 2026",
-    closingNote: "Published by Pixel Narratives on October 27, 2026.",
+    closingNote: "This release was distributed October 27, 2026 via EIN News.",
     schemaType: "NewsArticle",
     citationHeadline:
       "From Unexpected Setback to AI Entrepreneur: Madison Business Owner Publishes First Book",
