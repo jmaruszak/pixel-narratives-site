@@ -6,14 +6,16 @@ import {
   BOOK_AMAZON_URL,
   BOOK_APPLE_URL,
   BOOK_AUTHOR_PARAS,
+  BOOK_CHAPTER_URL,
   BOOK_COVER_SRC,
-  BOOK_DATE_LINE,
   BOOK_DESCRIPTION,
   BOOK_DESCRIPTION_PARAS,
   BOOK_DESK_SRC,
   BOOK_FULL_TITLE,
   BOOK_HARDBACK_ISBN,
   BOOK_ISBN,
+  BOOK_PUBLISHED_LINE,
+  BOOK_STATUS_LINE,
   BOOK_SUBTITLE,
   BOOK_TITLE,
 } from "../../lib/book";
@@ -29,21 +31,31 @@ const STORE_LINKS = [
 
 function BookStoreLinks() {
   return (
-    <p>
-      {STORE_LINKS.map((store, index) => (
-        <span key={store.href}>
-          {index > 0 ? " · " : null}
+    <div>
+      <div className="flex flex-wrap gap-3">
+        {STORE_LINKS.map((store) => (
           <a
+            key={store.href}
             href={store.href}
             target="_blank"
             rel="noreferrer"
-            className="text-[var(--foreground)] transition hover:opacity-80"
+            className="inline-flex min-h-11 items-center rounded-full border border-white/10 bg-[var(--foreground)] px-5 py-2.5 text-sm font-medium text-black transition hover:opacity-90"
           >
             {store.label}
           </a>
-        </span>
-      ))}
-    </p>
+        ))}
+      </div>
+      <p className="mt-5 text-base">
+        <a
+          href={BOOK_CHAPTER_URL}
+          target="_blank"
+          rel="noreferrer"
+          className="text-[var(--foreground)] transition hover:opacity-80"
+        >
+          Read the first chapter
+        </a>
+      </p>
+    </div>
   );
 }
 
@@ -104,7 +116,7 @@ export default function BookPage() {
               </Link>
             </p>
             <p className="mt-8 text-sm uppercase tracking-[0.22em] text-[var(--muted)]">
-              {BOOK_DATE_LINE}
+              {BOOK_STATUS_LINE}
             </p>
             <div className="mt-6 text-base">
               <BookStoreLinks />
@@ -245,7 +257,7 @@ export default function BookPage() {
                   Publication
                 </dt>
                 <dd className="mt-2 text-[var(--foreground)]">
-                  {BOOK_DATE_LINE}
+                  {BOOK_PUBLISHED_LINE}
                 </dd>
               </div>
             </dl>

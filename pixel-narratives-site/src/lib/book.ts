@@ -6,10 +6,12 @@ export const BOOK_HARDBACK_ISBN = "9798178293195";
 export const BOOK_PATH = "/book";
 export const BOOK_COVER_SRC = "/images/book-cover.jpg";
 export const BOOK_DESK_SRC = "/images/book-desk.jpg";
-export const BOOK_DATE_LINE = "Coming October 27, 2026.";
+export const BOOK_STATUS_LINE = "Available now.";
+export const BOOK_PUBLISHED_LINE = "October 27, 2026.";
 export const BOOK_AMAZON_URL = "https://www.amazon.com/dp/B0HN99KZW8";
 export const BOOK_APPLE_URL =
   "https://books.apple.com/us/book/insert-door-metaphor/id6824207588?ls=1";
+export const BOOK_CHAPTER_URL = "https://read.bookfunnel.com/read/78zx6uxzkp";
 
 export const BOOK_DESCRIPTION_PARAS = [
   "For most of our lives, good ideas have come with a price tag.",
